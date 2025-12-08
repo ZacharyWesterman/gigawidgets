@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('bitmap_8hpp_source.html',''); initResi
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    color_t *<span class="keyword">const</span> data;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_struct" href="structui_1_1Bitmap.html">Bitmap</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> &amp;size, color_t *<span class="keyword">const</span> data);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> renderAt(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> std::function&lt;color_t(color_t)&gt; &amp;shader = 0) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> renderAt(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> shader_function_t &amp;shader = 0) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> getSize() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">virtual</span> color_t averageColor() <span class="keyword">const</span>;</div>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('bitmap_8hpp_source.html',''); initResi
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    uint8_t *<span class="keyword">const</span> mask;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_struct" href="structui_1_1TransparentBitmap.html">TransparentBitmap</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> &amp;size, color_t *<span class="keyword">const</span> data, uint8_t *<span class="keyword">const</span> mask);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> renderAt(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> std::function&lt;color_t(color_t)&gt; &amp;shader = 0) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> renderAt(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> shader_function_t &amp;shader = 0) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    color_t averageColor() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('bitmap_8hpp_source.html',''); initResi
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace ui</span></div>
 <div class="ttc" id="astructui_1_1Bitmap_html"><div class="ttname"><a href="structui_1_1Bitmap.html">ui::Bitmap</a></div><div class="ttdef"><b>Definition</b> bitmap.hpp:9</div></div>
 <div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdef"><b>Definition</b> coords.hpp:9</div></div>
-<div class="ttc" id="astructui_1_1Renderable_html"><div class="ttname"><a href="structui_1_1Renderable.html">ui::Renderable</a></div><div class="ttdef"><b>Definition</b> renderable.hpp:10</div></div>
+<div class="ttc" id="astructui_1_1Renderable_html"><div class="ttname"><a href="structui_1_1Renderable.html">ui::Renderable</a></div><div class="ttdef"><b>Definition</b> renderable.hpp:12</div></div>
 <div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdef"><b>Definition</b> size.hpp:9</div></div>
 <div class="ttc" id="astructui_1_1TransparentBitmap_html"><div class="ttname"><a href="structui_1_1TransparentBitmap.html">ui::TransparentBitmap</a></div><div class="ttdef"><b>Definition</b> bitmap.hpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
