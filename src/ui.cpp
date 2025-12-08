@@ -17,7 +17,8 @@ void setRoot(Element *const root) {
 
 void render() {
 	auto currentTime = millis();
-	if (currentTime - lastRender < UI_RENDER_FREQUENCY && lastRender != 0) {
+	const auto elapsed = currentTime - lastRender;
+	if (elapsed < UI_RENDER_FREQUENCY && elapsed >= 0 && lastRender != 0) {
 		return;
 	}
 	lastRender = currentTime;
