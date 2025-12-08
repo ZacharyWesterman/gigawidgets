@@ -3,35 +3,35 @@
     "configurations": [
         {
             "name": "Arduino",
-            "compilerPath": "/home/zachary/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/bin/arm-none-eabi-g++",
+            "compilerPath": "${env:HOME}/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/bin/arm-none-eabi-g++",
             "compilerArgs": [
                 "-w",
                 "-nostdlib"
             ],
             "intelliSenseMode": "gcc-x64",
             "includePath": [
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/cores/arduino",
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/variants/GIGA",
-                "/home/zachary/Arduino/libraries/Arduino_GigaDisplayTouch/src",
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Wire",
-                "/home/zachary/Arduino/libraries/Arduino_GigaDisplay_GFX/src",
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Arduino_H7_Video/src",
-                "/home/zachary/Arduino/libraries/Adafruit_GFX_Library",
-                "/home/zachary/Arduino/libraries/Adafruit_BusIO",
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/SPI",
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Portenta_SDRAM/src",
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/ea_malloc",
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/cores/arduino/api/deprecated",
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/cores/arduino/api/deprecated-avr-comp",
-                "/home/zachary/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1",
-                "/home/zachary/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1/arm-none-eabi",
-                "/home/zachary/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1/backward",
-                "/home/zachary/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/lib/gcc/arm-none-eabi/7.2.1/include",
-                "/home/zachary/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/lib/gcc/arm-none-eabi/7.2.1/include-fixed",
-                "/home/zachary/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include"
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/cores/arduino",
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/variants/GIGA",
+                "${env:HOME}/Arduino/libraries/Arduino_GigaDisplayTouch/src",
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Wire",
+                "${env:HOME}/Arduino/libraries/Arduino_GigaDisplay_GFX/src",
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Arduino_H7_Video/src",
+                "${env:HOME}/Arduino/libraries/Adafruit_GFX_Library",
+                "${env:HOME}/Arduino/libraries/Adafruit_BusIO",
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/SPI",
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Portenta_SDRAM/src",
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/ea_malloc",
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/cores/arduino/api/deprecated",
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/cores/arduino/api/deprecated-avr-comp",
+                "${env:HOME}/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1",
+                "${env:HOME}/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1/arm-none-eabi",
+                "${env:HOME}/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1/backward",
+                "${env:HOME}/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/lib/gcc/arm-none-eabi/7.2.1/include",
+                "${env:HOME}/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/lib/gcc/arm-none-eabi/7.2.1/include-fixed",
+                "${env:HOME}/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include"
             ],
             "forcedInclude": [
-                "/home/zachary/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/cores/arduino/Arduino.h"
+                "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/cores/arduino/Arduino.h"
             ],
             "cStandard": "c11",
             "cppStandard": "c++11",
