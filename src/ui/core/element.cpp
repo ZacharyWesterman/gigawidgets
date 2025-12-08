@@ -7,7 +7,7 @@ Element::Element(const Position &pos, const Alignment &align, const Padding &pad
 
 Element::~Element() {}
 
-bool Element::update(unsigned long time_ms) {
+bool Element::update(time_t time_ms) {
 	if (initialRender) {
 		return rotationChanged() || redrawSelf;
 	}
@@ -153,7 +153,7 @@ void Element::onhold(std::function<void(Element &, unsigned long)> callback) {
 }
 
 void Element::onhold(std::function<void(unsigned long)> callback) {
-	callbackHold = [callback](Element &, unsigned long time_ms) { callback(time_ms); };
+	callbackHold = [callback](Element &, time_t time_ms) { callback(time_ms); };
 }
 
 void Element::onrelease(std::function<void(Element &)> callback) {
@@ -188,7 +188,7 @@ void Element::release() {
 	}
 }
 
-void Element::hold(unsigned long time) {
+void Element::hold(time_t time) {
 	if (callbackHold) {
 		callbackHold(*this, time);
 	}

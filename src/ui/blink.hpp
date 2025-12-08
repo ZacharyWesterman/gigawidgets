@@ -13,7 +13,7 @@ public:
 	Blink(Element *child);
 
 	void draw() const override;
-	bool update(unsigned long time_ms) override;
+	bool update(time_t time_ms) override;
 
 	Size size() const override;
 

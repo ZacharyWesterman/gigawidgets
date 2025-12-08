@@ -12,13 +12,15 @@ Bitmap::Bitmap(const Size &size, color_t *const data) : data(data) {
 	this->size = size;
 }
 
-void Bitmap::renderAt(const Coords &coords, const std::function<color_t(color_t)> &shader) const {
+void Bitmap::renderAt(const Coords &coords, const shader_function_t &shader) const {
+	time_t now = millis();
+
 	startWrite();
 	for (coord_t y = 0; y < size.y; y++) {
 		for (coord_t x = 0; x < size.x; x++) {
 			color_t pixel = data[y * size.x + x];
 			if (shader) {
-				pixel = shader(pixel);
+				pixel = shader(pixel, {x, y}, size, now);
 			}
 			drawPixel(coords.x + x, coords.y + y, pixel);
 		}
@@ -37,7 +39,9 @@ color_t Bitmap::averageColor() const {
 
 TransparentBitmap::TransparentBitmap(const Size &size, color_t *const data, uint8_t *const mask) : Bitmap(size, data), mask(mask) {}
 
-void TransparentBitmap::renderAt(const Coords &coords, const std::function<color_t(color_t)> &shader) const {
+void TransparentBitmap::renderAt(const Coords &coords, const shader_function_t &shader) const {
+	time_t now = millis();
+
 	color_t bw = (size.x + 7) / 8; // Bitmask scanline pad = whole byte
 	uint8_t b = 0;
 	startWrite();
@@ -51,7 +55,7 @@ void TransparentBitmap::renderAt(const Coords &coords, const std::function<color
 			if (b & 0x80) {
 				color_t pixel = data[y * size.x + x];
 				if (shader) {
-					pixel = shader(pixel);
+					pixel = shader(pixel, {x, y}, size, now);
 				}
 				drawPixel(coords.x + x, coords.y + y, pixel);
 			}

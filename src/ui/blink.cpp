@@ -12,7 +12,7 @@ void Blink::draw() const {
 	}
 }
 
-bool Blink::update(unsigned long time_ms) {
+bool Blink::update(time_t time_ms) {
 	const bool updated = SingleChildElement::update(time_ms);
 	redrawParent = child->redrawRequested();
 

@@ -15,7 +15,7 @@ Size Image::size() const {
 	return renderable->getSize();
 }
 
-void Image::setShader(const std::function<color_t(color_t)> &shader) {
+void Image::setShader(const shader_function_t &shader) {
 	this->shader = shader;
 	redrawSelf = true;
 }

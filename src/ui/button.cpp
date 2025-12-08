@@ -13,7 +13,7 @@ void Button::draw() const {
 	child->draw();
 }
 
-bool Button::update(unsigned long time_ms) {
+bool Button::update(time_t time_ms) {
 	return SingleChildElement::update(time_ms) || redrawSelf;
 }
 

@@ -15,7 +15,7 @@ public:
 
 	Size size() const override;
 
-	bool update(unsigned long time_ms) override;
+	bool update(time_t time_ms) override;
 
 	void drawDone() override;
 

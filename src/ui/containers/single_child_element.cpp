@@ -32,7 +32,7 @@ bool SingleChildElement::handleEvent(const Event &event) {
 	}
 }
 
-bool SingleChildElement::update(unsigned long time_ms) {
+bool SingleChildElement::update(time_t time_ms) {
 	return child->update(time_ms) || child->redrawRequested() || rotationChanged();
 }
 

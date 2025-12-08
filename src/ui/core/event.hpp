@@ -15,7 +15,7 @@ struct Event {
 	event_t type;
 	uint8_t contacts;
 	Coords coords[5];
-	unsigned long timeHeld;
+	time_t timeHeld;
 };
 
 } // namespace ui

@@ -39,7 +39,7 @@ public:
 
 	virtual ~Element();
 
-	virtual bool update(unsigned long time);
+	virtual bool update(time_t time);
 
 	virtual Size size() const = 0;
 	virtual Bounds bounds() const;
@@ -83,7 +83,7 @@ public:
 	void press();
 	void blur();
 	void release();
-	void hold(unsigned long time);
+	void hold(time_t time);
 
 	virtual bool handleEvent(const Event &event);
 };

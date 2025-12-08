@@ -17,7 +17,7 @@ public:
 	Button(Element *child, color_t color, const Size &size = {0}, radius_t borderRadius = 0, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
 
 	void draw() const override;
-	bool update(unsigned long time_ms) override;
+	bool update(time_t time_ms) override;
 	void drawDone() override;
 
 	Size size() const override;

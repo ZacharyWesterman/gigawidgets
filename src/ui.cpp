@@ -4,7 +4,7 @@
 
 namespace ui {
 static Element *rootNode = nullptr;
-static unsigned long lastRender = 0;
+static time_t lastRender = 0;
 
 void setRoot(Element *const root) {
 	if (rootNode) {
@@ -16,7 +16,7 @@ void setRoot(Element *const root) {
 }
 
 void render() {
-	unsigned long currentTime = millis();
+	auto currentTime = millis();
 	if (currentTime - lastRender < UI_RENDER_FREQUENCY && lastRender != 0) {
 		return;
 	}
