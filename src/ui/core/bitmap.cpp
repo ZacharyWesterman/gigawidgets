@@ -12,7 +12,7 @@ Bitmap::Bitmap(const Size &size, color_t *const data) : data(data) {
 	this->size = size;
 }
 
-void Bitmap::renderAt(const Coords &coords, const shader_function_t &shader) const {
+void Bitmap::renderAt(const Coords &coords, const shader_t &shader) const {
 	time_t now = millis();
 
 	startWrite();
@@ -39,7 +39,7 @@ color_t Bitmap::averageColor() const {
 
 TransparentBitmap::TransparentBitmap(const Size &size, color_t *const data, uint8_t *const mask) : Bitmap(size, data), mask(mask) {}
 
-void TransparentBitmap::renderAt(const Coords &coords, const shader_function_t &shader) const {
+void TransparentBitmap::renderAt(const Coords &coords, const shader_t &shader) const {
 	time_t now = millis();
 
 	color_t bw = (size.x + 7) / 8; // Bitmask scanline pad = whole byte

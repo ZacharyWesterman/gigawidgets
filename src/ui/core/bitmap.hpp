@@ -11,7 +11,7 @@ struct Bitmap : public Renderable {
 	color_t *const data;
 
 	Bitmap(const Size &size, color_t *const data);
-	void renderAt(const Coords &coords, const shader_function_t &shader = 0) const override;
+	void renderAt(const Coords &coords, const shader_t &shader = 0) const override;
 	Size getSize() const override;
 
 	virtual color_t averageColor() const;
@@ -21,7 +21,7 @@ struct TransparentBitmap : public Bitmap {
 	uint8_t *const mask;
 
 	TransparentBitmap(const Size &size, color_t *const data, uint8_t *const mask);
-	void renderAt(const Coords &coords, const shader_function_t &shader = 0) const override;
+	void renderAt(const Coords &coords, const shader_t &shader = 0) const override;
 
 	color_t averageColor() const override;
 };

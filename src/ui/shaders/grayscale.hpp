@@ -7,7 +7,7 @@
 namespace ui {
 namespace shader {
 
-color_t grayscale(color_t pixel, const Coords &coords, const Size &size, time_t time_ms) {
+color_t grayscale(color_t pixel, const Coords &coords, const Size &size) {
 	float r, g, b;
 	colorComponents(pixel, r, g, b);
 

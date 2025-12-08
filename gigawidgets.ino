@@ -1,5 +1,6 @@
 #include "src/ui.hpp"
 #include "src/ui/icons/firefox.hpp"
+#include "src/ui/shaders/animated/glow.hpp"
 #include "src/ui/shaders/grayscale.hpp"
 #include "src/ui/shaders/negative.hpp"
 
@@ -22,7 +23,8 @@ void setup() {
 	auto body = new ui::Body(button, ui::COLOR_BLACK);
 	ui::setRoot(body);
 
-	image->setShader(ui::shader::grayscale);
+	// Flash bright every 1000ms.
+	image->setShader(ui::shader::glow<1000>);
 
 	// Highlight the button on press, and make icon negative
 	button->onpress([=]() {
