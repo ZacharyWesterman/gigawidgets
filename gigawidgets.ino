@@ -30,7 +30,7 @@ void setup() {
 		image->setShader(ui::shader::negative);
 	});
 	button->onblur([=]() {
-		button->setColor(ui::COLOR_GREEN);
+		button->setColor(avgColor);
 		image->removeShader();
 	});
 }
