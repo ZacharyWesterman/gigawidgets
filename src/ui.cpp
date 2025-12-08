@@ -15,10 +15,15 @@ void setRoot(Element *const root) {
 	rootNode = root;
 }
 
-void render() {
+void render(bool block) {
 	auto currentTime = millis();
 	const auto elapsed = currentTime - lastRender;
-	if (elapsed < UI_RENDER_FREQUENCY && elapsed >= 0 && lastRender != 0) {
+	if (block) {
+		if (elapsed < UI_RENDER_FREQUENCY) {
+			delay(UI_RENDER_FREQUENCY - elapsed);
+		}
+		currentTime = millis();
+	} else if (elapsed < UI_RENDER_FREQUENCY && elapsed >= 0 && lastRender != 0) {
 		return;
 	}
 	lastRender = currentTime;
