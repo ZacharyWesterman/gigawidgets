@@ -7,7 +7,7 @@
 namespace ui {
 namespace shader {
 
-color_t halfGrayscaleV(color_t pixel, const Coords &coords, const Size &size, time_t time_ms) {
+color_t halfGrayscaleV(color_t pixel, const Coords &coords, const Size &size) {
 	if (coords.x <= size.x / 2) {
 		return pixel;
 	}
