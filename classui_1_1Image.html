@@ -122,9 +122,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a279edf8f3da547b5e12262c5e2e75475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac560e95e7dc92569f2502a65505b95e3" id="r_ac560e95e7dc92569f2502a65505b95e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3">size</a> () const override</td></tr>
 <tr class="separator:ac560e95e7dc92569f2502a65505b95e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2313eb9b3efd36656cbd2e2f3afc68f" id="r_af2313eb9b3efd36656cbd2e2f3afc68f"><td class="memItemLeft" align="right" valign="top"><a id="af2313eb9b3efd36656cbd2e2f3afc68f" name="af2313eb9b3efd36656cbd2e2f3afc68f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setShader</b> (const shader_function_t &amp;shader)</td></tr>
-<tr class="separator:af2313eb9b3efd36656cbd2e2f3afc68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a2f0cd3a0b2aa5ffd2f7ce45957042" id="r_a36a2f0cd3a0b2aa5ffd2f7ce45957042"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042">update</a> (time_t time_ms) override</td></tr>
+<tr class="separator:a36a2f0cd3a0b2aa5ffd2f7ce45957042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7760b915633ce656a2db89614f083f" id="r_acf7760b915633ce656a2db89614f083f"><td class="memItemLeft" align="right" valign="top"><a id="acf7760b915633ce656a2db89614f083f" name="acf7760b915633ce656a2db89614f083f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setShader</b> (const shader_animated_t &amp;shader)</td></tr>
+<tr class="separator:acf7760b915633ce656a2db89614f083f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc13048ee692e4038375d4203ff264e" id="r_a2bc13048ee692e4038375d4203ff264e"><td class="memItemLeft" align="right" valign="top"><a id="a2bc13048ee692e4038375d4203ff264e" name="a2bc13048ee692e4038375d4203ff264e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setShader</b> (const shader_oneframe_t &amp;shader)</td></tr>
+<tr class="separator:a2bc13048ee692e4038375d4203ff264e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e3afff1e53f42e6f09923adb7ec1fcd" id="r_a6e3afff1e53f42e6f09923adb7ec1fcd"><td class="memItemLeft" align="right" valign="top"><a id="a6e3afff1e53f42e6f09923adb7ec1fcd" name="a6e3afff1e53f42e6f09923adb7ec1fcd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>removeShader</b> ()</td></tr>
 <tr class="separator:a6e3afff1e53f42e6f09923adb7ec1fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,9 +137,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>removeShader</b> ()</
 <tr class="memitem:a4fe50e7389415f7b15f5baec72e1624a inherit pub_methods_classui_1_1Element" id="r_a4fe50e7389415f7b15f5baec72e1624a"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>Element</b> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0.5, 0.5}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;padding={0})</td></tr>
 <tr class="separator:a4fe50e7389415f7b15f5baec72e1624a inherit pub_methods_classui_1_1Element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e3765a123d5d3962df8dea9915fd77 inherit pub_methods_classui_1_1Element" id="r_a59e3765a123d5d3962df8dea9915fd77"><td class="memItemLeft" align="right" valign="top">
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (time_t time)</td></tr>
-<tr class="separator:a59e3765a123d5d3962df8dea9915fd77 inherit pub_methods_classui_1_1Element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0b46cfd0fbe6f369fa2b02a2d03ec40 inherit pub_methods_classui_1_1Element" id="r_af0b46cfd0fbe6f369fa2b02a2d03ec40"><td class="memItemLeft" align="right" valign="top">
 virtual <a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bounds</b> () const</td></tr>
 <tr class="separator:af0b46cfd0fbe6f369fa2b02a2d03ec40 inherit pub_methods_classui_1_1Element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -270,6 +272,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classui_1_1Element.html">ui::Element</a>.</p>
+
+</div>
+</div>
+<a id="a36a2f0cd3a0b2aa5ffd2f7ce45957042" name="a36a2f0cd3a0b2aa5ffd2f7ce45957042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a2f0cd3a0b2aa5ffd2f7ce45957042">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ui::Image::update </td>
+          <td>(</td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>time_ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classui_1_1Element.html">ui::Element</a>.</p>
 
 </div>
 </div>
