@@ -1,0 +1,24 @@
+var hierarchy =
+[
+    [ "ui::Alignment", "structui_1_1Alignment.html", null ],
+    [ "ui::Bounds", "structui_1_1Bounds.html", null ],
+    [ "ui::Coords", "structui_1_1Coords.html", null ],
+    [ "ui::Element", "classui_1_1Element.html", [
+      [ "ui::Image", "classui_1_1Image.html", null ],
+      [ "ui::SingleChildElement", "classui_1_1SingleChildElement.html", [
+        [ "ui::Blink", "classui_1_1Blink.html", null ],
+        [ "ui::Body", "classui_1_1Body.html", null ],
+        [ "ui::Button", "classui_1_1Button.html", null ]
+      ] ],
+      [ "ui::Text", "classui_1_1Text.html", null ]
+    ] ],
+    [ "ui::Event", "structui_1_1Event.html", null ],
+    [ "ui::Padding", "structui_1_1Padding.html", null ],
+    [ "ui::Position", "structui_1_1Position.html", null ],
+    [ "ui::Renderable", "structui_1_1Renderable.html", [
+      [ "ui::Bitmap", "structui_1_1Bitmap.html", [
+        [ "ui::TransparentBitmap", "structui_1_1TransparentBitmap.html", null ]
+      ] ]
+    ] ],
+    [ "ui::Size", "structui_1_1Size.html", null ]
+];
