@@ -5,7 +5,7 @@
 
 namespace ui {
 
-class Body : public SingleChildElement {
+class Body : public SingleChildWidget {
 	color_t backgroundColor;
 
 public:

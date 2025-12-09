@@ -4,14 +4,14 @@
 
 namespace ui {
 
-class SingleChildElement : public Widget {
+class SingleChildWidget : public Widget {
 protected:
 	Widget *child;
 
 public:
-	SingleChildElement(Widget *child, const Position &pos = {0.5, 0.5}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
+	SingleChildWidget(Widget *child, const Position &pos = {0.5, 0.5}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
 
-	~SingleChildElement() override;
+	~SingleChildWidget() override;
 
 	Size size() const override;
 

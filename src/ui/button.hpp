@@ -8,7 +8,7 @@
 
 namespace ui {
 
-class Button : public SingleChildElement {
+class Button : public SingleChildWidget {
 	color_t color;
 	Size buttonSize;
 	radius_t borderRadius;

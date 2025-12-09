@@ -4,7 +4,7 @@
 
 namespace ui {
 
-class Blink : public SingleChildElement {
+class Blink : public SingleChildWidget {
 private:
 	unsigned long lastRender;
 	bool visible;
