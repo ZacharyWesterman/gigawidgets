@@ -9,7 +9,7 @@ class Body : public SingleChildElement {
 	color_t backgroundColor;
 
 public:
-	Body(Element *child, color_t backgroundColor = COLOR_BLACK, const Padding &padding = {0});
+	Body(Widget *child, color_t backgroundColor = COLOR_BLACK, const Padding &padding = {0});
 
 	void draw() const override;
 

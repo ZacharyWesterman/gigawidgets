@@ -14,7 +14,7 @@
 
 namespace ui {
 
-void setRoot(Element *const root);
+void setRoot(Widget *const root);
 void render(bool block = true);
 
 } // namespace ui

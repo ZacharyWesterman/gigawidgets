@@ -1,11 +1,11 @@
 #pragma once
 
-#include "core/element.hpp"
 #include "core/renderable.hpp"
+#include "core/widget.hpp"
 
 namespace ui {
 
-class Image : public Element {
+class Image : public Widget {
 	const Renderable *const renderable;
 	shader_t shader;
 	bool renderEveryFrame;

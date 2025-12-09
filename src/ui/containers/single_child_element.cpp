@@ -3,7 +3,7 @@
 
 namespace ui {
 
-SingleChildElement::SingleChildElement(Element *const child, const Position &pos, const Alignment &align, const Padding &padding) : child(child), Element(pos, align, padding) {
+SingleChildElement::SingleChildElement(Widget *const child, const Position &pos, const Alignment &align, const Padding &padding) : child(child), Widget(pos, align, padding) {
 	child->setParent(this);
 }
 
@@ -16,18 +16,18 @@ Size SingleChildElement::size() const {
 }
 
 void SingleChildElement::drawDone() {
-	Element::drawDone();
+	Widget::drawDone();
 	child->drawDone();
 }
 
-void SingleChildElement::setChild(Element *const child) {
+void SingleChildElement::setChild(Widget *const child) {
 	delete this->child;
 	this->child = child;
 	child->setParent(this);
 }
 
 bool SingleChildElement::handleEvent(const Event &event) {
-	if (Element::handleEvent(event)) {
+	if (Widget::handleEvent(event)) {
 		child->handleEvent(event);
 	}
 }

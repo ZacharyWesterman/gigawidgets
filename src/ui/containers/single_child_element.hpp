@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../core/element.hpp"
+#include "../core/widget.hpp"
 
 namespace ui {
 
-class SingleChildElement : public Element {
+class SingleChildElement : public Widget {
 protected:
-	Element *child;
+	Widget *child;
 
 public:
-	SingleChildElement(Element *child, const Position &pos = {0.5, 0.5}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
+	SingleChildElement(Widget *child, const Position &pos = {0.5, 0.5}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
 
 	~SingleChildElement() override;
 
@@ -19,7 +19,7 @@ public:
 
 	void drawDone() override;
 
-	void setChild(Element *const child);
+	void setChild(Widget *const child);
 
 	bool handleEvent(const Event &event) override;
 };

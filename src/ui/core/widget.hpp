@@ -14,14 +14,14 @@
 
 namespace ui {
 
-class Element {
+class Widget {
 private:
-	std::function<void(Element &element)> callbackPress;
-	std::function<void(Element &element, unsigned long)> callbackHold;
-	std::function<void(Element &element)> callbackRelease;
-	std::function<void(Element &element)> callbackBlur;
+	std::function<void(Widget &element)> callbackPress;
+	std::function<void(Widget &element, unsigned long)> callbackHold;
+	std::function<void(Widget &element)> callbackRelease;
+	std::function<void(Widget &element)> callbackBlur;
 
-	Element *parent;
+	Widget *parent;
 	bool initialRender;
 	Position pos;
 	Alignment align;
@@ -33,11 +33,11 @@ protected:
 	bool redrawSelf;
 
 public:
-	Element(const Position &pos = {0.5, 0.5}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
+	Widget(const Position &pos = {0.5, 0.5}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
 
 	virtual void draw() const = 0;
 
-	virtual ~Element();
+	virtual ~Widget();
 
 	virtual bool update(time_t time);
 
@@ -60,23 +60,23 @@ public:
 
 	virtual void drawDone();
 
-	void setParent(Element *parent);
+	void setParent(Widget *parent);
 
 	Bounds parentBounds() const;
 
-	void onclick(std::function<void(Element &)> callback);
+	void onclick(std::function<void(Widget &)> callback);
 	void onclick(std::function<void()> callback);
 
-	void onpress(std::function<void(Element &)> callback);
+	void onpress(std::function<void(Widget &)> callback);
 	void onpress(std::function<void()> callback);
 
-	void onblur(std::function<void(Element &)> callback);
+	void onblur(std::function<void(Widget &)> callback);
 	void onblur(std::function<void()> callback);
 
-	void onhold(std::function<void(Element &, unsigned long)> callback);
+	void onhold(std::function<void(Widget &, unsigned long)> callback);
 	void onhold(std::function<void(unsigned long)> callback);
 
-	void onrelease(std::function<void(Element &)> callback);
+	void onrelease(std::function<void(Widget &)> callback);
 	void onrelease(std::function<void()> callback);
 
 	void click();

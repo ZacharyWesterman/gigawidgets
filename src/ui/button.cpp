@@ -3,7 +3,7 @@
 
 namespace ui {
 
-Button::Button(Element *child, color_t color, const Size &size, radius_t borderRadius, const Position &pos, const Alignment &align, const Padding &padding) : color(color), buttonSize(size), borderRadius(borderRadius), SingleChildElement(child, pos, align, padding) {}
+Button::Button(Widget *child, color_t color, const Size &size, radius_t borderRadius, const Position &pos, const Alignment &align, const Padding &padding) : color(color), buttonSize(size), borderRadius(borderRadius), SingleChildElement(child, pos, align, padding) {}
 
 void Button::draw() const {
 	if (child->redrawRequested() || redrawSelf || redrawParent || rotationChanged()) {

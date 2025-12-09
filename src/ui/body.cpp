@@ -5,7 +5,7 @@
 
 namespace ui {
 
-Body::Body(Element *const child, color_t backgroundColor, const Padding &padding) : backgroundColor(backgroundColor), SingleChildElement(child, {0, 0}, {ALIGN_LEFT, ALIGN_TOP}, padding) {}
+Body::Body(Widget *const child, color_t backgroundColor, const Padding &padding) : backgroundColor(backgroundColor), SingleChildElement(child, {0, 0}, {ALIGN_LEFT, ALIGN_TOP}, padding) {}
 
 void Body::draw() const {
 	if (child->redrawRequested() || redrawSelf || rotationChanged()) {

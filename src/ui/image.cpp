@@ -4,7 +4,7 @@
 
 namespace ui {
 
-Image::Image(const Renderable *const renderable, const Position &pos, const Alignment &align) : renderable(renderable), renderEveryFrame(false), Element(pos, align) {}
+Image::Image(const Renderable *const renderable, const Position &pos, const Alignment &align) : renderable(renderable), renderEveryFrame(false), Widget(pos, align) {}
 
 void Image::draw() const {
 	const auto b = bounds();
@@ -19,7 +19,7 @@ bool Image::update(time_t time_ms) {
 	if (renderEveryFrame) {
 		return true;
 	}
-	return Element::update(time_ms);
+	return Widget::update(time_ms);
 }
 
 void Image::setShader(const shader_animated_t &shader) {

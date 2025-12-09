@@ -4,7 +4,7 @@
 
 namespace ui {
 
-Blink::Blink(Element *const child) : lastRender(0), visible(false), SingleChildElement(child) {}
+Blink::Blink(Widget *const child) : lastRender(0), visible(false), SingleChildElement(child) {}
 
 void Blink::draw() const {
 	if (visible) {

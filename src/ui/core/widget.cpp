@@ -1,13 +1,13 @@
-#include "element.hpp"
+#include "widget.hpp"
 #include "display.hpp"
 
 namespace ui {
 
-Element::Element(const Position &pos, const Alignment &align, const Padding &padding) : parent(nullptr), pos(pos), align(align), pressed(false), padding(padding), initialRender(false), redrawParent(true), redrawSelf(true) {}
+Widget::Widget(const Position &pos, const Alignment &align, const Padding &padding) : parent(nullptr), pos(pos), align(align), pressed(false), padding(padding), initialRender(false), redrawParent(true), redrawSelf(true) {}
 
-Element::~Element() {}
+Widget::~Widget() {}
 
-bool Element::update(time_t time_ms) {
+bool Widget::update(time_t time_ms) {
 	if (initialRender) {
 		return rotationChanged() || redrawSelf;
 	}
@@ -16,16 +16,16 @@ bool Element::update(time_t time_ms) {
 	return true;
 }
 
-void Element::drawDone() {
+void Widget::drawDone() {
 	redrawParent = false;
 	redrawSelf = false;
 }
 
-void Element::setParent(Element *parent) {
+void Widget::setParent(Widget *parent) {
 	this->parent = parent;
 }
 
-Bounds Element::parentBounds() const {
+Bounds Widget::parentBounds() const {
 	if (parent) {
 		auto b = parent->bounds();
 
@@ -43,7 +43,7 @@ Bounds Element::parentBounds() const {
 	return {min, max};
 }
 
-Bounds Element::bounds() const {
+Bounds Widget::bounds() const {
 	const auto sz = size();
 	auto b = parentBounds();
 
@@ -81,7 +81,7 @@ Bounds Element::bounds() const {
 	return b;
 }
 
-bool Element::handleEvent(const Event &event) {
+bool Widget::handleEvent(const Event &event) {
 	const auto b = bounds();
 
 	if (!bounds().contains(event.coords[0])) {
@@ -124,71 +124,71 @@ bool Element::handleEvent(const Event &event) {
 	return true;
 }
 
-void Element::onclick(std::function<void(Element &)> callback) {
+void Widget::onclick(std::function<void(Widget &)> callback) {
 	callbackRelease = callback;
 };
 
-void Element::onclick(std::function<void()> callback) {
-	callbackRelease = [callback](Element &) { callback(); };
+void Widget::onclick(std::function<void()> callback) {
+	callbackRelease = [callback](Widget &) { callback(); };
 }
 
-void Element::onpress(std::function<void(Element &)> callback) {
+void Widget::onpress(std::function<void(Widget &)> callback) {
 	callbackPress = callback;
 }
 
-void Element::onpress(std::function<void()> callback) {
-	callbackPress = [callback](Element &) { callback(); };
+void Widget::onpress(std::function<void()> callback) {
+	callbackPress = [callback](Widget &) { callback(); };
 }
 
-void Element::onblur(std::function<void(Element &)> callback) {
+void Widget::onblur(std::function<void(Widget &)> callback) {
 	callbackBlur = callback;
 }
 
-void Element::onblur(std::function<void()> callback) {
-	callbackBlur = [callback](Element &) { callback(); };
+void Widget::onblur(std::function<void()> callback) {
+	callbackBlur = [callback](Widget &) { callback(); };
 }
 
-void Element::onhold(std::function<void(Element &, unsigned long)> callback) {
+void Widget::onhold(std::function<void(Widget &, unsigned long)> callback) {
 	callbackHold = callback;
 }
 
-void Element::onhold(std::function<void(unsigned long)> callback) {
-	callbackHold = [callback](Element &, time_t time_ms) { callback(time_ms); };
+void Widget::onhold(std::function<void(unsigned long)> callback) {
+	callbackHold = [callback](Widget &, time_t time_ms) { callback(time_ms); };
 }
 
-void Element::onrelease(std::function<void(Element &)> callback) {
+void Widget::onrelease(std::function<void(Widget &)> callback) {
 	callbackRelease = callback;
 }
 
-void Element::onrelease(std::function<void()> callback) {
-	callbackRelease = [callback](Element &) { callback(); };
+void Widget::onrelease(std::function<void()> callback) {
+	callbackRelease = [callback](Widget &) { callback(); };
 }
 
-void Element::click() {
+void Widget::click() {
 	if (callbackRelease) {
 		callbackRelease(*this);
 	}
 }
 
-void Element::press() {
+void Widget::press() {
 	if (callbackPress) {
 		callbackPress(*this);
 	}
 }
 
-void Element::blur() {
+void Widget::blur() {
 	if (callbackRelease) {
 		callbackRelease(*this);
 	}
 }
 
-void Element::release() {
+void Widget::release() {
 	if (callbackRelease) {
 		callbackRelease(*this);
 	}
 }
 
-void Element::hold(time_t time) {
+void Widget::hold(time_t time) {
 	if (callbackHold) {
 		callbackHold(*this, time);
 	}

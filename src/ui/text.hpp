@@ -4,13 +4,13 @@
 
 #include "core/alignment.hpp"
 #include "core/color.hpp"
-#include "core/element.hpp"
 #include "core/fontsize.hpp"
 #include "core/position.hpp"
+#include "core/widget.hpp"
 
 namespace ui {
 
-class Text : public Element {
+class Text : public Widget {
 protected:
 	String text;
 	fontsize_t scale;

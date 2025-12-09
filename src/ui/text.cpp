@@ -3,7 +3,7 @@
 
 namespace ui {
 
-Text::Text(const String &text, fontsize_t scale, color_t color, const Position &pos, const Alignment &align) : text(text), scale(scale), textColor(color), Element(pos, align) {}
+Text::Text(const String &text, fontsize_t scale, color_t color, const Position &pos, const Alignment &align) : text(text), scale(scale), textColor(color), Widget(pos, align) {}
 
 void Text::draw() const {
 	const auto b = bounds();

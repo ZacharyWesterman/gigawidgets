@@ -3,10 +3,10 @@
 #include "ui.hpp"
 
 namespace ui {
-static Element *rootNode = nullptr;
+static Widget *rootNode = nullptr;
 static time_t lastRender = 0;
 
-void setRoot(Element *const root) {
+void setRoot(Widget *const root) {
 	if (rootNode) {
 		delete rootNode;
 	} else {

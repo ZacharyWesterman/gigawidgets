@@ -10,7 +10,7 @@ private:
 	bool visible;
 
 public:
-	Blink(Element *child);
+	Blink(Widget *child);
 
 	void draw() const override;
 	bool update(time_t time_ms) override;
