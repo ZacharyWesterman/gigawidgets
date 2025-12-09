@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>gigawidgets: src/ui/containers/single_child_element.hpp Source File</title>
+<title>gigawidgets: src/ui/containers/single_child_widget.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('single__child__element_8hpp_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('single__child__widget_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('single__child__element_8hpp_source.htm
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">single_child_element.hpp</div></div>
+  <div class="headertitle"><div class="title">single_child_widget.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
@@ -107,14 +107,14 @@ $(document).ready(function(){initNavTree('single__child__element_8hpp_source.htm
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>ui {</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildElement.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1SingleChildElement.html">SingleChildElement</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1SingleChildWidget.html">SingleChildWidget</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> {</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *child;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="classui_1_1SingleChildElement.html">SingleChildElement</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *child, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos = {0.5, 0.5}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align = {ALIGN_LEFT, ALIGN_TOP}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Padding.html">Padding</a> &amp;padding = {0});</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="classui_1_1SingleChildWidget.html">SingleChildWidget</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *child, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos = {0.5, 0.5}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align = {ALIGN_LEFT, ALIGN_TOP}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Padding.html">Padding</a> &amp;padding = {0});</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classui_1_1SingleChildElement.html">~SingleChildElement</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classui_1_1SingleChildWidget.html">~SingleChildWidget</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> size() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('single__child__element_8hpp_source.htm
 </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>} <span class="comment">// namespace ui</span></div>
-<div class="ttc" id="aclassui_1_1SingleChildElement_html"><div class="ttname"><a href="classui_1_1SingleChildElement.html">ui::SingleChildElement</a></div><div class="ttdef"><b>Definition</b> single_child_element.hpp:7</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html"><div class="ttname"><a href="classui_1_1SingleChildWidget.html">ui::SingleChildWidget</a></div><div class="ttdef"><b>Definition</b> single_child_widget.hpp:7</div></div>
 <div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdef"><b>Definition</b> widget.hpp:17</div></div>
 <div class="ttc" id="astructui_1_1Alignment_html"><div class="ttname"><a href="structui_1_1Alignment.html">ui::Alignment</a></div><div class="ttdef"><b>Definition</b> alignment.hpp:15</div></div>
 <div class="ttc" id="astructui_1_1Event_html"><div class="ttname"><a href="structui_1_1Event.html">ui::Event</a></div><div class="ttdef"><b>Definition</b> event.hpp:13</div></div>
@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('single__child__element_8hpp_source.htm
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_184a71f9121078284806f5726eb66ba6.html">containers</a></li><li class="navelem"><b>single_child_element.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_184a71f9121078284806f5726eb66ba6.html">containers</a></li><li class="navelem"><b>single_child_widget.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

@@ -14,7 +14,7 @@ var hierarchy =
     [ "ui::Size", "structui_1_1Size.html", null ],
     [ "ui::Widget", "classui_1_1Widget.html", [
       [ "ui::Image", "classui_1_1Image.html", null ],
-      [ "ui::SingleChildElement", "classui_1_1SingleChildElement.html", [
+      [ "ui::SingleChildWidget", "classui_1_1SingleChildWidget.html", [
         [ "ui::Blink", "classui_1_1Blink.html", null ],
         [ "ui::Body", "classui_1_1Body.html", null ],
         [ "ui::Button", "classui_1_1Button.html", null ]

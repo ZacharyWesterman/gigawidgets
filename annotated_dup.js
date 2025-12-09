@@ -13,7 +13,7 @@ var annotated_dup =
       [ "Padding", "structui_1_1Padding.html", null ],
       [ "Position", "structui_1_1Position.html", null ],
       [ "Renderable", "structui_1_1Renderable.html", null ],
-      [ "SingleChildElement", "classui_1_1SingleChildElement.html", null ],
+      [ "SingleChildWidget", "classui_1_1SingleChildWidget.html", null ],
       [ "Size", "structui_1_1Size.html", null ],
       [ "Text", "classui_1_1Text.html", null ],
       [ "TransparentBitmap", "structui_1_1TransparentBitmap.html", null ],
