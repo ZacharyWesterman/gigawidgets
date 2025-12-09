@@ -1,24 +1,6 @@
 #pragma once
 
-#include <cinttypes>
-
-#include "size.hpp"
-#include "units.hpp"
-
 namespace ui {
-
-struct Padding {
-	uisize_t left;
-	uisize_t top;
-	uisize_t right;
-	uisize_t bottom;
-
-	Padding(uisize_t size);
-	Padding(uisize_t left_right, uisize_t top_bottom);
-	Padding(uisize_t left, uisize_t top, uisize_t right, uisize_t bottom);
-};
-
-} // namespace ui
 
 #define GIGA_DISPLAY_W_PX 480
 #define GIGA_DISPLAY_H_PX 800
@@ -47,3 +29,10 @@ constexpr uint16_t operator"" _vw(long double view_width_percent) {
 constexpr uint16_t operator"" _vh(long double view_height_percent) {
 	return view_height_percent * GIGA_DISPLAY_H_PX / 100;
 }
+
+constexpr uint16_t operator"" _pt(long double points) {
+	// 1 point = 1/72 inch
+	return points * GIGA_DISPLAY_PPI / 72.f;
+}
+
+} // namespace ui

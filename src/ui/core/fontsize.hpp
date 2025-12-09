@@ -1,7 +1,9 @@
 #pragma once
 
+#include "units.hpp"
+
 namespace ui {
 
-typedef uint8_t fontsize_t;
+typedef uint16_t fontsize_t;
 
-}
+} // namespace ui
