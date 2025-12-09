@@ -8,7 +8,7 @@ namespace ui {
 namespace shader {
 
 color_t negative(color_t pixel, const Coords &coords, const Size &size) {
-	return 0xffff - pixel;
+	return ~pixel;
 }
 
 } // namespace shader
