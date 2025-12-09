@@ -4,6 +4,7 @@
 #include "ui/body.hpp"
 #include "ui/button.hpp"
 #include "ui/core/display.hpp"
+#include "ui/core/units.hpp"
 #include "ui/image.hpp"
 #include "ui/text.hpp"
 
