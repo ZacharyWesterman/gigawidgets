@@ -1,6 +1,6 @@
 #pragma once
 
-#include "containers/single_child_element.hpp"
+#include "containers/single_child_widget.hpp"
 #include "core/color.hpp"
 
 namespace ui {
