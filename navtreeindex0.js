@@ -57,5 +57,6 @@ var NAVTREEINDEX0 =
 "structui_1_1TransparentBitmap.html":[0,0,0,15],
 "text_8hpp_source.html":[1,0,0,0,8],
 "ui_8hpp_source.html":[1,0,0,1],
-"widget_8hpp_source.html":[1,0,0,0,1,14]
+"units_8hpp_source.html":[1,0,0,0,1,14],
+"widget_8hpp_source.html":[1,0,0,0,1,15]
 };

@@ -14,5 +14,6 @@ var dir_54af36d51a9cc63772a7fe8bbd49e97e =
     [ "renderable.hpp", "renderable_8hpp_source.html", null ],
     [ "rotation.hpp", "rotation_8hpp_source.html", null ],
     [ "size.hpp", "size_8hpp_source.html", null ],
+    [ "units.hpp", "units_8hpp_source.html", null ],
     [ "widget.hpp", "widget_8hpp_source.html", null ]
 ];
