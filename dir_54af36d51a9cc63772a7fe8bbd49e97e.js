@@ -6,7 +6,6 @@ var dir_54af36d51a9cc63772a7fe8bbd49e97e =
     [ "color.hpp", "color_8hpp_source.html", null ],
     [ "coords.hpp", "coords_8hpp_source.html", null ],
     [ "display.hpp", "display_8hpp_source.html", null ],
-    [ "element.hpp", "element_8hpp_source.html", null ],
     [ "event.hpp", "event_8hpp_source.html", null ],
     [ "fontsize.hpp", "fontsize_8hpp_source.html", null ],
     [ "padding.hpp", "padding_8hpp_source.html", null ],
@@ -14,5 +13,6 @@ var dir_54af36d51a9cc63772a7fe8bbd49e97e =
     [ "radius.hpp", "radius_8hpp_source.html", null ],
     [ "renderable.hpp", "renderable_8hpp_source.html", null ],
     [ "rotation.hpp", "rotation_8hpp_source.html", null ],
-    [ "size.hpp", "size_8hpp_source.html", null ]
+    [ "size.hpp", "size_8hpp_source.html", null ],
+    [ "widget.hpp", "widget_8hpp_source.html", null ]
 ];
