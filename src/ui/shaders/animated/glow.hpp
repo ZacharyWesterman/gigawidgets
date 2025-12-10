@@ -12,9 +12,9 @@ color_t glow(color_t pixel, const Coords &coords, const Size &size, time_t time_
 	float r, g, b;
 	colorComponents(pixel, r, g, b);
 
-	float extra = .5f - sin(time_ms * (6.283f / (float)frequency)) / 2.f;
+	float ratio = .5f - sin(time_ms * (6.283f / (float)frequency)) / 2.f;
 
-	return color(r + extra, g + extra, b + extra);
+	return blend(pixel, ui::COLOR_WHITE, ratio);
 }
 
 } // namespace shader
