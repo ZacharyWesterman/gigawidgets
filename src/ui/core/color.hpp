@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cinttypes>
+#include <cmath>
 
 namespace ui {
 
@@ -15,6 +16,8 @@ constexpr color_t color(const float red, const float green, const float blue) {
 }
 
 void colorComponents(color_t color, float &red, float &green, float &blue);
+
+color_t blend(color_t color1, color_t color2, float ratio = 0.5f);
 
 enum {
 	COLOR_WHITE = 0xffff,

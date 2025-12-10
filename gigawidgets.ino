@@ -16,7 +16,7 @@ void setup() {
 
 	// Build the UI
 	const auto &icon = ui::icon::firefox;
-	auto avgColor = icon.averageColor();
+	auto avgColor = ui::blend(icon.averageColor(), ui::COLOR_WHITE, 0.3f);
 
 	auto image = new ui::Image(&icon, position, alignment);
 	auto button = new ui::Button(image, ui::COLOR_GRAY, {.4_in, .4_in}, 20, position, alignment);
