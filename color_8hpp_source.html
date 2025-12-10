@@ -103,47 +103,50 @@ $(document).ready(function(){initNavTree('color_8hpp_source.html',''); initResiz
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">typedef</span> uint16_t color_t;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> clampColor(<span class="keyword">const</span> <span class="keywordtype">float</span> color) {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">return</span> (0.f &gt; color) ? 0.f : ((1.f &lt; color) ? 1.f : color);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">constexpr</span> color_t color(<span class="keyword">const</span> <span class="keywordtype">float</span> red, <span class="keyword">const</span> <span class="keywordtype">float</span> green, <span class="keyword">const</span> <span class="keywordtype">float</span> blue) {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordflow">return</span> (((uint8_t)(clampColor(red) * 0xff) &amp; 0xF8) &lt;&lt; 8) | (((uint8_t)(clampColor(green) * 0xff) &amp; 0xFC) &lt;&lt; 3) | ((uint8_t)(clampColor(blue) * 0xff) &gt;&gt; 3);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> colorComponents(color_t color, <span class="keywordtype">float</span> &amp;red, <span class="keywordtype">float</span> &amp;green, <span class="keywordtype">float</span> &amp;blue);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">enum</span> {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    COLOR_WHITE = 0xffff,</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    COLOR_BLACK = 0x0000,</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// Mid-range colors</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    COLOR_GRAY = 0x7bef,</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    COLOR_RED = 0xe000,</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    COLOR_ORANGE = 0xfbe0,</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    COLOR_YELLOW = 0xffe0, <span class="comment">// 0b11111&#39;111111&#39;00000</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    COLOR_GREEN = 0x07e0,</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    COLOR_CYAN = 0x07ff,</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    COLOR_BLUE = 0x001f,</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    COLOR_MAGENTA = 0xf81f,</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Light colors</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    COLOR_LIGHT_GRAY = 0xd69a,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    COLOR_LIGHT_RED = 0xe534,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    COLOR_LIGHT_ORANGE = 0xfe11,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    COLOR_LIGHT_YELLOW = 0xfff7,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    COLOR_LIGHT_GREEN = 0xa7f4,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    COLOR_LIGHT_CYAN = 0xa7ff,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    COLOR_LIGHT_BLUE = 0x853f,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    COLOR_PINK = 0xfd3f,</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">typedef</span> uint16_t color_t;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> clampColor(<span class="keyword">const</span> <span class="keywordtype">float</span> color) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">return</span> (0.f &gt; color) ? 0.f : ((1.f &lt; color) ? 1.f : color);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">constexpr</span> color_t color(<span class="keyword">const</span> <span class="keywordtype">float</span> red, <span class="keyword">const</span> <span class="keywordtype">float</span> green, <span class="keyword">const</span> <span class="keywordtype">float</span> blue) {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordflow">return</span> (((uint8_t)(clampColor(red) * 0xff) &amp; 0xF8) &lt;&lt; 8) | (((uint8_t)(clampColor(green) * 0xff) &amp; 0xFC) &lt;&lt; 3) | ((uint8_t)(clampColor(blue) * 0xff) &gt;&gt; 3);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> colorComponents(color_t color, <span class="keywordtype">float</span> &amp;red, <span class="keywordtype">float</span> &amp;green, <span class="keywordtype">float</span> &amp;blue);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>color_t blend(color_t color1, color_t color2, <span class="keywordtype">float</span> ratio = 0.5f);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    COLOR_WHITE = 0xffff,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    COLOR_BLACK = 0x0000,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">// Mid-range colors</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    COLOR_GRAY = 0x7bef,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    COLOR_RED = 0xe000,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    COLOR_ORANGE = 0xfbe0,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    COLOR_YELLOW = 0xffe0, <span class="comment">// 0b11111&#39;111111&#39;00000</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    COLOR_GREEN = 0x07e0,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    COLOR_CYAN = 0x07ff,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    COLOR_BLUE = 0x001f,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    COLOR_MAGENTA = 0xf81f,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// Light colors</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    COLOR_LIGHT_GRAY = 0xd69a,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    COLOR_LIGHT_RED = 0xe534,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    COLOR_LIGHT_ORANGE = 0xfe11,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    COLOR_LIGHT_YELLOW = 0xfff7,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    COLOR_LIGHT_GREEN = 0xa7f4,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    COLOR_LIGHT_CYAN = 0xa7ff,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    COLOR_LIGHT_BLUE = 0x853f,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    COLOR_PINK = 0xfd3f,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace ui</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
