@@ -9,7 +9,7 @@ protected:
 	Widget *child;
 
 public:
-	SingleChildWidget(Widget *child, const Position &pos = {0.5, 0.5}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
+	SingleChildWidget(Widget *child, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
 
 	~SingleChildWidget() override;
 
