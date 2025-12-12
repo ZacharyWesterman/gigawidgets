@@ -62,7 +62,7 @@ struct Renderable {
 
 	/**
 	 * @brief Get the size of the renderable.
-	 * @return The size of the renderable.
+	 * @return The size of the renderable in pixels.
 	 */
 	virtual Size getSize() const = 0;
 };
