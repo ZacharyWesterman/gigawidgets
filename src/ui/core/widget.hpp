@@ -11,8 +11,10 @@
 #include "position.hpp"
 #include "size.hpp"
 
+#ifndef ONHOLD_EVENT_DEBOUNCE
 // The number of milliseconds to wait after pressing a widget before the "onhold" event gets sent.
 #define ONHOLD_EVENT_DEBOUNCE 200
+#endif
 
 namespace ui {
 

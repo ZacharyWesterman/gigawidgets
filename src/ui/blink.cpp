@@ -4,7 +4,7 @@
 
 namespace ui {
 
-Blink::Blink(Widget *const child) : lastRender(0), visible(false), SingleChildWidget(child) {}
+Blink::Blink(Widget *const child, time_t time) : lastRender(0), visible(false), delay(time / 2), SingleChildWidget(child) {}
 
 void Blink::draw() const {
 	if (visible) {
@@ -16,7 +16,7 @@ bool Blink::update(time_t time_ms) {
 	const bool updated = SingleChildWidget::update(time_ms);
 	redrawParent = child->redrawRequested();
 
-	if (time_ms - lastRender >= 500) {
+	if (time_ms - lastRender >= delay) {
 		lastRender = time_ms;
 		visible = !visible;
 		if (!visible) {
