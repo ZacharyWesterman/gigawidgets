@@ -21,7 +21,7 @@ color_t glow(color_t pixel, const Coords &coords, const Size &size, time_t time)
 	float r, g, b;
 	colorComponents(pixel, r, g, b);
 
-	float ratio = .5f - sin(time_ms * (6.283f / (float)frequency)) / 2.f;
+	float ratio = .5f - sin(time * (6.283f / (float)frequency)) / 2.f;
 
 	return blend(pixel, ui::COLOR_WHITE, ratio);
 }
