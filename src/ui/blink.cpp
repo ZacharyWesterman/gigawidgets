@@ -32,6 +32,10 @@ Size Blink::size() const {
 	return child->size();
 }
 
+Bounds Blink::bounds() const {
+	return parentBounds();
+}
+
 void Blink::drawDone() {
 	redrawParent = false;
 	child->drawDone();

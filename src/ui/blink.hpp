@@ -29,6 +29,7 @@ public:
 	bool update(time_t time_ms) override;
 
 	Size size() const override;
+	Bounds bounds() const override;
 
 	void drawDone() override;
 };
