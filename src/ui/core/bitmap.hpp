@@ -66,7 +66,7 @@ struct TransparentBitmap : public Bitmap {
 	/**
 	 * @brief Display the bitmapt directly onto the screen.
 	 * @param coords The coordinages to render the first pixel [0,0] of the bitmap.
-	 * @param shader An optional pixels shader to apply to each pixel of the bitmap.
+	 * @param shader An optional pixel shader to apply to each pixel of the bitmap.
 	 * @note Shaders will only be applied to \b non-transparent pixels.
 	 */
 	void renderAt(const Coords &coords, const shader_t &shader = 0) const override;
