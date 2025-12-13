@@ -1,3 +1,4 @@
+/// @file single_child_widget.hpp
 #pragma once
 
 #include "../core/widget.hpp"

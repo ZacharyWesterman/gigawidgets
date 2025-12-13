@@ -1,3 +1,4 @@
+/// @file coords.hpp
 #pragma once
 
 #include <cinttypes>

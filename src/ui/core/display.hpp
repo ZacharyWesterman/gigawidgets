@@ -1,3 +1,4 @@
+/// @file display.hpp
 #pragma once
 
 #include <Arduino.h>

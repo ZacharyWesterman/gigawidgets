@@ -1,3 +1,4 @@
+/// @file half_grayscale_v.hpp
 #pragma once
 
 #include "../core/color.hpp"

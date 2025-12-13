@@ -1,3 +1,4 @@
+/// @file grayscale.hpp
 #pragma once
 
 #include "../core/color.hpp"

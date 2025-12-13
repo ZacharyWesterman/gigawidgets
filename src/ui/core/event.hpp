@@ -1,3 +1,4 @@
+/// @file event.hpp
 #pragma once
 
 #include "coords.hpp"

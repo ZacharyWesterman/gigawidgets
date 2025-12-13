@@ -1,3 +1,4 @@
+/// @file negative.hpp
 #pragma once
 
 #include "../core/color.hpp"

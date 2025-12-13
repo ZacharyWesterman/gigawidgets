@@ -1,3 +1,4 @@
+/// @file image.hpp
 #pragma once
 
 #include "core/renderable.hpp"
