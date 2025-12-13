@@ -15,7 +15,6 @@ Bitmap::Bitmap(const Size &size, color_t *const data) : data(data) {
 void Bitmap::renderAt(const Coords &coords, const shader_t &shader) const {
 	time_t now = millis();
 
-	startWrite();
 	for (coord_t y = 0; y < size.y; y++) {
 		for (coord_t x = 0; x < size.x; x++) {
 			color_t pixel = data[y * size.x + x];
@@ -44,7 +43,6 @@ void TransparentBitmap::renderAt(const Coords &coords, const shader_t &shader) c
 
 	color_t bw = (size.x + 7) / 8; // Bitmask scanline pad = whole byte
 	uint8_t b = 0;
-	startWrite();
 	for (coord_t y = 0; y < size.y; y++) {
 		for (coord_t x = 0; x < size.x; x++) {
 			if (x & 7) {

@@ -1,3 +1,4 @@
+/// @file ui.hpp
 #pragma once
 
 #include "ui/blink.hpp"
@@ -15,7 +16,16 @@
 
 namespace ui {
 
+/**
+ * @brief Set the root widget for the UI to render.
+ * @param root The topmost widget where rendering starts.
+ */
 void setRoot(Widget *const root);
+
+/**
+ * @brief Update all UI elements and re-render any areas that need it.
+ * @param block If true, save CPU usage by blocking until it's time to render the screen. If false, return immediately if it's not time to render yet.
+ */
 void render(bool block = true);
 
 } // namespace ui

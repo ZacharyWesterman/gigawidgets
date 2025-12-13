@@ -74,10 +74,6 @@ void fillScreen(color_t color) {
 	display.fillScreen(color);
 }
 
-void byteSwap() {
-	display.byteSwap();
-}
-
 void drawFastVLine(coord_t x, coord_t y, coord_t h, color_t color) {
 	display.drawFastVLine(x, y, h, color);
 }
@@ -96,10 +92,6 @@ color_t *getBuffer() {
 
 color_t *hasBuffer() {
 	return display.hasBuffer();
-}
-
-void startWrite() {
-	display.startWrite();
 }
 
 void endWrite() {
@@ -185,45 +177,14 @@ void fillRoundRect(coord_t x, coord_t y, coord_t width, coord_t height, radius_t
 	display.fillRoundRect(x, y, width, height, radius, color);
 }
 
-void drawBitmap(coord_t x, coord_t y, const uint8_t bitmap[], coord_t w, coord_t h, color_t color) {
-	display.drawBitmap(x, y, bitmap, w, h, color);
-}
-void drawBitmap(coord_t x, coord_t y, const uint8_t bitmap[], coord_t w, coord_t h, color_t color, color_t bg) {
-	display.drawBitmap(x, y, bitmap, w, h, color);
-}
 void drawBitmap(coord_t x, coord_t y, uint8_t *bitmap, coord_t w, coord_t h, color_t color) {
 	display.drawBitmap(x, y, bitmap, w, h, color);
 }
-void drawBitmap(coord_t x, coord_t y, uint8_t *bitmap, coord_t w, coord_t h, color_t color, color_t bg) {
-	display.drawBitmap(x, y, bitmap, w, h, color, bg);
-};
 
-void drawXBitmap(coord_t x, coord_t y, const uint8_t bitmap[], coord_t w, coord_t h, color_t color) {
-	display.drawXBitmap(x, y, bitmap, w, h, color);
-}
-
-void drawGrayscaleBitmap(coord_t x, coord_t y, const uint8_t bitmap[], coord_t w, coord_t h) {
-	display.drawGrayscaleBitmap(x, y, bitmap, w, h);
-}
-void drawGrayscaleBitmap(coord_t x, coord_t y, uint8_t *bitmap, coord_t w, coord_t h) {
-	display.drawGrayscaleBitmap(x, y, bitmap, w, h);
-}
-void drawGrayscaleBitmap(coord_t x, coord_t y, const uint8_t bitmap[], const uint8_t mask[], coord_t w, coord_t h) {
-	display.drawGrayscaleBitmap(x, y, bitmap, mask, w, h);
-}
-void drawGrayscaleBitmap(coord_t x, coord_t y, uint8_t *bitmap, uint8_t *mask, coord_t w, coord_t h) {
-	display.drawGrayscaleBitmap(x, y, bitmap, mask, w, h);
-}
-
-void drawRGBBitmap(coord_t x, coord_t y, const color_t bitmap[], coord_t w, coord_t h) {
-	display.drawRGBBitmap(x, y, bitmap, w, h);
-}
 void drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, coord_t w, coord_t h) {
 	display.drawRGBBitmap(x, y, bitmap, w, h);
 }
-void drawRGBBitmap(coord_t x, coord_t y, const color_t bitmap[], const uint8_t mask[], coord_t w, coord_t h) {
-	display.drawRGBBitmap(x, y, bitmap, mask, w, h);
-}
+
 void drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, uint8_t *mask, coord_t w, coord_t h) {
 	display.drawRGBBitmap(x, y, bitmap, mask, w, h);
 }

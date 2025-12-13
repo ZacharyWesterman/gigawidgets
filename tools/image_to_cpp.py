@@ -22,6 +22,7 @@ image = image.resize((int(argv[2]), int(argv[3])))
 
 width, height = image.size
 
+print('// clang-format off')
 print('#pragma once')
 print('#include "../core/bitmap.hpp"')
 print('namespace ui { namespace icon {')
@@ -63,3 +64,4 @@ if transparent:
 
 print('});')
 print('}}')
+print('// clang-format on')
