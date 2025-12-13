@@ -28,6 +28,7 @@ void setRotation(rotation_t rotation);
 
 /**
  * @brief Check if the screen rotation has changed since the last render cycle.
+ * @return True if the rotation has changed, false otherwise.
  */
 bool rotationChanged();
 
