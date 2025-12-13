@@ -8,6 +8,12 @@
 namespace ui {
 namespace shader {
 
+/**
+ * @brief A pixel shader that converts an image to grayscale.
+ * @param pixel The original pixel color.
+ * @param coords The coords of the current pixel.
+ * @param size The total size of the image.
+ */
 color_t grayscale(color_t pixel, const Coords &coords, const Size &size) {
 	float r, g, b;
 	colorComponents(pixel, r, g, b);
