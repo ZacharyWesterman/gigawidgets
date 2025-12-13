@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,111 +104,135 @@ $(document).ready(function(){initNavTree('classui_1_1Blink.html',''); initResiza
   <div class="headertitle"><div class="title">ui::Blink Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A wrapper widget that causes its child to blink.  
+ <a href="classui_1_1Blink.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="blink_8hpp_source.html">blink.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ui::Blink:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classui_1_1Blink.png" usemap="#ui::Blink_map" alt=""/>
   <map id="ui::Blink_map" name="ui::Blink_map">
-<area href="classui_1_1SingleChildWidget.html" alt="ui::SingleChildWidget" shape="rect" coords="0,56,130,80"/>
-<area href="classui_1_1Widget.html" alt="ui::Widget" shape="rect" coords="0,0,130,24"/>
+<area href="classui_1_1SingleChildWidget.html" title="The common interface for a widget that contains a single child." alt="ui::SingleChildWidget" shape="rect" coords="0,56,130,80"/>
+<area href="classui_1_1Widget.html" title="The common interface for all UI objects." alt="ui::Widget" shape="rect" coords="0,0,130,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5a064c53e77aad0c547865df9fb36c82" id="r_a5a064c53e77aad0c547865df9fb36c82"><td class="memItemLeft" align="right" valign="top"><a id="a5a064c53e77aad0c547865df9fb36c82" name="a5a064c53e77aad0c547865df9fb36c82"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Blink</b> (<a class="el" href="classui_1_1Widget.html">Widget</a> *child)</td></tr>
-<tr class="separator:a5a064c53e77aad0c547865df9fb36c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779b6274dfc9e96c049d34766ff586c3" id="r_a779b6274dfc9e96c049d34766ff586c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Blink.html#a779b6274dfc9e96c049d34766ff586c3">Blink</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *<a class="el" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, time_t time=1000)</td></tr>
+<tr class="memdesc:a779b6274dfc9e96c049d34766ff586c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:a779b6274dfc9e96c049d34766ff586c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9dc2e00870c90af4e01de0fea55a199" id="r_aa9dc2e00870c90af4e01de0fea55a199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199">draw</a> () const override</td></tr>
+<tr class="memdesc:aa9dc2e00870c90af4e01de0fea55a199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the widget to the screen.  <br /></td></tr>
 <tr class="separator:aa9dc2e00870c90af4e01de0fea55a199"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac33e28c4921a6b8e59b6eadc37989695" id="r_ac33e28c4921a6b8e59b6eadc37989695"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695">update</a> (time_t time_ms) override</td></tr>
+<tr class="memdesc:ac33e28c4921a6b8e59b6eadc37989695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update any internal state of the widget, and check if it needs to be re-rendered.  <br /></td></tr>
 <tr class="separator:ac33e28c4921a6b8e59b6eadc37989695"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa08420808c151a180dbf3485e7b579c8" id="r_aa08420808c151a180dbf3485e7b579c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8">size</a> () const override</td></tr>
+<tr class="memdesc:aa08420808c151a180dbf3485e7b579c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the widget.  <br /></td></tr>
 <tr class="separator:aa08420808c151a180dbf3485e7b579c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7dac8f0f31f2c320a9c1fdee1e2a47" id="r_acd7dac8f0f31f2c320a9c1fdee1e2a47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Blink.html#acd7dac8f0f31f2c320a9c1fdee1e2a47">bounds</a> () const override</td></tr>
+<tr class="memdesc:acd7dac8f0f31f2c320a9c1fdee1e2a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rendering bounds of this widget.  <br /></td></tr>
+<tr class="separator:acd7dac8f0f31f2c320a9c1fdee1e2a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cf3346efe547b05b471aa4fc2d1dc95" id="r_a4cf3346efe547b05b471aa4fc2d1dc95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Blink.html#a4cf3346efe547b05b471aa4fc2d1dc95">drawDone</a> () override</td></tr>
+<tr class="memdesc:a4cf3346efe547b05b471aa4fc2d1dc95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset any state variables after rendering has finished.  <br /></td></tr>
 <tr class="separator:a4cf3346efe547b05b471aa4fc2d1dc95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classui_1_1SingleChildWidget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classui_1_1SingleChildWidget')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classui_1_1SingleChildWidget.html">ui::SingleChildWidget</a></td></tr>
-<tr class="memitem:a807ec5902f8831f1ef484aff0cefac68 inherit pub_methods_classui_1_1SingleChildWidget" id="r_a807ec5902f8831f1ef484aff0cefac68"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>SingleChildWidget</b> (<a class="el" href="classui_1_1Widget.html">Widget</a> *child, const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0.5, 0.5}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;padding={0})</td></tr>
-<tr class="separator:a807ec5902f8831f1ef484aff0cefac68 inherit pub_methods_classui_1_1SingleChildWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a55143159a07e508fc904991eb0e9f7 inherit pub_methods_classui_1_1SingleChildWidget" id="r_a9a55143159a07e508fc904991eb0e9f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#a9a55143159a07e508fc904991eb0e9f7">SingleChildWidget</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *<a class="el" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
+<tr class="memdesc:a9a55143159a07e508fc904991eb0e9f7 inherit pub_methods_classui_1_1SingleChildWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:a9a55143159a07e508fc904991eb0e9f7 inherit pub_methods_classui_1_1SingleChildWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5bba83d2ffb27f2a56c435dbfa5ebe inherit pub_methods_classui_1_1SingleChildWidget" id="r_a5f5bba83d2ffb27f2a56c435dbfa5ebe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#a5f5bba83d2ffb27f2a56c435dbfa5ebe">~SingleChildWidget</a> () override</td></tr>
+<tr class="memdesc:a5f5bba83d2ffb27f2a56c435dbfa5ebe inherit pub_methods_classui_1_1SingleChildWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:a5f5bba83d2ffb27f2a56c435dbfa5ebe inherit pub_methods_classui_1_1SingleChildWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7da4c395823d09b753a26c746edfd0a6 inherit pub_methods_classui_1_1SingleChildWidget" id="r_a7da4c395823d09b753a26c746edfd0a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6">size</a> () const override</td></tr>
+<tr class="memdesc:a7da4c395823d09b753a26c746edfd0a6 inherit pub_methods_classui_1_1SingleChildWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the widget.  <br /></td></tr>
 <tr class="separator:a7da4c395823d09b753a26c746edfd0a6 inherit pub_methods_classui_1_1SingleChildWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a927ec2ad9d6b72051aa18eccc2f0b2bf inherit pub_methods_classui_1_1SingleChildWidget" id="r_a927ec2ad9d6b72051aa18eccc2f0b2bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf">update</a> (time_t time_ms) override</td></tr>
+<tr class="memdesc:a927ec2ad9d6b72051aa18eccc2f0b2bf inherit pub_methods_classui_1_1SingleChildWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update any internal state of the widget, and check if it needs to be re-rendered.  <br /></td></tr>
 <tr class="separator:a927ec2ad9d6b72051aa18eccc2f0b2bf inherit pub_methods_classui_1_1SingleChildWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adece8b81ccd394ca73a1e6feb94e78b4 inherit pub_methods_classui_1_1SingleChildWidget" id="r_adece8b81ccd394ca73a1e6feb94e78b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#adece8b81ccd394ca73a1e6feb94e78b4">drawDone</a> () override</td></tr>
+<tr class="memdesc:adece8b81ccd394ca73a1e6feb94e78b4 inherit pub_methods_classui_1_1SingleChildWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset any state variables after rendering has finished.  <br /></td></tr>
 <tr class="separator:adece8b81ccd394ca73a1e6feb94e78b4 inherit pub_methods_classui_1_1SingleChildWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeda011e657a52ee632690111cd99f03c inherit pub_methods_classui_1_1SingleChildWidget" id="r_aeda011e657a52ee632690111cd99f03c"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setChild</b> (<a class="el" href="classui_1_1Widget.html">Widget</a> *const child)</td></tr>
+<tr class="memitem:aeda011e657a52ee632690111cd99f03c inherit pub_methods_classui_1_1SingleChildWidget" id="r_aeda011e657a52ee632690111cd99f03c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#aeda011e657a52ee632690111cd99f03c">setChild</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *const <a class="el" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>)</td></tr>
+<tr class="memdesc:aeda011e657a52ee632690111cd99f03c inherit pub_methods_classui_1_1SingleChildWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the child widget.  <br /></td></tr>
 <tr class="separator:aeda011e657a52ee632690111cd99f03c inherit pub_methods_classui_1_1SingleChildWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c508498d93c5b0ffcf3581f04da0535 inherit pub_methods_classui_1_1SingleChildWidget" id="r_a3c508498d93c5b0ffcf3581f04da0535"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#a3c508498d93c5b0ffcf3581f04da0535">handleEvent</a> (const <a class="el" href="structui_1_1Event.html">Event</a> &amp;event) override</td></tr>
+<tr class="memdesc:a3c508498d93c5b0ffcf3581f04da0535 inherit pub_methods_classui_1_1SingleChildWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle events from the touchscreen.  <br /></td></tr>
 <tr class="separator:a3c508498d93c5b0ffcf3581f04da0535 inherit pub_methods_classui_1_1SingleChildWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classui_1_1Widget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classui_1_1Widget')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classui_1_1Widget.html">ui::Widget</a></td></tr>
-<tr class="memitem:a055431024da457ea81df7028a980c7f1 inherit pub_methods_classui_1_1Widget" id="r_a055431024da457ea81df7028a980c7f1"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Widget</b> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0.5, 0.5}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;padding={0})</td></tr>
-<tr class="separator:a055431024da457ea81df7028a980c7f1 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35d1e9dde4160c11b37460e6b993abd4 inherit pub_methods_classui_1_1Widget" id="r_a35d1e9dde4160c11b37460e6b993abd4"><td class="memItemLeft" align="right" valign="top">
-virtual <a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bounds</b> () const</td></tr>
-<tr class="separator:a35d1e9dde4160c11b37460e6b993abd4 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4887c5301b27fe20e53734ddb56b2f84 inherit pub_methods_classui_1_1Widget" id="r_a4887c5301b27fe20e53734ddb56b2f84"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPos</b> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos)</td></tr>
+<tr class="memitem:aab84ce1c0718591a0f20fc2d10c21613 inherit pub_methods_classui_1_1Widget" id="r_aab84ce1c0718591a0f20fc2d10c21613"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#aab84ce1c0718591a0f20fc2d10c21613">Widget</a> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
+<tr class="memdesc:aab84ce1c0718591a0f20fc2d10c21613 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default widget constructor.  <br /></td></tr>
+<tr class="separator:aab84ce1c0718591a0f20fc2d10c21613 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c972f87a8311912094924be09218e26 inherit pub_methods_classui_1_1Widget" id="r_a3c972f87a8311912094924be09218e26"><td class="memItemLeft" align="right" valign="top">
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Widget</b> ()</td></tr>
+<tr class="memdesc:a3c972f87a8311912094924be09218e26 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default widget destructor. <br /></td></tr>
+<tr class="separator:a3c972f87a8311912094924be09218e26 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4887c5301b27fe20e53734ddb56b2f84 inherit pub_methods_classui_1_1Widget" id="r_a4887c5301b27fe20e53734ddb56b2f84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a4887c5301b27fe20e53734ddb56b2f84">setPos</a> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos)</td></tr>
+<tr class="memdesc:a4887c5301b27fe20e53734ddb56b2f84 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of this widget.  <br /></td></tr>
 <tr class="separator:a4887c5301b27fe20e53734ddb56b2f84 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6835f31d0c1f59064f6e340d2b3a8d1a inherit pub_methods_classui_1_1Widget" id="r_a6835f31d0c1f59064f6e340d2b3a8d1a"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAlign</b> (const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align)</td></tr>
+<tr class="memitem:a6835f31d0c1f59064f6e340d2b3a8d1a inherit pub_methods_classui_1_1Widget" id="r_a6835f31d0c1f59064f6e340d2b3a8d1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6835f31d0c1f59064f6e340d2b3a8d1a">setAlign</a> (const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align)</td></tr>
+<tr class="memdesc:a6835f31d0c1f59064f6e340d2b3a8d1a inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the alignment of this widget.  <br /></td></tr>
 <tr class="separator:a6835f31d0c1f59064f6e340d2b3a8d1a inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add6812540626995a7b35ee0b0a7c6338 inherit pub_methods_classui_1_1Widget" id="r_add6812540626995a7b35ee0b0a7c6338"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawRequested</b> () const</td></tr>
+<tr class="memitem:add6812540626995a7b35ee0b0a7c6338 inherit pub_methods_classui_1_1Widget" id="r_add6812540626995a7b35ee0b0a7c6338"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#add6812540626995a7b35ee0b0a7c6338">redrawRequested</a> () const</td></tr>
+<tr class="memdesc:add6812540626995a7b35ee0b0a7c6338 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this widget has requested for the parent widget to be redrawn.  <br /></td></tr>
 <tr class="separator:add6812540626995a7b35ee0b0a7c6338 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd0e7babb90d380238e17e4be75b7481 inherit pub_methods_classui_1_1Widget" id="r_afd0e7babb90d380238e17e4be75b7481"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setParent</b> (<a class="el" href="classui_1_1Widget.html">Widget</a> *parent)</td></tr>
+<tr class="memitem:afd0e7babb90d380238e17e4be75b7481 inherit pub_methods_classui_1_1Widget" id="r_afd0e7babb90d380238e17e4be75b7481"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#afd0e7babb90d380238e17e4be75b7481">setParent</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *parent)</td></tr>
+<tr class="memdesc:afd0e7babb90d380238e17e4be75b7481 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the parent widget.  <br /></td></tr>
 <tr class="separator:afd0e7babb90d380238e17e4be75b7481 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce26a2110d44208efd1095efa95349b inherit pub_methods_classui_1_1Widget" id="r_a3ce26a2110d44208efd1095efa95349b"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parentBounds</b> () const</td></tr>
+<tr class="memitem:a3ce26a2110d44208efd1095efa95349b inherit pub_methods_classui_1_1Widget" id="r_a3ce26a2110d44208efd1095efa95349b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a3ce26a2110d44208efd1095efa95349b">parentBounds</a> () const</td></tr>
+<tr class="memdesc:a3ce26a2110d44208efd1095efa95349b inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bounds of the parent widget, if any.  <br /></td></tr>
 <tr class="separator:a3ce26a2110d44208efd1095efa95349b inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63e32873bc1771cac42ce12b4aa8f465 inherit pub_methods_classui_1_1Widget" id="r_a63e32873bc1771cac42ce12b4aa8f465"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onclick</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:a63e32873bc1771cac42ce12b4aa8f465 inherit pub_methods_classui_1_1Widget" id="r_a63e32873bc1771cac42ce12b4aa8f465"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a63e32873bc1771cac42ce12b4aa8f465">onclick</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memdesc:a63e32873bc1771cac42ce12b4aa8f465 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on release.  <br /></td></tr>
 <tr class="separator:a63e32873bc1771cac42ce12b4aa8f465 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f66c0c423158cf68fd1ce4cc2520e20 inherit pub_methods_classui_1_1Widget" id="r_a6f66c0c423158cf68fd1ce4cc2520e20"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onclick</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a6f66c0c423158cf68fd1ce4cc2520e20 inherit pub_methods_classui_1_1Widget" id="r_a6f66c0c423158cf68fd1ce4cc2520e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6f66c0c423158cf68fd1ce4cc2520e20">onclick</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a6f66c0c423158cf68fd1ce4cc2520e20 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on release.  <br /></td></tr>
 <tr class="separator:a6f66c0c423158cf68fd1ce4cc2520e20 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c298f6e69a0a87be61b0792161ca7c8 inherit pub_methods_classui_1_1Widget" id="r_a2c298f6e69a0a87be61b0792161ca7c8"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onpress</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:a2c298f6e69a0a87be61b0792161ca7c8 inherit pub_methods_classui_1_1Widget" id="r_a2c298f6e69a0a87be61b0792161ca7c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a2c298f6e69a0a87be61b0792161ca7c8">onpress</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memdesc:a2c298f6e69a0a87be61b0792161ca7c8 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on press.  <br /></td></tr>
 <tr class="separator:a2c298f6e69a0a87be61b0792161ca7c8 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6232eaef6ec3d060e1537704eea4a355 inherit pub_methods_classui_1_1Widget" id="r_a6232eaef6ec3d060e1537704eea4a355"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onpress</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a6232eaef6ec3d060e1537704eea4a355 inherit pub_methods_classui_1_1Widget" id="r_a6232eaef6ec3d060e1537704eea4a355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6232eaef6ec3d060e1537704eea4a355">onpress</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a6232eaef6ec3d060e1537704eea4a355 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on press.  <br /></td></tr>
 <tr class="separator:a6232eaef6ec3d060e1537704eea4a355 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e1457fa8a0ce49e9392996e21084de5 inherit pub_methods_classui_1_1Widget" id="r_a2e1457fa8a0ce49e9392996e21084de5"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onblur</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:a2e1457fa8a0ce49e9392996e21084de5 inherit pub_methods_classui_1_1Widget" id="r_a2e1457fa8a0ce49e9392996e21084de5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a2e1457fa8a0ce49e9392996e21084de5">onblur</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memdesc:a2e1457fa8a0ce49e9392996e21084de5 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers when the widget stops being pressed.  <br /></td></tr>
 <tr class="separator:a2e1457fa8a0ce49e9392996e21084de5 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a659572d4cafc513f944362f2e5f8a447 inherit pub_methods_classui_1_1Widget" id="r_a659572d4cafc513f944362f2e5f8a447"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onblur</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a659572d4cafc513f944362f2e5f8a447 inherit pub_methods_classui_1_1Widget" id="r_a659572d4cafc513f944362f2e5f8a447"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a659572d4cafc513f944362f2e5f8a447">onblur</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a659572d4cafc513f944362f2e5f8a447 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers when the widget stops being pressed.  <br /></td></tr>
 <tr class="separator:a659572d4cafc513f944362f2e5f8a447 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82ab6a69131245c6fd4cab3300417bcb inherit pub_methods_classui_1_1Widget" id="r_a82ab6a69131245c6fd4cab3300417bcb"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onhold</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;, unsigned long)&gt; callback)</td></tr>
+<tr class="memitem:a82ab6a69131245c6fd4cab3300417bcb inherit pub_methods_classui_1_1Widget" id="r_a82ab6a69131245c6fd4cab3300417bcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a82ab6a69131245c6fd4cab3300417bcb">onhold</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;, unsigned long)&gt; callback)</td></tr>
+<tr class="memdesc:a82ab6a69131245c6fd4cab3300417bcb inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that repeatedly triggers when the widget is held for a while.  <br /></td></tr>
 <tr class="separator:a82ab6a69131245c6fd4cab3300417bcb inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40b838533bf7048699a8daabfdf1ff8f inherit pub_methods_classui_1_1Widget" id="r_a40b838533bf7048699a8daabfdf1ff8f"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onhold</b> (std::function&lt; void(unsigned long)&gt; callback)</td></tr>
+<tr class="memitem:a40b838533bf7048699a8daabfdf1ff8f inherit pub_methods_classui_1_1Widget" id="r_a40b838533bf7048699a8daabfdf1ff8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a40b838533bf7048699a8daabfdf1ff8f">onhold</a> (std::function&lt; void(unsigned long)&gt; callback)</td></tr>
+<tr class="memdesc:a40b838533bf7048699a8daabfdf1ff8f inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that repeatedly triggers when the widget is held for a while.  <br /></td></tr>
 <tr class="separator:a40b838533bf7048699a8daabfdf1ff8f inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf2b7f9d32ae943f9a3b870d2e959dd0 inherit pub_methods_classui_1_1Widget" id="r_acf2b7f9d32ae943f9a3b870d2e959dd0"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onrelease</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:acf2b7f9d32ae943f9a3b870d2e959dd0 inherit pub_methods_classui_1_1Widget" id="r_acf2b7f9d32ae943f9a3b870d2e959dd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#acf2b7f9d32ae943f9a3b870d2e959dd0">onrelease</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memdesc:acf2b7f9d32ae943f9a3b870d2e959dd0 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on release.  <br /></td></tr>
 <tr class="separator:acf2b7f9d32ae943f9a3b870d2e959dd0 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77e207ca0b2f1a52f3590f7f37768952 inherit pub_methods_classui_1_1Widget" id="r_a77e207ca0b2f1a52f3590f7f37768952"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onrelease</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a77e207ca0b2f1a52f3590f7f37768952 inherit pub_methods_classui_1_1Widget" id="r_a77e207ca0b2f1a52f3590f7f37768952"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a77e207ca0b2f1a52f3590f7f37768952">onrelease</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a77e207ca0b2f1a52f3590f7f37768952 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on release.  <br /></td></tr>
 <tr class="separator:a77e207ca0b2f1a52f3590f7f37768952 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a255fb68faa381b86b8a4a5e9836bd67a inherit pub_methods_classui_1_1Widget" id="r_a255fb68faa381b86b8a4a5e9836bd67a"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>click</b> ()</td></tr>
+<tr class="memdesc:a255fb68faa381b86b8a4a5e9836bd67a inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onrelease event handler. <br /></td></tr>
 <tr class="separator:a255fb68faa381b86b8a4a5e9836bd67a inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fb9029ea00054ed5f6c6d751616352e inherit pub_methods_classui_1_1Widget" id="r_a0fb9029ea00054ed5f6c6d751616352e"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>press</b> ()</td></tr>
+<tr class="memdesc:a0fb9029ea00054ed5f6c6d751616352e inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onpress event handler. <br /></td></tr>
 <tr class="separator:a0fb9029ea00054ed5f6c6d751616352e inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1e23d7818d99e623e60d2f3a4abbd59 inherit pub_methods_classui_1_1Widget" id="r_ab1e23d7818d99e623e60d2f3a4abbd59"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>blur</b> ()</td></tr>
+<tr class="memdesc:ab1e23d7818d99e623e60d2f3a4abbd59 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onblur event handler. <br /></td></tr>
 <tr class="separator:ab1e23d7818d99e623e60d2f3a4abbd59 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f41f588697ffddb9b97b4706a2eff8c inherit pub_methods_classui_1_1Widget" id="r_a7f41f588697ffddb9b97b4706a2eff8c"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> ()</td></tr>
+<tr class="memdesc:a7f41f588697ffddb9b97b4706a2eff8c inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onrelease event handler. <br /></td></tr>
 <tr class="separator:a7f41f588697ffddb9b97b4706a2eff8c inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea6a1c5a75f30820db9a4114c0291c5 inherit pub_methods_classui_1_1Widget" id="r_adea6a1c5a75f30820db9a4114c0291c5"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>hold</b> (time_t time)</td></tr>
+<tr class="memitem:adea6a1c5a75f30820db9a4114c0291c5 inherit pub_methods_classui_1_1Widget" id="r_adea6a1c5a75f30820db9a4114c0291c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5">hold</a> (time_t time)</td></tr>
+<tr class="memdesc:adea6a1c5a75f30820db9a4114c0291c5 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onhold event handler.  <br /></td></tr>
 <tr class="separator:adea6a1c5a75f30820db9a4114c0291c5 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -215,19 +240,94 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classui_1_1SingleChildWidget"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classui_1_1SingleChildWidget')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classui_1_1SingleChildWidget.html">ui::SingleChildWidget</a></td></tr>
 <tr class="memitem:aed1ad7b5ffa0b67a2640fa0707cf5fc5 inherit pro_attribs_classui_1_1SingleChildWidget" id="r_aed1ad7b5ffa0b67a2640fa0707cf5fc5"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classui_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>child</b></td></tr>
+<tr class="memdesc:aed1ad7b5ffa0b67a2640fa0707cf5fc5 inherit pro_attribs_classui_1_1SingleChildWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">The child widget. <br /></td></tr>
 <tr class="separator:aed1ad7b5ffa0b67a2640fa0707cf5fc5 inherit pro_attribs_classui_1_1SingleChildWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classui_1_1Widget"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classui_1_1Widget')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classui_1_1Widget.html">ui::Widget</a></td></tr>
 <tr class="memitem:a7aacf2d0dd89b4dd3eacad1965e4b56a inherit pro_attribs_classui_1_1Widget" id="r_a7aacf2d0dd89b4dd3eacad1965e4b56a"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structui_1_1Padding.html">Padding</a>&#160;</td><td class="memItemRight" valign="bottom"><b>padding</b></td></tr>
+<tr class="memdesc:a7aacf2d0dd89b4dd3eacad1965e4b56a inherit pro_attribs_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">The padding that will be applied to any child widgets. <br /></td></tr>
 <tr class="separator:a7aacf2d0dd89b4dd3eacad1965e4b56a inherit pro_attribs_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20543186dd7ef34d391371b08abf15c2 inherit pro_attribs_classui_1_1Widget" id="r_a20543186dd7ef34d391371b08abf15c2"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawParent</b></td></tr>
+<tr class="memdesc:a20543186dd7ef34d391371b08abf15c2 inherit pro_attribs_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, force a redraw of the parent and any of its child widgets. <br /></td></tr>
 <tr class="separator:a20543186dd7ef34d391371b08abf15c2 inherit pro_attribs_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39a9cb027602e627af0485e8227663ee inherit pro_attribs_classui_1_1Widget" id="r_a39a9cb027602e627af0485e8227663ee"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></tr>
+<tr class="memdesc:a39a9cb027602e627af0485e8227663ee inherit pro_attribs_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, force a redraw of this widget and any child widgets. <br /></td></tr>
 <tr class="separator:a39a9cb027602e627af0485e8227663ee inherit pro_attribs_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A wrapper widget that causes its child to blink. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a779b6274dfc9e96c049d34766ff586c3" name="a779b6274dfc9e96c049d34766ff586c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779b6274dfc9e96c049d34766ff586c3">&#9670;&#160;</a></span>Blink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Blink::Blink </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classui_1_1Widget.html">Widget</a> *&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>time</em> = <code>1000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>The child widget. </td></tr>
+    <tr><td class="paramname">time</td><td>The number of milliseconds it takes to perform a full on/off cycle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acd7dac8f0f31f2c320a9c1fdee1e2a47" name="acd7dac8f0f31f2c320a9c1fdee1e2a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7dac8f0f31f2c320a9c1fdee1e2a47">&#9670;&#160;</a></span>bounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structui_1_1Bounds.html">Bounds</a> ui::Blink::bounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the rendering bounds of this widget. </p>
+<dl class="section return"><dt>Returns</dt><dd>The bounds that this widget will render in. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This value may be based on the size of the parent widget, and so should <b>never</b> refer to the size of any child widgets! </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classui_1_1Widget.html#a35d1e9dde4160c11b37460e6b993abd4">ui::Widget</a>.</p>
+
+</div>
+</div>
 <a id="aa9dc2e00870c90af4e01de0fea55a199" name="aa9dc2e00870c90af4e01de0fea55a199"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9dc2e00870c90af4e01de0fea55a199">&#9670;&#160;</a></span>draw()</h2>
 
@@ -251,7 +351,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classui_1_1Widget.html">ui::Widget</a>.</p>
+<p>Render the widget to the screen. </p>
+<p>This only gets called when widgets indicate that a redraw is needed of either themselves or their parents. Widgets that implement this method should take care to render as little as they can get away with, to help performance. </p>
+
+<p>Implements <a class="el" href="classui_1_1Widget.html#a4e13c8bfff3f6638dbfd813fbfd530de">ui::Widget</a>.</p>
 
 </div>
 </div>
@@ -278,7 +381,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classui_1_1Widget.html">ui::Widget</a>.</p>
+<p>Reset any state variables after rendering has finished. </p>
+
+<p>Reimplemented from <a class="el" href="classui_1_1Widget.html#a25adfd15fb570c5aa4253a28d18de961">ui::Widget</a>.</p>
 
 </div>
 </div>
@@ -305,7 +410,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classui_1_1Widget.html">ui::Widget</a>.</p>
+<p>Get the size of the widget. </p>
+<dl class="section return"><dt>Returns</dt><dd>The width and height of the widget in pixels. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This value may be based on the size of the child widget, and so should <b>never</b> refer to the size of the parent widget! </dd></dl>
+
+<p>Implements <a class="el" href="classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49">ui::Widget</a>.</p>
 
 </div>
 </div>
@@ -322,7 +431,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
           <td class="memname">bool ui::Blink::update </td>
           <td>(</td>
           <td class="paramtype">time_t&#160;</td>
-          <td class="paramname"><em>time_ms</em></td><td>)</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -333,7 +442,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classui_1_1Widget.html">ui::Widget</a>.</p>
+<p>Update any internal state of the widget, and check if it needs to be re-rendered. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>The current time in milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if this widget needs to be re-rendered. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classui_1_1Widget.html#a3c2a521304a419ca57cce6e0730aa332">ui::Widget</a>.</p>
 
 </div>
 </div>

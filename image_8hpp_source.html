@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,45 +101,60 @@ $(document).ready(function(){initNavTree('image_8hpp_source.html',''); initResiz
   <div class="headertitle"><div class="title">image.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;core/renderable.hpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;core/widget.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classui_1_1Image.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1Image.html">Image</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Renderable.html">Renderable</a> *<span class="keyword">const</span> renderable;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    shader_t shader;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> renderEveryFrame;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classui_1_1Image.html">Image</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Renderable.html">Renderable</a> *<span class="keyword">const</span> renderable, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> draw() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> size() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> update(time_t time_ms) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> setShader(<span class="keyword">const</span> shader_animated_t &amp;shader);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> setShader(<span class="keyword">const</span> shader_oneframe_t &amp;shader);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> removeShader();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<a href="image_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="renderable_8hpp.html">core/renderable.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="widget_8hpp.html">core/widget.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classui_1_1Image.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1Image.html">Image</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Renderable.html">Renderable</a> *<span class="keyword">const</span> renderable;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_typedef" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> shader;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">bool</span> renderEveryFrame;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classui_1_1Image.html#ab75c6a131c9d7731a02b79c926a9caed">   25</a></span>    <a class="code hl_function" href="classui_1_1Image.html#ab75c6a131c9d7731a02b79c926a9caed">Image</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Renderable.html">Renderable</a> *<span class="keyword">const</span> renderable, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos = {0, 0}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align = {ALIGN_LEFT, ALIGN_TOP});</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classui_1_1Image.html#a279edf8f3da547b5e12262c5e2e75475">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Image.html#a279edf8f3da547b5e12262c5e2e75475">draw</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3">   28</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3">size</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042">   29</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042">update</a>(time_t time_ms) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classui_1_1Image.html#acf7760b915633ce656a2db89614f083f">   35</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Image.html#acf7760b915633ce656a2db89614f083f">setShader</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a134e86d04f6930a8adabb909da08b577">shader_animated_t</a> &amp;shader);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classui_1_1Image.html#a2bc13048ee692e4038375d4203ff264e">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Image.html#a2bc13048ee692e4038375d4203ff264e">setShader</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a97baf0716f0f9407b03889c4ea29a75b">shader_oneframe_t</a> &amp;shader);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classui_1_1Image.html#a6e3afff1e53f42e6f09923adb7ec1fcd">   46</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Image.html#a6e3afff1e53f42e6f09923adb7ec1fcd">removeShader</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <span class="comment">// namespace ui</span></div>
-<div class="ttc" id="aclassui_1_1Image_html"><div class="ttname"><a href="classui_1_1Image.html">ui::Image</a></div><div class="ttdef"><b>Definition</b> image.hpp:8</div></div>
-<div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdef"><b>Definition</b> widget.hpp:17</div></div>
-<div class="ttc" id="astructui_1_1Alignment_html"><div class="ttname"><a href="structui_1_1Alignment.html">ui::Alignment</a></div><div class="ttdef"><b>Definition</b> alignment.hpp:15</div></div>
-<div class="ttc" id="astructui_1_1Position_html"><div class="ttname"><a href="structui_1_1Position.html">ui::Position</a></div><div class="ttdef"><b>Definition</b> position.hpp:7</div></div>
-<div class="ttc" id="astructui_1_1Renderable_html"><div class="ttname"><a href="structui_1_1Renderable.html">ui::Renderable</a></div><div class="ttdef"><b>Definition</b> renderable.hpp:15</div></div>
-<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdef"><b>Definition</b> size.hpp:9</div></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace ui</span></div>
+<div class="ttc" id="aclassui_1_1Image_html"><div class="ttname"><a href="classui_1_1Image.html">ui::Image</a></div><div class="ttdoc">Display an arbitrary (non-animated) renderable to the screen with an optional shader.</div><div class="ttdef"><b>Definition</b> image.hpp:12</div></div>
+<div class="ttc" id="aclassui_1_1Image_html_a279edf8f3da547b5e12262c5e2e75475"><div class="ttname"><a href="classui_1_1Image.html#a279edf8f3da547b5e12262c5e2e75475">ui::Image::draw</a></div><div class="ttdeci">void draw() const override</div><div class="ttdoc">Render the widget to the screen.</div></div>
+<div class="ttc" id="aclassui_1_1Image_html_a2bc13048ee692e4038375d4203ff264e"><div class="ttname"><a href="classui_1_1Image.html#a2bc13048ee692e4038375d4203ff264e">ui::Image::setShader</a></div><div class="ttdeci">void setShader(const shader_oneframe_t &amp;shader)</div><div class="ttdoc">Set the image shader to one that only requires rendering once.</div></div>
+<div class="ttc" id="aclassui_1_1Image_html_a36a2f0cd3a0b2aa5ffd2f7ce45957042"><div class="ttname"><a href="classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042">ui::Image::update</a></div><div class="ttdeci">bool update(time_t time_ms) override</div><div class="ttdoc">Update any internal state of the widget, and check if it needs to be re-rendered.</div></div>
+<div class="ttc" id="aclassui_1_1Image_html_a6e3afff1e53f42e6f09923adb7ec1fcd"><div class="ttname"><a href="classui_1_1Image.html#a6e3afff1e53f42e6f09923adb7ec1fcd">ui::Image::removeShader</a></div><div class="ttdeci">void removeShader()</div><div class="ttdoc">Remove the shader from the image, if any exists.</div></div>
+<div class="ttc" id="aclassui_1_1Image_html_ab75c6a131c9d7731a02b79c926a9caed"><div class="ttname"><a href="classui_1_1Image.html#ab75c6a131c9d7731a02b79c926a9caed">ui::Image::Image</a></div><div class="ttdeci">Image(const Renderable *const renderable, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP})</div><div class="ttdoc">Construct an image from some renderable data.</div></div>
+<div class="ttc" id="aclassui_1_1Image_html_ac560e95e7dc92569f2502a65505b95e3"><div class="ttname"><a href="classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3">ui::Image::size</a></div><div class="ttdeci">Size size() const override</div><div class="ttdoc">Get the size of the widget.</div></div>
+<div class="ttc" id="aclassui_1_1Image_html_acf7760b915633ce656a2db89614f083f"><div class="ttname"><a href="classui_1_1Image.html#acf7760b915633ce656a2db89614f083f">ui::Image::setShader</a></div><div class="ttdeci">void setShader(const shader_animated_t &amp;shader)</div><div class="ttdoc">Set the image shader to a new one that requires re-rendering every frame.</div></div>
+<div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdoc">The common interface for all UI objects.</div><div class="ttdef"><b>Definition</b> widget.hpp:24</div></div>
+<div class="ttc" id="arenderable_8hpp_html"><div class="ttname"><a href="renderable_8hpp.html">renderable.hpp</a></div></div>
+<div class="ttc" id="arenderable_8hpp_html_a134e86d04f6930a8adabb909da08b577"><div class="ttname"><a href="renderable_8hpp.html#a134e86d04f6930a8adabb909da08b577">ui::shader_animated_t</a></div><div class="ttdeci">std::function&lt; color_t(color_t color, const Coords &amp;coords, const Size &amp;size, time_t time)&gt; shader_animated_t</div><div class="ttdoc">A pixel shader that may update based on the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:35</div></div>
+<div class="ttc" id="arenderable_8hpp_html_a8e765b43b59de2763f0ec0235e5fedac"><div class="ttname"><a href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">ui::shader_t</a></div><div class="ttdeci">shader_animated_t shader_t</div><div class="ttdoc">A pixel shader that may or may not update based on the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:48</div></div>
+<div class="ttc" id="arenderable_8hpp_html_a97baf0716f0f9407b03889c4ea29a75b"><div class="ttname"><a href="renderable_8hpp.html#a97baf0716f0f9407b03889c4ea29a75b">ui::shader_oneframe_t</a></div><div class="ttdeci">std::function&lt; color_t(color_t color, const Coords &amp;coords, const Size &amp;size)&gt; shader_oneframe_t</div><div class="ttdoc">A pixel shader that's independent of the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:22</div></div>
+<div class="ttc" id="astructui_1_1Alignment_html"><div class="ttname"><a href="structui_1_1Alignment.html">ui::Alignment</a></div><div class="ttdoc">A struct that holds a widget's vertical and horizontal alignment.</div><div class="ttdef"><b>Definition</b> alignment.hpp:22</div></div>
+<div class="ttc" id="astructui_1_1Position_html"><div class="ttname"><a href="structui_1_1Position.html">ui::Position</a></div><div class="ttdoc">A struct that holds the normalized position of a widget.</div><div class="ttdef"><b>Definition</b> position.hpp:15</div></div>
+<div class="ttc" id="astructui_1_1Renderable_html"><div class="ttname"><a href="structui_1_1Renderable.html">ui::Renderable</a></div><div class="ttdoc">An abstract interface for arabitrary renderable objects.</div><div class="ttdef"><b>Definition</b> renderable.hpp:55</div></div>
+<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>
+<div class="ttc" id="awidget_8hpp_html"><div class="ttname"><a href="widget_8hpp.html">widget.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><b>image.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="image_8hpp.html">image.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

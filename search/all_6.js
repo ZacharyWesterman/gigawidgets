@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['padding_0',['Padding',['../structui_1_1Padding.html',1,'ui']]],
-  ['position_1',['Position',['../structui_1_1Position.html',1,'ui']]]
+  ['getsize_0',['getsize',['../structui_1_1Bitmap.html#a8d4bab60bbcee6b18c9587e1bc2fdb84',1,'ui::Bitmap::getSize()'],['../structui_1_1Renderable.html#a6fa678fbb88daa04743ea91aae789ea5',1,'ui::Renderable::getSize()']]],
+  ['gettouchevent_1',['getTouchEvent',['../display_8hpp.html#ace709437101ad11c336fab6de6537047',1,'ui']]],
+  ['gigawidgets_2',['GigaWidgets',['../index.html',1,'']]],
+  ['glow_3',['glow',['../glow_8hpp.html#a8af2b4c61c6064fcac1a2d5eed22b067',1,'ui::shader']]],
+  ['glow_2ehpp_4',['glow.hpp',['../glow_8hpp.html',1,'']]],
+  ['grayscale_5',['grayscale',['../grayscale_8hpp.html#ad3306e8724e6666441b357dd97349703',1,'ui::shader']]],
+  ['grayscale_2ehpp_6',['grayscale.hpp',['../grayscale_8hpp.html',1,'']]]
 ];

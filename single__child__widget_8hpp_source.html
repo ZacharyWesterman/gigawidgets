@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,48 +101,55 @@ $(document).ready(function(){initNavTree('single__child__widget_8hpp_source.html
   <div class="headertitle"><div class="title">single_child_widget.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../core/widget.hpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1SingleChildWidget.html">SingleChildWidget</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *child;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="classui_1_1SingleChildWidget.html">SingleChildWidget</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *child, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos = {0.5, 0.5}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align = {ALIGN_LEFT, ALIGN_TOP}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Padding.html">Padding</a> &amp;padding = {0});</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classui_1_1SingleChildWidget.html">~SingleChildWidget</a>() <span class="keyword">override</span>;</div>
+<a href="single__child__widget_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../core/widget.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1SingleChildWidget.html">SingleChildWidget</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">   14</a></span>    <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *<a class="code hl_variable" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> size() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> update(time_t time_ms) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> drawDone() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> setChild(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *<span class="keyword">const</span> child);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> handleEvent(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Event.html">Event</a> &amp;event) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html#a9a55143159a07e508fc904991eb0e9f7">   24</a></span>    <a class="code hl_function" href="classui_1_1SingleChildWidget.html#a9a55143159a07e508fc904991eb0e9f7">SingleChildWidget</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *<a class="code hl_variable" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos = {0, 0}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align = {ALIGN_LEFT, ALIGN_TOP}, <span class="keyword">const</span> Padding &amp;<a class="code hl_variable" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a> = {0});</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html#a5f5bba83d2ffb27f2a56c435dbfa5ebe">   31</a></span>    <a class="code hl_function" href="classui_1_1SingleChildWidget.html#a5f5bba83d2ffb27f2a56c435dbfa5ebe">~SingleChildWidget</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6">   33</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6">size</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf">   34</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf">update</a>(time_t time_ms) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html#adece8b81ccd394ca73a1e6feb94e78b4">   35</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1SingleChildWidget.html#adece8b81ccd394ca73a1e6feb94e78b4">drawDone</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html#aeda011e657a52ee632690111cd99f03c">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1SingleChildWidget.html#aeda011e657a52ee632690111cd99f03c">setChild</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *<span class="keyword">const</span> <a class="code hl_variable" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classui_1_1SingleChildWidget.html#a3c508498d93c5b0ffcf3581f04da0535">   45</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classui_1_1SingleChildWidget.html#a3c508498d93c5b0ffcf3581f04da0535">handleEvent</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Event.html">Event</a> &amp;event) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>} <span class="comment">// namespace ui</span></div>
-<div class="ttc" id="aclassui_1_1SingleChildWidget_html"><div class="ttname"><a href="classui_1_1SingleChildWidget.html">ui::SingleChildWidget</a></div><div class="ttdef"><b>Definition</b> single_child_widget.hpp:7</div></div>
-<div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdef"><b>Definition</b> widget.hpp:17</div></div>
-<div class="ttc" id="astructui_1_1Alignment_html"><div class="ttname"><a href="structui_1_1Alignment.html">ui::Alignment</a></div><div class="ttdef"><b>Definition</b> alignment.hpp:15</div></div>
-<div class="ttc" id="astructui_1_1Event_html"><div class="ttname"><a href="structui_1_1Event.html">ui::Event</a></div><div class="ttdef"><b>Definition</b> event.hpp:13</div></div>
-<div class="ttc" id="astructui_1_1Padding_html"><div class="ttname"><a href="structui_1_1Padding.html">ui::Padding</a></div><div class="ttdef"><b>Definition</b> padding.hpp:9</div></div>
-<div class="ttc" id="astructui_1_1Position_html"><div class="ttname"><a href="structui_1_1Position.html">ui::Position</a></div><div class="ttdef"><b>Definition</b> position.hpp:7</div></div>
-<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdef"><b>Definition</b> size.hpp:9</div></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace ui</span></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html"><div class="ttname"><a href="classui_1_1SingleChildWidget.html">ui::SingleChildWidget</a></div><div class="ttdoc">The common interface for a widget that contains a single child.</div><div class="ttdef"><b>Definition</b> single_child_widget.hpp:11</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html_a3c508498d93c5b0ffcf3581f04da0535"><div class="ttname"><a href="classui_1_1SingleChildWidget.html#a3c508498d93c5b0ffcf3581f04da0535">ui::SingleChildWidget::handleEvent</a></div><div class="ttdeci">bool handleEvent(const Event &amp;event) override</div><div class="ttdoc">Handle events from the touchscreen.</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html_a5f5bba83d2ffb27f2a56c435dbfa5ebe"><div class="ttname"><a href="classui_1_1SingleChildWidget.html#a5f5bba83d2ffb27f2a56c435dbfa5ebe">ui::SingleChildWidget::~SingleChildWidget</a></div><div class="ttdeci">~SingleChildWidget() override</div><div class="ttdoc">Destructor.</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html_a7da4c395823d09b753a26c746edfd0a6"><div class="ttname"><a href="classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6">ui::SingleChildWidget::size</a></div><div class="ttdeci">Size size() const override</div><div class="ttdoc">Get the size of the widget.</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html_a927ec2ad9d6b72051aa18eccc2f0b2bf"><div class="ttname"><a href="classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf">ui::SingleChildWidget::update</a></div><div class="ttdeci">bool update(time_t time_ms) override</div><div class="ttdoc">Update any internal state of the widget, and check if it needs to be re-rendered.</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html_a9a55143159a07e508fc904991eb0e9f7"><div class="ttname"><a href="classui_1_1SingleChildWidget.html#a9a55143159a07e508fc904991eb0e9f7">ui::SingleChildWidget::SingleChildWidget</a></div><div class="ttdeci">SingleChildWidget(Widget *child, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, const Padding &amp;padding={0})</div><div class="ttdoc">Constructor.</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html_adece8b81ccd394ca73a1e6feb94e78b4"><div class="ttname"><a href="classui_1_1SingleChildWidget.html#adece8b81ccd394ca73a1e6feb94e78b4">ui::SingleChildWidget::drawDone</a></div><div class="ttdeci">void drawDone() override</div><div class="ttdoc">Reset any state variables after rendering has finished.</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html_aed1ad7b5ffa0b67a2640fa0707cf5fc5"><div class="ttname"><a href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">ui::SingleChildWidget::child</a></div><div class="ttdeci">Widget * child</div><div class="ttdoc">The child widget.</div><div class="ttdef"><b>Definition</b> single_child_widget.hpp:14</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html_aeda011e657a52ee632690111cd99f03c"><div class="ttname"><a href="classui_1_1SingleChildWidget.html#aeda011e657a52ee632690111cd99f03c">ui::SingleChildWidget::setChild</a></div><div class="ttdeci">void setChild(Widget *const child)</div><div class="ttdoc">Set the child widget.</div></div>
+<div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdoc">The common interface for all UI objects.</div><div class="ttdef"><b>Definition</b> widget.hpp:24</div></div>
+<div class="ttc" id="aclassui_1_1Widget_html_a7aacf2d0dd89b4dd3eacad1965e4b56a"><div class="ttname"><a href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">ui::Widget::padding</a></div><div class="ttdeci">Padding padding</div><div class="ttdoc">The padding that will be applied to any child widgets.</div><div class="ttdef"><b>Definition</b> widget.hpp:49</div></div>
+<div class="ttc" id="astructui_1_1Alignment_html"><div class="ttname"><a href="structui_1_1Alignment.html">ui::Alignment</a></div><div class="ttdoc">A struct that holds a widget's vertical and horizontal alignment.</div><div class="ttdef"><b>Definition</b> alignment.hpp:22</div></div>
+<div class="ttc" id="astructui_1_1Event_html"><div class="ttname"><a href="structui_1_1Event.html">ui::Event</a></div><div class="ttdoc">A touchscreen event.</div><div class="ttdef"><b>Definition</b> event.hpp:23</div></div>
+<div class="ttc" id="astructui_1_1Position_html"><div class="ttname"><a href="structui_1_1Position.html">ui::Position</a></div><div class="ttdoc">A struct that holds the normalized position of a widget.</div><div class="ttdef"><b>Definition</b> position.hpp:15</div></div>
+<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_184a71f9121078284806f5726eb66ba6.html">containers</a></li><li class="navelem"><b>single_child_widget.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_184a71f9121078284806f5726eb66ba6.html">containers</a></li><li class="navelem"><a class="el" href="single__child__widget_8hpp.html">single_child_widget.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,41 +101,53 @@ $(document).ready(function(){initNavTree('blink_8hpp_source.html',''); initResiz
   <div class="headertitle"><div class="title">blink.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;containers/single_child_widget.hpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classui_1_1Blink.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1Blink.html">Blink</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1SingleChildWidget.html">SingleChildWidget</a> {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastRender;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">bool</span> visible;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="classui_1_1Blink.html">Blink</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *child);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> draw() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">bool</span> update(time_t time_ms) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> size() <span class="keyword">const override</span>;</div>
+<a href="blink_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="single__child__widget_8hpp.html">containers/single_child_widget.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classui_1_1Blink.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1Blink.html">Blink</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1SingleChildWidget.html">SingleChildWidget</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    time_t lastRender;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    time_t delay;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> visible;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> drawDone() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classui_1_1Blink.html#a779b6274dfc9e96c049d34766ff586c3">   26</a></span>    <a class="code hl_function" href="classui_1_1Blink.html#a779b6274dfc9e96c049d34766ff586c3">Blink</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *<a class="code hl_variable" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, time_t time = 1000);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199">   28</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199">draw</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695">   29</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695">update</a>(time_t time_ms) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8">   31</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8">size</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classui_1_1Blink.html#acd7dac8f0f31f2c320a9c1fdee1e2a47">   32</a></span>    <a class="code hl_struct" href="structui_1_1Bounds.html">Bounds</a> <a class="code hl_function" href="classui_1_1Blink.html#acd7dac8f0f31f2c320a9c1fdee1e2a47">bounds</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classui_1_1Blink.html#a4cf3346efe547b05b471aa4fc2d1dc95">   34</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Blink.html#a4cf3346efe547b05b471aa4fc2d1dc95">drawDone</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <span class="comment">// namespace ui</span></div>
-<div class="ttc" id="aclassui_1_1Blink_html"><div class="ttname"><a href="classui_1_1Blink.html">ui::Blink</a></div><div class="ttdef"><b>Definition</b> blink.hpp:7</div></div>
-<div class="ttc" id="aclassui_1_1SingleChildWidget_html"><div class="ttname"><a href="classui_1_1SingleChildWidget.html">ui::SingleChildWidget</a></div><div class="ttdef"><b>Definition</b> single_child_widget.hpp:7</div></div>
-<div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdef"><b>Definition</b> widget.hpp:17</div></div>
-<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdef"><b>Definition</b> size.hpp:9</div></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <span class="comment">// namespace ui</span></div>
+<div class="ttc" id="aclassui_1_1Blink_html"><div class="ttname"><a href="classui_1_1Blink.html">ui::Blink</a></div><div class="ttdoc">A wrapper widget that causes its child to blink.</div><div class="ttdef"><b>Definition</b> blink.hpp:11</div></div>
+<div class="ttc" id="aclassui_1_1Blink_html_a4cf3346efe547b05b471aa4fc2d1dc95"><div class="ttname"><a href="classui_1_1Blink.html#a4cf3346efe547b05b471aa4fc2d1dc95">ui::Blink::drawDone</a></div><div class="ttdeci">void drawDone() override</div><div class="ttdoc">Reset any state variables after rendering has finished.</div></div>
+<div class="ttc" id="aclassui_1_1Blink_html_a779b6274dfc9e96c049d34766ff586c3"><div class="ttname"><a href="classui_1_1Blink.html#a779b6274dfc9e96c049d34766ff586c3">ui::Blink::Blink</a></div><div class="ttdeci">Blink(Widget *child, time_t time=1000)</div><div class="ttdoc">Constructor.</div></div>
+<div class="ttc" id="aclassui_1_1Blink_html_aa08420808c151a180dbf3485e7b579c8"><div class="ttname"><a href="classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8">ui::Blink::size</a></div><div class="ttdeci">Size size() const override</div><div class="ttdoc">Get the size of the widget.</div></div>
+<div class="ttc" id="aclassui_1_1Blink_html_aa9dc2e00870c90af4e01de0fea55a199"><div class="ttname"><a href="classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199">ui::Blink::draw</a></div><div class="ttdeci">void draw() const override</div><div class="ttdoc">Render the widget to the screen.</div></div>
+<div class="ttc" id="aclassui_1_1Blink_html_ac33e28c4921a6b8e59b6eadc37989695"><div class="ttname"><a href="classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695">ui::Blink::update</a></div><div class="ttdeci">bool update(time_t time_ms) override</div><div class="ttdoc">Update any internal state of the widget, and check if it needs to be re-rendered.</div></div>
+<div class="ttc" id="aclassui_1_1Blink_html_acd7dac8f0f31f2c320a9c1fdee1e2a47"><div class="ttname"><a href="classui_1_1Blink.html#acd7dac8f0f31f2c320a9c1fdee1e2a47">ui::Blink::bounds</a></div><div class="ttdeci">Bounds bounds() const override</div><div class="ttdoc">Get the rendering bounds of this widget.</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html"><div class="ttname"><a href="classui_1_1SingleChildWidget.html">ui::SingleChildWidget</a></div><div class="ttdoc">The common interface for a widget that contains a single child.</div><div class="ttdef"><b>Definition</b> single_child_widget.hpp:11</div></div>
+<div class="ttc" id="aclassui_1_1SingleChildWidget_html_aed1ad7b5ffa0b67a2640fa0707cf5fc5"><div class="ttname"><a href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">ui::SingleChildWidget::child</a></div><div class="ttdeci">Widget * child</div><div class="ttdoc">The child widget.</div><div class="ttdef"><b>Definition</b> single_child_widget.hpp:14</div></div>
+<div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdoc">The common interface for all UI objects.</div><div class="ttdef"><b>Definition</b> widget.hpp:24</div></div>
+<div class="ttc" id="asingle__child__widget_8hpp_html"><div class="ttname"><a href="single__child__widget_8hpp.html">single_child_widget.hpp</a></div></div>
+<div class="ttc" id="astructui_1_1Bounds_html"><div class="ttname"><a href="structui_1_1Bounds.html">ui::Bounds</a></div><div class="ttdoc">A struct that holds the pixel space that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> bounds.hpp:11</div></div>
+<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><b>blink.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="blink_8hpp.html">blink.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

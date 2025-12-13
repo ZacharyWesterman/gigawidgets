@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -104,117 +105,816 @@ $(document).ready(function(){initNavTree('classui_1_1Widget.html',''); initResiz
   <div class="headertitle"><div class="title">ui::Widget Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The common interface for all UI objects.  
+ <a href="classui_1_1Widget.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="widget_8hpp_source.html">widget.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ui::Widget:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classui_1_1Widget.png" usemap="#ui::Widget_map" alt=""/>
   <map id="ui::Widget_map" name="ui::Widget_map">
-<area href="classui_1_1Image.html" alt="ui::Image" shape="rect" coords="0,56,130,80"/>
-<area href="classui_1_1SingleChildWidget.html" alt="ui::SingleChildWidget" shape="rect" coords="140,56,270,80"/>
-<area href="classui_1_1Text.html" alt="ui::Text" shape="rect" coords="280,56,410,80"/>
-<area href="classui_1_1Blink.html" alt="ui::Blink" shape="rect" coords="0,112,130,136"/>
-<area href="classui_1_1Body.html" alt="ui::Body" shape="rect" coords="140,112,270,136"/>
-<area href="classui_1_1Button.html" alt="ui::Button" shape="rect" coords="280,112,410,136"/>
+<area href="classui_1_1Image.html" title="Display an arbitrary (non-animated) renderable to the screen with an optional shader." alt="ui::Image" shape="rect" coords="0,56,130,80"/>
+<area href="classui_1_1SingleChildWidget.html" title="The common interface for a widget that contains a single child." alt="ui::SingleChildWidget" shape="rect" coords="140,56,270,80"/>
+<area href="classui_1_1Text.html" title="Display text to the screen." alt="ui::Text" shape="rect" coords="280,56,410,80"/>
+<area href="classui_1_1Blink.html" title="A wrapper widget that causes its child to blink." alt="ui::Blink" shape="rect" coords="0,112,130,136"/>
+<area href="classui_1_1Body.html" title="The root widget of a UI." alt="ui::Body" shape="rect" coords="140,112,270,136"/>
+<area href="classui_1_1Button.html" title="A basic widget that displays a rounded rectangle behind another widget." alt="ui::Button" shape="rect" coords="280,112,410,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a055431024da457ea81df7028a980c7f1" id="r_a055431024da457ea81df7028a980c7f1"><td class="memItemLeft" align="right" valign="top"><a id="a055431024da457ea81df7028a980c7f1" name="a055431024da457ea81df7028a980c7f1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Widget</b> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0.5, 0.5}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;padding={0})</td></tr>
-<tr class="separator:a055431024da457ea81df7028a980c7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e13c8bfff3f6638dbfd813fbfd530de" id="r_a4e13c8bfff3f6638dbfd813fbfd530de"><td class="memItemLeft" align="right" valign="top"><a id="a4e13c8bfff3f6638dbfd813fbfd530de" name="a4e13c8bfff3f6638dbfd813fbfd530de"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> () const =0</td></tr>
+<tr class="memitem:aab84ce1c0718591a0f20fc2d10c21613" id="r_aab84ce1c0718591a0f20fc2d10c21613"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#aab84ce1c0718591a0f20fc2d10c21613">Widget</a> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
+<tr class="memdesc:aab84ce1c0718591a0f20fc2d10c21613"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default widget constructor.  <br /></td></tr>
+<tr class="separator:aab84ce1c0718591a0f20fc2d10c21613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e13c8bfff3f6638dbfd813fbfd530de" id="r_a4e13c8bfff3f6638dbfd813fbfd530de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a4e13c8bfff3f6638dbfd813fbfd530de">draw</a> () const =0</td></tr>
+<tr class="memdesc:a4e13c8bfff3f6638dbfd813fbfd530de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the widget to the screen.  <br /></td></tr>
 <tr class="separator:a4e13c8bfff3f6638dbfd813fbfd530de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c2a521304a419ca57cce6e0730aa332" id="r_a3c2a521304a419ca57cce6e0730aa332"><td class="memItemLeft" align="right" valign="top"><a id="a3c2a521304a419ca57cce6e0730aa332" name="a3c2a521304a419ca57cce6e0730aa332"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (time_t time)</td></tr>
+<tr class="memitem:a3c972f87a8311912094924be09218e26" id="r_a3c972f87a8311912094924be09218e26"><td class="memItemLeft" align="right" valign="top"><a id="a3c972f87a8311912094924be09218e26" name="a3c972f87a8311912094924be09218e26"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Widget</b> ()</td></tr>
+<tr class="memdesc:a3c972f87a8311912094924be09218e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default widget destructor. <br /></td></tr>
+<tr class="separator:a3c972f87a8311912094924be09218e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c2a521304a419ca57cce6e0730aa332" id="r_a3c2a521304a419ca57cce6e0730aa332"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a3c2a521304a419ca57cce6e0730aa332">update</a> (time_t time)</td></tr>
+<tr class="memdesc:a3c2a521304a419ca57cce6e0730aa332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update any internal state of the widget, and check if it needs to be re-rendered.  <br /></td></tr>
 <tr class="separator:a3c2a521304a419ca57cce6e0730aa332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46e62c602135d86aaa99788bbf306a49" id="r_a46e62c602135d86aaa99788bbf306a49"><td class="memItemLeft" align="right" valign="top"><a id="a46e62c602135d86aaa99788bbf306a49" name="a46e62c602135d86aaa99788bbf306a49"></a>
-virtual <a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const =0</td></tr>
+<tr class="memitem:a46e62c602135d86aaa99788bbf306a49" id="r_a46e62c602135d86aaa99788bbf306a49"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49">size</a> () const =0</td></tr>
+<tr class="memdesc:a46e62c602135d86aaa99788bbf306a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the widget.  <br /></td></tr>
 <tr class="separator:a46e62c602135d86aaa99788bbf306a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35d1e9dde4160c11b37460e6b993abd4" id="r_a35d1e9dde4160c11b37460e6b993abd4"><td class="memItemLeft" align="right" valign="top"><a id="a35d1e9dde4160c11b37460e6b993abd4" name="a35d1e9dde4160c11b37460e6b993abd4"></a>
-virtual <a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bounds</b> () const</td></tr>
+<tr class="memitem:a35d1e9dde4160c11b37460e6b993abd4" id="r_a35d1e9dde4160c11b37460e6b993abd4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a35d1e9dde4160c11b37460e6b993abd4">bounds</a> () const</td></tr>
+<tr class="memdesc:a35d1e9dde4160c11b37460e6b993abd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rendering bounds of this widget.  <br /></td></tr>
 <tr class="separator:a35d1e9dde4160c11b37460e6b993abd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4887c5301b27fe20e53734ddb56b2f84" id="r_a4887c5301b27fe20e53734ddb56b2f84"><td class="memItemLeft" align="right" valign="top"><a id="a4887c5301b27fe20e53734ddb56b2f84" name="a4887c5301b27fe20e53734ddb56b2f84"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPos</b> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos)</td></tr>
+<tr class="memitem:a4887c5301b27fe20e53734ddb56b2f84" id="r_a4887c5301b27fe20e53734ddb56b2f84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a4887c5301b27fe20e53734ddb56b2f84">setPos</a> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos)</td></tr>
+<tr class="memdesc:a4887c5301b27fe20e53734ddb56b2f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of this widget.  <br /></td></tr>
 <tr class="separator:a4887c5301b27fe20e53734ddb56b2f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6835f31d0c1f59064f6e340d2b3a8d1a" id="r_a6835f31d0c1f59064f6e340d2b3a8d1a"><td class="memItemLeft" align="right" valign="top"><a id="a6835f31d0c1f59064f6e340d2b3a8d1a" name="a6835f31d0c1f59064f6e340d2b3a8d1a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAlign</b> (const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align)</td></tr>
+<tr class="memitem:a6835f31d0c1f59064f6e340d2b3a8d1a" id="r_a6835f31d0c1f59064f6e340d2b3a8d1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6835f31d0c1f59064f6e340d2b3a8d1a">setAlign</a> (const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align)</td></tr>
+<tr class="memdesc:a6835f31d0c1f59064f6e340d2b3a8d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the alignment of this widget.  <br /></td></tr>
 <tr class="separator:a6835f31d0c1f59064f6e340d2b3a8d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add6812540626995a7b35ee0b0a7c6338" id="r_add6812540626995a7b35ee0b0a7c6338"><td class="memItemLeft" align="right" valign="top"><a id="add6812540626995a7b35ee0b0a7c6338" name="add6812540626995a7b35ee0b0a7c6338"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawRequested</b> () const</td></tr>
+<tr class="memitem:add6812540626995a7b35ee0b0a7c6338" id="r_add6812540626995a7b35ee0b0a7c6338"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#add6812540626995a7b35ee0b0a7c6338">redrawRequested</a> () const</td></tr>
+<tr class="memdesc:add6812540626995a7b35ee0b0a7c6338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this widget has requested for the parent widget to be redrawn.  <br /></td></tr>
 <tr class="separator:add6812540626995a7b35ee0b0a7c6338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25adfd15fb570c5aa4253a28d18de961" id="r_a25adfd15fb570c5aa4253a28d18de961"><td class="memItemLeft" align="right" valign="top"><a id="a25adfd15fb570c5aa4253a28d18de961" name="a25adfd15fb570c5aa4253a28d18de961"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawDone</b> ()</td></tr>
+<tr class="memitem:a25adfd15fb570c5aa4253a28d18de961" id="r_a25adfd15fb570c5aa4253a28d18de961"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a25adfd15fb570c5aa4253a28d18de961">drawDone</a> ()</td></tr>
+<tr class="memdesc:a25adfd15fb570c5aa4253a28d18de961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset any state variables after rendering has finished.  <br /></td></tr>
 <tr class="separator:a25adfd15fb570c5aa4253a28d18de961"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd0e7babb90d380238e17e4be75b7481" id="r_afd0e7babb90d380238e17e4be75b7481"><td class="memItemLeft" align="right" valign="top"><a id="afd0e7babb90d380238e17e4be75b7481" name="afd0e7babb90d380238e17e4be75b7481"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setParent</b> (<a class="el" href="classui_1_1Widget.html">Widget</a> *parent)</td></tr>
+<tr class="memitem:afd0e7babb90d380238e17e4be75b7481" id="r_afd0e7babb90d380238e17e4be75b7481"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#afd0e7babb90d380238e17e4be75b7481">setParent</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *parent)</td></tr>
+<tr class="memdesc:afd0e7babb90d380238e17e4be75b7481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the parent widget.  <br /></td></tr>
 <tr class="separator:afd0e7babb90d380238e17e4be75b7481"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce26a2110d44208efd1095efa95349b" id="r_a3ce26a2110d44208efd1095efa95349b"><td class="memItemLeft" align="right" valign="top"><a id="a3ce26a2110d44208efd1095efa95349b" name="a3ce26a2110d44208efd1095efa95349b"></a>
-<a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parentBounds</b> () const</td></tr>
+<tr class="memitem:a3ce26a2110d44208efd1095efa95349b" id="r_a3ce26a2110d44208efd1095efa95349b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a3ce26a2110d44208efd1095efa95349b">parentBounds</a> () const</td></tr>
+<tr class="memdesc:a3ce26a2110d44208efd1095efa95349b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bounds of the parent widget, if any.  <br /></td></tr>
 <tr class="separator:a3ce26a2110d44208efd1095efa95349b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63e32873bc1771cac42ce12b4aa8f465" id="r_a63e32873bc1771cac42ce12b4aa8f465"><td class="memItemLeft" align="right" valign="top"><a id="a63e32873bc1771cac42ce12b4aa8f465" name="a63e32873bc1771cac42ce12b4aa8f465"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onclick</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:a63e32873bc1771cac42ce12b4aa8f465" id="r_a63e32873bc1771cac42ce12b4aa8f465"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a63e32873bc1771cac42ce12b4aa8f465">onclick</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memdesc:a63e32873bc1771cac42ce12b4aa8f465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on release.  <br /></td></tr>
 <tr class="separator:a63e32873bc1771cac42ce12b4aa8f465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f66c0c423158cf68fd1ce4cc2520e20" id="r_a6f66c0c423158cf68fd1ce4cc2520e20"><td class="memItemLeft" align="right" valign="top"><a id="a6f66c0c423158cf68fd1ce4cc2520e20" name="a6f66c0c423158cf68fd1ce4cc2520e20"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onclick</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a6f66c0c423158cf68fd1ce4cc2520e20" id="r_a6f66c0c423158cf68fd1ce4cc2520e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6f66c0c423158cf68fd1ce4cc2520e20">onclick</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a6f66c0c423158cf68fd1ce4cc2520e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on release.  <br /></td></tr>
 <tr class="separator:a6f66c0c423158cf68fd1ce4cc2520e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c298f6e69a0a87be61b0792161ca7c8" id="r_a2c298f6e69a0a87be61b0792161ca7c8"><td class="memItemLeft" align="right" valign="top"><a id="a2c298f6e69a0a87be61b0792161ca7c8" name="a2c298f6e69a0a87be61b0792161ca7c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onpress</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:a2c298f6e69a0a87be61b0792161ca7c8" id="r_a2c298f6e69a0a87be61b0792161ca7c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a2c298f6e69a0a87be61b0792161ca7c8">onpress</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memdesc:a2c298f6e69a0a87be61b0792161ca7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on press.  <br /></td></tr>
 <tr class="separator:a2c298f6e69a0a87be61b0792161ca7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6232eaef6ec3d060e1537704eea4a355" id="r_a6232eaef6ec3d060e1537704eea4a355"><td class="memItemLeft" align="right" valign="top"><a id="a6232eaef6ec3d060e1537704eea4a355" name="a6232eaef6ec3d060e1537704eea4a355"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onpress</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a6232eaef6ec3d060e1537704eea4a355" id="r_a6232eaef6ec3d060e1537704eea4a355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6232eaef6ec3d060e1537704eea4a355">onpress</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a6232eaef6ec3d060e1537704eea4a355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on press.  <br /></td></tr>
 <tr class="separator:a6232eaef6ec3d060e1537704eea4a355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e1457fa8a0ce49e9392996e21084de5" id="r_a2e1457fa8a0ce49e9392996e21084de5"><td class="memItemLeft" align="right" valign="top"><a id="a2e1457fa8a0ce49e9392996e21084de5" name="a2e1457fa8a0ce49e9392996e21084de5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onblur</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:a2e1457fa8a0ce49e9392996e21084de5" id="r_a2e1457fa8a0ce49e9392996e21084de5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a2e1457fa8a0ce49e9392996e21084de5">onblur</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memdesc:a2e1457fa8a0ce49e9392996e21084de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers when the widget stops being pressed.  <br /></td></tr>
 <tr class="separator:a2e1457fa8a0ce49e9392996e21084de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a659572d4cafc513f944362f2e5f8a447" id="r_a659572d4cafc513f944362f2e5f8a447"><td class="memItemLeft" align="right" valign="top"><a id="a659572d4cafc513f944362f2e5f8a447" name="a659572d4cafc513f944362f2e5f8a447"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onblur</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a659572d4cafc513f944362f2e5f8a447" id="r_a659572d4cafc513f944362f2e5f8a447"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a659572d4cafc513f944362f2e5f8a447">onblur</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a659572d4cafc513f944362f2e5f8a447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers when the widget stops being pressed.  <br /></td></tr>
 <tr class="separator:a659572d4cafc513f944362f2e5f8a447"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82ab6a69131245c6fd4cab3300417bcb" id="r_a82ab6a69131245c6fd4cab3300417bcb"><td class="memItemLeft" align="right" valign="top"><a id="a82ab6a69131245c6fd4cab3300417bcb" name="a82ab6a69131245c6fd4cab3300417bcb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onhold</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;, unsigned long)&gt; callback)</td></tr>
+<tr class="memitem:a82ab6a69131245c6fd4cab3300417bcb" id="r_a82ab6a69131245c6fd4cab3300417bcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a82ab6a69131245c6fd4cab3300417bcb">onhold</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;, unsigned long)&gt; callback)</td></tr>
+<tr class="memdesc:a82ab6a69131245c6fd4cab3300417bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that repeatedly triggers when the widget is held for a while.  <br /></td></tr>
 <tr class="separator:a82ab6a69131245c6fd4cab3300417bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40b838533bf7048699a8daabfdf1ff8f" id="r_a40b838533bf7048699a8daabfdf1ff8f"><td class="memItemLeft" align="right" valign="top"><a id="a40b838533bf7048699a8daabfdf1ff8f" name="a40b838533bf7048699a8daabfdf1ff8f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onhold</b> (std::function&lt; void(unsigned long)&gt; callback)</td></tr>
+<tr class="memitem:a40b838533bf7048699a8daabfdf1ff8f" id="r_a40b838533bf7048699a8daabfdf1ff8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a40b838533bf7048699a8daabfdf1ff8f">onhold</a> (std::function&lt; void(unsigned long)&gt; callback)</td></tr>
+<tr class="memdesc:a40b838533bf7048699a8daabfdf1ff8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that repeatedly triggers when the widget is held for a while.  <br /></td></tr>
 <tr class="separator:a40b838533bf7048699a8daabfdf1ff8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf2b7f9d32ae943f9a3b870d2e959dd0" id="r_acf2b7f9d32ae943f9a3b870d2e959dd0"><td class="memItemLeft" align="right" valign="top"><a id="acf2b7f9d32ae943f9a3b870d2e959dd0" name="acf2b7f9d32ae943f9a3b870d2e959dd0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onrelease</b> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:acf2b7f9d32ae943f9a3b870d2e959dd0" id="r_acf2b7f9d32ae943f9a3b870d2e959dd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#acf2b7f9d32ae943f9a3b870d2e959dd0">onrelease</a> (std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt; callback)</td></tr>
+<tr class="memdesc:acf2b7f9d32ae943f9a3b870d2e959dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on release.  <br /></td></tr>
 <tr class="separator:acf2b7f9d32ae943f9a3b870d2e959dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77e207ca0b2f1a52f3590f7f37768952" id="r_a77e207ca0b2f1a52f3590f7f37768952"><td class="memItemLeft" align="right" valign="top"><a id="a77e207ca0b2f1a52f3590f7f37768952" name="a77e207ca0b2f1a52f3590f7f37768952"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onrelease</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a77e207ca0b2f1a52f3590f7f37768952" id="r_a77e207ca0b2f1a52f3590f7f37768952"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a77e207ca0b2f1a52f3590f7f37768952">onrelease</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a77e207ca0b2f1a52f3590f7f37768952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a touchscreen event handler that triggers on release.  <br /></td></tr>
 <tr class="separator:a77e207ca0b2f1a52f3590f7f37768952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a255fb68faa381b86b8a4a5e9836bd67a" id="r_a255fb68faa381b86b8a4a5e9836bd67a"><td class="memItemLeft" align="right" valign="top"><a id="a255fb68faa381b86b8a4a5e9836bd67a" name="a255fb68faa381b86b8a4a5e9836bd67a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>click</b> ()</td></tr>
+<tr class="memdesc:a255fb68faa381b86b8a4a5e9836bd67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onrelease event handler. <br /></td></tr>
 <tr class="separator:a255fb68faa381b86b8a4a5e9836bd67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fb9029ea00054ed5f6c6d751616352e" id="r_a0fb9029ea00054ed5f6c6d751616352e"><td class="memItemLeft" align="right" valign="top"><a id="a0fb9029ea00054ed5f6c6d751616352e" name="a0fb9029ea00054ed5f6c6d751616352e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>press</b> ()</td></tr>
+<tr class="memdesc:a0fb9029ea00054ed5f6c6d751616352e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onpress event handler. <br /></td></tr>
 <tr class="separator:a0fb9029ea00054ed5f6c6d751616352e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1e23d7818d99e623e60d2f3a4abbd59" id="r_ab1e23d7818d99e623e60d2f3a4abbd59"><td class="memItemLeft" align="right" valign="top"><a id="ab1e23d7818d99e623e60d2f3a4abbd59" name="ab1e23d7818d99e623e60d2f3a4abbd59"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>blur</b> ()</td></tr>
+<tr class="memdesc:ab1e23d7818d99e623e60d2f3a4abbd59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onblur event handler. <br /></td></tr>
 <tr class="separator:ab1e23d7818d99e623e60d2f3a4abbd59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f41f588697ffddb9b97b4706a2eff8c" id="r_a7f41f588697ffddb9b97b4706a2eff8c"><td class="memItemLeft" align="right" valign="top"><a id="a7f41f588697ffddb9b97b4706a2eff8c" name="a7f41f588697ffddb9b97b4706a2eff8c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> ()</td></tr>
+<tr class="memdesc:a7f41f588697ffddb9b97b4706a2eff8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onrelease event handler. <br /></td></tr>
 <tr class="separator:a7f41f588697ffddb9b97b4706a2eff8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea6a1c5a75f30820db9a4114c0291c5" id="r_adea6a1c5a75f30820db9a4114c0291c5"><td class="memItemLeft" align="right" valign="top"><a id="adea6a1c5a75f30820db9a4114c0291c5" name="adea6a1c5a75f30820db9a4114c0291c5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>hold</b> (time_t time)</td></tr>
+<tr class="memitem:adea6a1c5a75f30820db9a4114c0291c5" id="r_adea6a1c5a75f30820db9a4114c0291c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5">hold</a> (time_t time)</td></tr>
+<tr class="memdesc:adea6a1c5a75f30820db9a4114c0291c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger the onhold event handler.  <br /></td></tr>
 <tr class="separator:adea6a1c5a75f30820db9a4114c0291c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac324ab3c0ed44d81b339828e0f13d0f9" id="r_ac324ab3c0ed44d81b339828e0f13d0f9"><td class="memItemLeft" align="right" valign="top"><a id="ac324ab3c0ed44d81b339828e0f13d0f9" name="ac324ab3c0ed44d81b339828e0f13d0f9"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>handleEvent</b> (const <a class="el" href="structui_1_1Event.html">Event</a> &amp;event)</td></tr>
+<tr class="memitem:ac324ab3c0ed44d81b339828e0f13d0f9" id="r_ac324ab3c0ed44d81b339828e0f13d0f9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#ac324ab3c0ed44d81b339828e0f13d0f9">handleEvent</a> (const <a class="el" href="structui_1_1Event.html">Event</a> &amp;event)</td></tr>
+<tr class="memdesc:ac324ab3c0ed44d81b339828e0f13d0f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle events from the touchscreen.  <br /></td></tr>
 <tr class="separator:ac324ab3c0ed44d81b339828e0f13d0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a7aacf2d0dd89b4dd3eacad1965e4b56a" id="r_a7aacf2d0dd89b4dd3eacad1965e4b56a"><td class="memItemLeft" align="right" valign="top"><a id="a7aacf2d0dd89b4dd3eacad1965e4b56a" name="a7aacf2d0dd89b4dd3eacad1965e4b56a"></a>
 <a class="el" href="structui_1_1Padding.html">Padding</a>&#160;</td><td class="memItemRight" valign="bottom"><b>padding</b></td></tr>
+<tr class="memdesc:a7aacf2d0dd89b4dd3eacad1965e4b56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The padding that will be applied to any child widgets. <br /></td></tr>
 <tr class="separator:a7aacf2d0dd89b4dd3eacad1965e4b56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20543186dd7ef34d391371b08abf15c2" id="r_a20543186dd7ef34d391371b08abf15c2"><td class="memItemLeft" align="right" valign="top"><a id="a20543186dd7ef34d391371b08abf15c2" name="a20543186dd7ef34d391371b08abf15c2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawParent</b></td></tr>
+<tr class="memdesc:a20543186dd7ef34d391371b08abf15c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, force a redraw of the parent and any of its child widgets. <br /></td></tr>
 <tr class="separator:a20543186dd7ef34d391371b08abf15c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39a9cb027602e627af0485e8227663ee" id="r_a39a9cb027602e627af0485e8227663ee"><td class="memItemLeft" align="right" valign="top"><a id="a39a9cb027602e627af0485e8227663ee" name="a39a9cb027602e627af0485e8227663ee"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></tr>
+<tr class="memdesc:a39a9cb027602e627af0485e8227663ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, force a redraw of this widget and any child widgets. <br /></td></tr>
 <tr class="separator:a39a9cb027602e627af0485e8227663ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The common interface for all UI objects. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aab84ce1c0718591a0f20fc2d10c21613" name="aab84ce1c0718591a0f20fc2d10c21613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab84ce1c0718591a0f20fc2d10c21613">&#9670;&#160;</a></span>Widget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Widget::Widget </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Position.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em> = <code>{0,&#160;0}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;&#160;</td>
+          <td class="paramname"><em>align</em> = <code>{ALIGN_LEFT,&#160;ALIGN_TOP}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;&#160;</td>
+          <td class="paramname"><em>padding</em> = <code>{0}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The default widget constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the widget relative to the parent. </td></tr>
+    <tr><td class="paramname">align</td><td>The alignment of the widget relative to the parent. </td></tr>
+    <tr><td class="paramname">padding</td><td>The padding to apply to any child widgets. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a35d1e9dde4160c11b37460e6b993abd4" name="a35d1e9dde4160c11b37460e6b993abd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d1e9dde4160c11b37460e6b993abd4">&#9670;&#160;</a></span>bounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structui_1_1Bounds.html">Bounds</a> ui::Widget::bounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the rendering bounds of this widget. </p>
+<dl class="section return"><dt>Returns</dt><dd>The bounds that this widget will render in. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This value may be based on the size of the parent widget, and so should <b>never</b> refer to the size of any child widgets! </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classui_1_1Blink.html#acd7dac8f0f31f2c320a9c1fdee1e2a47">ui::Blink</a>, and <a class="el" href="classui_1_1Body.html#a751f718ff310d1bc4c46c5da3f85158d">ui::Body</a>.</p>
+
+</div>
+</div>
+<a id="a4e13c8bfff3f6638dbfd813fbfd530de" name="a4e13c8bfff3f6638dbfd813fbfd530de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e13c8bfff3f6638dbfd813fbfd530de">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ui::Widget::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Render the widget to the screen. </p>
+<p>This only gets called when widgets indicate that a redraw is needed of either themselves or their parents. Widgets that implement this method should take care to render as little as they can get away with, to help performance. </p>
+
+<p>Implemented in <a class="el" href="classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199">ui::Blink</a>, <a class="el" href="classui_1_1Body.html#ab3d117b82577c54ddf7a672081b6ccff">ui::Body</a>, <a class="el" href="classui_1_1Button.html#a121633d5bc98720d3a7a7925fa874b64">ui::Button</a>, <a class="el" href="classui_1_1Image.html#a279edf8f3da547b5e12262c5e2e75475">ui::Image</a>, and <a class="el" href="classui_1_1Text.html#aeee84bcdebcba6d7c1f6bf8b98d24570">ui::Text</a>.</p>
+
+</div>
+</div>
+<a id="a25adfd15fb570c5aa4253a28d18de961" name="a25adfd15fb570c5aa4253a28d18de961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25adfd15fb570c5aa4253a28d18de961">&#9670;&#160;</a></span>drawDone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ui::Widget::drawDone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset any state variables after rendering has finished. </p>
+
+<p>Reimplemented in <a class="el" href="classui_1_1Blink.html#a4cf3346efe547b05b471aa4fc2d1dc95">ui::Blink</a>, <a class="el" href="classui_1_1Button.html#a51704b2e52aa92e1a8d9ff779eea9c49">ui::Button</a>, and <a class="el" href="classui_1_1SingleChildWidget.html#adece8b81ccd394ca73a1e6feb94e78b4">ui::SingleChildWidget</a>.</p>
+
+</div>
+</div>
+<a id="ac324ab3c0ed44d81b339828e0f13d0f9" name="ac324ab3c0ed44d81b339828e0f13d0f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac324ab3c0ed44d81b339828e0f13d0f9">&#9670;&#160;</a></span>handleEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ui::Widget::handleEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Event.html">Event</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle events from the touchscreen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The touch event info. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if this widget was within the event bounds, false otherwise. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classui_1_1SingleChildWidget.html#a3c508498d93c5b0ffcf3581f04da0535">ui::SingleChildWidget</a>.</p>
+
+</div>
+</div>
+<a id="adea6a1c5a75f30820db9a4114c0291c5" name="adea6a1c5a75f30820db9a4114c0291c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adea6a1c5a75f30820db9a4114c0291c5">&#9670;&#160;</a></span>hold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::hold </td>
+          <td>(</td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Manually trigger the onhold event handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>The number of milliseconds that the widget has been "held". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a659572d4cafc513f944362f2e5f8a447" name="a659572d4cafc513f944362f2e5f8a447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a659572d4cafc513f944362f2e5f8a447">&#9670;&#160;</a></span>onblur() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onblur </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that triggers when the widget stops being pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes no arguments and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="a2e1457fa8a0ce49e9392996e21084de5" name="a2e1457fa8a0ce49e9392996e21084de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1457fa8a0ce49e9392996e21084de5">&#9670;&#160;</a></span>onblur() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onblur </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that triggers when the widget stops being pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes a reference to the clicked widget and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="a6f66c0c423158cf68fd1ce4cc2520e20" name="a6f66c0c423158cf68fd1ce4cc2520e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f66c0c423158cf68fd1ce4cc2520e20">&#9670;&#160;</a></span>onclick() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onclick </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that triggers on release. </p>
+<p>This is identical to the <a class="el" href="classui_1_1Widget.html#acf2b7f9d32ae943f9a3b870d2e959dd0" title="Register a touchscreen event handler that triggers on release.">onrelease()</a> function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes no arguments and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="a63e32873bc1771cac42ce12b4aa8f465" name="a63e32873bc1771cac42ce12b4aa8f465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63e32873bc1771cac42ce12b4aa8f465">&#9670;&#160;</a></span>onclick() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onclick </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that triggers on release. </p>
+<p>This is identical to the <a class="el" href="classui_1_1Widget.html#acf2b7f9d32ae943f9a3b870d2e959dd0" title="Register a touchscreen event handler that triggers on release.">onrelease()</a> function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes a reference to the clicked widget and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="a40b838533bf7048699a8daabfdf1ff8f" name="a40b838533bf7048699a8daabfdf1ff8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40b838533bf7048699a8daabfdf1ff8f">&#9670;&#160;</a></span>onhold() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onhold </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(unsigned long)&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that repeatedly triggers when the widget is held for a while. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes the number of milliseconds that the widget has been held and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="a82ab6a69131245c6fd4cab3300417bcb" name="a82ab6a69131245c6fd4cab3300417bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ab6a69131245c6fd4cab3300417bcb">&#9670;&#160;</a></span>onhold() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onhold </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;, unsigned long)&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that repeatedly triggers when the widget is held for a while. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes a reference to the clicked widget and the number of milliseconds that the widget has been held and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="a6232eaef6ec3d060e1537704eea4a355" name="a6232eaef6ec3d060e1537704eea4a355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6232eaef6ec3d060e1537704eea4a355">&#9670;&#160;</a></span>onpress() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onpress </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that triggers on press. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes no arguments and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="a2c298f6e69a0a87be61b0792161ca7c8" name="a2c298f6e69a0a87be61b0792161ca7c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c298f6e69a0a87be61b0792161ca7c8">&#9670;&#160;</a></span>onpress() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onpress </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that triggers on press. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes a reference to the clicked widget and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="a77e207ca0b2f1a52f3590f7f37768952" name="a77e207ca0b2f1a52f3590f7f37768952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77e207ca0b2f1a52f3590f7f37768952">&#9670;&#160;</a></span>onrelease() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onrelease </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that triggers on release. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes no arguments and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="acf2b7f9d32ae943f9a3b870d2e959dd0" name="acf2b7f9d32ae943f9a3b870d2e959dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2b7f9d32ae943f9a3b870d2e959dd0">&#9670;&#160;</a></span>onrelease() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::onrelease </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="classui_1_1Widget.html">Widget</a> &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a touchscreen event handler that triggers on release. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>A callback function that takes a reference to the clicked widget and returns nothing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Only one event handler for each type of event (press, hold, release, blur) is allowed per widget. </dd></dl>
+
+</div>
+</div>
+<a id="a3ce26a2110d44208efd1095efa95349b" name="a3ce26a2110d44208efd1095efa95349b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce26a2110d44208efd1095efa95349b">&#9670;&#160;</a></span>parentBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structui_1_1Bounds.html">Bounds</a> ui::Widget::parentBounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the bounds of the parent widget, if any. </p>
+<dl class="section return"><dt>Returns</dt><dd>The parent's bounds, or {0,0,0,0} if no parent. </dd></dl>
+
+</div>
+</div>
+<a id="add6812540626995a7b35ee0b0a7c6338" name="add6812540626995a7b35ee0b0a7c6338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6812540626995a7b35ee0b0a7c6338">&#9670;&#160;</a></span>redrawRequested()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ui::Widget::redrawRequested </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if this widget has requested for the parent widget to be redrawn. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if this widget has requested to redraw the parent, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a6835f31d0c1f59064f6e340d2b3a8d1a" name="a6835f31d0c1f59064f6e340d2b3a8d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6835f31d0c1f59064f6e340d2b3a8d1a">&#9670;&#160;</a></span>setAlign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::setAlign </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;&#160;</td>
+          <td class="paramname"><em>align</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the alignment of this widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">align</td><td>The new alignment, relative to the parent widget. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd0e7babb90d380238e17e4be75b7481" name="afd0e7babb90d380238e17e4be75b7481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd0e7babb90d380238e17e4be75b7481">&#9670;&#160;</a></span>setParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::setParent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classui_1_1Widget.html">Widget</a> *&#160;</td>
+          <td class="paramname"><em>parent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the parent widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>The parent widget. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4887c5301b27fe20e53734ddb56b2f84" name="a4887c5301b27fe20e53734ddb56b2f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4887c5301b27fe20e53734ddb56b2f84">&#9670;&#160;</a></span>setPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::setPos </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Position.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the position of this widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The new position, relative to the parent widget. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a46e62c602135d86aaa99788bbf306a49" name="a46e62c602135d86aaa99788bbf306a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e62c602135d86aaa99788bbf306a49">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structui_1_1Size.html">Size</a> ui::Widget::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the size of the widget. </p>
+<dl class="section return"><dt>Returns</dt><dd>The width and height of the widget in pixels. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This value may be based on the size of the child widget, and so should <b>never</b> refer to the size of the parent widget! </dd></dl>
+
+<p>Implemented in <a class="el" href="classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8">ui::Blink</a>, <a class="el" href="classui_1_1Body.html#a985a32b7381a2c0cdbd41c380fdd4c88">ui::Body</a>, <a class="el" href="classui_1_1Button.html#a1468f1a1cdf56fac29bd7e23f7eeff07">ui::Button</a>, <a class="el" href="classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6">ui::SingleChildWidget</a>, <a class="el" href="classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3">ui::Image</a>, and <a class="el" href="classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c">ui::Text</a>.</p>
+
+</div>
+</div>
+<a id="a3c2a521304a419ca57cce6e0730aa332" name="a3c2a521304a419ca57cce6e0730aa332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c2a521304a419ca57cce6e0730aa332">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ui::Widget::update </td>
+          <td>(</td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update any internal state of the widget, and check if it needs to be re-rendered. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>The current time in milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if this widget needs to be re-rendered. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695">ui::Blink</a>, <a class="el" href="classui_1_1Button.html#acee7e2e147cf9256dc6d6e115483eaab">ui::Button</a>, <a class="el" href="classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf">ui::SingleChildWidget</a>, and <a class="el" href="classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042">ui::Image</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/ui/core/<a class="el" href="widget_8hpp_source.html">widget.hpp</a></li>
 </ul>

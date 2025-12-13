@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -104,34 +105,160 @@ $(document).ready(function(){initNavTree('structui_1_1Padding.html',''); initRes
   <div class="headertitle"><div class="title">ui::Padding Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A struct that holds the padding that a parent widget may impose on a child widget.  
+ <a href="structui_1_1Padding.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="padding_8hpp_source.html">padding.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afa0d0e718529e385f8c0115fcf15e09f" id="r_afa0d0e718529e385f8c0115fcf15e09f"><td class="memItemLeft" align="right" valign="top"><a id="afa0d0e718529e385f8c0115fcf15e09f" name="afa0d0e718529e385f8c0115fcf15e09f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Padding</b> (uisize_t size)</td></tr>
+<tr class="memitem:afa0d0e718529e385f8c0115fcf15e09f" id="r_afa0d0e718529e385f8c0115fcf15e09f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Padding.html#afa0d0e718529e385f8c0115fcf15e09f">Padding</a> (<a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> size)</td></tr>
+<tr class="memdesc:afa0d0e718529e385f8c0115fcf15e09f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the padding with all sides equal.  <br /></td></tr>
 <tr class="separator:afa0d0e718529e385f8c0115fcf15e09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c35c00eeff0244d2b66b8e2e5fadb76" id="r_a2c35c00eeff0244d2b66b8e2e5fadb76"><td class="memItemLeft" align="right" valign="top"><a id="a2c35c00eeff0244d2b66b8e2e5fadb76" name="a2c35c00eeff0244d2b66b8e2e5fadb76"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Padding</b> (uisize_t left_right, uisize_t top_bottom)</td></tr>
+<tr class="memitem:a2c35c00eeff0244d2b66b8e2e5fadb76" id="r_a2c35c00eeff0244d2b66b8e2e5fadb76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Padding.html#a2c35c00eeff0244d2b66b8e2e5fadb76">Padding</a> (<a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> left_right, <a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> top_bottom)</td></tr>
+<tr class="memdesc:a2c35c00eeff0244d2b66b8e2e5fadb76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the padding with parallel sides equal.  <br /></td></tr>
 <tr class="separator:a2c35c00eeff0244d2b66b8e2e5fadb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2873495bef81a51332755305ea165d46" id="r_a2873495bef81a51332755305ea165d46"><td class="memItemLeft" align="right" valign="top"><a id="a2873495bef81a51332755305ea165d46" name="a2873495bef81a51332755305ea165d46"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Padding</b> (uisize_t left, uisize_t top, uisize_t right, uisize_t bottom)</td></tr>
+<tr class="memitem:a2873495bef81a51332755305ea165d46" id="r_a2873495bef81a51332755305ea165d46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Padding.html#a2873495bef81a51332755305ea165d46">Padding</a> (<a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> <a class="el" href="structui_1_1Padding.html#a7089f73c8b3f565df6df7a9134725232">left</a>, <a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> <a class="el" href="structui_1_1Padding.html#aad4ab1fbd14d614745b4201f0a92a49d">top</a>, <a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> <a class="el" href="structui_1_1Padding.html#ada0931cf0123e8ef1cfc1d73d36514d6">right</a>, <a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> <a class="el" href="structui_1_1Padding.html#a0cf4b0a5b50e5951fafaa2c421ae3de0">bottom</a>)</td></tr>
+<tr class="memdesc:a2873495bef81a51332755305ea165d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the padding with all sides specified individually.  <br /></td></tr>
 <tr class="separator:a2873495bef81a51332755305ea165d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a7089f73c8b3f565df6df7a9134725232" id="r_a7089f73c8b3f565df6df7a9134725232"><td class="memItemLeft" align="right" valign="top"><a id="a7089f73c8b3f565df6df7a9134725232" name="a7089f73c8b3f565df6df7a9134725232"></a>
-uisize_t&#160;</td><td class="memItemRight" valign="bottom"><b>left</b></td></tr>
+<a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>left</b></td></tr>
+<tr class="memdesc:a7089f73c8b3f565df6df7a9134725232"><td class="mdescLeft">&#160;</td><td class="mdescRight">The left padding. <br /></td></tr>
 <tr class="separator:a7089f73c8b3f565df6df7a9134725232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4ab1fbd14d614745b4201f0a92a49d" id="r_aad4ab1fbd14d614745b4201f0a92a49d"><td class="memItemLeft" align="right" valign="top"><a id="aad4ab1fbd14d614745b4201f0a92a49d" name="aad4ab1fbd14d614745b4201f0a92a49d"></a>
-uisize_t&#160;</td><td class="memItemRight" valign="bottom"><b>top</b></td></tr>
+<a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>top</b></td></tr>
+<tr class="memdesc:aad4ab1fbd14d614745b4201f0a92a49d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The top padding. <br /></td></tr>
 <tr class="separator:aad4ab1fbd14d614745b4201f0a92a49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada0931cf0123e8ef1cfc1d73d36514d6" id="r_ada0931cf0123e8ef1cfc1d73d36514d6"><td class="memItemLeft" align="right" valign="top"><a id="ada0931cf0123e8ef1cfc1d73d36514d6" name="ada0931cf0123e8ef1cfc1d73d36514d6"></a>
-uisize_t&#160;</td><td class="memItemRight" valign="bottom"><b>right</b></td></tr>
+<a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>right</b></td></tr>
+<tr class="memdesc:ada0931cf0123e8ef1cfc1d73d36514d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The right padding. <br /></td></tr>
 <tr class="separator:ada0931cf0123e8ef1cfc1d73d36514d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cf4b0a5b50e5951fafaa2c421ae3de0" id="r_a0cf4b0a5b50e5951fafaa2c421ae3de0"><td class="memItemLeft" align="right" valign="top"><a id="a0cf4b0a5b50e5951fafaa2c421ae3de0" name="a0cf4b0a5b50e5951fafaa2c421ae3de0"></a>
-uisize_t&#160;</td><td class="memItemRight" valign="bottom"><b>bottom</b></td></tr>
+<a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bottom</b></td></tr>
+<tr class="memdesc:a0cf4b0a5b50e5951fafaa2c421ae3de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bottom padding. <br /></td></tr>
 <tr class="separator:a0cf4b0a5b50e5951fafaa2c421ae3de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A struct that holds the padding that a parent widget may impose on a child widget. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afa0d0e718529e385f8c0115fcf15e09f" name="afa0d0e718529e385f8c0115fcf15e09f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa0d0e718529e385f8c0115fcf15e09f">&#9670;&#160;</a></span>Padding() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Padding::Padding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct the padding with all sides equal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The number of pixels to pad on the left, top, right and bottom. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2c35c00eeff0244d2b66b8e2e5fadb76" name="a2c35c00eeff0244d2b66b8e2e5fadb76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c35c00eeff0244d2b66b8e2e5fadb76">&#9670;&#160;</a></span>Padding() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Padding::Padding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td>
+          <td class="paramname"><em>left_right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td>
+          <td class="paramname"><em>top_bottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct the padding with parallel sides equal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left_right</td><td>The number of pixels to pad on the left and right. </td></tr>
+    <tr><td class="paramname">top_bottom</td><td>The number of pixels to pad on the top and bottom. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2873495bef81a51332755305ea165d46" name="a2873495bef81a51332755305ea165d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2873495bef81a51332755305ea165d46">&#9670;&#160;</a></span>Padding() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Padding::Padding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a>&#160;</td>
+          <td class="paramname"><em>bottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct the padding with all sides specified individually. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>The number of pixels to pad on the left. </td></tr>
+    <tr><td class="paramname">top</td><td>The number of pixels to pad on the top. </td></tr>
+    <tr><td class="paramname">right</td><td>The number of pixels to pad on the right. </td></tr>
+    <tr><td class="paramname">bottom</td><td>The number of pixels to pad on the bottom. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/ui/core/<a class="el" href="padding_8hpp_source.html">padding.hpp</a></li>
 </ul>

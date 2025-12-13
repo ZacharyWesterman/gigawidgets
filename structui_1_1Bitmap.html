@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -104,40 +105,120 @@ $(document).ready(function(){initNavTree('structui_1_1Bitmap.html',''); initResi
   <div class="headertitle"><div class="title">ui::Bitmap Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A basic image with no compression or transparency.  
+ <a href="structui_1_1Bitmap.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bitmap_8hpp_source.html">bitmap.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ui::Bitmap:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="structui_1_1Bitmap.png" usemap="#ui::Bitmap_map" alt=""/>
   <map id="ui::Bitmap_map" name="ui::Bitmap_map">
-<area href="structui_1_1Renderable.html" alt="ui::Renderable" shape="rect" coords="0,0,133,24"/>
-<area href="structui_1_1TransparentBitmap.html" alt="ui::TransparentBitmap" shape="rect" coords="0,112,133,136"/>
+<area href="structui_1_1Renderable.html" title="An abstract interface for arabitrary renderable objects." alt="ui::Renderable" shape="rect" coords="0,0,133,24"/>
+<area href="structui_1_1TransparentBitmap.html" title="A basic image with no compression, and with 1 bit of transparency per pixel." alt="ui::TransparentBitmap" shape="rect" coords="0,112,133,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa8fd9ffcf8d22a4de85200320de941f4" id="r_aa8fd9ffcf8d22a4de85200320de941f4"><td class="memItemLeft" align="right" valign="top"><a id="aa8fd9ffcf8d22a4de85200320de941f4" name="aa8fd9ffcf8d22a4de85200320de941f4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Bitmap</b> (const <a class="el" href="structui_1_1Size.html">Size</a> &amp;size, color_t *const data)</td></tr>
+<tr class="memitem:aa8fd9ffcf8d22a4de85200320de941f4" id="r_aa8fd9ffcf8d22a4de85200320de941f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Bitmap.html#aa8fd9ffcf8d22a4de85200320de941f4">Bitmap</a> (const <a class="el" href="structui_1_1Size.html">Size</a> &amp;<a class="el" href="structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3">size</a>, <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> *const <a class="el" href="structui_1_1Bitmap.html#a7ec23a60e9b54c4177dba62d9c6b26d1">data</a>)</td></tr>
+<tr class="memdesc:aa8fd9ffcf8d22a4de85200320de941f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a bitmap image from static data.  <br /></td></tr>
 <tr class="separator:aa8fd9ffcf8d22a4de85200320de941f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d29a28c84fbe1c9c414b8829493f93e" id="r_a1d29a28c84fbe1c9c414b8829493f93e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e">renderAt</a> (const <a class="el" href="structui_1_1Coords.html">Coords</a> &amp;coords, const shader_t &amp;shader=0) const override</td></tr>
+<tr class="memitem:a1d29a28c84fbe1c9c414b8829493f93e" id="r_a1d29a28c84fbe1c9c414b8829493f93e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e">renderAt</a> (const <a class="el" href="structui_1_1Coords.html">Coords</a> &amp;coords, const <a class="el" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader=0) const override</td></tr>
+<tr class="memdesc:a1d29a28c84fbe1c9c414b8829493f93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the bitmap directly onto the screen.  <br /></td></tr>
 <tr class="separator:a1d29a28c84fbe1c9c414b8829493f93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d4bab60bbcee6b18c9587e1bc2fdb84" id="r_a8d4bab60bbcee6b18c9587e1bc2fdb84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Bitmap.html#a8d4bab60bbcee6b18c9587e1bc2fdb84">getSize</a> () const override</td></tr>
+<tr class="memdesc:a8d4bab60bbcee6b18c9587e1bc2fdb84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the bitmap.  <br /></td></tr>
 <tr class="separator:a8d4bab60bbcee6b18c9587e1bc2fdb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afce6ce9f54fd8f13d9cca6b21dfd5be3" id="r_afce6ce9f54fd8f13d9cca6b21dfd5be3"><td class="memItemLeft" align="right" valign="top"><a id="afce6ce9f54fd8f13d9cca6b21dfd5be3" name="afce6ce9f54fd8f13d9cca6b21dfd5be3"></a>
-virtual color_t&#160;</td><td class="memItemRight" valign="bottom"><b>averageColor</b> () const</td></tr>
+<tr class="memitem:afce6ce9f54fd8f13d9cca6b21dfd5be3" id="r_afce6ce9f54fd8f13d9cca6b21dfd5be3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Bitmap.html#afce6ce9f54fd8f13d9cca6b21dfd5be3">averageColor</a> () const</td></tr>
+<tr class="memdesc:afce6ce9f54fd8f13d9cca6b21dfd5be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the average color of the bitmap.  <br /></td></tr>
 <tr class="separator:afce6ce9f54fd8f13d9cca6b21dfd5be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a69124ddc614cb750d6578708ff029ca3" id="r_a69124ddc614cb750d6578708ff029ca3"><td class="memItemLeft" align="right" valign="top"><a id="a69124ddc614cb750d6578708ff029ca3" name="a69124ddc614cb750d6578708ff029ca3"></a>
 <a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="memdesc:a69124ddc614cb750d6578708ff029ca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the image in pixels. <br /></td></tr>
 <tr class="separator:a69124ddc614cb750d6578708ff029ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ec23a60e9b54c4177dba62d9c6b26d1" id="r_a7ec23a60e9b54c4177dba62d9c6b26d1"><td class="memItemLeft" align="right" valign="top"><a id="a7ec23a60e9b54c4177dba62d9c6b26d1" name="a7ec23a60e9b54c4177dba62d9c6b26d1"></a>
-color_t *const&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<tr class="memdesc:a7ec23a60e9b54c4177dba62d9c6b26d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of pixels in the image. <br /></td></tr>
 <tr class="separator:a7ec23a60e9b54c4177dba62d9c6b26d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A basic image with no compression or transparency. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa8fd9ffcf8d22a4de85200320de941f4" name="aa8fd9ffcf8d22a4de85200320de941f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8fd9ffcf8d22a4de85200320de941f4">&#9670;&#160;</a></span>Bitmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Bitmap::Bitmap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Size.html">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> *const&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a bitmap image from static data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the image. </td></tr>
+    <tr><td class="paramname">data</td><td>The list of pixels in the image. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="afce6ce9f54fd8f13d9cca6b21dfd5be3" name="afce6ce9f54fd8f13d9cca6b21dfd5be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce6ce9f54fd8f13d9cca6b21dfd5be3">&#9670;&#160;</a></span>averageColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> ui::Bitmap::averageColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the average color of the bitmap. </p>
+<dl class="section return"><dt>Returns</dt><dd>A calculated average of the color from all pixels in the bitmap. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This performs a fast, naive average (mean) of the raw pixel data, without accounting for human perception. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="structui_1_1TransparentBitmap.html#a32671266e6c31e3dc12a970059ba6a0a">ui::TransparentBitmap</a>.</p>
+
+</div>
+</div>
 <a id="a8d4bab60bbcee6b18c9587e1bc2fdb84" name="a8d4bab60bbcee6b18c9587e1bc2fdb84"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d4bab60bbcee6b18c9587e1bc2fdb84">&#9670;&#160;</a></span>getSize()</h2>
 
@@ -161,7 +242,10 @@ color_t *const&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></t
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="structui_1_1Renderable.html">ui::Renderable</a>.</p>
+<p>Get the size of the bitmap. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the bitmap in pixels. </dd></dl>
+
+<p>Implements <a class="el" href="structui_1_1Renderable.html#a6fa678fbb88daa04743ea91aae789ea5">ui::Renderable</a>.</p>
 
 </div>
 </div>
@@ -183,7 +267,7 @@ color_t *const&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></t
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const shader_t &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;&#160;</td>
           <td class="paramname"><em>shader</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
@@ -199,7 +283,18 @@ color_t *const&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></t
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="structui_1_1Renderable.html">ui::Renderable</a>.</p>
+<p>Display the bitmap directly onto the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coords</td><td>The coordinates to render the first pixel [0,0] of the bitmap. </td></tr>
+    <tr><td class="paramname">shader</td><td>An optional pixel shader to apply to each pixel of the bitmap. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577">ui::Renderable</a>.</p>
+
+<p>Reimplemented in <a class="el" href="structui_1_1TransparentBitmap.html#a985914402197ddf7b65146f6e82dbcb4">ui::TransparentBitmap</a>.</p>
 
 </div>
 </div>

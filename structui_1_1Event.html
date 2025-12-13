@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,26 +104,38 @@ $(document).ready(function(){initNavTree('structui_1_1Event.html',''); initResiz
   <div class="headertitle"><div class="title">ui::Event Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A touchscreen event.  
+ <a href="structui_1_1Event.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="event_8hpp_source.html">event.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a38009f7115cef96a76813eb75bbc7cd5" id="r_a38009f7115cef96a76813eb75bbc7cd5"><td class="memItemLeft" align="right" valign="top"><a id="a38009f7115cef96a76813eb75bbc7cd5" name="a38009f7115cef96a76813eb75bbc7cd5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>triggered</b> = false</td></tr>
+<tr class="memdesc:a38009f7115cef96a76813eb75bbc7cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this event should be handled, false otherwise. <br /></td></tr>
 <tr class="separator:a38009f7115cef96a76813eb75bbc7cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a862ba00cc89b35a364a30812dc2145e0" id="r_a862ba00cc89b35a364a30812dc2145e0"><td class="memItemLeft" align="right" valign="top"><a id="a862ba00cc89b35a364a30812dc2145e0" name="a862ba00cc89b35a364a30812dc2145e0"></a>
-event_t&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<a class="el" href="event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e">event_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<tr class="memdesc:a862ba00cc89b35a364a30812dc2145e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The touchscreen event type. <br /></td></tr>
 <tr class="separator:a862ba00cc89b35a364a30812dc2145e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab25a38ceb7fc103d603223a420c6d78d" id="r_ab25a38ceb7fc103d603223a420c6d78d"><td class="memItemLeft" align="right" valign="top"><a id="ab25a38ceb7fc103d603223a420c6d78d" name="ab25a38ceb7fc103d603223a420c6d78d"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>contacts</b></td></tr>
+<tr class="memdesc:ab25a38ceb7fc103d603223a420c6d78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of distinct points on the screen that were touched. <br /></td></tr>
 <tr class="separator:ab25a38ceb7fc103d603223a420c6d78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1178834040efb7d41498f85a544dbcb5" id="r_a1178834040efb7d41498f85a544dbcb5"><td class="memItemLeft" align="right" valign="top"><a id="a1178834040efb7d41498f85a544dbcb5" name="a1178834040efb7d41498f85a544dbcb5"></a>
 <a class="el" href="structui_1_1Coords.html">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><b>coords</b> [5]</td></tr>
+<tr class="memdesc:a1178834040efb7d41498f85a544dbcb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of coordinates corresponding to each touch point, accounting for screen rotation. <br /></td></tr>
 <tr class="separator:a1178834040efb7d41498f85a544dbcb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9623180f9796dfc1858044f146fd5a2" id="r_aa9623180f9796dfc1858044f146fd5a2"><td class="memItemLeft" align="right" valign="top"><a id="aa9623180f9796dfc1858044f146fd5a2" name="aa9623180f9796dfc1858044f146fd5a2"></a>
 time_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeHeld</b></td></tr>
+<tr class="memdesc:aa9623180f9796dfc1858044f146fd5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of milliseconds that the screen has been pressed continuously. <br /></td></tr>
 <tr class="separator:aa9623180f9796dfc1858044f146fd5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A touchscreen event. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/ui/core/<a class="el" href="event_8hpp_source.html">event.hpp</a></li>
 </ul>
 </div><!-- contents -->

@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,35 +101,46 @@ $(document).ready(function(){initNavTree('half__grayscale__v_8hpp_source.html','
   <div class="headertitle"><div class="title">half_grayscale_v.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../core/color.hpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../core/coords.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../core/size.hpp&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>shader {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>color_t halfGrayscaleV(color_t pixel, <span class="keyword">const</span> Coords &amp;coords, <span class="keyword">const</span> Size &amp;size) {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">if</span> (coords.x &lt;= size.x / 2) {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">return</span> pixel;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span> r, g, b;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    colorComponents(pixel, r, g, b);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">float</span> gray = r * 0.299 + g * 0.587 + b * 0.113;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">return</span> color(gray, gray, gray);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<a href="half__grayscale__v_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../core/color.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../core/coords.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../core/size.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>shader {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="half__grayscale__v_8hpp.html#ae670f0541834e31b98f54ae6184a8c95">   17</a></span><a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="code hl_function" href="half__grayscale__v_8hpp.html#ae670f0541834e31b98f54ae6184a8c95">halfGrayscaleV</a>(<a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> pixel, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> &amp;size) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">if</span> (coords.<a class="code hl_variable" href="structui_1_1Coords.html#ad52b86eeb060961cf9335925a2010823">x</a> &lt;= size.<a class="code hl_variable" href="structui_1_1Size.html#aeb9e405fe67884eca890d5899b125944">x</a> / 2) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">return</span> pixel;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>} <span class="comment">// namespace shader</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">float</span> r, g, b;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="color_8hpp.html#a5006b678e79506956ed1dc53d0f7a9c3">colorComponents</a>(pixel, r, g, b);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">float</span> gray = r * 0.299 + g * 0.587 + b * 0.113;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">color</a>(gray, gray, gray);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace shader</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <span class="comment">// namespace ui</span></div>
+<div class="ttc" id="acolor_8hpp_html_a279adbc45436ee54b61be4812ebea282"><div class="ttname"><a href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">ui::color</a></div><div class="ttdeci">constexpr color_t color(const float red, const float green, const float blue)</div><div class="ttdoc">Convert normalized color components into an RGB565 value.</div><div class="ttdef"><b>Definition</b> color.hpp:31</div></div>
+<div class="ttc" id="acolor_8hpp_html_a5006b678e79506956ed1dc53d0f7a9c3"><div class="ttname"><a href="color_8hpp.html#a5006b678e79506956ed1dc53d0f7a9c3">ui::colorComponents</a></div><div class="ttdeci">void colorComponents(color_t color, float &amp;red, float &amp;green, float &amp;blue)</div><div class="ttdoc">Split an RGB565 color value into normalized components.</div></div>
+<div class="ttc" id="acolor_8hpp_html_ad0e32988a8ab7bbc1a746f35409aa25d"><div class="ttname"><a href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">ui::color_t</a></div><div class="ttdeci">uint16_t color_t</div><div class="ttdoc">An RGB565 color value. 5 bits red, 6 bits green, 5 bits blue.</div><div class="ttdef"><b>Definition</b> color.hpp:13</div></div>
+<div class="ttc" id="ahalf__grayscale__v_8hpp_html_ae670f0541834e31b98f54ae6184a8c95"><div class="ttname"><a href="half__grayscale__v_8hpp.html#ae670f0541834e31b98f54ae6184a8c95">ui::shader::halfGrayscaleV</a></div><div class="ttdeci">color_t halfGrayscaleV(color_t pixel, const Coords &amp;coords, const Size &amp;size)</div><div class="ttdoc">A pixel shader that converts the right half of an image to grayscale.</div><div class="ttdef"><b>Definition</b> half_grayscale_v.hpp:17</div></div>
+<div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdoc">A struct for storing the pixel coordinates of various UI elements.</div><div class="ttdef"><b>Definition</b> coords.hpp:17</div></div>
+<div class="ttc" id="astructui_1_1Coords_html_ad52b86eeb060961cf9335925a2010823"><div class="ttname"><a href="structui_1_1Coords.html#ad52b86eeb060961cf9335925a2010823">ui::Coords::x</a></div><div class="ttdeci">coord_t x</div><div class="ttdoc">The horizontal coordinate.</div><div class="ttdef"><b>Definition</b> coords.hpp:19</div></div>
+<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>
+<div class="ttc" id="astructui_1_1Size_html_aeb9e405fe67884eca890d5899b125944"><div class="ttname"><a href="structui_1_1Size.html#aeb9e405fe67884eca890d5899b125944">ui::Size::x</a></div><div class="ttdeci">uisize_t x</div><div class="ttdoc">The width of the widget.</div><div class="ttdef"><b>Definition</b> size.hpp:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_d483d63164b872ed1c2586d931b47e10.html">shaders</a></li><li class="navelem"><b>half_grayscale_v.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_d483d63164b872ed1c2586d931b47e10.html">shaders</a></li><li class="navelem"><a class="el" href="half__grayscale__v_8hpp.html">half_grayscale_v.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

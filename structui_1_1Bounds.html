@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -104,22 +105,59 @@ $(document).ready(function(){initNavTree('structui_1_1Bounds.html',''); initResi
   <div class="headertitle"><div class="title">ui::Bounds Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A struct that holds the pixel space that a widget would take up on the screen.  
+ <a href="structui_1_1Bounds.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bounds_8hpp_source.html">bounds.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6818832d49c5b9bc5c864877ebef3758" id="r_a6818832d49c5b9bc5c864877ebef3758"><td class="memItemLeft" align="right" valign="top"><a id="a6818832d49c5b9bc5c864877ebef3758" name="a6818832d49c5b9bc5c864877ebef3758"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const <a class="el" href="structui_1_1Coords.html">Coords</a> &amp;point)</td></tr>
+<tr class="memitem:a6818832d49c5b9bc5c864877ebef3758" id="r_a6818832d49c5b9bc5c864877ebef3758"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Bounds.html#a6818832d49c5b9bc5c864877ebef3758">contains</a> (const <a class="el" href="structui_1_1Coords.html">Coords</a> &amp;point)</td></tr>
+<tr class="memdesc:a6818832d49c5b9bc5c864877ebef3758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a point is contained within the current bounds.  <br /></td></tr>
 <tr class="separator:a6818832d49c5b9bc5c864877ebef3758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a635b60b94324cd2cf7eb5a8031fc2db2" id="r_a635b60b94324cd2cf7eb5a8031fc2db2"><td class="memItemLeft" align="right" valign="top"><a id="a635b60b94324cd2cf7eb5a8031fc2db2" name="a635b60b94324cd2cf7eb5a8031fc2db2"></a>
 <a class="el" href="structui_1_1Coords.html">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><b>min</b></td></tr>
+<tr class="memdesc:a635b60b94324cd2cf7eb5a8031fc2db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The starting point of the bounds. <br /></td></tr>
 <tr class="separator:a635b60b94324cd2cf7eb5a8031fc2db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcc0586139b51a8769c7cfe2b57ad897" id="r_adcc0586139b51a8769c7cfe2b57ad897"><td class="memItemLeft" align="right" valign="top"><a id="adcc0586139b51a8769c7cfe2b57ad897" name="adcc0586139b51a8769c7cfe2b57ad897"></a>
 <a class="el" href="structui_1_1Coords.html">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><b>max</b></td></tr>
+<tr class="memdesc:adcc0586139b51a8769c7cfe2b57ad897"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ending point of the bounds. <br /></td></tr>
 <tr class="separator:adcc0586139b51a8769c7cfe2b57ad897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A struct that holds the pixel space that a widget would take up on the screen. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6818832d49c5b9bc5c864877ebef3758" name="a6818832d49c5b9bc5c864877ebef3758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6818832d49c5b9bc5c864877ebef3758">&#9670;&#160;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ui::Bounds::contains </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Coords.html">Coords</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if a point is contained within the current bounds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>The point to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the point is within the bounds or on the edge, false if outside the bounds. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/ui/core/<a class="el" href="bounds_8hpp_source.html">bounds.hpp</a></li>
 </ul>

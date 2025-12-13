@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,35 +101,41 @@ $(document).ready(function(){initNavTree('alignment_8hpp_source.html',''); initR
   <div class="headertitle"><div class="title">alignment.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">enum</span> align_t {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    ALIGN_CENTER,</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    ALIGN_LEFT = 1,</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    ALIGN_RIGHT = 2,</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    ALIGN_TOP = 1,</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    ALIGN_BOTTOM = 2,</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>};</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structui_1_1Alignment.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    align_t h;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    align_t v;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<a href="alignment_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">   11</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">align_t</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    ALIGN_CENTER,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    ALIGN_LEFT = 1,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    ALIGN_RIGHT = 2,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    ALIGN_TOP = 1,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    ALIGN_BOTTOM = 2,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>} <span class="comment">// namespace ui</span></div>
-<div class="ttc" id="astructui_1_1Alignment_html"><div class="ttname"><a href="structui_1_1Alignment.html">ui::Alignment</a></div><div class="ttdef"><b>Definition</b> alignment.hpp:15</div></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structui_1_1Alignment.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structui_1_1Alignment.html#a6a49bf368706100303800e64744a2d53">   24</a></span>    <a class="code hl_enumeration" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">align_t</a> <a class="code hl_variable" href="structui_1_1Alignment.html#a6a49bf368706100303800e64744a2d53">h</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structui_1_1Alignment.html#ad9b4978edb2bff0a7813192df9b2a137">   26</a></span>    <a class="code hl_enumeration" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">align_t</a> <a class="code hl_variable" href="structui_1_1Alignment.html#ad9b4978edb2bff0a7813192df9b2a137">v</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace ui</span></div>
+<div class="ttc" id="aalignment_8hpp_html_abe835994d9d0152e9cb975025c672df8"><div class="ttname"><a href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">ui::align_t</a></div><div class="ttdeci">align_t</div><div class="ttdoc">The various ways a child widget can be aligned in its parent.</div><div class="ttdef"><b>Definition</b> alignment.hpp:11</div></div>
+<div class="ttc" id="astructui_1_1Alignment_html"><div class="ttname"><a href="structui_1_1Alignment.html">ui::Alignment</a></div><div class="ttdoc">A struct that holds a widget's vertical and horizontal alignment.</div><div class="ttdef"><b>Definition</b> alignment.hpp:22</div></div>
+<div class="ttc" id="astructui_1_1Alignment_html_a6a49bf368706100303800e64744a2d53"><div class="ttname"><a href="structui_1_1Alignment.html#a6a49bf368706100303800e64744a2d53">ui::Alignment::h</a></div><div class="ttdeci">align_t h</div><div class="ttdoc">The horizontal alignment of the widget.</div><div class="ttdef"><b>Definition</b> alignment.hpp:24</div></div>
+<div class="ttc" id="astructui_1_1Alignment_html_ad9b4978edb2bff0a7813192df9b2a137"><div class="ttname"><a href="structui_1_1Alignment.html#ad9b4978edb2bff0a7813192df9b2a137">ui::Alignment::v</a></div><div class="ttdeci">align_t v</div><div class="ttdoc">The vertical alignment of the widget.</div><div class="ttdef"><b>Definition</b> alignment.hpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_54af36d51a9cc63772a7fe8bbd49e97e.html">core</a></li><li class="navelem"><b>alignment.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_54af36d51a9cc63772a7fe8bbd49e97e.html">core</a></li><li class="navelem"><a class="el" href="alignment_8hpp.html">alignment.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

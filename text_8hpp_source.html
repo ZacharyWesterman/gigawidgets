@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,55 +101,79 @@ $(document).ready(function(){initNavTree('text_8hpp_source.html',''); initResiza
   <div class="headertitle"><div class="title">text.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;gfxfont.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;core/alignment.hpp&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;core/color.hpp&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;core/fontsize.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;core/position.hpp&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;core/widget.hpp&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classui_1_1Text.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1Text.html">Text</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">const</span> GFXfont *font;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    String text;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    fontsize_t scale;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    color_t textColor;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> wrap;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="classui_1_1Text.html">Text</a>(<span class="keyword">const</span> String &amp;text, fontsize_t scale = 1, color_t color = COLOR_WHITE, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos = {0, 0}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align = {ALIGN_LEFT, ALIGN_TOP}, <span class="keywordtype">bool</span> wrap = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classui_1_1Text.html">Text</a>(<span class="keyword">const</span> String &amp;text, <span class="keyword">const</span> GFXfont *font, color_t color = COLOR_WHITE, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos = {0, 0}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align = {ALIGN_LEFT, ALIGN_TOP}, <span class="keywordtype">bool</span> wrap = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> draw() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> size() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> setText(<span class="keyword">const</span> String &amp;text);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> setWrap(<span class="keywordtype">bool</span> wrap);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> setFont(GFXfont *<span class="keyword">const</span> font);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> setScale(fontsize_t scale);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+<a href="text_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;gfxfont.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="alignment_8hpp.html">core/alignment.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="color_8hpp.html">core/color.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="fontsize_8hpp.html">core/fontsize.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="position_8hpp.html">core/position.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="widget_8hpp.html">core/widget.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classui_1_1Text.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1Text.html">Text</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Widget.html">Widget</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#a9bf04d9d78e9fc766bf4a9d583035d98">   21</a></span>    <span class="keyword">const</span> GFXfont *<a class="code hl_variable" href="classui_1_1Text.html#a9bf04d9d78e9fc766bf4a9d583035d98">font</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#a356f4eb34e0a9b10d5780c007b922a0a">   23</a></span>    String <a class="code hl_variable" href="classui_1_1Text.html#a356f4eb34e0a9b10d5780c007b922a0a">text</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#ade1d2ef85ead495007dfd937a7c63f6a">   25</a></span>    <a class="code hl_typedef" href="fontsize_8hpp.html#ac3df109f299778e87e1deb95c53eea69">fontsize_t</a> <a class="code hl_variable" href="classui_1_1Text.html#ade1d2ef85ead495007dfd937a7c63f6a">scale</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#a70dfc810818a525868a3fa8eec0a54e3">   27</a></span>    <a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="code hl_variable" href="classui_1_1Text.html#a70dfc810818a525868a3fa8eec0a54e3">textColor</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#a3e1ad84f5679fc551dffaa34c03bc498">   29</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classui_1_1Text.html#a3e1ad84f5679fc551dffaa34c03bc498">wrap</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#a79450e805ad6ed1e449cdd8ba0077777">   41</a></span>    <a class="code hl_function" href="classui_1_1Text.html#a79450e805ad6ed1e449cdd8ba0077777">Text</a>(<span class="keyword">const</span> String &amp;<a class="code hl_variable" href="classui_1_1Text.html#a356f4eb34e0a9b10d5780c007b922a0a">text</a>, <a class="code hl_typedef" href="fontsize_8hpp.html#ac3df109f299778e87e1deb95c53eea69">fontsize_t</a> <a class="code hl_variable" href="classui_1_1Text.html#ade1d2ef85ead495007dfd937a7c63f6a">scale</a> = 1, <a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color = COLOR_WHITE, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos = {0, 0}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align = {ALIGN_LEFT, ALIGN_TOP}, <span class="keywordtype">bool</span> <a class="code hl_variable" href="classui_1_1Text.html#a3e1ad84f5679fc551dffaa34c03bc498">wrap</a> = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#a05c8c9dd2b9630a1eeb1b0577f8d1d5d">   52</a></span>    <a class="code hl_function" href="classui_1_1Text.html#a05c8c9dd2b9630a1eeb1b0577f8d1d5d">Text</a>(<span class="keyword">const</span> String &amp;<a class="code hl_variable" href="classui_1_1Text.html#a356f4eb34e0a9b10d5780c007b922a0a">text</a>, <span class="keyword">const</span> GFXfont *<a class="code hl_variable" href="classui_1_1Text.html#a9bf04d9d78e9fc766bf4a9d583035d98">font</a>, <a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color = COLOR_WHITE, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Position.html">Position</a> &amp;pos = {0, 0}, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Alignment.html">Alignment</a> &amp;align = {ALIGN_LEFT, ALIGN_TOP}, <span class="keywordtype">bool</span> <a class="code hl_variable" href="classui_1_1Text.html#a3e1ad84f5679fc551dffaa34c03bc498">wrap</a> = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#aeee84bcdebcba6d7c1f6bf8b98d24570">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Text.html#aeee84bcdebcba6d7c1f6bf8b98d24570">draw</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c">   55</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c">size</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#a866e0667756223aab321e25f4918b5e0">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Text.html#a866e0667756223aab321e25f4918b5e0">setText</a>(<span class="keyword">const</span> String &amp;<a class="code hl_variable" href="classui_1_1Text.html#a356f4eb34e0a9b10d5780c007b922a0a">text</a>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#a03b0a10495d46955c264176f3e1e840c">   67</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Text.html#a03b0a10495d46955c264176f3e1e840c">setWrap</a>(<span class="keywordtype">bool</span> <a class="code hl_variable" href="classui_1_1Text.html#a3e1ad84f5679fc551dffaa34c03bc498">wrap</a>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#a983861dd8aa672bb1b1c0e6595ca3476">   73</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Text.html#a983861dd8aa672bb1b1c0e6595ca3476">setFont</a>(GFXfont *<span class="keyword">const</span> <a class="code hl_variable" href="classui_1_1Text.html#a9bf04d9d78e9fc766bf4a9d583035d98">font</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classui_1_1Text.html#af62f6596e5273ce586c13bae9ce87072">   79</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Text.html#af62f6596e5273ce586c13bae9ce87072">setScale</a>(<a class="code hl_typedef" href="fontsize_8hpp.html#ac3df109f299778e87e1deb95c53eea69">fontsize_t</a> <a class="code hl_variable" href="classui_1_1Text.html#ade1d2ef85ead495007dfd937a7c63f6a">scale</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">// namespace ui</span></div>
-<div class="ttc" id="aclassui_1_1Text_html"><div class="ttname"><a href="classui_1_1Text.html">ui::Text</a></div><div class="ttdef"><b>Definition</b> text.hpp:14</div></div>
-<div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdef"><b>Definition</b> widget.hpp:17</div></div>
-<div class="ttc" id="astructui_1_1Alignment_html"><div class="ttname"><a href="structui_1_1Alignment.html">ui::Alignment</a></div><div class="ttdef"><b>Definition</b> alignment.hpp:15</div></div>
-<div class="ttc" id="astructui_1_1Position_html"><div class="ttname"><a href="structui_1_1Position.html">ui::Position</a></div><div class="ttdef"><b>Definition</b> position.hpp:7</div></div>
-<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdef"><b>Definition</b> size.hpp:9</div></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>} <span class="comment">// namespace ui</span></div>
+<div class="ttc" id="aalignment_8hpp_html"><div class="ttname"><a href="alignment_8hpp.html">alignment.hpp</a></div></div>
+<div class="ttc" id="aclassui_1_1Text_html"><div class="ttname"><a href="classui_1_1Text.html">ui::Text</a></div><div class="ttdoc">Display text to the screen.</div><div class="ttdef"><b>Definition</b> text.hpp:18</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_a03b0a10495d46955c264176f3e1e840c"><div class="ttname"><a href="classui_1_1Text.html#a03b0a10495d46955c264176f3e1e840c">ui::Text::setWrap</a></div><div class="ttdeci">void setWrap(bool wrap)</div><div class="ttdoc">Set whether text wraps.</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_a05c8c9dd2b9630a1eeb1b0577f8d1d5d"><div class="ttname"><a href="classui_1_1Text.html#a05c8c9dd2b9630a1eeb1b0577f8d1d5d">ui::Text::Text</a></div><div class="ttdeci">Text(const String &amp;text, const GFXfont *font, color_t color=COLOR_WHITE, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, bool wrap=true)</div><div class="ttdoc">Construct text with a given font.</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_a356f4eb34e0a9b10d5780c007b922a0a"><div class="ttname"><a href="classui_1_1Text.html#a356f4eb34e0a9b10d5780c007b922a0a">ui::Text::text</a></div><div class="ttdeci">String text</div><div class="ttdoc">The text to display.</div><div class="ttdef"><b>Definition</b> text.hpp:23</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_a3e1ad84f5679fc551dffaa34c03bc498"><div class="ttname"><a href="classui_1_1Text.html#a3e1ad84f5679fc551dffaa34c03bc498">ui::Text::wrap</a></div><div class="ttdeci">bool wrap</div><div class="ttdoc">If true, wrap the text when reaching the right side of the parent widget. If false,...</div><div class="ttdef"><b>Definition</b> text.hpp:29</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_a70dfc810818a525868a3fa8eec0a54e3"><div class="ttname"><a href="classui_1_1Text.html#a70dfc810818a525868a3fa8eec0a54e3">ui::Text::textColor</a></div><div class="ttdeci">color_t textColor</div><div class="ttdoc">The text color.</div><div class="ttdef"><b>Definition</b> text.hpp:27</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_a79450e805ad6ed1e449cdd8ba0077777"><div class="ttname"><a href="classui_1_1Text.html#a79450e805ad6ed1e449cdd8ba0077777">ui::Text::Text</a></div><div class="ttdeci">Text(const String &amp;text, fontsize_t scale=1, color_t color=COLOR_WHITE, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, bool wrap=true)</div><div class="ttdoc">Construct text with the built-in font.</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_a866e0667756223aab321e25f4918b5e0"><div class="ttname"><a href="classui_1_1Text.html#a866e0667756223aab321e25f4918b5e0">ui::Text::setText</a></div><div class="ttdeci">void setText(const String &amp;text)</div><div class="ttdoc">Set the text to display.</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_a983861dd8aa672bb1b1c0e6595ca3476"><div class="ttname"><a href="classui_1_1Text.html#a983861dd8aa672bb1b1c0e6595ca3476">ui::Text::setFont</a></div><div class="ttdeci">void setFont(GFXfont *const font)</div><div class="ttdoc">Set the font to render text in.</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_a9bf04d9d78e9fc766bf4a9d583035d98"><div class="ttname"><a href="classui_1_1Text.html#a9bf04d9d78e9fc766bf4a9d583035d98">ui::Text::font</a></div><div class="ttdeci">const GFXfont * font</div><div class="ttdoc">The font to render the text in. If null, defaults to the built-in font.</div><div class="ttdef"><b>Definition</b> text.hpp:21</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_ade1d2ef85ead495007dfd937a7c63f6a"><div class="ttname"><a href="classui_1_1Text.html#ade1d2ef85ead495007dfd937a7c63f6a">ui::Text::scale</a></div><div class="ttdeci">fontsize_t scale</div><div class="ttdoc">A scaling factor for the text, e.g. 2x, 3x, etc.</div><div class="ttdef"><b>Definition</b> text.hpp:25</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_ae372dff0485ae761ace4ae58fa58fb9c"><div class="ttname"><a href="classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c">ui::Text::size</a></div><div class="ttdeci">Size size() const override</div><div class="ttdoc">Get the size of the widget.</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_aeee84bcdebcba6d7c1f6bf8b98d24570"><div class="ttname"><a href="classui_1_1Text.html#aeee84bcdebcba6d7c1f6bf8b98d24570">ui::Text::draw</a></div><div class="ttdeci">void draw() const override</div><div class="ttdoc">Render the widget to the screen.</div></div>
+<div class="ttc" id="aclassui_1_1Text_html_af62f6596e5273ce586c13bae9ce87072"><div class="ttname"><a href="classui_1_1Text.html#af62f6596e5273ce586c13bae9ce87072">ui::Text::setScale</a></div><div class="ttdeci">void setScale(fontsize_t scale)</div><div class="ttdoc">Set the scaling factor for the text.</div></div>
+<div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdoc">The common interface for all UI objects.</div><div class="ttdef"><b>Definition</b> widget.hpp:24</div></div>
+<div class="ttc" id="acolor_8hpp_html"><div class="ttname"><a href="color_8hpp.html">color.hpp</a></div></div>
+<div class="ttc" id="acolor_8hpp_html_ad0e32988a8ab7bbc1a746f35409aa25d"><div class="ttname"><a href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">ui::color_t</a></div><div class="ttdeci">uint16_t color_t</div><div class="ttdoc">An RGB565 color value. 5 bits red, 6 bits green, 5 bits blue.</div><div class="ttdef"><b>Definition</b> color.hpp:13</div></div>
+<div class="ttc" id="afontsize_8hpp_html"><div class="ttname"><a href="fontsize_8hpp.html">fontsize.hpp</a></div></div>
+<div class="ttc" id="afontsize_8hpp_html_ac3df109f299778e87e1deb95c53eea69"><div class="ttname"><a href="fontsize_8hpp.html#ac3df109f299778e87e1deb95c53eea69">ui::fontsize_t</a></div><div class="ttdeci">uint16_t fontsize_t</div><div class="ttdoc">A non-negative integer for font sizes.</div><div class="ttdef"><b>Definition</b> fontsize.hpp:12</div></div>
+<div class="ttc" id="aposition_8hpp_html"><div class="ttname"><a href="position_8hpp.html">position.hpp</a></div></div>
+<div class="ttc" id="astructui_1_1Alignment_html"><div class="ttname"><a href="structui_1_1Alignment.html">ui::Alignment</a></div><div class="ttdoc">A struct that holds a widget's vertical and horizontal alignment.</div><div class="ttdef"><b>Definition</b> alignment.hpp:22</div></div>
+<div class="ttc" id="astructui_1_1Position_html"><div class="ttname"><a href="structui_1_1Position.html">ui::Position</a></div><div class="ttdoc">A struct that holds the normalized position of a widget.</div><div class="ttdef"><b>Definition</b> position.hpp:15</div></div>
+<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>
+<div class="ttc" id="awidget_8hpp_html"><div class="ttname"><a href="widget_8hpp.html">widget.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><b>text.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="text_8hpp.html">text.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

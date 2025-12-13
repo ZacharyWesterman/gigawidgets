@@ -23,6 +23,7 @@
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colors.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,37 +101,50 @@ $(document).ready(function(){initNavTree('renderable_8hpp_source.html',''); init
   <div class="headertitle"><div class="title">renderable.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;color.hpp&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;coords.hpp&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;size.hpp&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">typedef</span> std::function&lt;color_t(color_t, <span class="keyword">const</span> Coords &amp;, <span class="keyword">const</span> Size &amp;)&gt; shader_oneframe_t;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">typedef</span> std::function&lt;color_t(color_t, <span class="keyword">const</span> Coords &amp;, <span class="keyword">const</span> Size &amp;, time_t)&gt; shader_animated_t;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">typedef</span> shader_animated_t shader_t;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structui_1_1Renderable.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Renderable.html">Renderable</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> renderAt(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> shader_t &amp;shader = 0) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">virtual</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> getSize() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<a href="renderable_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="color_8hpp.html">color.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="coords_8hpp.html">coords.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="size_8hpp.html">size.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="renderable_8hpp.html#a97baf0716f0f9407b03889c4ea29a75b">   22</a></span><span class="keyword">typedef</span> std::function&lt;<a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>(<a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> &amp;size)&gt; <a class="code hl_typedef" href="renderable_8hpp.html#a97baf0716f0f9407b03889c4ea29a75b">shader_oneframe_t</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="renderable_8hpp.html#a134e86d04f6930a8adabb909da08b577">   35</a></span><span class="keyword">typedef</span> std::function&lt;<a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>(<a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> &amp;size, time_t time)&gt; <a class="code hl_typedef" href="renderable_8hpp.html#a134e86d04f6930a8adabb909da08b577">shader_animated_t</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">   48</a></span><span class="keyword">typedef</span> <a class="code hl_typedef" href="renderable_8hpp.html#a134e86d04f6930a8adabb909da08b577">shader_animated_t</a> <a class="code hl_typedef" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structui_1_1Renderable.html">   55</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Renderable.html">Renderable</a> {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577">   61</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577">renderAt</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader = 0) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structui_1_1Renderable.html#a6fa678fbb88daa04743ea91aae789ea5">   67</a></span>    <span class="keyword">virtual</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="structui_1_1Renderable.html#a6fa678fbb88daa04743ea91aae789ea5">getSize</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}; <span class="comment">// namespace ui</span></div>
-<div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdef"><b>Definition</b> coords.hpp:9</div></div>
-<div class="ttc" id="astructui_1_1Renderable_html"><div class="ttname"><a href="structui_1_1Renderable.html">ui::Renderable</a></div><div class="ttdef"><b>Definition</b> renderable.hpp:15</div></div>
-<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdef"><b>Definition</b> size.hpp:9</div></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}; <span class="comment">// namespace ui</span></div>
+<div class="ttc" id="acolor_8hpp_html"><div class="ttname"><a href="color_8hpp.html">color.hpp</a></div></div>
+<div class="ttc" id="acolor_8hpp_html_ad0e32988a8ab7bbc1a746f35409aa25d"><div class="ttname"><a href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">ui::color_t</a></div><div class="ttdeci">uint16_t color_t</div><div class="ttdoc">An RGB565 color value. 5 bits red, 6 bits green, 5 bits blue.</div><div class="ttdef"><b>Definition</b> color.hpp:13</div></div>
+<div class="ttc" id="acoords_8hpp_html"><div class="ttname"><a href="coords_8hpp.html">coords.hpp</a></div></div>
+<div class="ttc" id="arenderable_8hpp_html_a134e86d04f6930a8adabb909da08b577"><div class="ttname"><a href="renderable_8hpp.html#a134e86d04f6930a8adabb909da08b577">ui::shader_animated_t</a></div><div class="ttdeci">std::function&lt; color_t(color_t color, const Coords &amp;coords, const Size &amp;size, time_t time)&gt; shader_animated_t</div><div class="ttdoc">A pixel shader that may update based on the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:35</div></div>
+<div class="ttc" id="arenderable_8hpp_html_a8e765b43b59de2763f0ec0235e5fedac"><div class="ttname"><a href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">ui::shader_t</a></div><div class="ttdeci">shader_animated_t shader_t</div><div class="ttdoc">A pixel shader that may or may not update based on the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:48</div></div>
+<div class="ttc" id="arenderable_8hpp_html_a97baf0716f0f9407b03889c4ea29a75b"><div class="ttname"><a href="renderable_8hpp.html#a97baf0716f0f9407b03889c4ea29a75b">ui::shader_oneframe_t</a></div><div class="ttdeci">std::function&lt; color_t(color_t color, const Coords &amp;coords, const Size &amp;size)&gt; shader_oneframe_t</div><div class="ttdoc">A pixel shader that's independent of the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:22</div></div>
+<div class="ttc" id="asize_8hpp_html"><div class="ttname"><a href="size_8hpp.html">size.hpp</a></div></div>
+<div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdoc">A struct for storing the pixel coordinates of various UI elements.</div><div class="ttdef"><b>Definition</b> coords.hpp:17</div></div>
+<div class="ttc" id="astructui_1_1Renderable_html"><div class="ttname"><a href="structui_1_1Renderable.html">ui::Renderable</a></div><div class="ttdoc">An abstract interface for arabitrary renderable objects.</div><div class="ttdef"><b>Definition</b> renderable.hpp:55</div></div>
+<div class="ttc" id="astructui_1_1Renderable_html_a414bdfa2a38ba315ca5aa2e12255a577"><div class="ttname"><a href="structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577">ui::Renderable::renderAt</a></div><div class="ttdeci">virtual void renderAt(const Coords &amp;coords, const shader_t &amp;shader=0) const =0</div><div class="ttdoc">Display the renderable directly onto the screen.</div></div>
+<div class="ttc" id="astructui_1_1Renderable_html_a6fa678fbb88daa04743ea91aae789ea5"><div class="ttname"><a href="structui_1_1Renderable.html#a6fa678fbb88daa04743ea91aae789ea5">ui::Renderable::getSize</a></div><div class="ttdeci">virtual Size getSize() const =0</div><div class="ttdoc">Get the size of the renderable.</div></div>
+<div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_54af36d51a9cc63772a7fe8bbd49e97e.html">core</a></li><li class="navelem"><b>renderable.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_54af36d51a9cc63772a7fe8bbd49e97e.html">core</a></li><li class="navelem"><a class="el" href="renderable_8hpp.html">renderable.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
