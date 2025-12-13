@@ -20,9 +20,9 @@ enum align_t {
  * @brief A struct that holds a widget's vertical and horizontal alignment.
  */
 struct Alignment {
-	/// The horizontal alignment of the widget.
+	/// @brief The horizontal alignment of the widget.
 	align_t h;
-	/// The vertical alignment of the widget.
+	/// @brief The vertical alignment of the widget.
 	align_t v;
 };
 
