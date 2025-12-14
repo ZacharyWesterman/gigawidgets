@@ -15,13 +15,13 @@ void setup() {
 	// Build the UI
 	auto text = new ui::Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", &FreeSerif18pt7b, ui::COLOR_LIGHT_GREEN);
 
-	auto logo = new ui::Image(&ui::icon::skrunk, {0.5, 0.5}, {ui::ALIGN_CENTER, ui::ALIGN_CENTER});
+	auto logo = new ui::Image(&ui::icon::skrunk, position, alignment);
 
-	auto collection = new ui::Collection({ui::width(), ui::height()});
+	auto collection = new ui::Collection({ui::width(), ui::height()}, {0, 0}, {ui::ALIGN_LEFT, ui::ALIGN_TOP}, padding);
 	collection->addChild(logo);
 	collection->addChild(text);
 
-	auto body = new ui::Body(collection, ui::COLOR_BLACK, padding);
+	auto body = new ui::Body(collection, ui::COLOR_BLACK);
 	ui::setRoot(body);
 }
 
