@@ -75,6 +75,8 @@ enum {
 	COLOR_CYAN = 0x07ff,
 	/// <span class="color blue"></span>
 	COLOR_BLUE = 0x001f,
+	/// <span class="color purple"></span>
+	COLOR_PURPLE = 0x381f,
 	/// <span class="color magenta"></span>
 	COLOR_MAGENTA = 0xf81f,
 
