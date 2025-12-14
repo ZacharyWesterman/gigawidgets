@@ -29,7 +29,9 @@ void SingleChildWidget::setChild(Widget *const child) {
 bool SingleChildWidget::handleEvent(const Event &event) {
 	if (Widget::handleEvent(event)) {
 		child->handleEvent(event);
+		return true;
 	}
+	return false;
 }
 
 bool SingleChildWidget::update(time_t time_ms) {

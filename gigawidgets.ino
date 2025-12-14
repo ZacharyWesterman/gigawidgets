@@ -1,6 +1,6 @@
 #include "src/ui.hpp"
 #include "src/ui/icons/skrunk.hpp"
-#include "src/ui/shaders/animated/startup_rainbow.hpp"
+#include <Fonts/FreeSerif18pt7b.h>
 
 void setup() {
 	// Position is relative to parent.
@@ -8,26 +8,21 @@ void setup() {
 	// Alignment is relative to position on parent.
 	ui::Alignment alignment = {ui::ALIGN_CENTER, ui::ALIGN_CENTER};
 	// Padding can be in px, mm, cm, in, vw, or vh.
-	ui::Padding padding = {0.5_cm, 0.5_cm};
+	ui::Padding padding = {0.5_cm};
 
 	ui::setRotation(ui::ROT_270_DEG);
 
 	// Build the UI
-	const auto &icon = ui::icon::skrunk;
+	auto text = new ui::Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", &FreeSerif18pt7b, ui::COLOR_LIGHT_GREEN);
 
-	auto image = new ui::Image(&icon, position, alignment);
-	auto body = new ui::Body(image, ui::COLOR_BLACK);
+	auto logo = new ui::Image(&ui::icon::skrunk, {0.5, 0.5}, {ui::ALIGN_CENTER, ui::ALIGN_CENTER});
+
+	auto collection = new ui::Collection({ui::width(), ui::height()});
+	collection->addChild(logo);
+	collection->addChild(text);
+
+	auto body = new ui::Body(collection, ui::COLOR_BLACK, padding);
 	ui::setRoot(body);
-
-	// Flash bright every 1000ms.
-	image->setShader(ui::shader::startupRainbow);
-
-	while (millis() < 5000) {
-		ui::render();
-	}
-
-	ui::setRoot(nullptr);
-	ui::setRoot(new ui::Body(new ui::Text("")));
 }
 
 void loop() {
