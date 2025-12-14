@@ -1,7 +1,7 @@
 var dir_54af36d51a9cc63772a7fe8bbd49e97e =
 [
+    [ "renderable", "dir_313bf325e116e1fdfe6a5b3cce438ca3.html", "dir_313bf325e116e1fdfe6a5b3cce438ca3" ],
     [ "alignment.hpp", "alignment_8hpp.html", "alignment_8hpp" ],
-    [ "bitmap.hpp", "bitmap_8hpp.html", "bitmap_8hpp" ],
     [ "bounds.hpp", "bounds_8hpp.html", "bounds_8hpp" ],
     [ "color.hpp", "color_8hpp.html", "color_8hpp" ],
     [ "coords.hpp", "coords_8hpp.html", "coords_8hpp" ],

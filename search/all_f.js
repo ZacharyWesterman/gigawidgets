@@ -4,7 +4,7 @@ var searchData=
   ['setalign_1',['setAlign',['../classui_1_1Widget.html#a6835f31d0c1f59064f6e340d2b3a8d1a',1,'ui::Widget']]],
   ['setborderradius_2',['setBorderRadius',['../classui_1_1Button.html#ac745a376799bb571b2f236db2ef8b114',1,'ui::Button']]],
   ['setchild_3',['setChild',['../classui_1_1SingleChildWidget.html#aeda011e657a52ee632690111cd99f03c',1,'ui::SingleChildWidget']]],
-  ['setcolor_4',['setcolor',['../classui_1_1Body.html#aa4db60884daa0b50a74ff7e3e4666e53',1,'ui::Body::setColor()'],['../classui_1_1Button.html#a4343d46dc85b050e67244b95ddad8c90',1,'ui::Button::setColor()']]],
+  ['setcolor_4',['setcolor',['../classui_1_1Button.html#a4343d46dc85b050e67244b95ddad8c90',1,'ui::Button::setColor()'],['../classui_1_1Body.html#aa4db60884daa0b50a74ff7e3e4666e53',1,'ui::Body::setColor()']]],
   ['setcursor_5',['setCursor',['../display_8hpp.html#aba98f23052303a15637b5b2d3d3b4679',1,'ui']]],
   ['setfont_6',['setFont',['../classui_1_1Text.html#a983861dd8aa672bb1b1c0e6595ca3476',1,'ui::Text']]],
   ['setparent_7',['setParent',['../classui_1_1Widget.html#afd0e7babb90d380238e17e4be75b7481',1,'ui::Widget']]],
@@ -22,7 +22,9 @@ var searchData=
   ['shader_5foneframe_5ft_19',['shader_oneframe_t',['../renderable_8hpp.html#a97baf0716f0f9407b03889c4ea29a75b',1,'ui']]],
   ['shader_5ft_20',['shader_t',['../renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac',1,'ui']]],
   ['single_5fchild_5fwidget_2ehpp_21',['single_child_widget.hpp',['../single__child__widget_8hpp.html',1,'']]],
-  ['singlechildwidget_22',['singlechildwidget',['../classui_1_1SingleChildWidget.html#a9a55143159a07e508fc904991eb0e9f7',1,'ui::SingleChildWidget::SingleChildWidget()'],['../classui_1_1SingleChildWidget.html',1,'ui::SingleChildWidget']]],
-  ['size_23',['size',['../classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3',1,'ui::Image::size()'],['../classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c',1,'ui::Text::size()'],['../classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49',1,'ui::Widget::size()'],['../classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6',1,'ui::SingleChildWidget::size()'],['../classui_1_1Button.html#a1468f1a1cdf56fac29bd7e23f7eeff07',1,'ui::Button::size()'],['../classui_1_1Body.html#a985a32b7381a2c0cdbd41c380fdd4c88',1,'ui::Body::size()'],['../classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8',1,'ui::Blink::size()'],['../structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3',1,'ui::Bitmap::size'],['../structui_1_1Size.html',1,'ui::Size']]],
-  ['size_2ehpp_24',['size.hpp',['../size_8hpp.html',1,'']]]
+  ['singlechildwidget_22',['singlechildwidget',['../classui_1_1SingleChildWidget.html',1,'ui::SingleChildWidget'],['../classui_1_1SingleChildWidget.html#a9a55143159a07e508fc904991eb0e9f7',1,'ui::SingleChildWidget::SingleChildWidget()']]],
+  ['size_23',['size',['../structui_1_1Size.html',1,'ui::Size'],['../classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c',1,'ui::Text::size()'],['../classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3',1,'ui::Image::size()'],['../classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49',1,'ui::Widget::size()'],['../classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6',1,'ui::SingleChildWidget::size()'],['../classui_1_1Button.html#a1468f1a1cdf56fac29bd7e23f7eeff07',1,'ui::Button::size()'],['../classui_1_1Body.html#a985a32b7381a2c0cdbd41c380fdd4c88',1,'ui::Body::size()'],['../classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8',1,'ui::Blink::size()'],['../structui_1_1TransparencyMap.html#abffc9efb89c599a906e0b034f80300ef',1,'ui::TransparencyMap::size'],['../structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3',1,'ui::Bitmap::size']]],
+  ['size_2ehpp_24',['size.hpp',['../size_8hpp.html',1,'']]],
+  ['startup_5frainbow_2ehpp_25',['startup_rainbow.hpp',['../startup__rainbow_8hpp.html',1,'']]],
+  ['startuprainbow_26',['startupRainbow',['../startup__rainbow_8hpp.html#ac06869d9b183456ce16a95ee347505c3',1,'ui::shader']]]
 ];

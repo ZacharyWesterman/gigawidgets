@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>gigawidgets: src/ui/core/renderable/bitmap.hpp Source File</title>
+<title>gigawidgets: src/ui/core/renderable/transparent_bitmap.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('bitmap_8hpp_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('transparent__bitmap_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,50 +98,48 @@ $(document).ready(function(){initNavTree('bitmap_8hpp_source.html',''); initResi
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">bitmap.hpp</div></div>
+  <div class="headertitle"><div class="title">transparent_bitmap.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="bitmap_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../renderable.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="bitmap_8hpp.html">bitmap.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>ui {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structui_1_1Bitmap.html">   11</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Bitmap.html">Bitmap</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structui_1_1Renderable.html">Renderable</a> {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3">   13</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_variable" href="structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3">size</a>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structui_1_1Bitmap.html#a7ec23a60e9b54c4177dba62d9c6b26d1">   15</a></span>    <a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> *<span class="keyword">const</span> <a class="code hl_variable" href="structui_1_1Bitmap.html#a7ec23a60e9b54c4177dba62d9c6b26d1">data</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structui_1_1Bitmap.html#aa8fd9ffcf8d22a4de85200320de941f4">   22</a></span>    <a class="code hl_function" href="structui_1_1Bitmap.html#aa8fd9ffcf8d22a4de85200320de941f4">Bitmap</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> &amp;<a class="code hl_variable" href="structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3">size</a>, <a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> *<span class="keyword">const</span> <a class="code hl_variable" href="structui_1_1Bitmap.html#a7ec23a60e9b54c4177dba62d9c6b26d1">data</a>);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e">   29</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e">renderAt</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader = 0) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structui_1_1Bitmap.html#a8d4bab60bbcee6b18c9587e1bc2fdb84">   35</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="structui_1_1Bitmap.html#a8d4bab60bbcee6b18c9587e1bc2fdb84">getSize</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structui_1_1Bitmap.html#afce6ce9f54fd8f13d9cca6b21dfd5be3">   42</a></span>    <span class="keyword">virtual</span> <a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="code hl_function" href="structui_1_1Bitmap.html#afce6ce9f54fd8f13d9cca6b21dfd5be3">averageColor</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structui_1_1TransparentBitmap.html">   11</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1TransparentBitmap.html">TransparentBitmap</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structui_1_1Bitmap.html">Bitmap</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structui_1_1TransparentBitmap.html#a934d101cafa95fd5dbfa449d6028f29a">   17</a></span>    uint8_t *<span class="keyword">const</span> <a class="code hl_variable" href="structui_1_1TransparentBitmap.html#a934d101cafa95fd5dbfa449d6028f29a">mask</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structui_1_1TransparentBitmap.html#af653a92167aadf3c039872b5a9947ab5">   25</a></span>    <a class="code hl_function" href="structui_1_1TransparentBitmap.html#af653a92167aadf3c039872b5a9947ab5">TransparentBitmap</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> &amp;<a class="code hl_variable" href="structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3">size</a>, <a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> *<span class="keyword">const</span> <a class="code hl_variable" href="structui_1_1Bitmap.html#a7ec23a60e9b54c4177dba62d9c6b26d1">data</a>, uint8_t *<span class="keyword">const</span> <a class="code hl_variable" href="structui_1_1TransparentBitmap.html#a934d101cafa95fd5dbfa449d6028f29a">mask</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structui_1_1TransparentBitmap.html#a985914402197ddf7b65146f6e82dbcb4">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structui_1_1TransparentBitmap.html#a985914402197ddf7b65146f6e82dbcb4">renderAt</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader = 0) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structui_1_1TransparentBitmap.html#a32671266e6c31e3dc12a970059ba6a0a">   40</a></span>    <a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="code hl_function" href="structui_1_1TransparentBitmap.html#a32671266e6c31e3dc12a970059ba6a0a">averageColor</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <span class="comment">// namespace ui</span></div>
+<div class="ttc" id="abitmap_8hpp_html"><div class="ttname"><a href="bitmap_8hpp.html">bitmap.hpp</a></div></div>
 <div class="ttc" id="acolor_8hpp_html_ad0e32988a8ab7bbc1a746f35409aa25d"><div class="ttname"><a href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">ui::color_t</a></div><div class="ttdeci">uint16_t color_t</div><div class="ttdoc">An RGB565 color value. 5 bits red, 6 bits green, 5 bits blue.</div><div class="ttdef"><b>Definition</b> color.hpp:13</div></div>
 <div class="ttc" id="arenderable_8hpp_html_a8e765b43b59de2763f0ec0235e5fedac"><div class="ttname"><a href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">ui::shader_t</a></div><div class="ttdeci">shader_animated_t shader_t</div><div class="ttdoc">A pixel shader that may or may not update based on the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:48</div></div>
 <div class="ttc" id="astructui_1_1Bitmap_html"><div class="ttname"><a href="structui_1_1Bitmap.html">ui::Bitmap</a></div><div class="ttdoc">A basic image with no compression or transparency.</div><div class="ttdef"><b>Definition</b> bitmap.hpp:11</div></div>
-<div class="ttc" id="astructui_1_1Bitmap_html_a1d29a28c84fbe1c9c414b8829493f93e"><div class="ttname"><a href="structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e">ui::Bitmap::renderAt</a></div><div class="ttdeci">void renderAt(const Coords &amp;coords, const shader_t &amp;shader=0) const override</div><div class="ttdoc">Display the bitmap directly onto the screen.</div></div>
 <div class="ttc" id="astructui_1_1Bitmap_html_a69124ddc614cb750d6578708ff029ca3"><div class="ttname"><a href="structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3">ui::Bitmap::size</a></div><div class="ttdeci">Size size</div><div class="ttdoc">The size of the image in pixels.</div><div class="ttdef"><b>Definition</b> bitmap.hpp:13</div></div>
 <div class="ttc" id="astructui_1_1Bitmap_html_a7ec23a60e9b54c4177dba62d9c6b26d1"><div class="ttname"><a href="structui_1_1Bitmap.html#a7ec23a60e9b54c4177dba62d9c6b26d1">ui::Bitmap::data</a></div><div class="ttdeci">color_t *const data</div><div class="ttdoc">The list of pixels in the image.</div><div class="ttdef"><b>Definition</b> bitmap.hpp:15</div></div>
-<div class="ttc" id="astructui_1_1Bitmap_html_a8d4bab60bbcee6b18c9587e1bc2fdb84"><div class="ttname"><a href="structui_1_1Bitmap.html#a8d4bab60bbcee6b18c9587e1bc2fdb84">ui::Bitmap::getSize</a></div><div class="ttdeci">Size getSize() const override</div><div class="ttdoc">Get the size of the bitmap.</div></div>
-<div class="ttc" id="astructui_1_1Bitmap_html_aa8fd9ffcf8d22a4de85200320de941f4"><div class="ttname"><a href="structui_1_1Bitmap.html#aa8fd9ffcf8d22a4de85200320de941f4">ui::Bitmap::Bitmap</a></div><div class="ttdeci">Bitmap(const Size &amp;size, color_t *const data)</div><div class="ttdoc">Construct a bitmap image from static data.</div></div>
-<div class="ttc" id="astructui_1_1Bitmap_html_afce6ce9f54fd8f13d9cca6b21dfd5be3"><div class="ttname"><a href="structui_1_1Bitmap.html#afce6ce9f54fd8f13d9cca6b21dfd5be3">ui::Bitmap::averageColor</a></div><div class="ttdeci">virtual color_t averageColor() const</div><div class="ttdoc">Get the average color of the bitmap.</div></div>
 <div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdoc">A struct for storing the pixel coordinates of various UI elements.</div><div class="ttdef"><b>Definition</b> coords.hpp:17</div></div>
-<div class="ttc" id="astructui_1_1Renderable_html"><div class="ttname"><a href="structui_1_1Renderable.html">ui::Renderable</a></div><div class="ttdoc">An abstract interface for arabitrary renderable objects.</div><div class="ttdef"><b>Definition</b> renderable.hpp:55</div></div>
 <div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>
+<div class="ttc" id="astructui_1_1TransparentBitmap_html"><div class="ttname"><a href="structui_1_1TransparentBitmap.html">ui::TransparentBitmap</a></div><div class="ttdoc">A basic image with no compression, and with 1 bit of transparency per pixel.</div><div class="ttdef"><b>Definition</b> transparent_bitmap.hpp:11</div></div>
+<div class="ttc" id="astructui_1_1TransparentBitmap_html_a32671266e6c31e3dc12a970059ba6a0a"><div class="ttname"><a href="structui_1_1TransparentBitmap.html#a32671266e6c31e3dc12a970059ba6a0a">ui::TransparentBitmap::averageColor</a></div><div class="ttdeci">color_t averageColor() const override</div><div class="ttdoc">Get the average color of the bitmap.</div></div>
+<div class="ttc" id="astructui_1_1TransparentBitmap_html_a934d101cafa95fd5dbfa449d6028f29a"><div class="ttname"><a href="structui_1_1TransparentBitmap.html#a934d101cafa95fd5dbfa449d6028f29a">ui::TransparentBitmap::mask</a></div><div class="ttdeci">uint8_t *const mask</div><div class="ttdoc">The transparency mask.</div><div class="ttdef"><b>Definition</b> transparent_bitmap.hpp:17</div></div>
+<div class="ttc" id="astructui_1_1TransparentBitmap_html_a985914402197ddf7b65146f6e82dbcb4"><div class="ttname"><a href="structui_1_1TransparentBitmap.html#a985914402197ddf7b65146f6e82dbcb4">ui::TransparentBitmap::renderAt</a></div><div class="ttdeci">void renderAt(const Coords &amp;coords, const shader_t &amp;shader=0) const override</div><div class="ttdoc">Display the bitmap directly onto the screen.</div></div>
+<div class="ttc" id="astructui_1_1TransparentBitmap_html_af653a92167aadf3c039872b5a9947ab5"><div class="ttname"><a href="structui_1_1TransparentBitmap.html#af653a92167aadf3c039872b5a9947ab5">ui::TransparentBitmap::TransparentBitmap</a></div><div class="ttdeci">TransparentBitmap(const Size &amp;size, color_t *const data, uint8_t *const mask)</div><div class="ttdoc">Construct a transparent bitmap image from static data.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_54af36d51a9cc63772a7fe8bbd49e97e.html">core</a></li><li class="navelem"><a class="el" href="dir_313bf325e116e1fdfe6a5b3cce438ca3.html">renderable</a></li><li class="navelem"><a class="el" href="bitmap_8hpp.html">bitmap.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_54af36d51a9cc63772a7fe8bbd49e97e.html">core</a></li><li class="navelem"><a class="el" href="dir_313bf325e116e1fdfe6a5b3cce438ca3.html">renderable</a></li><li class="navelem"><b>transparent_bitmap.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

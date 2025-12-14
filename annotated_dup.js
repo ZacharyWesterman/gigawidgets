@@ -16,6 +16,7 @@ var annotated_dup =
       [ "SingleChildWidget", "classui_1_1SingleChildWidget.html", "classui_1_1SingleChildWidget" ],
       [ "Size", "structui_1_1Size.html", "structui_1_1Size" ],
       [ "Text", "classui_1_1Text.html", "classui_1_1Text" ],
+      [ "TransparencyMap", "structui_1_1TransparencyMap.html", "structui_1_1TransparencyMap" ],
       [ "TransparentBitmap", "structui_1_1TransparentBitmap.html", "structui_1_1TransparentBitmap" ],
       [ "Widget", "classui_1_1Widget.html", "classui_1_1Widget" ]
     ] ]

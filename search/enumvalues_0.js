@@ -15,7 +15,8 @@ var searchData=
   ['color_5fmagenta_12',['COLOR_MAGENTA',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da69f0176f25e84cf3b53e18216f378a08',1,'ui']]],
   ['color_5forange_13',['COLOR_ORANGE',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da31877b7f095c5ad0a8adea4595e752dd',1,'ui']]],
   ['color_5fpink_14',['COLOR_PINK',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da05fcd1705a3840f349a0228a428f9336',1,'ui']]],
-  ['color_5fred_15',['COLOR_RED',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9daf4a39119f605a163d18924b385329ac4',1,'ui']]],
-  ['color_5fwhite_16',['COLOR_WHITE',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da9ffd91a8396122ac2ab0c3da63e5e568',1,'ui']]],
-  ['color_5fyellow_17',['COLOR_YELLOW',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da37e42ea93eb7e776570bd3f52b923990',1,'ui']]]
+  ['color_5fpurple_15',['COLOR_PURPLE',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da7e2926779ede103afa76c4fcd87f0a71',1,'ui']]],
+  ['color_5fred_16',['COLOR_RED',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9daf4a39119f605a163d18924b385329ac4',1,'ui']]],
+  ['color_5fwhite_17',['COLOR_WHITE',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da9ffd91a8396122ac2ab0c3da63e5e568',1,'ui']]],
+  ['color_5fyellow_18',['COLOR_YELLOW',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da37e42ea93eb7e776570bd3f52b923990',1,'ui']]]
 ];
