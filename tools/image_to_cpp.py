@@ -39,6 +39,12 @@ parser.add_argument(
     type=color_hex,
     help='Replace all non-transparent pixels with a single color.',
 )
+parser.add_argument(
+    '-c',
+    '--compress',
+    action='store_true',
+    help='Attempt to compress image data to save space.',
+)
 
 args = parser.parse_args()
 filename = args.filename
@@ -108,7 +114,11 @@ class TransparentBitmap(Bitmap):
 
     def mask(self):
         print(', (uint8_t[]){', end='')
+        for i in self.bytes():
+            print(f'{i},', end='')
+        print('}', end='')
 
+    def bytes(self):
         byte = 0
         shift = 0
         for y in range(image.height):
@@ -117,14 +127,14 @@ class TransparentBitmap(Bitmap):
                 byte = byte * 2 + int(a >= args.transparency)
                 shift += 1
                 if shift >= 8:
-                    print(f'{byte},', end='')
+                    yield byte
                     shift = 0
                     byte = 0
             # Renderer always moves to the next byte when it hits the end of the line
             if shift > 0:
                 for _ in range(shift, 8):
                     byte *= 2
-                print(f'{byte},', end='')
+                yield byte
                 shift = 0
                 byte = 0
 
@@ -132,9 +142,7 @@ class TransparentBitmap(Bitmap):
         if shift > 0:
             for _ in range(shift, 8):
                 byte *= 2
-            print(f'{byte},', end='')
-
-        print('}', end='')
+            yield byte
 
 
 class TransparencyMap(TransparentBitmap):
@@ -145,12 +153,36 @@ class TransparencyMap(TransparentBitmap):
         self.footer()
 
 
+class CompressedTransparencyMap(TransparencyMap):
+    def mask(self):
+        print(', (uint8_t[]){', end='')
+
+        init = False
+        ct = 0
+        last_byte = 0
+        for byte in self.bytes():
+            if not init:
+                init = True
+            elif ct >= 255 or last_byte != byte:
+                print(f'{ct},{last_byte},', end='')
+                ct = 0
+
+            last_byte = byte
+            ct += 1
+
+        print(f'{ct},{last_byte},', end='')
+        print('}', end='')
+
+
 if args.monochrome and not args.transparency:
     print('ERROR: Monochrome without transparency?!')
     exit(1)
 
 if args.monochrome is not None:
-    render = TransparencyMap()
+    if args.compress:
+        render = CompressedTransparencyMap()
+    else:
+        render = TransparencyMap()
 elif args.transparency is not None:
     render = TransparentBitmap()
 else:
