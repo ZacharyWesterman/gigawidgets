@@ -48,7 +48,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "alignment_8hpp.html",
-"structui_1_1TransparencyMap.html#ab10106ef4ef32212a002563c67fd37ff"
+"structui_1_1TransparencyMap.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

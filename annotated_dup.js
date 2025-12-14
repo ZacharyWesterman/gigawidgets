@@ -7,6 +7,7 @@ var annotated_dup =
       [ "Body", "classui_1_1Body.html", "classui_1_1Body" ],
       [ "Bounds", "structui_1_1Bounds.html", "structui_1_1Bounds" ],
       [ "Button", "classui_1_1Button.html", "classui_1_1Button" ],
+      [ "CompressedTransparencyMap", "structui_1_1CompressedTransparencyMap.html", "structui_1_1CompressedTransparencyMap" ],
       [ "Coords", "structui_1_1Coords.html", "structui_1_1Coords" ],
       [ "Event", "structui_1_1Event.html", "structui_1_1Event" ],
       [ "Image", "classui_1_1Image.html", "classui_1_1Image" ],

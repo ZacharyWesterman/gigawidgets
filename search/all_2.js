@@ -26,9 +26,10 @@ var searchData=
   ['color_5fwhite_23',['COLOR_WHITE',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da9ffd91a8396122ac2ab0c3da63e5e568',1,'ui']]],
   ['color_5fyellow_24',['COLOR_YELLOW',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da37e42ea93eb7e776570bd3f52b923990',1,'ui']]],
   ['colorcomponents_25',['colorComponents',['../color_8hpp.html#a5006b678e79506956ed1dc53d0f7a9c3',1,'ui']]],
-  ['contacts_26',['contacts',['../structui_1_1Event.html#ab25a38ceb7fc103d603223a420c6d78d',1,'ui::Event']]],
-  ['contains_27',['contains',['../structui_1_1Bounds.html#a6818832d49c5b9bc5c864877ebef3758',1,'ui::Bounds']]],
-  ['coord_5ft_28',['coord_t',['../coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4',1,'ui']]],
-  ['coords_29',['coords',['../structui_1_1Coords.html',1,'ui::Coords'],['../structui_1_1Event.html#a1178834040efb7d41498f85a544dbcb5',1,'ui::Event::coords']]],
-  ['coords_2ehpp_30',['coords.hpp',['../coords_8hpp.html',1,'']]]
+  ['compressedtransparencymap_26',['CompressedTransparencyMap',['../structui_1_1CompressedTransparencyMap.html',1,'ui']]],
+  ['contacts_27',['contacts',['../structui_1_1Event.html#ab25a38ceb7fc103d603223a420c6d78d',1,'ui::Event']]],
+  ['contains_28',['contains',['../structui_1_1Bounds.html#a6818832d49c5b9bc5c864877ebef3758',1,'ui::Bounds']]],
+  ['coord_5ft_29',['coord_t',['../coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4',1,'ui']]],
+  ['coords_30',['coords',['../structui_1_1Event.html#a1178834040efb7d41498f85a544dbcb5',1,'ui::Event::coords'],['../structui_1_1Coords.html',1,'ui::Coords']]],
+  ['coords_2ehpp_31',['coords.hpp',['../coords_8hpp.html',1,'']]]
 ];

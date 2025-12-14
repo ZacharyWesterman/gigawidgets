@@ -10,7 +10,9 @@ var hierarchy =
       [ "ui::Bitmap", "structui_1_1Bitmap.html", [
         [ "ui::TransparentBitmap", "structui_1_1TransparentBitmap.html", null ]
       ] ],
-      [ "ui::TransparencyMap", "structui_1_1TransparencyMap.html", null ]
+      [ "ui::TransparencyMap", "structui_1_1TransparencyMap.html", [
+        [ "ui::CompressedTransparencyMap", "structui_1_1CompressedTransparencyMap.html", null ]
+      ] ]
     ] ],
     [ "ui::Size", "structui_1_1Size.html", null ],
     [ "ui::Widget", "classui_1_1Widget.html", [
