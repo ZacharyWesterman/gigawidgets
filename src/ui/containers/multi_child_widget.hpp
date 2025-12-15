@@ -39,7 +39,7 @@ public:
 	 * @brief Append a child widget.
 	 * @param child The new child widget.
 	 */
-	void addChild(Widget *const child);
+	virtual void addChild(Widget *const child);
 
 	bool handleEvent(const Event &event) override;
 };
