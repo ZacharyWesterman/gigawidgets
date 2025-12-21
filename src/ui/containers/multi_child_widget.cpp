@@ -22,9 +22,10 @@ void MultiChildWidget::drawDone() {
 	}
 }
 
-void MultiChildWidget::addChild(Widget *const child) {
+void MultiChildWidget::push(Widget *const child) {
 	child->setParent(this);
 	children.push_back(child);
+	redrawSelf = true;
 }
 
 bool MultiChildWidget::handleEvent(const Event &event) {
@@ -50,7 +51,7 @@ bool MultiChildWidget::update(time_t time_ms) {
 		}
 	}
 
-	return updated;
+	return updated || redrawSelf || redrawParent;
 }
 
 void MultiChildWidget::draw() const {

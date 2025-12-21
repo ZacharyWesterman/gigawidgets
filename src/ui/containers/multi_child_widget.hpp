@@ -36,10 +36,10 @@ public:
 	void draw() const override;
 
 	/**
-	 * @brief Append a child widget.
+	 * @brief Append a child widget to the end of the list.
 	 * @param child The new child widget.
 	 */
-	virtual void addChild(Widget *const child);
+	virtual void push(Widget *const child);
 
 	bool handleEvent(const Event &event) override;
 };

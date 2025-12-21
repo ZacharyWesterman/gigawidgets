@@ -7,12 +7,28 @@
 namespace ui {
 
 class Column : public Collection {
-	spacing_t spacing;
+	uisize_t minimumHeight = 0;
+	align_t childAlignment = ALIGN_TOP;
+
+	void calcChildBounds(int index);
 
 public:
 	using Collection::Collection;
 
-	void addChild(Widget *const child) override;
+	bool update(time_t time) override;
+
+	void push(Widget *const child) override;
+
+	void setMinHeight(uisize_t minHeight);
+	void setChildAlign(align_t align);
+
+	inline uisize_t getMinHeight() const {
+		return minimumHeight;
+	}
+
+	inline align_t getChildAlign() const {
+		return childAlignment;
+	}
 };
 
 } // namespace ui
