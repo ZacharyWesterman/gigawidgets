@@ -2,11 +2,12 @@
 #pragma once
 
 #include "collection.hpp"
+#include "core/spacing.hpp"
 
 namespace ui {
 
 class Column : public Collection {
-	bool expand;
+	spacing_t spacing;
 
 public:
 	using Collection::Collection;

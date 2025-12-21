@@ -1,27 +1,31 @@
 #include "src/ui.hpp"
+#include "src/ui/icons/firefox.hpp"
 #include "src/ui/icons/skrunk.hpp"
 #include <Fonts/FreeSerif18pt7b.h>
 
 void setup() {
-	// Position is relative to parent.
-	ui::Position position = {0.5, 0.5};
-	// Alignment is relative to position on parent.
-	ui::Alignment alignment = {ui::ALIGN_CENTER, ui::ALIGN_CENTER};
-	// Padding can be in px, mm, cm, in, vw, or vh.
-	ui::Padding padding = {0.5_cm};
-
 	ui::setRotation(ui::ROT_270_DEG);
 
+	// Position is relative to parent.
+	ui::Position position = {0, 0};
+	// Alignment is relative to position on parent.
+	ui::Alignment alignment = {ui::ALIGN_LEFT, ui::ALIGN_TOP};
+	// Padding can be in px, mm, cm, in, vw, or vh.
+	ui::Padding padding = {10_px};
+	// Size is absolute
+	ui::Size size = {ui::width(), ui::height()};
+
 	// Build the UI
-	auto text = new ui::Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", &FreeSerif18pt7b, ui::COLOR_LIGHT_GREEN);
 
-	auto logo = new ui::Image(&ui::icon::skrunk, position, alignment);
+	auto column = new ui::Column(size, position, alignment, padding);
 
-	auto collection = new ui::Collection({ui::width(), ui::height()}, {0, 0}, {ui::ALIGN_LEFT, ui::ALIGN_TOP}, padding);
-	collection->addChild(logo);
-	collection->addChild(text);
+	column->addChild(new ui::Text("This is line 1.", &FreeSerif18pt7b, ui::COLOR_LIGHT_YELLOW));
+	column->addChild(new ui::Text("This is line 2.", &FreeSerif18pt7b, ui::COLOR_LIGHT_BLUE));
+	column->addChild(new ui::Image(&ui::icon::firefox));
+	column->addChild(new ui::Text("This is line 3.", &FreeSerif18pt7b, ui::COLOR_PINK, {.99f, 0.f}, {ui::ALIGN_RIGHT, ui::ALIGN_TOP}));
+	column->addChild(new ui::Text("This is line 4.", &FreeSerif18pt7b, ui::COLOR_YELLOW));
 
-	auto body = new ui::Body(collection, ui::COLOR_BLACK);
+	auto body = new ui::Body(column, ui::COLOR_BLACK);
 	ui::setRoot(body);
 }
 

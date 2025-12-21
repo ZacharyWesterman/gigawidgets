@@ -1,23 +1,29 @@
 #include "column.hpp"
 #include "containers/box.hpp"
+#include <Arduino.h>
 
 namespace ui {
 
 void Column::addChild(Widget *const child) {
 	auto childSize = child->size();
 	auto b = bounds();
-	Coords start = b.min;
-	Coords end = {b.max.x, b.min.y + childSize.y};
 
-	for (const auto c : children) {
-		if (c) {
-			auto height = c->size().y;
-			start.y += height;
-			end.y += height;
+	auto y = b.min.y;
+
+	for (const auto prevChild : children) {
+		if (prevChild) {
+			auto prevChildHeight = prevChild->size().y;
+			y += prevChildHeight + padding.top + padding.bottom;
 		}
 	}
 
-	children.push_back(new ui::Box(child, {start, end}));
+	b.min.x += padding.left;
+	b.max.x -= padding.right;
+
+	b.min.y = y + padding.top;
+	b.max.y = y + padding.top + childSize.y;
+
+	children.push_back(new ui::Box(child, b));
 }
 
 } // namespace ui
