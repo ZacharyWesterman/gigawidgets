@@ -107,29 +107,35 @@ $(document).ready(function(){initNavTree('ui_8hpp_source.html',''); initResizabl
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="blink_8hpp.html">ui/blink.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="body_8hpp.html">ui/body.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="button_8hpp.html">ui/button.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="display_8hpp.html">ui/core/display.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="units_8hpp.html">ui/core/units.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="image_8hpp.html">ui/image.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="text_8hpp.html">ui/text.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef UI_RENDER_FREQUENCY</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Refresh at most every 50ms</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define UI_RENDER_FREQUENCY 50</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="ui_8hpp.html#a2bc05cb7596a67be883f8617b580c957">   23</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="ui_8hpp.html#a2bc05cb7596a67be883f8617b580c957">setRoot</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *<span class="keyword">const</span> root);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13">   29</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13">render</a>(<span class="keywordtype">bool</span> block = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="collection_8hpp.html">ui/collection.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="column_8hpp.html">ui/column.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="display_8hpp.html">ui/core/display.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="units_8hpp.html">ui/core/units.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="image_8hpp.html">ui/image.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="row_8hpp.html">ui/row.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="text_8hpp.html">ui/text.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifndef UI_RENDER_FREQUENCY</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// Refresh at most every 50ms</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define UI_RENDER_FREQUENCY 50</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="ui_8hpp.html#a2bc05cb7596a67be883f8617b580c957">   26</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="ui_8hpp.html#a2bc05cb7596a67be883f8617b580c957">setRoot</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *<span class="keyword">const</span> root);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13">   32</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13">render</a>(<span class="keywordtype">bool</span> block = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace ui</span></div>
 <div class="ttc" id="ablink_8hpp_html"><div class="ttname"><a href="blink_8hpp.html">blink.hpp</a></div></div>
 <div class="ttc" id="abody_8hpp_html"><div class="ttname"><a href="body_8hpp.html">body.hpp</a></div></div>
 <div class="ttc" id="abutton_8hpp_html"><div class="ttname"><a href="button_8hpp.html">button.hpp</a></div></div>
 <div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdoc">The common interface for all UI objects.</div><div class="ttdef"><b>Definition</b> widget.hpp:24</div></div>
+<div class="ttc" id="acollection_8hpp_html"><div class="ttname"><a href="collection_8hpp.html">collection.hpp</a></div></div>
+<div class="ttc" id="acolumn_8hpp_html"><div class="ttname"><a href="column_8hpp.html">column.hpp</a></div></div>
 <div class="ttc" id="adisplay_8hpp_html"><div class="ttname"><a href="display_8hpp.html">display.hpp</a></div></div>
 <div class="ttc" id="aimage_8hpp_html"><div class="ttname"><a href="image_8hpp.html">image.hpp</a></div></div>
+<div class="ttc" id="arow_8hpp_html"><div class="ttname"><a href="row_8hpp.html">row.hpp</a></div></div>
 <div class="ttc" id="atext_8hpp_html"><div class="ttname"><a href="text_8hpp.html">text.hpp</a></div></div>
 <div class="ttc" id="aui_8hpp_html_a2bc05cb7596a67be883f8617b580c957"><div class="ttname"><a href="ui_8hpp.html#a2bc05cb7596a67be883f8617b580c957">ui::setRoot</a></div><div class="ttdeci">void setRoot(Widget *const root)</div><div class="ttdoc">Set the root widget for the UI to render.</div></div>
 <div class="ttc" id="aui_8hpp_html_ad2c2da5e61ff916211317d49d733ec13"><div class="ttname"><a href="ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13">ui::render</a></div><div class="ttdeci">void render(bool block=true)</div><div class="ttdoc">Update all UI elements and re-render any areas that need it.</div></div>

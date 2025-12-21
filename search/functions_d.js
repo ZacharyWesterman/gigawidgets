@@ -1,23 +1,9 @@
 var searchData=
 [
-  ['setalign_0',['setAlign',['../classui_1_1Widget.html#a6835f31d0c1f59064f6e340d2b3a8d1a',1,'ui::Widget']]],
-  ['setborderradius_1',['setBorderRadius',['../classui_1_1Button.html#ac745a376799bb571b2f236db2ef8b114',1,'ui::Button']]],
-  ['setchild_2',['setChild',['../classui_1_1SingleChildWidget.html#aeda011e657a52ee632690111cd99f03c',1,'ui::SingleChildWidget']]],
-  ['setcolor_3',['setcolor',['../classui_1_1Body.html#aa4db60884daa0b50a74ff7e3e4666e53',1,'ui::Body::setColor()'],['../classui_1_1Button.html#a4343d46dc85b050e67244b95ddad8c90',1,'ui::Button::setColor()']]],
-  ['setcursor_4',['setCursor',['../display_8hpp.html#aba98f23052303a15637b5b2d3d3b4679',1,'ui']]],
-  ['setfont_5',['setFont',['../classui_1_1Text.html#a983861dd8aa672bb1b1c0e6595ca3476',1,'ui::Text']]],
-  ['setparent_6',['setParent',['../classui_1_1Widget.html#afd0e7babb90d380238e17e4be75b7481',1,'ui::Widget']]],
-  ['setpos_7',['setPos',['../classui_1_1Widget.html#a4887c5301b27fe20e53734ddb56b2f84',1,'ui::Widget']]],
-  ['setroot_8',['setRoot',['../ui_8hpp.html#a2bc05cb7596a67be883f8617b580c957',1,'ui']]],
-  ['setrotation_9',['setRotation',['../display_8hpp.html#ab8a0a15b947e630a557455ac8524f069',1,'ui']]],
-  ['setscale_10',['setScale',['../classui_1_1Text.html#af62f6596e5273ce586c13bae9ce87072',1,'ui::Text']]],
-  ['setshader_11',['setshader',['../classui_1_1Image.html#acf7760b915633ce656a2db89614f083f',1,'ui::Image::setShader(const shader_animated_t &amp;shader)'],['../classui_1_1Image.html#a2bc13048ee692e4038375d4203ff264e',1,'ui::Image::setShader(const shader_oneframe_t &amp;shader)']]],
-  ['settext_12',['setText',['../classui_1_1Text.html#a866e0667756223aab321e25f4918b5e0',1,'ui::Text']]],
-  ['settextcolor_13',['setTextColor',['../display_8hpp.html#a261fb6e10705d3b47e6dde2de6178553',1,'ui']]],
-  ['settextsize_14',['setTextSize',['../display_8hpp.html#aa1862626a9e804ae8a2c8f347ce84539',1,'ui']]],
-  ['settextwrap_15',['setTextWrap',['../display_8hpp.html#a0418c68f0e7805470f5acff3a6499d08',1,'ui']]],
-  ['setwrap_16',['setWrap',['../classui_1_1Text.html#a03b0a10495d46955c264176f3e1e840c',1,'ui::Text']]],
-  ['singlechildwidget_17',['SingleChildWidget',['../classui_1_1SingleChildWidget.html#a9a55143159a07e508fc904991eb0e9f7',1,'ui::SingleChildWidget']]],
-  ['size_18',['size',['../classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8',1,'ui::Blink::size()'],['../classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c',1,'ui::Text::size()'],['../classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3',1,'ui::Image::size()'],['../classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49',1,'ui::Widget::size()'],['../classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6',1,'ui::SingleChildWidget::size()'],['../classui_1_1Button.html#a1468f1a1cdf56fac29bd7e23f7eeff07',1,'ui::Button::size()'],['../classui_1_1Body.html#a985a32b7381a2c0cdbd41c380fdd4c88',1,'ui::Body::size()']]],
-  ['startuprainbow_19',['startupRainbow',['../startup__rainbow_8hpp.html#ac06869d9b183456ce16a95ee347505c3',1,'ui::shader']]]
+  ['redrawrequested_0',['redrawRequested',['../classui_1_1Widget.html#add6812540626995a7b35ee0b0a7c6338',1,'ui::Widget']]],
+  ['release_1',['release',['../classui_1_1Widget.html#a7f41f588697ffddb9b97b4706a2eff8c',1,'ui::Widget']]],
+  ['removeshader_2',['removeShader',['../classui_1_1Image.html#a6e3afff1e53f42e6f09923adb7ec1fcd',1,'ui::Image']]],
+  ['render_3',['render',['../ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13',1,'ui']]],
+  ['renderat_4',['renderat',['../structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577',1,'ui::Renderable::renderAt()'],['../structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e',1,'ui::Bitmap::renderAt()'],['../structui_1_1CompressedTransparencyMap.html#ac928ffa2448795354d46f627c980a8f8',1,'ui::CompressedTransparencyMap::renderAt()'],['../structui_1_1TransparencyMap.html#a9380ce6fb8c000ffae11e2b8aca10d21',1,'ui::TransparencyMap::renderAt()'],['../structui_1_1TransparentBitmap.html#a985914402197ddf7b65146f6e82dbcb4',1,'ui::TransparentBitmap::renderAt()']]],
+  ['rotationchanged_5',['rotationChanged',['../display_8hpp.html#a36a3e1f95518ce96f5b8df2778e51ad8',1,'ui']]]
 ];

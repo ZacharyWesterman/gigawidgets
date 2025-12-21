@@ -10,9 +10,11 @@ var searchData=
   ['render_7',['render',['../ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13',1,'ui']]],
   ['renderable_8',['Renderable',['../structui_1_1Renderable.html',1,'ui']]],
   ['renderable_2ehpp_9',['renderable.hpp',['../renderable_8hpp.html',1,'']]],
-  ['renderat_10',['renderat',['../structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577',1,'ui::Renderable::renderAt()'],['../structui_1_1TransparentBitmap.html#a985914402197ddf7b65146f6e82dbcb4',1,'ui::TransparentBitmap::renderAt()'],['../structui_1_1TransparencyMap.html#a9380ce6fb8c000ffae11e2b8aca10d21',1,'ui::TransparencyMap::renderAt()'],['../structui_1_1CompressedTransparencyMap.html#ac928ffa2448795354d46f627c980a8f8',1,'ui::CompressedTransparencyMap::renderAt()'],['../structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e',1,'ui::Bitmap::renderAt()']]],
+  ['renderat_10',['renderat',['../structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577',1,'ui::Renderable::renderAt()'],['../structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e',1,'ui::Bitmap::renderAt()'],['../structui_1_1CompressedTransparencyMap.html#ac928ffa2448795354d46f627c980a8f8',1,'ui::CompressedTransparencyMap::renderAt()'],['../structui_1_1TransparencyMap.html#a9380ce6fb8c000ffae11e2b8aca10d21',1,'ui::TransparencyMap::renderAt()'],['../structui_1_1TransparentBitmap.html#a985914402197ddf7b65146f6e82dbcb4',1,'ui::TransparentBitmap::renderAt()']]],
   ['right_11',['right',['../structui_1_1Padding.html#ada0931cf0123e8ef1cfc1d73d36514d6',1,'ui::Padding']]],
   ['rotation_2ehpp_12',['rotation.hpp',['../rotation_8hpp.html',1,'']]],
   ['rotation_5ft_13',['rotation_t',['../rotation_8hpp.html#ac35f2fd44194da2d523b20ef83270410',1,'ui']]],
-  ['rotationchanged_14',['rotationChanged',['../display_8hpp.html#a36a3e1f95518ce96f5b8df2778e51ad8',1,'ui']]]
+  ['rotationchanged_14',['rotationChanged',['../display_8hpp.html#a36a3e1f95518ce96f5b8df2778e51ad8',1,'ui']]],
+  ['row_15',['Row',['../classui_1_1Row.html',1,'ui']]],
+  ['row_2ehpp_16',['row.hpp',['../row_8hpp.html',1,'']]]
 ];

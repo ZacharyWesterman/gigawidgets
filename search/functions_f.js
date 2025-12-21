@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['update_0',['update',['../classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695',1,'ui::Blink::update()'],['../classui_1_1Button.html#acee7e2e147cf9256dc6d6e115483eaab',1,'ui::Button::update()'],['../classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf',1,'ui::SingleChildWidget::update()'],['../classui_1_1Widget.html#a3c2a521304a419ca57cce6e0730aa332',1,'ui::Widget::update()'],['../classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042',1,'ui::Image::update()']]]
+  ['text_0',['text',['../classui_1_1Text.html#a79450e805ad6ed1e449cdd8ba0077777',1,'ui::Text::Text(const String &amp;text, fontsize_t scale=1, color_t color=COLOR_WHITE, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, bool wrap=true)'],['../classui_1_1Text.html#a05c8c9dd2b9630a1eeb1b0577f8d1d5d',1,'ui::Text::Text(const String &amp;text, const GFXfont *font, color_t color=COLOR_WHITE, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, bool wrap=true)']]],
+  ['transparencymap_1',['transparencymap',['../structui_1_1TransparencyMap.html#ab10106ef4ef32212a002563c67fd37ff',1,'ui::TransparencyMap::TransparencyMap()'],['../structui_1_1CompressedTransparencyMap.html#ab10106ef4ef32212a002563c67fd37ff',1,'ui::CompressedTransparencyMap::TransparencyMap()']]],
+  ['transparentbitmap_2',['TransparentBitmap',['../structui_1_1TransparentBitmap.html#af653a92167aadf3c039872b5a9947ab5',1,'ui::TransparentBitmap']]]
 ];
