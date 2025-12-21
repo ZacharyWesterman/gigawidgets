@@ -104,6 +104,11 @@ $(document).ready(function(){initNavTree('classui_1_1Box.html',''); initResizabl
   <div class="headertitle"><div class="title">ui::Box Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Display a single widget within arbitrary bounds.  
+ <a href="classui_1_1Box.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="box_8hpp_source.html">box.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ui::Box:</div>
 <div class="dyncontent">
@@ -117,14 +122,14 @@ Inheritance diagram for ui::Box:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af908d1d68e0ce1172641bdf45a80d875" id="r_af908d1d68e0ce1172641bdf45a80d875"><td class="memItemLeft" align="right" valign="top"><a id="af908d1d68e0ce1172641bdf45a80d875" name="af908d1d68e0ce1172641bdf45a80d875"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Box</b> (<a class="el" href="classui_1_1Widget.html">Widget</a> *<a class="el" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, const <a class="el" href="structui_1_1Bounds.html">Bounds</a> &amp;<a class="el" href="classui_1_1Box.html#a4c8bd8c605405e86292a4f303e7ce3b8">bounds</a>)</td></tr>
+<tr class="memitem:af908d1d68e0ce1172641bdf45a80d875" id="r_af908d1d68e0ce1172641bdf45a80d875"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Box.html#af908d1d68e0ce1172641bdf45a80d875">Box</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *<a class="el" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, const <a class="el" href="structui_1_1Bounds.html">Bounds</a> &amp;<a class="el" href="classui_1_1Box.html#a4c8bd8c605405e86292a4f303e7ce3b8">bounds</a>)</td></tr>
+<tr class="memdesc:af908d1d68e0ce1172641bdf45a80d875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classui_1_1Box.html" title="Display a single widget within arbitrary bounds.">Box</a> from a child and <a class="el" href="structui_1_1Bounds.html" title="A struct that holds the pixel space that a widget would take up on the screen.">Bounds</a> to restrict the child to.  <br /></td></tr>
 <tr class="separator:af908d1d68e0ce1172641bdf45a80d875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c8bd8c605405e86292a4f303e7ce3b8" id="r_a4c8bd8c605405e86292a4f303e7ce3b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Box.html#a4c8bd8c605405e86292a4f303e7ce3b8">bounds</a> () const override</td></tr>
 <tr class="memdesc:a4c8bd8c605405e86292a4f303e7ce3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rendering bounds of this widget.  <br /></td></tr>
 <tr class="separator:a4c8bd8c605405e86292a4f303e7ce3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8880e7bd814231d945d9f0938956c201" id="r_a8880e7bd814231d945d9f0938956c201"><td class="memItemLeft" align="right" valign="top"><a id="a8880e7bd814231d945d9f0938956c201" name="a8880e7bd814231d945d9f0938956c201"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBounds</b> (const <a class="el" href="structui_1_1Bounds.html">Bounds</a> &amp;<a class="el" href="classui_1_1Box.html#a4c8bd8c605405e86292a4f303e7ce3b8">bounds</a>)</td></tr>
+<tr class="memitem:a8880e7bd814231d945d9f0938956c201" id="r_a8880e7bd814231d945d9f0938956c201"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Box.html#a8880e7bd814231d945d9f0938956c201">setBounds</a> (const <a class="el" href="structui_1_1Bounds.html">Bounds</a> &amp;<a class="el" href="classui_1_1Box.html#a4c8bd8c605405e86292a4f303e7ce3b8">bounds</a>)</td></tr>
+<tr class="memdesc:a8880e7bd814231d945d9f0938956c201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the bounds for the child widget.  <br /></td></tr>
 <tr class="separator:a8880e7bd814231d945d9f0938956c201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0574b19b94af64731ef236a49a1fb0af" id="r_a0574b19b94af64731ef236a49a1fb0af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Box.html#a0574b19b94af64731ef236a49a1fb0af">draw</a> () const override</td></tr>
 <tr class="memdesc:a0574b19b94af64731ef236a49a1fb0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the widget to the screen.  <br /></td></tr>
@@ -245,6 +250,47 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 <tr class="memdesc:a39a9cb027602e627af0485e8227663ee inherit pro_attribs_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, force a redraw of this widget and any child widgets. <br /></td></tr>
 <tr class="separator:a39a9cb027602e627af0485e8227663ee inherit pro_attribs_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Display a single widget within arbitrary bounds. </p>
+<p>Normally, the parent widget will specify the bounds as a way to organize multiple widgets on the screen. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af908d1d68e0ce1172641bdf45a80d875" name="af908d1d68e0ce1172641bdf45a80d875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af908d1d68e0ce1172641bdf45a80d875">&#9670;&#160;</a></span>Box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Box::Box </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classui_1_1Widget.html">Widget</a> *&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Bounds.html">Bounds</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="classui_1_1Box.html" title="Display a single widget within arbitrary bounds.">Box</a> from a child and <a class="el" href="structui_1_1Bounds.html" title="A struct that holds the pixel space that a widget would take up on the screen.">Bounds</a> to restrict the child to. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>The child widget. </td></tr>
+    <tr><td class="paramname">bounds</td><td>The bounds for the child. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4c8bd8c605405e86292a4f303e7ce3b8" name="a4c8bd8c605405e86292a4f303e7ce3b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c8bd8c605405e86292a4f303e7ce3b8">&#9670;&#160;</a></span>bounds()</h2>
@@ -304,6 +350,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 <p>This only gets called when widgets indicate that a redraw is needed of either themselves or their parents. Widgets that implement this method should take care to render as little as they can get away with, to help performance. </p>
 
 <p>Implements <a class="el" href="classui_1_1Widget.html#a4e13c8bfff3f6638dbfd813fbfd530de">ui::Widget</a>.</p>
+
+</div>
+</div>
+<a id="a8880e7bd814231d945d9f0938956c201" name="a8880e7bd814231d945d9f0938956c201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8880e7bd814231d945d9f0938956c201">&#9670;&#160;</a></span>setBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Box::setBounds </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Bounds.html">Bounds</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the bounds for the child widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The new bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -108,39 +108,49 @@ $(document).ready(function(){initNavTree('row_8hpp_source.html',''); initResizab
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>ui {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classui_1_1Row.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1Row.html">Row</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Collection.html">Collection</a> {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_typedef" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> minimumWidth = 0;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_enumeration" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">align_t</a> childAlignment = ALIGN_LEFT;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> calcChildBounds(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">using </span>Collection::Collection;</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classui_1_1Row.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classui_1_1Row.html">Row</a> : <span class="keyword">public</span> <a class="code hl_class" href="classui_1_1Collection.html">Collection</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_typedef" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> minimumWidth = 0;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_enumeration" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">align_t</a> childAlignment = ALIGN_LEFT;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classui_1_1Row.html#a95d1a83c07f5c1452e4a91b2bacd5aa7">   17</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classui_1_1Row.html#a95d1a83c07f5c1452e4a91b2bacd5aa7">update</a>(time_t time) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classui_1_1Row.html#a67dfc1116660a285e9f2303befaa11b5">   19</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Row.html#a67dfc1116660a285e9f2303befaa11b5">push</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *<span class="keyword">const</span> child) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> setMinWidth(<a class="code hl_typedef" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> minWidth);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> setChildAlign(<a class="code hl_enumeration" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">align_t</a> align);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> getMinWidth()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> minimumWidth;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> calcChildBounds(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">using </span><a class="code hl_function" href="classui_1_1Collection.html#a72f4128e53e13960296c149f35595ef0">Collection::Collection</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classui_1_1Row.html#a95d1a83c07f5c1452e4a91b2bacd5aa7">   26</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classui_1_1Row.html#a95d1a83c07f5c1452e4a91b2bacd5aa7">update</a>(time_t time) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">inline</span> <a class="code hl_enumeration" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">align_t</a> getChildAlign()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> childAlignment;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classui_1_1Row.html#a67dfc1116660a285e9f2303befaa11b5">   28</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Row.html#a67dfc1116660a285e9f2303befaa11b5">push</a>(<a class="code hl_class" href="classui_1_1Widget.html">Widget</a> *<span class="keyword">const</span> child) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classui_1_1Row.html#a5d122e86484a3013dd26a6561a7c0fb1">   34</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Row.html#a5d122e86484a3013dd26a6561a7c0fb1">setMinWidth</a>(<a class="code hl_typedef" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> minWidth);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classui_1_1Row.html#a0a2f856f1347424f195e6e9bdf53aa20">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Row.html#a0a2f856f1347424f195e6e9bdf53aa20">setChildAlign</a>(<a class="code hl_enumeration" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">align_t</a> align);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classui_1_1Row.html#afa7d69fcdfb5f6fb0cc96fd7e56bc42f">   50</a></span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">uisize_t</a> <a class="code hl_function" href="classui_1_1Row.html#afa7d69fcdfb5f6fb0cc96fd7e56bc42f">getMinWidth</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> minimumWidth;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
 </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classui_1_1Row.html#a0b2292c4688dac9dd40d6a085c42922e">   58</a></span>    <span class="keyword">inline</span> <a class="code hl_enumeration" href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">align_t</a> <a class="code hl_function" href="classui_1_1Row.html#a0b2292c4688dac9dd40d6a085c42922e">getChildAlign</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> childAlignment;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>} <span class="comment">// namespace ui</span></div>
 <div class="ttc" id="aalignment_8hpp_html_abe835994d9d0152e9cb975025c672df8"><div class="ttname"><a href="alignment_8hpp.html#abe835994d9d0152e9cb975025c672df8">ui::align_t</a></div><div class="ttdeci">align_t</div><div class="ttdoc">The various ways a child widget can be aligned in its parent.</div><div class="ttdef"><b>Definition</b> alignment.hpp:11</div></div>
-<div class="ttc" id="aclassui_1_1Collection_html"><div class="ttname"><a href="classui_1_1Collection.html">ui::Collection</a></div><div class="ttdef"><b>Definition</b> collection.hpp:8</div></div>
-<div class="ttc" id="aclassui_1_1Row_html"><div class="ttname"><a href="classui_1_1Row.html">ui::Row</a></div><div class="ttdef"><b>Definition</b> row.hpp:8</div></div>
+<div class="ttc" id="aclassui_1_1Collection_html"><div class="ttname"><a href="classui_1_1Collection.html">ui::Collection</a></div><div class="ttdoc">A container widget for displaying a list of arbitrarily-positioned child widgets.</div><div class="ttdef"><b>Definition</b> collection.hpp:11</div></div>
+<div class="ttc" id="aclassui_1_1Collection_html_a72f4128e53e13960296c149f35595ef0"><div class="ttname"><a href="classui_1_1Collection.html#a72f4128e53e13960296c149f35595ef0">ui::Collection::Collection</a></div><div class="ttdeci">Collection(const Size &amp;size, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, const Padding &amp;padding={0})</div><div class="ttdoc">Construct a collection.</div></div>
+<div class="ttc" id="aclassui_1_1Row_html"><div class="ttname"><a href="classui_1_1Row.html">ui::Row</a></div><div class="ttdoc">A container widget that horizontally organizes its children into a structured row.</div><div class="ttdef"><b>Definition</b> row.hpp:11</div></div>
+<div class="ttc" id="aclassui_1_1Row_html_a0a2f856f1347424f195e6e9bdf53aa20"><div class="ttname"><a href="classui_1_1Row.html#a0a2f856f1347424f195e6e9bdf53aa20">ui::Row::setChildAlign</a></div><div class="ttdeci">void setChildAlign(align_t align)</div><div class="ttdoc">Set where to start when displaying child widgets; on the left, or right.</div></div>
+<div class="ttc" id="aclassui_1_1Row_html_a0b2292c4688dac9dd40d6a085c42922e"><div class="ttname"><a href="classui_1_1Row.html#a0b2292c4688dac9dd40d6a085c42922e">ui::Row::getChildAlign</a></div><div class="ttdeci">align_t getChildAlign() const</div><div class="ttdoc">Get where to start when displaying child widgets; on the left, or right.</div><div class="ttdef"><b>Definition</b> row.hpp:58</div></div>
+<div class="ttc" id="aclassui_1_1Row_html_a5d122e86484a3013dd26a6561a7c0fb1"><div class="ttname"><a href="classui_1_1Row.html#a5d122e86484a3013dd26a6561a7c0fb1">ui::Row::setMinWidth</a></div><div class="ttdeci">void setMinWidth(uisize_t minWidth)</div><div class="ttdoc">Set the minimum width of each cell in the row.</div></div>
 <div class="ttc" id="aclassui_1_1Row_html_a67dfc1116660a285e9f2303befaa11b5"><div class="ttname"><a href="classui_1_1Row.html#a67dfc1116660a285e9f2303befaa11b5">ui::Row::push</a></div><div class="ttdeci">void push(Widget *const child) override</div><div class="ttdoc">Append a child widget to the end of the list.</div></div>
 <div class="ttc" id="aclassui_1_1Row_html_a95d1a83c07f5c1452e4a91b2bacd5aa7"><div class="ttname"><a href="classui_1_1Row.html#a95d1a83c07f5c1452e4a91b2bacd5aa7">ui::Row::update</a></div><div class="ttdeci">bool update(time_t time) override</div><div class="ttdoc">Update any internal state of the widget, and check if it needs to be re-rendered.</div></div>
+<div class="ttc" id="aclassui_1_1Row_html_afa7d69fcdfb5f6fb0cc96fd7e56bc42f"><div class="ttname"><a href="classui_1_1Row.html#afa7d69fcdfb5f6fb0cc96fd7e56bc42f">ui::Row::getMinWidth</a></div><div class="ttdeci">uisize_t getMinWidth() const</div><div class="ttdoc">Get the minimum width of each cell in the row.</div><div class="ttdef"><b>Definition</b> row.hpp:50</div></div>
 <div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdoc">The common interface for all UI objects.</div><div class="ttdef"><b>Definition</b> widget.hpp:24</div></div>
 <div class="ttc" id="acollection_8hpp_html"><div class="ttname"><a href="collection_8hpp.html">collection.hpp</a></div></div>
 <div class="ttc" id="asize_8hpp_html_acbf7740ffe9891dbc00599b50662750c"><div class="ttname"><a href="size_8hpp.html#acbf7740ffe9891dbc00599b50662750c">ui::uisize_t</a></div><div class="ttdeci">uint16_t uisize_t</div><div class="ttdoc">A non-negative size for UI widgets.</div><div class="ttdef"><b>Definition</b> size.hpp:12</div></div>

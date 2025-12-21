@@ -104,6 +104,11 @@ $(document).ready(function(){initNavTree('classui_1_1Collection.html',''); initR
   <div class="headertitle"><div class="title">ui::Collection Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A container widget for displaying a list of arbitrarily-positioned child widgets.  
+ <a href="classui_1_1Collection.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="collection_8hpp_source.html">collection.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ui::Collection:</div>
 <div class="dyncontent">
@@ -112,15 +117,15 @@ Inheritance diagram for ui::Collection:</div>
   <map id="ui::Collection_map" name="ui::Collection_map">
 <area href="classui_1_1MultiChildWidget.html" title="The common interface for a widget that contains multiple children." alt="ui::MultiChildWidget" shape="rect" coords="66,56,188,80"/>
 <area href="classui_1_1Widget.html" title="The common interface for all UI objects." alt="ui::Widget" shape="rect" coords="66,0,188,24"/>
-<area href="classui_1_1Column.html" alt="ui::Column" shape="rect" coords="0,168,122,192"/>
-<area href="classui_1_1Row.html" alt="ui::Row" shape="rect" coords="132,168,254,192"/>
+<area href="classui_1_1Column.html" title="A container widget that vertically organizes its children into a structured column." alt="ui::Column" shape="rect" coords="0,168,122,192"/>
+<area href="classui_1_1Row.html" title="A container widget that horizontally organizes its children into a structured row." alt="ui::Row" shape="rect" coords="132,168,254,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a72f4128e53e13960296c149f35595ef0" id="r_a72f4128e53e13960296c149f35595ef0"><td class="memItemLeft" align="right" valign="top"><a id="a72f4128e53e13960296c149f35595ef0" name="a72f4128e53e13960296c149f35595ef0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Collection</b> (const <a class="el" href="structui_1_1Size.html">Size</a> &amp;<a class="el" href="classui_1_1Collection.html#a017ed8063a9bba606abe53456b05fae4">size</a>, const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
+<tr class="memitem:a72f4128e53e13960296c149f35595ef0" id="r_a72f4128e53e13960296c149f35595ef0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Collection.html#a72f4128e53e13960296c149f35595ef0">Collection</a> (const <a class="el" href="structui_1_1Size.html">Size</a> &amp;<a class="el" href="classui_1_1Collection.html#a017ed8063a9bba606abe53456b05fae4">size</a>, const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
+<tr class="memdesc:a72f4128e53e13960296c149f35595ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a collection.  <br /></td></tr>
 <tr class="separator:a72f4128e53e13960296c149f35595ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a017ed8063a9bba606abe53456b05fae4" id="r_a017ed8063a9bba606abe53456b05fae4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Collection.html#a017ed8063a9bba606abe53456b05fae4">size</a> () const override</td></tr>
 <tr class="memdesc:a017ed8063a9bba606abe53456b05fae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the widget.  <br /></td></tr>
@@ -244,6 +249,60 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 <tr class="memdesc:a39a9cb027602e627af0485e8227663ee inherit pro_attribs_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, force a redraw of this widget and any child widgets. <br /></td></tr>
 <tr class="separator:a39a9cb027602e627af0485e8227663ee inherit pro_attribs_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A container widget for displaying a list of arbitrarily-positioned child widgets. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a72f4128e53e13960296c149f35595ef0" name="a72f4128e53e13960296c149f35595ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f4128e53e13960296c149f35595ef0">&#9670;&#160;</a></span>Collection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Collection::Collection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Size.html">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Position.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em> = <code>{0,&#160;0}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;&#160;</td>
+          <td class="paramname"><em>align</em> = <code>{ALIGN_LEFT,&#160;ALIGN_TOP}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;&#160;</td>
+          <td class="paramname"><em>padding</em> = <code>{0}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a collection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of this container widget. </td></tr>
+    <tr><td class="paramname">pos</td><td>The position of this widget relative to its parent. </td></tr>
+    <tr><td class="paramname">align</td><td>The alignment of this widget relative to its parent. </td></tr>
+    <tr><td class="paramname">padding</td><td>The padding to apply to the child widget. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a017ed8063a9bba606abe53456b05fae4" name="a017ed8063a9bba606abe53456b05fae4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a017ed8063a9bba606abe53456b05fae4">&#9670;&#160;</a></span>size()</h2>
