@@ -29,11 +29,15 @@ void SingleChildWidget::setChild(Widget *const child) {
 bool SingleChildWidget::handleEvent(const Event &event) {
 	if (Widget::handleEvent(event)) {
 		child->handleEvent(event);
+		return true;
 	}
+	return false;
 }
 
 bool SingleChildWidget::update(time_t time_ms) {
-	return child->update(time_ms) || child->redrawRequested() || rotationChanged();
+	auto updated = child->update(time_ms);
+	redrawSelf = child->redrawRequested();
+	return updated || redrawSelf || rotationChanged();
 }
 
 } // namespace ui

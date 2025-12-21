@@ -34,7 +34,25 @@ void Text::draw() const {
 }
 
 Size Text::size() const {
-	return {0, 0};
+	const auto p = parentBounds();
+	const auto width = p.max.x - p.min.x;
+	const auto height = p.max.y - p.min.y;
+
+	const uint8_t y_offset = font ? font->yAdvance / 2 : 0;
+
+	GFXcanvas1 canvas(width, height);
+	canvas.setTextSize(scale);
+	canvas.setTextWrap(wrap);
+	canvas.setFont(font);
+
+	int16_t x, y;
+	uint16_t w, h;
+	canvas.getTextBounds(text, 0, 0, &x, &y, &w, &h);
+
+	return {
+		w + 5,
+		h + h / 2,
+	};
 }
 
 void Text::setText(const String &text) {
