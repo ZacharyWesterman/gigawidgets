@@ -50,7 +50,7 @@ Size Text::size() const {
 	canvas.getTextBounds(text, 0, 0, &x, &y, &w, &h);
 
 	return {
-		w,
+		w + 5,
 		h + h / 2,
 	};
 }

@@ -1,48 +1,48 @@
-#include "column.hpp"
+#include "row.hpp"
 #include "containers/box.hpp"
 #include <Arduino.h>
 
 namespace ui {
 
-void Column::calcChildBounds(int index) {
-	// We know this Column will ONLY contain ui::Box widgets.
+void Row::calcChildBounds(int index) {
+	// We know this Row will ONLY contain ui::Box widgets.
 	// Recalc this child based on previous child's bounds.
 
 	auto b = bounds();
 	Box *prevChild = index ? reinterpret_cast<Box *>(children[index - 1]) : nullptr;
 
-	uisize_t y = b.min.y;
+	uisize_t x = b.min.x;
 
 	if (index) {
-		if (childAlignment == ALIGN_TOP) {
-			y = prevChild->bounds().max.y + padding.bottom;
+		if (childAlignment == ALIGN_LEFT) {
+			x = prevChild->bounds().max.x + padding.right;
 		} else {
-			y = prevChild->bounds().min.y - padding.top;
-			y = b.max.y - y + b.min.y;
+			x = prevChild->bounds().min.x - padding.left;
+			x = b.max.x - x + b.min.x;
 		}
 	}
 
-	uisize_t height = max(minimumHeight - padding.top - padding.bottom, children[index]->size().y);
+	uisize_t width = max(minimumWidth - padding.left - padding.right, children[index]->size().x);
 
-	auto ybegin = y + padding.top;
-	auto yend = y + padding.top + height;
+	auto xbegin = x + padding.left;
+	auto xend = x + padding.left + width;
 
-	if (childAlignment != ALIGN_TOP) {
-		ybegin = b.max.y - (ybegin - b.min.y);
-		yend = b.max.y - (yend - b.min.y);
-		std::swap(ybegin, yend);
+	if (childAlignment != ALIGN_LEFT) {
+		xbegin = b.max.x - (xbegin - b.min.x);
+		xend = b.max.x - (xend - b.min.x);
+		std::swap(xbegin, xend);
 	}
 
 	Bounds childBounds = {
-		{b.min.x + padding.left, ybegin},
-		{b.max.x - padding.right, yend},
+		{xbegin, b.min.y + padding.top},
+		{xend, b.max.y - padding.bottom},
 	};
 
 	auto child = reinterpret_cast<Box *>(children[index]);
 	child->setBounds(childBounds);
 }
 
-bool Column::update(time_t time) {
+bool Row::update(time_t time) {
 	bool updated = MultiChildWidget::update(time);
 	// Don't recalculate bounds if not needed.
 	if (!updated) {
@@ -57,18 +57,18 @@ bool Column::update(time_t time) {
 	return true;
 }
 
-void Column::push(Widget *const child) {
+void Row::push(Widget *const child) {
 	MultiChildWidget::push(new Box(child, {{0, 0}, {0, 0}}));
 	calcChildBounds(children.size() - 1);
 }
 
-void Column::setMinHeight(uisize_t minHeight) {
-	minimumHeight = minHeight;
+void Row::setMinWidth(uisize_t minWidth) {
+	minimumWidth = minWidth;
 	redrawSelf = true;
 	redrawParent = true;
 }
 
-void Column::setChildAlign(align_t align) {
+void Row::setChildAlign(align_t align) {
 	childAlignment = align;
 	redrawSelf = true;
 	redrawParent = true;

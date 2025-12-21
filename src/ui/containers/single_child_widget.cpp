@@ -35,9 +35,9 @@ bool SingleChildWidget::handleEvent(const Event &event) {
 }
 
 bool SingleChildWidget::update(time_t time_ms) {
-	redrawSelf = child->update(time_ms);
-	redrawParent = child->redrawRequested();
-	return redrawSelf || redrawParent || rotationChanged();
+	auto updated = child->update(time_ms);
+	redrawSelf = child->redrawRequested();
+	return updated || redrawSelf || rotationChanged();
 }
 
 } // namespace ui

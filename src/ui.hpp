@@ -9,6 +9,7 @@
 #include "ui/core/display.hpp"
 #include "ui/core/units.hpp"
 #include "ui/image.hpp"
+#include "ui/row.hpp"
 #include "ui/text.hpp"
 
 #ifndef UI_RENDER_FREQUENCY
