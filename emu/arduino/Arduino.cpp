@@ -12,7 +12,7 @@ unsigned long millis() {
 }
 
 void delay(unsigned long ms) {
-	std::this_thread::sleep_for(std::chrono::milliseconds(ms));
+	// std::this_thread::sleep_for(std::chrono::milliseconds(ms));
 }
 
 void digitalWrite(int pinNumber, bool pinStatus) {}

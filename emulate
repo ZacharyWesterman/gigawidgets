@@ -18,7 +18,8 @@ if [ ! -f "$1" ]; then
     exit 1
 fi
 
-rsync "$1" emu/ino.cpp
-rsync -a src emu/
-make -C emu INO_FILE="$1"
-exit $?
+rsync "$1" emu/ino.cpp -u || exit 1
+rsync -a src emu/ -u || exit 1
+make -C emu || exit 1
+
+emu/ino || exit 1

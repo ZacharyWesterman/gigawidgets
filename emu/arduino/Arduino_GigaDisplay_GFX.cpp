@@ -1,15 +1,7 @@
 #include <raylib.h>
 
 #include "Arduino_GigaDisplay_GFX.h"
-
-#define GIGA_DISPLAY_W_PX 480
-#define GIGA_DISPLAY_H_PX 800
-#ifndef WINDOW_TITLE
-#define WINDOW_TITLE "GigaWidgets Emulator"
-#endif
-#ifndef WINDOW_SCALE
-#define WINDOW_SCALE 1
-#endif
+#include "define.h"
 
 Color rgb(uint16_t color565) {
 	uint8_t r = color565 >> 8;
@@ -18,8 +10,12 @@ Color rgb(uint16_t color565) {
 	return {r, g, b, 255};
 }
 
+GigaDisplay_GFX::GigaDisplay_GFX() : Adafruit_GFX(GIGA_DISPLAY_W_PX * WINDOW_SCALE, GIGA_DISPLAY_H_PX * WINDOW_SCALE) {}
+
+GigaDisplay_GFX::~GigaDisplay_GFX() {}
+
 void GigaDisplay_GFX::begin() {
-	BeginDrawing();
+	// BeginDrawing();
 }
 
 void GigaDisplay_GFX::fillScreen(uint16_t color) {
@@ -46,7 +42,10 @@ uint16_t GigaDisplay_GFX::getPixel(int16_t x, int16_t y) {
 	return 0; // Dummy, returns black always.
 }
 
+void GigaDisplay_GFX::startWrite() {
+	BeginDrawing();
+}
+
 void GigaDisplay_GFX::endWrite() {
 	EndDrawing();
-	BeginDrawing();
 }

@@ -15,7 +15,6 @@ LIB_INCLUDES = -Iarduino -Ilib/$(RAYLIB_DIR)/include
 
 CC = g++
 CFLAGS = -DEMULATE -DARDUINO=300 -DARDUINO_GIGA -std=c++11 $(LIB_INCLUDES) $(ARDUINO_INCLUDES) -Wno-narrowing
-INO_FILE = xx.ino
 
 all: lib src ino
 

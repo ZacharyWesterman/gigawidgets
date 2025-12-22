@@ -39,6 +39,9 @@ POSSIBILITY OF SUCH DAMAGE.
 #include <pgmspace.h>
 #endif
 
+#include "define.h"
+#include <raylib.h>
+
 // Many (but maybe not all) non-AVR board installs define macros
 // for compatibility with existing PROGMEM-reading AVR code.
 // Do our own checks and defines here for good measure...
@@ -1311,6 +1314,14 @@ void Adafruit_GFX::setRotation(uint8_t x) {
 		_height = WIDTH;
 		break;
 	}
+
+	// EndDrawing();
+	if (x % 2) {
+		SetWindowSize(GIGA_DISPLAY_H_PX * WINDOW_SCALE, GIGA_DISPLAY_W_PX * WINDOW_SCALE);
+	} else {
+		SetWindowSize(GIGA_DISPLAY_W_PX * WINDOW_SCALE, GIGA_DISPLAY_H_PX * WINDOW_SCALE);
+	}
+	// BeginDrawing();
 }
 
 /**************************************************************************/
