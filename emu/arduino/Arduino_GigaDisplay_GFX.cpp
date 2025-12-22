@@ -1,14 +1,8 @@
+#include <iostream>
 #include <raylib.h>
 
 #include "Arduino_GigaDisplay_GFX.h"
 #include "define.h"
-
-Color rgb(uint16_t color565) {
-	uint8_t r = color565 >> 8;
-	uint8_t g = color565 >> 3 & 0xff;
-	uint8_t b = color565 << 3 & 0xff;
-	return {r, g, b, 255};
-}
 
 GigaDisplay_GFX::GigaDisplay_GFX() : Adafruit_GFX(GIGA_DISPLAY_W_PX * WINDOW_SCALE, GIGA_DISPLAY_H_PX * WINDOW_SCALE) {}
 

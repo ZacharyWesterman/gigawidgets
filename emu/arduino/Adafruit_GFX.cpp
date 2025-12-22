@@ -40,6 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #endif
 
 #include "define.h"
+#include <iostream>
 #include <raylib.h>
 
 // Many (but maybe not all) non-AVR board installs define macros
@@ -191,6 +192,11 @@ void Adafruit_GFX::startWrite() {}
 /**************************************************************************/
 void Adafruit_GFX::writePixel(int16_t x, int16_t y, uint16_t color) {
 	drawPixel(x, y, color);
+	if (WINDOW_SCALE > 1) {
+		DrawRectangle(x * WINDOW_SCALE, y * WINDOW_SCALE, WINDOW_SCALE, WINDOW_SCALE, rgb(color));
+	} else {
+		DrawPixel(x * WINDOW_SCALE, y * WINDOW_SCALE, rgb(color));
+	}
 }
 
 /**************************************************************************/
