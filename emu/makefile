@@ -9,8 +9,7 @@ ARDUINO_OBJECTS=$(foreach x, $(basename $(ARDUINO_SOURCES)), $(x).o)
 RAYLIB_URL = https://github.com/raysan5/raylib/releases/download/5.5/raylib-5.5_linux_amd64.tar.gz
 RAYLIB_TAR_FILE = $(notdir $(RAYLIB_URL))
 RAYLIB_DIR = $(basename $(basename $(RAYLIB_TAR_FILE)))
-RAYLIB_BIN = lib/$(RAYLIB_DIR)/lib/libraylib.so
-RAYLIB_SO = lib/$(RAYLIB_DIR)/lib/raylib.so
+RAYLIB_BIN_DIR = lib/$(RAYLIB_DIR)/lib
 
 LIB_INCLUDES = -Iarduino -Ilib/$(RAYLIB_DIR)/include
 
@@ -21,7 +20,7 @@ INO_FILE = xx.ino
 all: lib src ino
 
 ino: main.o ino.o $(OBJECTS) $(ARDUINO_OBJECTS)
-	$(CC) -L$(RAYLIB_SO) -o $@ $^
+	$(CC) -o $@ $^ -l:libraylib.a -lGL -lm -lpthread -ldl -lrt -lX11 -L$(RAYLIB_BIN_DIR)
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) -o $@ -c $<
@@ -36,7 +35,6 @@ src:
 	rsync -a ../src .
 
 lib: $(RAYLIB_TAR_FILE)
-	echo $(RAYLIB_BIN)
 	mkdir -p lib
 	tar xzf $< -C lib/ || rm lib -rf
 
