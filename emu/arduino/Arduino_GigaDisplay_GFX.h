@@ -42,6 +42,7 @@ private:
 	void refresh_if_needed();
 	bool need_refresh = false;
 	uint32_t last_refresh = 0;
+	uint8_t window_scale = 1;
 };
 
 #endif //__ARDUINO_GIGADISPLAY_GFX__

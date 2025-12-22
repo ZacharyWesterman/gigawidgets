@@ -6,3 +6,5 @@ emu/src/
 emu/ino.cpp
 emu/ino
 *.o
+*.gz
+emu/lib/
