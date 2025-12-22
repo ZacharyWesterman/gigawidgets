@@ -5,11 +5,17 @@ from pathlib import Path
 from argparse import ArgumentParser, ArgumentTypeError
 from PIL import Image
 import cairosvg
+from sys import stderr
+
+
+def color565(r, g, b) -> int:
+    return ((r & 0xf8) << 8) | ((g & 0xfc) << 3) | ((b & 0xff) >> 3)
 
 
 def color_hex(s: str) -> int:
     if re.match(r'^[0-9a-fA-F]+$', s):
-        return int(s, 16)
+        r, g, b = int(s[0:2], 16), int(s[2:4], 16), int(s[4:6], 16)
+        return color565(r, g, b)
 
     raise ArgumentTypeError(
         f'not a valid hex color of the format "abcdef": {s!r}')
@@ -67,10 +73,6 @@ if image.size[0] != args.width or image.size[1] != args.height:
 
 if tempfile:
     Path(filename).unlink(missing_ok=True)
-
-
-def color565(r, g, b) -> int:
-    return ((r & 0xf8) << 8) | ((g & 0xfc) << 3) | ((b & 0xff) >> 3)
 
 
 class Bitmap:
@@ -175,7 +177,7 @@ class CompressedTransparencyMap(TransparencyMap):
 
 
 if args.monochrome and not args.transparency:
-    print('ERROR: Monochrome without transparency?!')
+    print('ERROR: Monochrome without transparency?!', file=stderr)
     exit(1)
 
 if args.monochrome is not None:
