@@ -1,6 +1,7 @@
-#include "row.hpp"
-#include "containers/box.hpp"
 #include <Arduino.h>
+
+#include "containers/box.hpp"
+#include "row.hpp"
 
 namespace ui {
 
@@ -22,7 +23,8 @@ void Row::calcChildBounds(int index) {
 		}
 	}
 
-	uisize_t width = max(minimumWidth - padding.left - padding.right, children[index]->size().x);
+	uisize_t minWidth = minimumWidth - padding.left - padding.right;
+	uisize_t width = std::max(minWidth, children[index]->size().x);
 
 	auto xbegin = x + padding.left;
 	auto xend = x + padding.left + width;

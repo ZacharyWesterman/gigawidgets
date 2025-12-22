@@ -26,9 +26,12 @@ void Button::drawDone() {
 Size Button::size() const {
 	const auto childSize = child->size();
 
+	uisize_t xmin = childSize.x + padding.left + padding.right;
+	uisize_t ymin = childSize.y + padding.top + padding.bottom;
+
 	return {
-		max(childSize.x + padding.left + padding.right, buttonSize.x),
-		max(childSize.y + padding.top + padding.bottom, buttonSize.y),
+		std::max(xmin, buttonSize.x),
+		std::max(ymin, buttonSize.y),
 	};
 }
 

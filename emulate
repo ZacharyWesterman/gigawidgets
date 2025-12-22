@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 <ino file>" >&2
+    exit 1
+fi
+
+if [ ! -f "$1" ]; then
+    echo "ERROR: no such file '$1'" >&2
+    exit 1
+fi
+
+rsync "$1" emu/ino.cpp
+rsync -a src emu/
+make -C emu INO_FILE="$1"

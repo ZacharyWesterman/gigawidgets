@@ -2,3 +2,7 @@ build/
 secret/
 html/
 doxygen.log
+emu/src/
+emu/ino.cpp
+emu/ino
+*.o
