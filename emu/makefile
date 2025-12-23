@@ -45,4 +45,4 @@ $(RAYLIB_TAR_FILE):
 .PHONY: clean
 
 clean:
-	rm -rf src lib *.o ino.cpp arduino/*.o $(RAYLIB_TAR_FILE)
+	rm -rf src lib ino *.o ino.cpp arduino/*.o $(RAYLIB_TAR_FILE)
