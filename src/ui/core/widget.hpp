@@ -1,6 +1,7 @@
 /// @file widget.hpp
 #pragma once
 
+#include <ctime>
 #include <functional>
 
 #include "alignment.hpp"

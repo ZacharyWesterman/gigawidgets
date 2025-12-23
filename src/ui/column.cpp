@@ -22,7 +22,8 @@ void Column::calcChildBounds(int index) {
 		}
 	}
 
-	uisize_t height = max(minimumHeight - padding.top - padding.bottom, children[index]->size().y);
+	uisize_t minHeight = minimumHeight ? minimumHeight - padding.top - padding.bottom : 0;
+	uisize_t height = std::max(minHeight, children[index]->size().y);
 
 	auto ybegin = y + padding.top;
 	auto yend = y + padding.top + height;

@@ -1,6 +1,8 @@
 /// @file event.hpp
 #pragma once
 
+#include <ctime>
+
 #include "coords.hpp"
 
 namespace ui {

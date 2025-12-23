@@ -134,6 +134,7 @@ Event getTouchEvent() {
 				auto x = points[i].x;
 				auto y = points[i].y;
 
+#ifndef EMULATE
 				// Account for screen rotation
 				switch ((rotation_t)display.getRotation()) {
 				case ROT_270_DEG:
@@ -149,6 +150,7 @@ Event getTouchEvent() {
 					y = ui::height() - y;
 					break;
 				}
+#endif
 
 				event.coords[i].x = x;
 				event.coords[i].y = y;

@@ -2,6 +2,10 @@
 
 #include "ui.hpp"
 
+#ifdef EMULATE
+#include <raylib.h>
+#endif
+
 namespace ui {
 static Widget *rootNode = nullptr;
 static time_t lastRender = 0;
@@ -16,37 +20,49 @@ void setRoot(Widget *const root) {
 }
 
 void render(bool block) {
-	auto currentTime = millis();
-	const auto elapsed = currentTime - lastRender;
-	if (block) {
-		if (elapsed < UI_RENDER_FREQUENCY) {
-			delay(UI_RENDER_FREQUENCY - elapsed);
+
+#ifdef EMULATE
+	static auto r = [](bool block) {
+#endif
+		auto currentTime = millis();
+		const auto elapsed = currentTime - lastRender;
+		if (block) {
+			if (elapsed < UI_RENDER_FREQUENCY) {
+				delay(UI_RENDER_FREQUENCY - elapsed);
+			}
+			currentTime = millis();
+		} else if (elapsed < UI_RENDER_FREQUENCY && elapsed >= 0 && lastRender != 0) {
+			return;
 		}
-		currentTime = millis();
-	} else if (elapsed < UI_RENDER_FREQUENCY && elapsed >= 0 && lastRender != 0) {
-		return;
-	}
-	lastRender = currentTime;
+		lastRender = currentTime;
 
-	if (!rootNode) {
-		return;
-	}
+		if (!rootNode) {
+			return;
+		}
 
-	const auto event = getTouchEvent();
-	if (event.triggered) {
-		rootNode->handleEvent(event);
-	}
+		const auto event = getTouchEvent();
+		if (event.triggered) {
+			rootNode->handleEvent(event);
+		}
 
-	const auto rChanged = rotationChanged();
-	if (rootNode->update(millis()) || rootNode->redrawRequested() || rChanged) {
-		ui::endWrite();
-		rootNode->draw();
-	}
+		const auto rChanged = rotationChanged();
+		if (rootNode->update(millis()) || rootNode->redrawRequested() || rChanged) {
+			ui::endWrite();
+			rootNode->draw();
+		}
 
-	rootNode->drawDone();
-	if (rChanged) {
-		finalizeRotation();
-	}
+		rootNode->drawDone();
+		if (rChanged) {
+			finalizeRotation();
+		}
+
+#ifdef EMULATE
+	};
+
+	EndDrawing();
+	r(block);
+	BeginDrawing();
+#endif
 }
 
 } // namespace ui
