@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -104,42 +104,44 @@ $(document).ready(function(){initNavTree('event_8hpp_source.html',''); initResiz
 <a href="event_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="coords_8hpp.html">coords.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="coords_8hpp.html">coords.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e">   14</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e">event_t</a> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    EVENT_PRESS,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    EVENT_RELEASE,</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    EVENT_HOLD,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>ui {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e">   16</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e">event_t</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    EVENT_PRESS,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    EVENT_RELEASE,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    EVENT_HOLD,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structui_1_1Event.html">   23</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Event.html">Event</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5">   25</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5">triggered</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0">   28</a></span>    <a class="code hl_enumeration" href="event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e">event_t</a> <a class="code hl_variable" href="structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0">type</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#ab25a38ceb7fc103d603223a420c6d78d">   31</a></span>    uint8_t <a class="code hl_variable" href="structui_1_1Event.html#ab25a38ceb7fc103d603223a420c6d78d">contacts</a>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#a1178834040efb7d41498f85a544dbcb5">   34</a></span>    <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> <a class="code hl_variable" href="structui_1_1Event.html#a1178834040efb7d41498f85a544dbcb5">coords</a>[5];</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2">   37</a></span>    time_t <a class="code hl_variable" href="structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2">timeHeld</a>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structui_1_1Event.html">   25</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Event.html">Event</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5">   27</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5">triggered</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0">   30</a></span>    <a class="code hl_enumeration" href="event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e">event_t</a> <a class="code hl_variable" href="structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0">type</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#ab25a38ceb7fc103d603223a420c6d78d">   33</a></span>    uint8_t <a class="code hl_variable" href="structui_1_1Event.html#ab25a38ceb7fc103d603223a420c6d78d">contacts</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#a1178834040efb7d41498f85a544dbcb5">   36</a></span>    <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> <a class="code hl_variable" href="structui_1_1Event.html#a1178834040efb7d41498f85a544dbcb5">coords</a>[5];</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2">   39</a></span>    time_t <a class="code hl_variable" href="structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2">timeHeld</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
 </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace ui</span></div>
 <div class="ttc" id="acoords_8hpp_html"><div class="ttname"><a href="coords_8hpp.html">coords.hpp</a></div></div>
-<div class="ttc" id="aevent_8hpp_html_a9471404f6db30dd75601ebba589c3b0e"><div class="ttname"><a href="event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e">ui::event_t</a></div><div class="ttdeci">event_t</div><div class="ttdoc">The various touchscreen event types.</div><div class="ttdef"><b>Definition</b> event.hpp:14</div></div>
+<div class="ttc" id="aevent_8hpp_html_a9471404f6db30dd75601ebba589c3b0e"><div class="ttname"><a href="event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e">ui::event_t</a></div><div class="ttdeci">event_t</div><div class="ttdoc">The various touchscreen event types.</div><div class="ttdef"><b>Definition</b> event.hpp:16</div></div>
 <div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdoc">A struct for storing the pixel coordinates of various UI elements.</div><div class="ttdef"><b>Definition</b> coords.hpp:17</div></div>
-<div class="ttc" id="astructui_1_1Event_html"><div class="ttname"><a href="structui_1_1Event.html">ui::Event</a></div><div class="ttdoc">A touchscreen event.</div><div class="ttdef"><b>Definition</b> event.hpp:23</div></div>
-<div class="ttc" id="astructui_1_1Event_html_a1178834040efb7d41498f85a544dbcb5"><div class="ttname"><a href="structui_1_1Event.html#a1178834040efb7d41498f85a544dbcb5">ui::Event::coords</a></div><div class="ttdeci">Coords coords[5]</div><div class="ttdoc">A list of coordinates corresponding to each touch point, accounting for screen rotation.</div><div class="ttdef"><b>Definition</b> event.hpp:34</div></div>
-<div class="ttc" id="astructui_1_1Event_html_a38009f7115cef96a76813eb75bbc7cd5"><div class="ttname"><a href="structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5">ui::Event::triggered</a></div><div class="ttdeci">bool triggered</div><div class="ttdoc">True if this event should be handled, false otherwise.</div><div class="ttdef"><b>Definition</b> event.hpp:25</div></div>
-<div class="ttc" id="astructui_1_1Event_html_a862ba00cc89b35a364a30812dc2145e0"><div class="ttname"><a href="structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0">ui::Event::type</a></div><div class="ttdeci">event_t type</div><div class="ttdoc">The touchscreen event type.</div><div class="ttdef"><b>Definition</b> event.hpp:28</div></div>
-<div class="ttc" id="astructui_1_1Event_html_aa9623180f9796dfc1858044f146fd5a2"><div class="ttname"><a href="structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2">ui::Event::timeHeld</a></div><div class="ttdeci">time_t timeHeld</div><div class="ttdoc">The number of milliseconds that the screen has been pressed continuously.</div><div class="ttdef"><b>Definition</b> event.hpp:37</div></div>
-<div class="ttc" id="astructui_1_1Event_html_ab25a38ceb7fc103d603223a420c6d78d"><div class="ttname"><a href="structui_1_1Event.html#ab25a38ceb7fc103d603223a420c6d78d">ui::Event::contacts</a></div><div class="ttdeci">uint8_t contacts</div><div class="ttdoc">The number of distinct points on the screen that were touched.</div><div class="ttdef"><b>Definition</b> event.hpp:31</div></div>
+<div class="ttc" id="astructui_1_1Event_html"><div class="ttname"><a href="structui_1_1Event.html">ui::Event</a></div><div class="ttdoc">A touchscreen event.</div><div class="ttdef"><b>Definition</b> event.hpp:25</div></div>
+<div class="ttc" id="astructui_1_1Event_html_a1178834040efb7d41498f85a544dbcb5"><div class="ttname"><a href="structui_1_1Event.html#a1178834040efb7d41498f85a544dbcb5">ui::Event::coords</a></div><div class="ttdeci">Coords coords[5]</div><div class="ttdoc">A list of coordinates corresponding to each touch point, accounting for screen rotation.</div><div class="ttdef"><b>Definition</b> event.hpp:36</div></div>
+<div class="ttc" id="astructui_1_1Event_html_a38009f7115cef96a76813eb75bbc7cd5"><div class="ttname"><a href="structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5">ui::Event::triggered</a></div><div class="ttdeci">bool triggered</div><div class="ttdoc">True if this event should be handled, false otherwise.</div><div class="ttdef"><b>Definition</b> event.hpp:27</div></div>
+<div class="ttc" id="astructui_1_1Event_html_a862ba00cc89b35a364a30812dc2145e0"><div class="ttname"><a href="structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0">ui::Event::type</a></div><div class="ttdeci">event_t type</div><div class="ttdoc">The touchscreen event type.</div><div class="ttdef"><b>Definition</b> event.hpp:30</div></div>
+<div class="ttc" id="astructui_1_1Event_html_aa9623180f9796dfc1858044f146fd5a2"><div class="ttname"><a href="structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2">ui::Event::timeHeld</a></div><div class="ttdeci">time_t timeHeld</div><div class="ttdoc">The number of milliseconds that the screen has been pressed continuously.</div><div class="ttdef"><b>Definition</b> event.hpp:39</div></div>
+<div class="ttc" id="astructui_1_1Event_html_ab25a38ceb7fc103d603223a420c6d78d"><div class="ttname"><a href="structui_1_1Event.html#ab25a38ceb7fc103d603223a420c6d78d">ui::Event::contacts</a></div><div class="ttdeci">uint8_t contacts</div><div class="ttdoc">The number of distinct points on the screen that were touched.</div><div class="ttdef"><b>Definition</b> event.hpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
