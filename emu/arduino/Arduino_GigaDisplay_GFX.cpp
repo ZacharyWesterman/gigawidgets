@@ -37,9 +37,10 @@ uint16_t GigaDisplay_GFX::getPixel(int16_t x, int16_t y) {
 }
 
 void GigaDisplay_GFX::startWrite() {
-	BeginDrawing();
+	// BeginDrawing();
 }
 
 void GigaDisplay_GFX::endWrite() {
-	EndDrawing();
+	// BeginDrawing();
+	// EndDrawing();
 }

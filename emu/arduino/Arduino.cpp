@@ -4,6 +4,14 @@
 #include <iostream>
 #include <thread>
 
+String::String(const char *value) : std::string(value) {}
+String::String() : std::string() {}
+String::String(int value) : std::string(std::to_string(value)) {}
+String::String(unsigned int value) : std::string(std::to_string(value)) {}
+String::String(size_t value) : std::string(std::to_string(value)) {}
+String::String(float value) : std::string(std::to_string(value)) {}
+String::String(const std::basic_string<char> &value) : std::string(value) {}
+
 unsigned long millis() {
 	static auto begin = std::chrono::system_clock::now();
 	auto elapsed = std::chrono::system_clock::now() - begin;

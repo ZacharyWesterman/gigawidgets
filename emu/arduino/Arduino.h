@@ -1,13 +1,23 @@
 #pragma once
 
 #include <chrono>
+#include <cinttypes>
 #include <string>
 
 #define HIGH 1
 #define LOW 0
 #define PROGMEM
 
-typedef std::string String;
+class String : public std::string {
+public:
+	String(const char *value);
+	String();
+	String(float value);
+	String(int value);
+	String(unsigned int value);
+	String(size_t value);
+	String(const std::basic_string<char> &value);
+};
 
 unsigned long millis();
 

@@ -22,8 +22,8 @@
 #include <cstring>
 #include <inttypes.h>
 #include <stdio.h> // for size_t
-#include <string>
-typedef std::string String;
+
+#include "Arduino.h"
 
 #define DEC 10
 #define HEX 16

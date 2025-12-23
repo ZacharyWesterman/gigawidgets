@@ -10,9 +10,9 @@ int main() {
 	setup();
 
 	while (!WindowShouldClose()) {
-		BeginDrawing();
-		loop();
 		EndDrawing();
+		loop();
+		BeginDrawing();
 	}
 
 	CloseWindow();

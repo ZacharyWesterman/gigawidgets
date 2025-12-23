@@ -192,11 +192,11 @@ void Adafruit_GFX::startWrite() {}
 /**************************************************************************/
 void Adafruit_GFX::writePixel(int16_t x, int16_t y, uint16_t color) {
 	drawPixel(x, y, color);
-	if (WINDOW_SCALE > 1) {
-		DrawRectangle(x * WINDOW_SCALE, y * WINDOW_SCALE, WINDOW_SCALE, WINDOW_SCALE, rgb(color));
-	} else {
-		DrawPixel(x * WINDOW_SCALE, y * WINDOW_SCALE, rgb(color));
-	}
+	// if (WINDOW_SCALE > 1) {
+	// 	DrawRectangle(x * WINDOW_SCALE, y * WINDOW_SCALE, WINDOW_SCALE, WINDOW_SCALE, rgb(color));
+	// } else {
+	// 	DrawPixel(x * WINDOW_SCALE, y * WINDOW_SCALE, rgb(color));
+	// }
 }
 
 /**************************************************************************/
@@ -1321,13 +1321,7 @@ void Adafruit_GFX::setRotation(uint8_t x) {
 		break;
 	}
 
-	// EndDrawing();
-	if (x % 2) {
-		SetWindowSize(GIGA_DISPLAY_H_PX * WINDOW_SCALE, GIGA_DISPLAY_W_PX * WINDOW_SCALE);
-	} else {
-		SetWindowSize(GIGA_DISPLAY_W_PX * WINDOW_SCALE, GIGA_DISPLAY_H_PX * WINDOW_SCALE);
-	}
-	// BeginDrawing();
+	SetWindowSize(_width * WINDOW_SCALE, _height * WINDOW_SCALE);
 }
 
 /**************************************************************************/
