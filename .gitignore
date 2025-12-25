@@ -5,6 +5,7 @@ doxygen.log
 emu/src/
 emu/ino.cpp
 emu/ino
+emu/ino.watch
 *.o
 *.gz
 emu/lib/
