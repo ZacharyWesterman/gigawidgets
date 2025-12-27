@@ -40,8 +40,6 @@ if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
     echo "  --scale=[SCALE] | Scale the window by an integer amount." >&2
     echo "  --watch         | Watch for source changes, automatically rebuilding when a change is detected." >&2
     echo "  --help          | Display this message." >&2
-    echo "To remove build files, run" >&2
-    echo "  $0 --clean" >&2
     [ "$print_help" == 0 ] && exit 1
     exit 0
 fi
