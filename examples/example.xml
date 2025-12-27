@@ -1,0 +1,7 @@
+<body>
+    <column size="50vw 100vh" height=".5cm" valign="top">
+        <text font="FreeSerif12pt7b" color="red">This is line 1.</text>
+        <text font="FreeSerif12pt7b" color="green">This is line 2.</text>
+        <text font="FreeSerif12pt7b" color="blue">This is line 3.</text>
+    </column>
+</body>
