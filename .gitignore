@@ -9,3 +9,4 @@ emu/ino.watch
 *.o
 *.gz
 emu/lib/
+__pycache__/

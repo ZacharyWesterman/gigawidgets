@@ -56,5 +56,8 @@
         "regex": "cpp"
     },
     "editor.formatOnSave": true,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportInvalidTypeForm": false
+    }
 }
