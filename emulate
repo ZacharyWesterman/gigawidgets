@@ -46,7 +46,7 @@ if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
 fi
 
 build() {
-    rsync "$filename" emu/ino.cpp -u || return 1
+    rsync "$filename" emu/ino.cpp || return 1
     rsync -a src emu/ -u || return 1
     make -C emu WINDOW_SCALE="$window_scale" || return 1
     return 0
