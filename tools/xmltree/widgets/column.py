@@ -7,6 +7,7 @@ from ..datatypes import (
     Position,
     HorizontalAlignment,
     VerticalAlignment,
+    VerticalOrdering,
 )
 
 
@@ -18,7 +19,7 @@ class Column(Widget):
     )("left top")
 
     size: Pair(Size)
-    valign: Optional[VerticalAlignment]
+    order: Optional[VerticalOrdering]
     height: Optional[Size]
 
     def __str__(self) -> str:
@@ -28,8 +29,8 @@ class Column(Widget):
             *(f'{self.var}->push({i.var});' for i in self.children),
         ]
 
-        if self.valign:
-            text += [f'{self.var}->setChildAlign({self.valign});']
+        if self.order:
+            text += [f'{self.var}->setChildAlign({self.order});']
 
         if self.height:
             text += [f'{self.var}->setMinHeight({self.height});']

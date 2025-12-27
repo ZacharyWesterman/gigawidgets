@@ -28,6 +28,8 @@ from .shader import Shader  # nopep8
 from .vertical_alignment import VerticalAlignment  # nopep8
 from .size import Size  # nopep8
 from .alignment import Alignment  # nopep8
+from .vertical_ordering import VerticalOrdering  # nopep8
+from .horizontal_ordering import HorizontalOrdering  # nopep8
 
 # pylint: enable=wrong-import-position
 # pylint: enable=wrong-import-order
