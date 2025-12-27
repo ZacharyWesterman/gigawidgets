@@ -1,4 +1,4 @@
-/// @file button.hpp
+/// @file panel.hpp
 #pragma once
 
 #include "containers/single_child_widget.hpp"
@@ -15,23 +15,23 @@ namespace ui {
  *
  * @note This widget does not automatically update its color etc. when clicked. That is up to the user to implement.
  */
-class Button : public SingleChildWidget {
+class Panel : public SingleChildWidget {
 	color_t color;
-	Size buttonSize;
+	Size panelSize;
 	radius_t borderRadius;
 
 public:
 	/**
-	 * @brief Construct a button with optional configuration.
+	 * @brief Construct a panel with optional configuration.
 	 * @param child The child widget.
-	 * @param color The color of the button.
-	 * @param size The minimum size of the button. It may expand to fit the child widget.
-	 * @param borderRadius The radius of the rounded parts of the button.
-	 * @param pos The position of the button relative to its parent.
-	 * @param align The alignment of the button relative to its parent.
+	 * @param color The color of the panel.
+	 * @param size The minimum size of the panel. It may expand to fit the child widget.
+	 * @param borderRadius The radius of the rounded parts of the panel.
+	 * @param pos The position of the panel relative to its parent.
+	 * @param align The alignment of the panel relative to its parent.
 	 * @param padding The padding to apply to the child widget.
 	 */
-	Button(Widget *child, color_t color, const Size &size = {0}, radius_t borderRadius = 0, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
+	Panel(Widget *child, color_t color, const Size &size = {0}, radius_t borderRadius = 0, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
 
 	void draw() const override;
 	bool update(time_t time_ms) override;
@@ -39,14 +39,14 @@ public:
 	Size size() const override;
 
 	/**
-	 * @brief Set the button color.
-	 * @param new_color The new button color.
+	 * @brief Set the panel color.
+	 * @param new_color The new panel color.
 	 */
 	void setColor(color_t new_color);
 
 	/**
 	 * @brief Set the border radius.
-	 * @param new_radius The new radius for the rounded parts of the button.
+	 * @param new_radius The new radius for the rounded parts of the panel.
 	 */
 	void setBorderRadius(radius_t new_radius);
 };

@@ -3,12 +3,12 @@
 
 #include "ui/blink.hpp"
 #include "ui/body.hpp"
-#include "ui/button.hpp"
 #include "ui/collection.hpp"
 #include "ui/column.hpp"
 #include "ui/core/display.hpp"
 #include "ui/core/units.hpp"
 #include "ui/image.hpp"
+#include "ui/panel.hpp"
 #include "ui/row.hpp"
 #include "ui/text.hpp"
 
