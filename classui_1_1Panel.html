@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>gigawidgets: ui::Button Class Reference</title>
+<title>gigawidgets: ui::Panel Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classui_1_1Button.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classui_1_1Panel.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -100,21 +100,21 @@ $(document).ready(function(){initNavTree('classui_1_1Button.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classui_1_1Button-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">ui::Button Class Reference</div></div>
+<a href="classui_1_1Panel-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ui::Panel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>A basic widget that displays a rounded rectangle behind another widget.  
- <a href="classui_1_1Button.html#details">More...</a></p>
+ <a href="classui_1_1Panel.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="button_8hpp_source.html">button.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="panel_8hpp_source.html">panel.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for ui::Button:</div>
+Inheritance diagram for ui::Panel:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classui_1_1Button.png" usemap="#ui::Button_map" alt=""/>
-  <map id="ui::Button_map" name="ui::Button_map">
+  <img src="classui_1_1Panel.png" usemap="#ui::Panel_map" alt=""/>
+  <map id="ui::Panel_map" name="ui::Panel_map">
 <area href="classui_1_1SingleChildWidget.html" title="The common interface for a widget that contains a single child." alt="ui::SingleChildWidget" shape="rect" coords="0,56,130,80"/>
 <area href="classui_1_1Widget.html" title="The common interface for all UI objects." alt="ui::Widget" shape="rect" coords="0,0,130,24"/>
   </map>
@@ -122,27 +122,27 @@ Inheritance diagram for ui::Button:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a76101872574ddd9e7a0e38269d08c19f" id="r_a76101872574ddd9e7a0e38269d08c19f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Button.html#a76101872574ddd9e7a0e38269d08c19f">Button</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *<a class="el" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color, const <a class="el" href="structui_1_1Size.html">Size</a> &amp;<a class="el" href="classui_1_1Button.html#a1468f1a1cdf56fac29bd7e23f7eeff07">size</a>={0}, <a class="el" href="radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148">radius_t</a> borderRadius=0, const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
-<tr class="memdesc:a76101872574ddd9e7a0e38269d08c19f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a button with optional configuration.  <br /></td></tr>
-<tr class="separator:a76101872574ddd9e7a0e38269d08c19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a121633d5bc98720d3a7a7925fa874b64" id="r_a121633d5bc98720d3a7a7925fa874b64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Button.html#a121633d5bc98720d3a7a7925fa874b64">draw</a> () const override</td></tr>
-<tr class="memdesc:a121633d5bc98720d3a7a7925fa874b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the widget to the screen.  <br /></td></tr>
-<tr class="separator:a121633d5bc98720d3a7a7925fa874b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acee7e2e147cf9256dc6d6e115483eaab" id="r_acee7e2e147cf9256dc6d6e115483eaab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Button.html#acee7e2e147cf9256dc6d6e115483eaab">update</a> (time_t time_ms) override</td></tr>
-<tr class="memdesc:acee7e2e147cf9256dc6d6e115483eaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update any internal state of the widget, and check if it needs to be re-rendered.  <br /></td></tr>
-<tr class="separator:acee7e2e147cf9256dc6d6e115483eaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51704b2e52aa92e1a8d9ff779eea9c49" id="r_a51704b2e52aa92e1a8d9ff779eea9c49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Button.html#a51704b2e52aa92e1a8d9ff779eea9c49">drawDone</a> () override</td></tr>
-<tr class="memdesc:a51704b2e52aa92e1a8d9ff779eea9c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset any state variables after rendering has finished.  <br /></td></tr>
-<tr class="separator:a51704b2e52aa92e1a8d9ff779eea9c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1468f1a1cdf56fac29bd7e23f7eeff07" id="r_a1468f1a1cdf56fac29bd7e23f7eeff07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Button.html#a1468f1a1cdf56fac29bd7e23f7eeff07">size</a> () const override</td></tr>
-<tr class="memdesc:a1468f1a1cdf56fac29bd7e23f7eeff07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the widget.  <br /></td></tr>
-<tr class="separator:a1468f1a1cdf56fac29bd7e23f7eeff07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4343d46dc85b050e67244b95ddad8c90" id="r_a4343d46dc85b050e67244b95ddad8c90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Button.html#a4343d46dc85b050e67244b95ddad8c90">setColor</a> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> new_color)</td></tr>
-<tr class="memdesc:a4343d46dc85b050e67244b95ddad8c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the button color.  <br /></td></tr>
-<tr class="separator:a4343d46dc85b050e67244b95ddad8c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac745a376799bb571b2f236db2ef8b114" id="r_ac745a376799bb571b2f236db2ef8b114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Button.html#ac745a376799bb571b2f236db2ef8b114">setBorderRadius</a> (<a class="el" href="radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148">radius_t</a> new_radius)</td></tr>
-<tr class="memdesc:ac745a376799bb571b2f236db2ef8b114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the border radius.  <br /></td></tr>
-<tr class="separator:ac745a376799bb571b2f236db2ef8b114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc9ccfb86ab481ceaf08b6689112aab" id="r_a6dc9ccfb86ab481ceaf08b6689112aab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Panel.html#a6dc9ccfb86ab481ceaf08b6689112aab">Panel</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *<a class="el" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color, const <a class="el" href="structui_1_1Size.html">Size</a> &amp;<a class="el" href="classui_1_1Panel.html#a799137c43b637be150fd24f89fcb689f">size</a>={0}, <a class="el" href="radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148">radius_t</a> borderRadius=0, const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
+<tr class="memdesc:a6dc9ccfb86ab481ceaf08b6689112aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a panel with optional configuration.  <br /></td></tr>
+<tr class="separator:a6dc9ccfb86ab481ceaf08b6689112aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba97ec14b02c86ce55fd3e8018d0fcca" id="r_aba97ec14b02c86ce55fd3e8018d0fcca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Panel.html#aba97ec14b02c86ce55fd3e8018d0fcca">draw</a> () const override</td></tr>
+<tr class="memdesc:aba97ec14b02c86ce55fd3e8018d0fcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the widget to the screen.  <br /></td></tr>
+<tr class="separator:aba97ec14b02c86ce55fd3e8018d0fcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e23cddfd13824a2f09bc6c08600e993" id="r_a5e23cddfd13824a2f09bc6c08600e993"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Panel.html#a5e23cddfd13824a2f09bc6c08600e993">update</a> (time_t time_ms) override</td></tr>
+<tr class="memdesc:a5e23cddfd13824a2f09bc6c08600e993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update any internal state of the widget, and check if it needs to be re-rendered.  <br /></td></tr>
+<tr class="separator:a5e23cddfd13824a2f09bc6c08600e993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c730001252e320315bad056a4ae0805" id="r_a0c730001252e320315bad056a4ae0805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Panel.html#a0c730001252e320315bad056a4ae0805">drawDone</a> () override</td></tr>
+<tr class="memdesc:a0c730001252e320315bad056a4ae0805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset any state variables after rendering has finished.  <br /></td></tr>
+<tr class="separator:a0c730001252e320315bad056a4ae0805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a799137c43b637be150fd24f89fcb689f" id="r_a799137c43b637be150fd24f89fcb689f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Panel.html#a799137c43b637be150fd24f89fcb689f">size</a> () const override</td></tr>
+<tr class="memdesc:a799137c43b637be150fd24f89fcb689f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the widget.  <br /></td></tr>
+<tr class="separator:a799137c43b637be150fd24f89fcb689f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4d2bf8b31913fda5d537dc4893c3f3" id="r_a5c4d2bf8b31913fda5d537dc4893c3f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Panel.html#a5c4d2bf8b31913fda5d537dc4893c3f3">setColor</a> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> new_color)</td></tr>
+<tr class="memdesc:a5c4d2bf8b31913fda5d537dc4893c3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the panel color.  <br /></td></tr>
+<tr class="separator:a5c4d2bf8b31913fda5d537dc4893c3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf10a1f5d29d64d0dcb474c6e103c9b5" id="r_abf10a1f5d29d64d0dcb474c6e103c9b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Panel.html#abf10a1f5d29d64d0dcb474c6e103c9b5">setBorderRadius</a> (<a class="el" href="radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148">radius_t</a> new_radius)</td></tr>
+<tr class="memdesc:abf10a1f5d29d64d0dcb474c6e103c9b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the border radius.  <br /></td></tr>
+<tr class="separator:abf10a1f5d29d64d0dcb474c6e103c9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classui_1_1SingleChildWidget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classui_1_1SingleChildWidget')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classui_1_1SingleChildWidget.html">ui::SingleChildWidget</a></td></tr>
 <tr class="memitem:a9a55143159a07e508fc904991eb0e9f7 inherit pub_methods_classui_1_1SingleChildWidget" id="r_a9a55143159a07e508fc904991eb0e9f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#a9a55143159a07e508fc904991eb0e9f7">SingleChildWidget</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *<a class="el" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
 <tr class="memdesc:a9a55143159a07e508fc904991eb0e9f7 inherit pub_methods_classui_1_1SingleChildWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
@@ -267,14 +267,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 <p>The child widget is usually some text label, but it can be any arbitrary widget.</p>
 <dl class="section note"><dt>Note</dt><dd>This widget does not automatically update its color etc. when clicked. That is up to the user to implement. </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a76101872574ddd9e7a0e38269d08c19f" name="a76101872574ddd9e7a0e38269d08c19f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76101872574ddd9e7a0e38269d08c19f">&#9670;&#160;</a></span>Button()</h2>
+<a id="a6dc9ccfb86ab481ceaf08b6689112aab" name="a6dc9ccfb86ab481ceaf08b6689112aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc9ccfb86ab481ceaf08b6689112aab">&#9670;&#160;</a></span>Panel()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ui::Button::Button </td>
+          <td class="memname">ui::Panel::Panel </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classui_1_1Widget.html">Widget</a> *&#160;</td>
           <td class="paramname"><em>child</em>, </td>
@@ -323,15 +323,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
       </table>
 </div><div class="memdoc">
 
-<p>Construct a button with optional configuration. </p>
+<p>Construct a panel with optional configuration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">child</td><td>The child widget. </td></tr>
-    <tr><td class="paramname">color</td><td>The color of the button. </td></tr>
-    <tr><td class="paramname">size</td><td>The minimum size of the button. It may expand to fit the child widget. </td></tr>
-    <tr><td class="paramname">borderRadius</td><td>The radius of the rounded parts of the button. </td></tr>
-    <tr><td class="paramname">pos</td><td>The position of the button relative to its parent. </td></tr>
-    <tr><td class="paramname">align</td><td>The alignment of the button relative to its parent. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the panel. </td></tr>
+    <tr><td class="paramname">size</td><td>The minimum size of the panel. It may expand to fit the child widget. </td></tr>
+    <tr><td class="paramname">borderRadius</td><td>The radius of the rounded parts of the panel. </td></tr>
+    <tr><td class="paramname">pos</td><td>The position of the panel relative to its parent. </td></tr>
+    <tr><td class="paramname">align</td><td>The alignment of the panel relative to its parent. </td></tr>
     <tr><td class="paramname">padding</td><td>The padding to apply to the child widget. </td></tr>
   </table>
   </dd>
@@ -340,8 +340,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a121633d5bc98720d3a7a7925fa874b64" name="a121633d5bc98720d3a7a7925fa874b64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a121633d5bc98720d3a7a7925fa874b64">&#9670;&#160;</a></span>draw()</h2>
+<a id="aba97ec14b02c86ce55fd3e8018d0fcca" name="aba97ec14b02c86ce55fd3e8018d0fcca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba97ec14b02c86ce55fd3e8018d0fcca">&#9670;&#160;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,7 +350,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ui::Button::draw </td>
+          <td class="memname">void ui::Panel::draw </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -370,8 +370,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 
 </div>
 </div>
-<a id="a51704b2e52aa92e1a8d9ff779eea9c49" name="a51704b2e52aa92e1a8d9ff779eea9c49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51704b2e52aa92e1a8d9ff779eea9c49">&#9670;&#160;</a></span>drawDone()</h2>
+<a id="a0c730001252e320315bad056a4ae0805" name="a0c730001252e320315bad056a4ae0805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c730001252e320315bad056a4ae0805">&#9670;&#160;</a></span>drawDone()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,7 +380,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ui::Button::drawDone </td>
+          <td class="memname">void ui::Panel::drawDone </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -399,14 +399,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 
 </div>
 </div>
-<a id="ac745a376799bb571b2f236db2ef8b114" name="ac745a376799bb571b2f236db2ef8b114"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac745a376799bb571b2f236db2ef8b114">&#9670;&#160;</a></span>setBorderRadius()</h2>
+<a id="abf10a1f5d29d64d0dcb474c6e103c9b5" name="abf10a1f5d29d64d0dcb474c6e103c9b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf10a1f5d29d64d0dcb474c6e103c9b5">&#9670;&#160;</a></span>setBorderRadius()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ui::Button::setBorderRadius </td>
+          <td class="memname">void ui::Panel::setBorderRadius </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148">radius_t</a>&#160;</td>
           <td class="paramname"><em>new_radius</em></td><td>)</td>
@@ -418,21 +418,21 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 <p>Set the border radius. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">new_radius</td><td>The new radius for the rounded parts of the button. </td></tr>
+    <tr><td class="paramname">new_radius</td><td>The new radius for the rounded parts of the panel. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a4343d46dc85b050e67244b95ddad8c90" name="a4343d46dc85b050e67244b95ddad8c90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4343d46dc85b050e67244b95ddad8c90">&#9670;&#160;</a></span>setColor()</h2>
+<a id="a5c4d2bf8b31913fda5d537dc4893c3f3" name="a5c4d2bf8b31913fda5d537dc4893c3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4d2bf8b31913fda5d537dc4893c3f3">&#9670;&#160;</a></span>setColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ui::Button::setColor </td>
+          <td class="memname">void ui::Panel::setColor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td>
           <td class="paramname"><em>new_color</em></td><td>)</td>
@@ -441,18 +441,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
       </table>
 </div><div class="memdoc">
 
-<p>Set the button color. </p>
+<p>Set the panel color. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">new_color</td><td>The new button color. </td></tr>
+    <tr><td class="paramname">new_color</td><td>The new panel color. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a1468f1a1cdf56fac29bd7e23f7eeff07" name="a1468f1a1cdf56fac29bd7e23f7eeff07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1468f1a1cdf56fac29bd7e23f7eeff07">&#9670;&#160;</a></span>size()</h2>
+<a id="a799137c43b637be150fd24f89fcb689f" name="a799137c43b637be150fd24f89fcb689f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a799137c43b637be150fd24f89fcb689f">&#9670;&#160;</a></span>size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -461,7 +461,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structui_1_1Size.html">Size</a> ui::Button::size </td>
+          <td class="memname"><a class="el" href="structui_1_1Size.html">Size</a> ui::Panel::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -482,8 +482,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 
 </div>
 </div>
-<a id="acee7e2e147cf9256dc6d6e115483eaab" name="acee7e2e147cf9256dc6d6e115483eaab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acee7e2e147cf9256dc6d6e115483eaab">&#9670;&#160;</a></span>update()</h2>
+<a id="a5e23cddfd13824a2f09bc6c08600e993" name="a5e23cddfd13824a2f09bc6c08600e993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e23cddfd13824a2f09bc6c08600e993">&#9670;&#160;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -492,7 +492,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ui::Button::update </td>
+          <td class="memname">bool ui::Panel::update </td>
           <td>(</td>
           <td class="paramtype">time_t&#160;</td>
           <td class="paramname"><em>time</em></td><td>)</td>
@@ -520,14 +520,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/ui/<a class="el" href="button_8hpp_source.html">button.hpp</a></li>
+<li>src/ui/<a class="el" href="panel_8hpp_source.html">panel.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>ui</b></li><li class="navelem"><a class="el" href="classui_1_1Button.html">Button</a></li>
+    <li class="navelem"><b>ui</b></li><li class="navelem"><a class="el" href="classui_1_1Panel.html">Panel</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

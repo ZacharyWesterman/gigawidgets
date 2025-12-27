@@ -6,10 +6,10 @@ var dir_da5c6b39c0a2f54e57df6799511cd3ab =
     [ "shaders", "dir_d483d63164b872ed1c2586d931b47e10.html", "dir_d483d63164b872ed1c2586d931b47e10" ],
     [ "blink.hpp", "blink_8hpp.html", "blink_8hpp" ],
     [ "body.hpp", "body_8hpp.html", "body_8hpp" ],
-    [ "button.hpp", "button_8hpp.html", "button_8hpp" ],
     [ "collection.hpp", "collection_8hpp.html", "collection_8hpp" ],
     [ "column.hpp", "column_8hpp.html", "column_8hpp" ],
     [ "image.hpp", "image_8hpp.html", "image_8hpp" ],
+    [ "panel.hpp", "panel_8hpp.html", "panel_8hpp" ],
     [ "row.hpp", "row_8hpp.html", "row_8hpp" ],
     [ "text.hpp", "text_8hpp.html", "text_8hpp" ]
 ];

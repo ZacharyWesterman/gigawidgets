@@ -27,7 +27,7 @@ var hierarchy =
         [ "ui::Blink", "classui_1_1Blink.html", null ],
         [ "ui::Body", "classui_1_1Body.html", null ],
         [ "ui::Box", "classui_1_1Box.html", null ],
-        [ "ui::Button", "classui_1_1Button.html", null ]
+        [ "ui::Panel", "classui_1_1Panel.html", null ]
       ] ],
       [ "ui::Text", "classui_1_1Text.html", null ]
     ] ]

@@ -124,7 +124,7 @@ Inheritance diagram for ui::Widget:</div>
 <area href="classui_1_1Blink.html" title="A wrapper widget that causes its child to blink." alt="ui::Blink" shape="rect" coords="280,112,410,136"/>
 <area href="classui_1_1Body.html" title="The root widget of a UI." alt="ui::Body" shape="rect" coords="420,112,550,136"/>
 <area href="classui_1_1Box.html" title="Display a single widget within arbitrary bounds." alt="ui::Box" shape="rect" coords="560,112,690,136"/>
-<area href="classui_1_1Button.html" title="A basic widget that displays a rounded rectangle behind another widget." alt="ui::Button" shape="rect" coords="700,112,830,136"/>
+<area href="classui_1_1Panel.html" title="A basic widget that displays a rounded rectangle behind another widget." alt="ui::Panel" shape="rect" coords="700,112,830,136"/>
 <area href="classui_1_1Column.html" title="A container widget that vertically organizes its children into a structured column." alt="ui::Column" shape="rect" coords="70,168,200,192"/>
 <area href="classui_1_1Row.html" title="A container widget that horizontally organizes its children into a structured row." alt="ui::Row" shape="rect" coords="210,168,340,192"/>
   </map>
@@ -342,7 +342,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 <p>Render the widget to the screen. </p>
 <p>This only gets called when widgets indicate that a redraw is needed of either themselves or their parents. Widgets that implement this method should take care to render as little as they can get away with, to help performance. </p>
 
-<p>Implemented in <a class="el" href="classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199">ui::Blink</a>, <a class="el" href="classui_1_1Body.html#ab3d117b82577c54ddf7a672081b6ccff">ui::Body</a>, <a class="el" href="classui_1_1Button.html#a121633d5bc98720d3a7a7925fa874b64">ui::Button</a>, <a class="el" href="classui_1_1Box.html#a0574b19b94af64731ef236a49a1fb0af">ui::Box</a>, <a class="el" href="classui_1_1MultiChildWidget.html#a11ce6ccfcefa02501602a474bfe22b5d">ui::MultiChildWidget</a>, <a class="el" href="classui_1_1Image.html#a279edf8f3da547b5e12262c5e2e75475">ui::Image</a>, and <a class="el" href="classui_1_1Text.html#aeee84bcdebcba6d7c1f6bf8b98d24570">ui::Text</a>.</p>
+<p>Implemented in <a class="el" href="classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199">ui::Blink</a>, <a class="el" href="classui_1_1Body.html#ab3d117b82577c54ddf7a672081b6ccff">ui::Body</a>, <a class="el" href="classui_1_1Box.html#a0574b19b94af64731ef236a49a1fb0af">ui::Box</a>, <a class="el" href="classui_1_1MultiChildWidget.html#a11ce6ccfcefa02501602a474bfe22b5d">ui::MultiChildWidget</a>, <a class="el" href="classui_1_1Image.html#a279edf8f3da547b5e12262c5e2e75475">ui::Image</a>, <a class="el" href="classui_1_1Panel.html#aba97ec14b02c86ce55fd3e8018d0fcca">ui::Panel</a>, and <a class="el" href="classui_1_1Text.html#aeee84bcdebcba6d7c1f6bf8b98d24570">ui::Text</a>.</p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 
 <p>Reset any state variables after rendering has finished. </p>
 
-<p>Reimplemented in <a class="el" href="classui_1_1Blink.html#a4cf3346efe547b05b471aa4fc2d1dc95">ui::Blink</a>, <a class="el" href="classui_1_1Button.html#a51704b2e52aa92e1a8d9ff779eea9c49">ui::Button</a>, <a class="el" href="classui_1_1MultiChildWidget.html#a5ce41cf2a5a1bfacdc5c4dd39b71cd50">ui::MultiChildWidget</a>, and <a class="el" href="classui_1_1SingleChildWidget.html#adece8b81ccd394ca73a1e6feb94e78b4">ui::SingleChildWidget</a>.</p>
+<p>Reimplemented in <a class="el" href="classui_1_1Blink.html#a4cf3346efe547b05b471aa4fc2d1dc95">ui::Blink</a>, <a class="el" href="classui_1_1MultiChildWidget.html#a5ce41cf2a5a1bfacdc5c4dd39b71cd50">ui::MultiChildWidget</a>, <a class="el" href="classui_1_1SingleChildWidget.html#adece8b81ccd394ca73a1e6feb94e78b4">ui::SingleChildWidget</a>, and <a class="el" href="classui_1_1Panel.html#a0c730001252e320315bad056a4ae0805">ui::Panel</a>.</p>
 
 </div>
 </div>
@@ -879,7 +879,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 <dl class="section return"><dt>Returns</dt><dd>The width and height of the widget in pixels. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This value may be based on the size of the child widget, and so should <b>never</b> refer to the size of the parent widget! </dd></dl>
 
-<p>Implemented in <a class="el" href="classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8">ui::Blink</a>, <a class="el" href="classui_1_1Body.html#a985a32b7381a2c0cdbd41c380fdd4c88">ui::Body</a>, <a class="el" href="classui_1_1Button.html#a1468f1a1cdf56fac29bd7e23f7eeff07">ui::Button</a>, <a class="el" href="classui_1_1Collection.html#a017ed8063a9bba606abe53456b05fae4">ui::Collection</a>, <a class="el" href="classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6">ui::SingleChildWidget</a>, <a class="el" href="classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3">ui::Image</a>, and <a class="el" href="classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c">ui::Text</a>.</p>
+<p>Implemented in <a class="el" href="classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8">ui::Blink</a>, <a class="el" href="classui_1_1Body.html#a985a32b7381a2c0cdbd41c380fdd4c88">ui::Body</a>, <a class="el" href="classui_1_1Collection.html#a017ed8063a9bba606abe53456b05fae4">ui::Collection</a>, <a class="el" href="classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6">ui::SingleChildWidget</a>, <a class="el" href="classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3">ui::Image</a>, <a class="el" href="classui_1_1Panel.html#a799137c43b637be150fd24f89fcb689f">ui::Panel</a>, and <a class="el" href="classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c">ui::Text</a>.</p>
 
 </div>
 </div>
@@ -916,7 +916,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if this widget needs to be re-rendered. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classui_1_1Column.html#aef24679c1109a70a282e58d09b236b85">ui::Column</a>, <a class="el" href="classui_1_1Row.html#a95d1a83c07f5c1452e4a91b2bacd5aa7">ui::Row</a>, <a class="el" href="classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695">ui::Blink</a>, <a class="el" href="classui_1_1Button.html#acee7e2e147cf9256dc6d6e115483eaab">ui::Button</a>, <a class="el" href="classui_1_1MultiChildWidget.html#afed1d53cfeb599e1074b63bec3ee838e">ui::MultiChildWidget</a>, <a class="el" href="classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf">ui::SingleChildWidget</a>, and <a class="el" href="classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042">ui::Image</a>.</p>
+<p>Reimplemented in <a class="el" href="classui_1_1Column.html#aef24679c1109a70a282e58d09b236b85">ui::Column</a>, <a class="el" href="classui_1_1Row.html#a95d1a83c07f5c1452e4a91b2bacd5aa7">ui::Row</a>, <a class="el" href="classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695">ui::Blink</a>, <a class="el" href="classui_1_1MultiChildWidget.html#afed1d53cfeb599e1074b63bec3ee838e">ui::MultiChildWidget</a>, <a class="el" href="classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf">ui::SingleChildWidget</a>, <a class="el" href="classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042">ui::Image</a>, and <a class="el" href="classui_1_1Panel.html#a5e23cddfd13824a2f09bc6c08600e993">ui::Panel</a>.</p>
 
 </div>
 </div>
