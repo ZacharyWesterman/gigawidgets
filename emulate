@@ -42,7 +42,8 @@ if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
     echo "  --help          | Display this message." >&2
     echo "To remove build files, run" >&2
     echo "  $0 --clean" >&2
-    exit "$([ "$print_help" == 1 ])"
+    [ "$print_help" == 0 ] && exit 1
+    exit 0
 fi
 
 build() {
