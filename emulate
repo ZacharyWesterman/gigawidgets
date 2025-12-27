@@ -33,7 +33,7 @@ for i in "$@"; do
 done
 
 if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
-    echo "Usage: [FLAGS] $0 <ino file>" >&2
+    echo "Usage: [FLAGS] $0 <ino/xml file>" >&2
     echo >&2
     echo "Flags:" >&2
     echo "  --clean         | Remove build files and exit." >&2
@@ -44,8 +44,34 @@ if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
     exit 0
 fi
 
+move_file() {
+    if [[ "$filename" == *.xml ]]; then
+        local tmp
+        tmp=$(mktemp)
+        if ! tools/xml_to_ui.py "$filename" build_ui > "$tmp"; then
+            rm -f "$tmp"
+            return 1
+        fi
+        echo "
+        $(cat "$tmp")
+        void setup() {
+            ui::begin();
+            ui::setRoot(build_ui());
+        }
+
+        void loop() {
+            ui::render();
+        }
+        " > emu/ino.cpp
+        rm -f "$tmp"
+    else
+        rsync "$filename" emu/ino.cpp || return 1
+    fi
+    return 0
+}
+
 build() {
-    rsync "$filename" emu/ino.cpp || return 1
+    move_file || return 1
     rsync -a src emu/ -u || return 1
     make -C emu WINDOW_SCALE="$window_scale" || return 1
     return 0
@@ -58,14 +84,16 @@ if [ $watch == 0 ]; then
 fi
 
 poll_src_changes() {
+    local file
     inotifywait -m -r -q --format '%w%f' -e CLOSE_WRITE "$filename" src/ --include '.*\.(hpp|cpp|h)$' | while read -r file; do
         rsync "$file" emu/"$file" -u
     done
 }
 
 poll_src_changes2() {
-    inotifywait -m -q --format '%w%f' -e CLOSE_WRITE "$filename" | while read -r file; do
-        rsync "$file" emu/ino.cpp -u
+    local file
+    inotifywait -m -q --format '%w' -e CLOSE_WRITE "$filename" | while read -r file; do
+        move_file
     done
 }
 
@@ -82,7 +110,7 @@ __exit() {
 trap __exit INT
 
 poll_build_changes() {
-    inotifywait -m -r -q emu/ -e MOVED_TO --include '.*\.(hpp|cpp|h)$' | while read -r file; do
+    inotifywait -m -r -q emu/ -e MOVED_TO -e CLOSE_WRITE --include '.*\.(hpp|cpp|h)$' | while read -r file; do
         echo 1 > "$buildfile"
     done
 }
@@ -105,7 +133,6 @@ while true; do
         
         if make -C emu WINDOW_SCALE="$window_scale"; then
             if [ ! -z "$pid" ]; then
-                echo ">>$pid<<"
                 kill "$pid"
                 wait "$pid"
                 echo '' > "$pidfile"

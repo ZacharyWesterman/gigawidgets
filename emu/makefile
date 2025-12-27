@@ -11,7 +11,7 @@ RAYLIB_TAR_FILE = $(notdir $(RAYLIB_URL))
 RAYLIB_DIR = $(basename $(basename $(RAYLIB_TAR_FILE)))
 RAYLIB_BIN_DIR = lib/$(RAYLIB_DIR)/lib
 
-LIB_INCLUDES = -Iarduino -Ilib/$(RAYLIB_DIR)/include
+LIB_INCLUDES = -Isrc -Iarduino -Ilib/$(RAYLIB_DIR)/include
 
 CC = g++
 WINDOW_SCALE = 1
