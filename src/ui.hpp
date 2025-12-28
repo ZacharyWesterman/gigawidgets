@@ -7,6 +7,7 @@
 #include "ui/column.hpp"
 #include "ui/core/display.hpp"
 #include "ui/core/units.hpp"
+#include "ui/demo_widget.hpp"
 #include "ui/image.hpp"
 #include "ui/panel.hpp"
 #include "ui/row.hpp"
