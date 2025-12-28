@@ -46,6 +46,20 @@ void finalizeRotation();
 void drawPixel(coord_t x, coord_t y, color_t color);
 
 /**
+ * @brief Render a line to the screen, accounting for rotation.
+ * @param x1 The horizontal coordinate of the first point.
+ * @param y1 The vertical coordinate of the first point.
+ * @param x2 The horizontal coordinate of the second point.
+ * @param y2 The vertical coordinate of the second point.
+ * @param color The color of the pixel.
+ */
+void drawLine(coord_t x1, coord_t y1, coord_t x2, coord_t y2, color_t color);
+
+void drawSpiral(coord_t cx, coord_t cy, float a, float b, float thetaMax, float thetaStep, color_t color);
+
+void drawPolygon(coord_t cx, coord_t cy, coord_t radius, int n, color_t color, float rotationRadians);
+
+/**
  * @brief Fill the screen with a color.
  * @param color The color to fill.
  */

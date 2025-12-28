@@ -1,5 +1,6 @@
 #include <Arduino_GigaDisplayTouch.h>
 #include <Arduino_GigaDisplay_GFX.h>
+#include <cmath>
 
 #include "display.hpp"
 
@@ -68,6 +69,93 @@ void finalizeRotation() {
 
 void drawPixel(coord_t x, coord_t y, color_t color) {
 	display.drawPixel(x, y, color);
+}
+
+void drawLine(coord_t x0, coord_t y0, coord_t x1, coord_t y1, color_t color) {
+	int dx = std::abs(x1 - x0);
+	int dy = std::abs(y1 - y0);
+
+	int sx = (x0 < x1) ? 1 : -1;
+	int sy = (y0 < y1) ? 1 : -1;
+
+	int err = dx - dy;
+
+	while (true) {
+		ui::drawPixel(x0, y0, color);
+
+		if (x0 == x1 && y0 == y1) {
+			break;
+		}
+
+		int e2 = err * 2;
+
+		if (e2 > -dy) {
+			err -= dy;
+			x0 += sx;
+		}
+		if (e2 < dx) {
+			err += dx;
+			y0 += sy;
+		}
+	}
+}
+
+void drawSpiral(coord_t cx, coord_t cy, float a, float b, float thetaMax, float thetaStep, color_t color) {
+	bool first = true;
+	int prevX = 0, prevY = 0;
+
+	for (float t = 0.0f; t <= thetaMax; t += thetaStep) {
+		float r = a + b * t;
+		int x = int(std::lround(cx + r * std::cos(t)));
+		int y = int(std::lround(cy + r * std::sin(t)));
+
+		if (!first) {
+			ui::drawLine(prevX, prevY, x, y, color); // your Bresenham function
+		} else {
+			first = false;
+		}
+
+		prevX = x;
+		prevY = y;
+	}
+}
+
+void drawPolygon(coord_t cx, coord_t cy, coord_t radius, int n, color_t color, float rotationRadians) {
+	if (n < 3 || radius <= 0) {
+		return;
+	}
+
+	const float twoPi = 6.283185307179586f;
+	const float step = twoPi / float(n);
+
+	auto calcXY = [&](float angle, coord_t &outX, coord_t &outY) {
+		float fx = float(cx) + float(radius) * std::cos(angle);
+		float fy = float(cy) + float(radius) * std::sin(angle);
+		outX = (coord_t)std::lround(fx);
+		outY = (coord_t)std::lround(fy);
+	};
+
+	// First vertex
+	coord_t firstX, firstY;
+	calcXY(rotationRadians, firstX, firstY);
+
+	// Previous vertex starts at first
+	coord_t prevX = firstX;
+	coord_t prevY = firstY;
+
+	// Remaining vertices
+	for (int i = 1; i < n; ++i) {
+		coord_t curX, curY;
+		calcXY(rotationRadians + step * float(i), curX, curY);
+
+		ui::drawLine(prevX, prevY, curX, curY, color);
+
+		prevX = curX;
+		prevY = curY;
+	}
+
+	// Close polygon
+	ui::drawLine(prevX, prevY, firstX, firstY, color);
 }
 
 void fillScreen(color_t color) {

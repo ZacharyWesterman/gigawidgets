@@ -43,8 +43,9 @@
 // }
 
 void setup() {
-	//
-	ui::drawPixel(10, 10, ui::COLOR_RED);
+	auto w = new ui::DemoWidget();
+	auto body = new ui::Body(w, ui::COLOR_BLACK);
+	ui::setRoot(body);
 }
 
 void loop() {
