@@ -3,6 +3,7 @@ var classui_1_1Text =
     [ "Text", "classui_1_1Text.html#a79450e805ad6ed1e449cdd8ba0077777", null ],
     [ "Text", "classui_1_1Text.html#a05c8c9dd2b9630a1eeb1b0577f8d1d5d", null ],
     [ "draw", "classui_1_1Text.html#aeee84bcdebcba6d7c1f6bf8b98d24570", null ],
+    [ "setColor", "classui_1_1Text.html#abdd1a916767395052635ffe407dc1467", null ],
     [ "setFont", "classui_1_1Text.html#a983861dd8aa672bb1b1c0e6595ca3476", null ],
     [ "setScale", "classui_1_1Text.html#af62f6596e5273ce586c13bae9ce87072", null ],
     [ "setText", "classui_1_1Text.html#a866e0667756223aab321e25f4918b5e0", null ],
