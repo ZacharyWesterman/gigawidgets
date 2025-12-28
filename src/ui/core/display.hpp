@@ -55,9 +55,15 @@ void drawPixel(coord_t x, coord_t y, color_t color);
  */
 void drawLine(coord_t x1, coord_t y1, coord_t x2, coord_t y2, color_t color);
 
+// TODO: document
 void drawSpiral(coord_t cx, coord_t cy, float a, float b, float thetaMax, float thetaStep, color_t color);
 
+// TODO: document
 void drawPolygon(coord_t cx, coord_t cy, coord_t radius, int n, color_t color, float rotationRadians);
+
+// TODO: add drawCircle, drawEllipse
+// TODO: add filled versions of some of these
+// TODO: add drawPoints (with an option for connected for custom "polygonal" paths)
 
 /**
  * @brief Fill the screen with a color.
