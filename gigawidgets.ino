@@ -8,7 +8,7 @@ void setup() {
 	// while (!Serial)
 	// 	;
 
-	ui::setRotation(ui::ROT_270_DEG);
+	ui::setRotation(ui::ROT_90_DEG);
 
 	// Position is relative to parent.
 	ui::Position position = {0, 0};
