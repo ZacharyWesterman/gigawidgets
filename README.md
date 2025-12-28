@@ -5,6 +5,19 @@ It could easily be extended to other displays, but the first and foremost target
 
 This project is a WIP and is not currently stable enough for use in other projects.
 
+## Requirements
+
+### Emulation requirements
+Emulation is only *officially* supported on Linux. If you can get it running on Windows, power to you!
+- `rsync`
+- A C++ compiler (if not `g++`, you'll have to tweak `emulate` to add the `CC=<your_compiler>` flag to the `make command`)
+
+### Real hardware upload requirements
+- The "Arduino Community Edition" VS Code extension, if uploading with VS Code.
+- The following Arduino libraries:
+  - `Arduino_GigaDisplayTouch`
+  - `Arduino_GigaDisplay_GFX`
+
 ---
 
 An emulator is available to test sketches and for rapid prototyping of this library. To emulate a sketch, run:
