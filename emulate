@@ -121,6 +121,7 @@ buildfile=$(tmpfile)
 __exit() {
     rm "$pidfile" "$buildfile"
     pkill -P "$$" &>/dev/null
+    wait
     kill "$$"
     exit 0
 }
