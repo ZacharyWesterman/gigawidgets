@@ -44,58 +44,6 @@ if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
     exit 0
 fi
 
-if ! command rsync &>/dev/null; then
-    rsync() {
-        local src dest recursive i args in_recursive
-
-        args=()
-        recursive=0
-        in_recursive=0
-
-        for i in "$@"; do
-            case "$i" in
-                -a) recursive=1 ;;
-                -r) in_recursive=1 ;;
-                *) args+=("$i")
-            esac
-        done
-
-        src="${args[0]}"
-        dest="${args[1]}"
-
-        if [ -z "$src" ] || [ -z "$dest" ]; then
-            echo "ERROR: incorrect usage of rsync emulating function!" >&2
-            return 1
-        fi
-
-        if [ ! -d "$src" ]; then
-            [ -d "$dest" ] && dest="$dest/$(basename "$src")"
-            if [ "$(cat "$src")" != "$(cat "$dest")" ]; then
-                cp "$src" "$dest" || return 1
-            fi
-            return 0
-        fi
-
-        if [ "$recursive" == 0 ]; then
-            echo "ERROR: cannot copy source: is a directory" >&2
-            return 1
-        fi
-
-        for i in "$src"/*; do
-            local newdest
-            [ "$in_recursive" == 1 ] && newdest="$dest/$(basename "$i")" || newdest="$dest/$i"
-            if [ -d "$i" ]; then
-                [ ! -e "$newdest" ] && mkdir -p "$newdest"
-                rsync -a "$i" "$newdest" -r
-            else
-                if [ ! -e "$newdest" ] || [ "$(cat "$i")" != "$(cat "$newdest")" ]; then
-                    cp "$src" "$newdest"
-                fi
-            fi
-        done
-    }
-fi
-
 move_file() {
     if [[ "$filename" == *.xml ]]; then
         local tmp
