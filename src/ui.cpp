@@ -7,12 +7,19 @@
 #endif
 
 namespace ui {
+
+static Widget *prevRoot = nullptr;
 static Widget *rootNode = nullptr;
 static time_t lastRender = 0;
 
 void setRoot(Widget *const root) {
+	if (prevRoot) {
+		delete prevRoot;
+		prevRoot = nullptr;
+	}
+
 	if (rootNode) {
-		delete rootNode;
+		prevRoot = rootNode;
 	} else {
 		ui::begin();
 	}
@@ -24,6 +31,11 @@ void render(bool block) {
 #ifdef EMULATE
 	static auto r = [](bool block) {
 #endif
+		if (prevRoot) {
+			delete prevRoot;
+			prevRoot = nullptr;
+		}
+
 		auto currentTime = millis();
 		const auto elapsed = currentTime - lastRender;
 		if (block) {
