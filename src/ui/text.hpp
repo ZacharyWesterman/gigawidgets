@@ -77,6 +77,12 @@ public:
 	 * @param scale The new scaling factor for the text, e.g. 2x, 3x, etc.
 	 */
 	void setScale(fontsize_t scale);
+
+	/**
+	 * @brief Set the text color.
+	 * @param new_color The new text color.
+	 */
+	void setColor(color_t new_color);
 };
 
 } // namespace ui

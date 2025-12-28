@@ -75,4 +75,9 @@ void Text::setScale(fontsize_t scale) {
 	redrawParent = true;
 }
 
+void Text::setColor(color_t new_color) {
+	textColor = new_color;
+	redrawSelf = true;
+}
+
 } // namespace ui
