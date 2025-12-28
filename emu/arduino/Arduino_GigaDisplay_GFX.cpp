@@ -1,4 +1,3 @@
-#include <iostream>
 #include <raylib.h>
 
 #include "Arduino_GigaDisplay_GFX.h"

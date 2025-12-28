@@ -21,7 +21,7 @@ CFLAGS = -DEMULATE -DARDUINO=300 -DARDUINO_GIGA -DWINDOW_SCALE=$(WINDOW_SCALE) -
 all: lib src ino
 
 ino: main.o ino.o $(OBJECTS) $(ARDUINO_OBJECTS)
-	$(CC) -o $@ $^ -l:libraylib.a -lGL -lm -lpthread -ldl -lrt -lX11 -L$(RAYLIB_BIN_DIR)
+	$(CC) -o $@ $^ -l:libraylib.a -lm -lpthread -ldl -lrt -L$(RAYLIB_BIN_DIR)
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) -o $@ -c $<
