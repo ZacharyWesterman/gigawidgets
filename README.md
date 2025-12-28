@@ -9,10 +9,13 @@ This project is a WIP and is not currently stable enough for use in other projec
 
 ### Emulation requirements
 Emulation is only *officially* supported on Linux. If you can get it running on Windows, power to you!
+
 - `rsync`
 - A C++ compiler (if not `g++`, you'll have to tweak `emulate` to add the `CC=<your_compiler>` flag to the `make command`)
 
 ### Real hardware upload requirements
+These are also required when emulating.
+
 - The "Arduino Community Edition" VS Code extension, if uploading with VS Code.
 - The following Arduino libraries:
   - `Arduino_GigaDisplayTouch`
