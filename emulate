@@ -44,10 +44,18 @@ if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
     exit 0
 fi
 
+tmpfile() {
+    mktemp 2>/dev/null && return 0
+    local t
+    t="/tmp/giga_emu_$(uuidgen)"
+    touch "$t" || return 1
+    echo "$t"
+}
+
 move_file() {
     if [[ "$filename" == *.xml ]]; then
         local tmp
-        tmp=$(mktemp)
+        tmp=$(tmpfile)
         if ! tools/xml_to_ui.py "$filename" build_ui > "$tmp"; then
             rm -f "$tmp"
             return 1
@@ -97,8 +105,10 @@ poll_src_changes2() {
     done
 }
 
-pidfile=$(mktemp)
-buildfile=$(mktemp)
+
+
+pidfile=$(tmpfile)
+buildfile=$(tmpfile)
 
 __exit() {
     rm "$pidfile" "$buildfile"
