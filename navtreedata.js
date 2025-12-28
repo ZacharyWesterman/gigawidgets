@@ -25,6 +25,10 @@
 var NAVTREE =
 [
   [ "gigawidgets", "index.html", [
+    [ "Requirements", "index.html#autotoc_md1", [
+      [ "Emulation requirements", "index.html#autotoc_md2", null ],
+      [ "Real hardware upload requirements", "index.html#autotoc_md3", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -48,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "alignment_8hpp.html",
-"structui_1_1Alignment.html"
+"startup__rainbow_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

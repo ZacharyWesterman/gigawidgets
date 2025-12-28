@@ -103,6 +103,24 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> This project allows simple widget-based construction and rendering of a GUI on an Arduino Giga with an attached Giga Display Shield. It could easily be extended to other displays, but the first and foremost target is the aforementioned.</p>
 <p>This project is a WIP and is not currently stable enough for use in other projects.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Requirements</h1>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Emulation requirements</h2>
+<p>Emulation is only <em>officially</em> supported on Linux. If you can get it running on Windows, power to you!</p><ul>
+<li><code>rsync</code></li>
+<li>A C++ compiler (if not <code>g++</code>, you'll have to tweak <code>emulate</code> to add the <code>CC=&lt;your_compiler&gt;</code> flag to the <code>make command</code>)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Real hardware upload requirements</h2>
+<ul>
+<li>The "Arduino Community Edition" VS Code extension, if uploading with VS Code.</li>
+<li>The following Arduino libraries:<ul>
+<li><code>Arduino_GigaDisplayTouch</code></li>
+<li><code>Arduino_GigaDisplay_GFX</code></li>
+</ul>
+</li>
+</ul>
 <hr  />
 <p>An emulator is available to test sketches and for rapid prototyping of this library. To emulate a sketch, run:</p>
 <div class="fragment"><div class="line">./emulate your_sketch.ino</div>
