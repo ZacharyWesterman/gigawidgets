@@ -6,17 +6,14 @@ from ..datatypes import (
     Shader,
     Pair,
     Position,
-    HorizontalAlignment,
-    VerticalAlignment,
+    Alignment,
 )
 
 
 @register
 class Image(Widget):
     pos: Optional[Pair(Position)] = Pair(Position)("0 0")
-    align: Optional[Pair(HorizontalAlignment, VerticalAlignment)] = Pair(
-        HorizontalAlignment, VerticalAlignment
-    )("left top")
+    align: Optional[Alignment] = Alignment("left top")
 
     source: ImageSource
     shader: Optional[Shader]

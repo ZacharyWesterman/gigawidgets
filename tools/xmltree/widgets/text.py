@@ -7,8 +7,7 @@ from ..datatypes import (
     Font,
     Pair,
     Position,
-    HorizontalAlignment,
-    VerticalAlignment,
+    Alignment,
 )
 from ..logging import warn
 
@@ -16,9 +15,7 @@ from ..logging import warn
 @register
 class Text(Widget):
     pos: Optional[Pair(Position)] = Pair(Position)("0 0")
-    align: Optional[Pair(HorizontalAlignment, VerticalAlignment)] = Pair(
-        HorizontalAlignment, VerticalAlignment
-    )("left top")
+    align: Optional[Alignment] = Alignment("left top")
 
     font: Optional[Font]
     scale: Optional[int]

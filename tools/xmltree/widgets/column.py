@@ -5,8 +5,7 @@ from ..datatypes import (
     Pair,
     Size,
     Position,
-    HorizontalAlignment,
-    VerticalAlignment,
+    Alignment,
     VerticalOrdering,
 )
 
@@ -14,9 +13,7 @@ from ..datatypes import (
 @register
 class Column(Widget):
     pos: Optional[Pair(Position)] = Pair(Position)("0 0")
-    align: Optional[Pair(HorizontalAlignment, VerticalAlignment)] = Pair(
-        HorizontalAlignment, VerticalAlignment
-    )("left top")
+    align: Optional[Alignment] = Alignment("left top")
 
     size: Pair(Size)
     order: Optional[VerticalOrdering]
