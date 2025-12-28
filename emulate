@@ -4,6 +4,7 @@ filename=''
 window_scale=1
 print_help=0
 watch=0
+dry_run=0
 
 for i in "$@"; do
     case "$i" in
@@ -18,10 +19,13 @@ for i in "$@"; do
         --scale=*)
             window_scale="${i#*=}"
             ;;
-        --watch)
+        --watch|-w)
             watch=1
             ;;
-        --help) print_help=1 ;;
+        --dry-run|-d)
+            dry_run=1
+            ;;
+        --help|-h) print_help=1 ;;
         *)
             filename="$i"
             if [ ! -f "$filename" ]; then
@@ -38,8 +42,9 @@ if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
     echo "Flags:" >&2
     echo "  --clean         | Remove build files and exit." >&2
     echo "  --scale=[SCALE] | Scale the window by an integer amount." >&2
-    echo "  --watch         | Watch for source changes, automatically rebuilding when a change is detected." >&2
-    echo "  --help          | Display this message." >&2
+    echo "  --watch,   -w   | Watch for source changes, automatically rebuilding when a change is detected." >&2
+    echo "  --dry-run, -d   | Verify compilation and exit." >&2
+    echo "  --help     -h   | Display this message." >&2
     [ "$print_help" == 0 ] && exit 1
     exit 0
 fi
@@ -82,11 +87,14 @@ build() {
     move_file || return 1
     rsync -a src emu/ -u || return 1
     make -C emu WINDOW_SCALE="$window_scale" || return 1
+
+    echo -e "\e[32mBuild Successful.\e[0m"
     return 0
 }
 
 if [ $watch == 0 ]; then
     build || exit 1
+    [ "$dry_run" == 1 ] && exit 0
     emu/ino
     exit $?
 fi
@@ -116,7 +124,7 @@ __exit() {
     kill "$$"
     exit 0
 }
- 
+
 trap __exit INT
 
 poll_build_changes() {
@@ -127,6 +135,8 @@ poll_build_changes() {
 
 # If watching, don't exit when build fails, just keep watching.
 build
+[ "$dry_run" == 1 ] && exit 0
+
 poll_src_changes &
 poll_src_changes2 &
 poll_build_changes &
