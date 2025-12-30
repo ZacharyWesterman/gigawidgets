@@ -31,4 +31,13 @@ void setRoot(Widget *const root);
  */
 void render(bool block = true);
 
+#ifdef DEBUG
+/**
+ * @brief Toggle whether bounding boxes are displayed for all widgets.
+ * @param enable If true, show bounding boxes. If false, hide bounding boxes.
+ * @note This function is only available in debug builds.
+ */
+void showBoundingBoxes(bool enable);
+#endif
+
 } // namespace ui
