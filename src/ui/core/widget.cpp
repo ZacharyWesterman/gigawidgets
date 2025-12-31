@@ -81,10 +81,10 @@ Bounds Widget::bounds() const {
 	return b;
 }
 
-bool Widget::handleEvent(const Event &event) {
+bool Widget::handleEvent(Event &event) {
 	const auto b = bounds();
 
-	if (!bounds().contains(event.coords[0])) {
+	if (!bounds().contains(event.points[0])) {
 		// If this element *was* pressed but user slid their finger off,
 		// trigger the blur event.
 		if (pressed) {

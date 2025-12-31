@@ -134,6 +134,10 @@ Event getTouchEvent() {
 
 		if (event.contacts > 0) {
 			event.triggered = true;
+
+			float inv_width = 1.f / ui::width();
+			float inv_height = 1.f / ui::height();
+
 			for (int i = 0; i < event.contacts; i++) {
 				auto x = points[i].x;
 				auto y = points[i].y;
@@ -156,8 +160,11 @@ Event getTouchEvent() {
 				}
 #endif
 
-				event.coords[i].x = x;
-				event.coords[i].y = y;
+				event.points[i] = {x, y};
+				event.coords[i] = {
+					x * inv_width,
+					y * inv_height,
+				};
 			}
 
 			if (!pressed) {

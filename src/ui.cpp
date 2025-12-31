@@ -56,7 +56,7 @@ void render(bool block) {
 			return;
 		}
 
-		const auto event = getTouchEvent();
+		auto event = getTouchEvent();
 		if (event.triggered) {
 			rootNode->handleEvent(event);
 		}
