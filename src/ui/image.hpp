@@ -44,6 +44,8 @@ public:
 	 * @brief Remove the shader from the image, if any exists.
 	 */
 	void removeShader();
+
+	DERIVE_EVENT_HANDLERS(Image)
 };
 
 } // namespace ui

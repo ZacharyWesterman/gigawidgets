@@ -32,6 +32,8 @@ public:
 	Bounds bounds() const override;
 
 	void drawDone() override;
+
+	DERIVE_EVENT_HANDLERS(Blink)
 };
 
 } // namespace ui

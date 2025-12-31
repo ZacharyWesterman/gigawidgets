@@ -58,6 +58,8 @@ public:
 	inline align_t getChildAlign() const {
 		return childAlignment;
 	}
+
+	DERIVE_EVENT_HANDLERS(Row)
 };
 
 } // namespace ui

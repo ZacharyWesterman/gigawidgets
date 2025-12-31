@@ -43,6 +43,8 @@ public:
 	void setChild(Widget *const child);
 
 	bool handleEvent(const Event &event) override;
+
+	DERIVE_EVENT_HANDLERS(SingleChildWidget)
 };
 
 } // namespace ui

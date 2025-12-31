@@ -42,6 +42,8 @@ public:
 	virtual void push(Widget *const child);
 
 	bool handleEvent(const Event &event) override;
+
+	DERIVE_EVENT_HANDLERS(MultiChildWidget)
 };
 
 } // namespace ui

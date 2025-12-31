@@ -8,6 +8,7 @@
 #include "bounds.hpp"
 #include "coords.hpp"
 #include "event.hpp"
+#include "event_handlers.hpp"
 #include "padding.hpp"
 #include "position.hpp"
 #include "size.hpp"
@@ -22,16 +23,15 @@ namespace ui {
 /**
  * @brief The common interface for all UI objects.
  */
-class Widget {
-private:
+class Widget : public EventHandlers<Widget> {
 	/// @brief The (optional) callback function that gets called when the touchscreen is pressed within this widget's bounds.
-	std::function<void(Widget &element)> callbackPress;
+	std::function<void(Widget &element, const Event &event)> callbackPress;
 	/// @brief The (optional) callback function that gets called when the touchscreen is held within this widget's bounds.
-	std::function<void(Widget &element, unsigned long)> callbackHold;
+	std::function<void(Widget &element, const Event &event, time_t time)> callbackHold;
 	/// @brief The (optional) callback function that gets called when the touchscreen is released within this widget's bounds.
-	std::function<void(Widget &element)> callbackRelease;
+	std::function<void(Widget &element, const Event &event)> callbackRelease;
 	/// @brief The (optional) callback function that gets called when the touchscreen is either released or the user drags outside of this widget's bounds.
-	std::function<void(Widget &element)> callbackBlur;
+	std::function<void(Widget &element, const Event &event)> callbackBlur;
 
 	/// @brief The parent widget, if any.
 	Widget *parent;
@@ -54,6 +54,12 @@ protected:
 	bool redrawSelf;
 
 public:
+	using EventHandlers<Widget>::onpress;
+	using EventHandlers<Widget>::onrelease;
+	using EventHandlers<Widget>::onblur;
+	using EventHandlers<Widget>::onhold;
+	using EventHandlers<Widget>::onclick;
+
 	/**
 	 * @brief The default widget constructor.
 	 * @param pos The position of the widget relative to the parent.
@@ -141,80 +147,32 @@ public:
 	Bounds parentBounds() const;
 
 	/**
-	 * @brief Register a touchscreen event handler that triggers on release.
-	 *
-	 * This is identical to the onrelease() function.
-	 *
-	 * @param callback A callback function that takes a reference to the clicked widget and returns nothing.
-	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
-	 */
-	void onclick(std::function<void(Widget &)> callback);
-
-	/**
-	 * @brief Register a touchscreen event handler that triggers on release.
-	 *
-	 * This is identical to the onrelease() function.
-	 *
-	 * @param callback A callback function that takes no arguments and returns nothing.
-	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
-	 */
-	void onclick(std::function<void()> callback);
-
-	/**
-	 * @brief Register a touchscreen event handler that triggers on press.
-	 * @param callback A callback function that takes a reference to the clicked widget and returns nothing.
-	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
-	 */
-	void onpress(std::function<void(Widget &)> callback);
-
-	/**
 	 * @brief Register a touchscreen event handler that triggers on press.
 	 * @param callback A callback function that takes no arguments and returns nothing.
 	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
 	 */
-	void onpress(std::function<void()> callback);
+	void onpress(std::function<void(Widget &, const Event &)> callback) override;
 
 	/**
 	 * @brief Register a touchscreen event handler that triggers when the widget stops being pressed.
 	 * @param callback A callback function that takes a reference to the clicked widget and returns nothing.
 	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
 	 */
-	void onblur(std::function<void(Widget &)> callback);
-
-	/**
-	 * @brief Register a touchscreen event handler that triggers when the widget stops being pressed.
-	 * @param callback A callback function that takes no arguments and returns nothing.
-	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
-	 */
-	void onblur(std::function<void()> callback);
+	void onblur(std::function<void(Widget &, const Event &)> callback) override;
 
 	/**
 	 * @brief Register a touchscreen event handler that repeatedly triggers when the widget is held for a while.
 	 * @param callback A callback function that takes a reference to the clicked widget and the number of milliseconds that the widget has been held and returns nothing.
 	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
 	 */
-	void onhold(std::function<void(Widget &, unsigned long)> callback);
-
-	/**
-	 * @brief Register a touchscreen event handler that repeatedly triggers when the widget is held for a while.
-	 * @param callback A callback function that takes the number of milliseconds that the widget has been held and returns nothing.
-	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
-	 */
-	void onhold(std::function<void(unsigned long)> callback);
+	void onhold(std::function<void(Widget &, const Event &, time_t)> callback) override;
 
 	/**
 	 * @brief Register a touchscreen event handler that triggers on release.
 	 * @param callback A callback function that takes a reference to the clicked widget and returns nothing.
 	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
 	 */
-	void onrelease(std::function<void(Widget &)> callback);
-
-	/**
-	 * @brief Register a touchscreen event handler that triggers on release.
-	 * @param callback A callback function that takes no arguments and returns nothing.
-	 * @note Only one event handler for each type of event (press, hold, release, blur) is allowed per widget.
-	 */
-	void onrelease(std::function<void()> callback);
+	void onrelease(std::function<void(Widget &, const Event &)> callback) override;
 
 	/**
 	 * @brief Manually trigger the onrelease event handler.
