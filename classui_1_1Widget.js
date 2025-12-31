@@ -6,6 +6,7 @@ var classui_1_1Widget =
     [ "bounds", "classui_1_1Widget.html#a35d1e9dde4160c11b37460e6b993abd4", null ],
     [ "click", "classui_1_1Widget.html#a255fb68faa381b86b8a4a5e9836bd67a", null ],
     [ "draw", "classui_1_1Widget.html#a4e13c8bfff3f6638dbfd813fbfd530de", null ],
+    [ "drawBoundingBox", "classui_1_1Widget.html#af1bf15d4d5b60be0b8f987aaaab5a306", null ],
     [ "drawDone", "classui_1_1Widget.html#a25adfd15fb570c5aa4253a28d18de961", null ],
     [ "handleEvent", "classui_1_1Widget.html#ac324ab3c0ed44d81b339828e0f13d0f9", null ],
     [ "hold", "classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5", null ],

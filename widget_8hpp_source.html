@@ -212,10 +212,14 @@ $(document).ready(function(){initNavTree('widget_8hpp_source.html',''); initResi
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5">  243</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5">hold</a>(time_t time);</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="classui_1_1Widget.html#ac324ab3c0ed44d81b339828e0f13d0f9">  250</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classui_1_1Widget.html#ac324ab3c0ed44d81b339828e0f13d0f9">handleEvent</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Event.html">Event</a> &amp;event);</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>};</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">#ifdef DEBUG</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="classui_1_1Widget.html#af1bf15d4d5b60be0b8f987aaaab5a306">  257</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classui_1_1Widget.html#af1bf15d4d5b60be0b8f987aaaab5a306">drawBoundingBox</a>(time_t time) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>};</div>
 </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>} <span class="comment">// namespace ui</span></div>
 <div class="ttc" id="aalignment_8hpp_html"><div class="ttname"><a href="alignment_8hpp.html">alignment.hpp</a></div></div>
 <div class="ttc" id="abounds_8hpp_html"><div class="ttname"><a href="bounds_8hpp.html">bounds.hpp</a></div></div>
 <div class="ttc" id="aclassui_1_1Widget_html"><div class="ttname"><a href="classui_1_1Widget.html">ui::Widget</a></div><div class="ttdoc">The common interface for all UI objects.</div><div class="ttdef"><b>Definition</b> widget.hpp:25</div></div>
@@ -249,6 +253,7 @@ $(document).ready(function(){initNavTree('widget_8hpp_source.html',''); initResi
 <div class="ttc" id="aclassui_1_1Widget_html_acf2b7f9d32ae943f9a3b870d2e959dd0"><div class="ttname"><a href="classui_1_1Widget.html#acf2b7f9d32ae943f9a3b870d2e959dd0">ui::Widget::onrelease</a></div><div class="ttdeci">void onrelease(std::function&lt; void(Widget &amp;)&gt; callback)</div><div class="ttdoc">Register a touchscreen event handler that triggers on release.</div></div>
 <div class="ttc" id="aclassui_1_1Widget_html_add6812540626995a7b35ee0b0a7c6338"><div class="ttname"><a href="classui_1_1Widget.html#add6812540626995a7b35ee0b0a7c6338">ui::Widget::redrawRequested</a></div><div class="ttdeci">bool redrawRequested() const</div><div class="ttdoc">Check if this widget has requested for the parent widget to be redrawn.</div><div class="ttdef"><b>Definition</b> widget.hpp:122</div></div>
 <div class="ttc" id="aclassui_1_1Widget_html_adea6a1c5a75f30820db9a4114c0291c5"><div class="ttname"><a href="classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5">ui::Widget::hold</a></div><div class="ttdeci">void hold(time_t time)</div><div class="ttdoc">Manually trigger the onhold event handler.</div></div>
+<div class="ttc" id="aclassui_1_1Widget_html_af1bf15d4d5b60be0b8f987aaaab5a306"><div class="ttname"><a href="classui_1_1Widget.html#af1bf15d4d5b60be0b8f987aaaab5a306">ui::Widget::drawBoundingBox</a></div><div class="ttdeci">virtual void drawBoundingBox(time_t time) const</div><div class="ttdoc">Render the bounding box of this and any child widgets.</div></div>
 <div class="ttc" id="aclassui_1_1Widget_html_afd0e7babb90d380238e17e4be75b7481"><div class="ttname"><a href="classui_1_1Widget.html#afd0e7babb90d380238e17e4be75b7481">ui::Widget::setParent</a></div><div class="ttdeci">void setParent(Widget *parent)</div><div class="ttdoc">Set the parent widget.</div></div>
 <div class="ttc" id="acoords_8hpp_html"><div class="ttname"><a href="coords_8hpp.html">coords.hpp</a></div></div>
 <div class="ttc" id="aevent_8hpp_html"><div class="ttname"><a href="event_8hpp.html">event.hpp</a></div></div>

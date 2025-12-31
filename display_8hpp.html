@@ -114,6 +114,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab8a0a15b947e630a557455ac8524f069" id="r_ab8a0a15b947e630a557455ac8524f069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8hpp.html#ab8a0a15b947e630a557455ac8524f069">ui::setRotation</a> (<a class="el" href="rotation_8hpp.html#ac35f2fd44194da2d523b20ef83270410">rotation_t</a> rotation)</td></tr>
 <tr class="memdesc:ab8a0a15b947e630a557455ac8524f069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the screen rotation.  <br /></td></tr>
 <tr class="separator:ab8a0a15b947e630a557455ac8524f069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247a203128a51523283eb4aeba896ed5" id="r_a247a203128a51523283eb4aeba896ed5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rotation_8hpp.html#ac35f2fd44194da2d523b20ef83270410">rotation_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8hpp.html#a247a203128a51523283eb4aeba896ed5">ui::getRotation</a> ()</td></tr>
+<tr class="memdesc:a247a203128a51523283eb4aeba896ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current screen rotation.  <br /></td></tr>
+<tr class="separator:a247a203128a51523283eb4aeba896ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36a3e1f95518ce96f5b8df2778e51ad8" id="r_a36a3e1f95518ce96f5b8df2778e51ad8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8hpp.html#a36a3e1f95518ce96f5b8df2778e51ad8">ui::rotationChanged</a> ()</td></tr>
 <tr class="memdesc:a36a3e1f95518ce96f5b8df2778e51ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the screen rotation has changed since the last render cycle.  <br /></td></tr>
 <tr class="separator:a36a3e1f95518ce96f5b8df2778e51ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,8 +165,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ui::endWrite</b> ()</
 <tr class="memdesc:ace709437101ad11c336fab6de6537047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for a touchscreen event.  <br /></td></tr>
 <tr class="separator:ace709437101ad11c336fab6de6537047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e8248f35d269fd3b8cd5f968fe226ff" id="r_a6e8248f35d269fd3b8cd5f968fe226ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8hpp.html#a6e8248f35d269fd3b8cd5f968fe226ff">ui::fillRoundRect</a> (<a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> x, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> y, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> <a class="el" href="display_8hpp.html#a68c4b5cbc4dd1fa2ab1be0d2cd98d058">width</a>, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> <a class="el" href="display_8hpp.html#a7c06dc533be5be02e359fb75f5df3d79">height</a>, <a class="el" href="radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148">radius_t</a> radius, <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">color</a>)</td></tr>
-<tr class="memdesc:a6e8248f35d269fd3b8cd5f968fe226ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a rectangle with rounded corners.  <br /></td></tr>
+<tr class="memdesc:a6e8248f35d269fd3b8cd5f968fe226ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a filled rectangle with rounded corners.  <br /></td></tr>
 <tr class="separator:a6e8248f35d269fd3b8cd5f968fe226ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a076a52db5e1b8279e262aa9d52730496" id="r_a076a52db5e1b8279e262aa9d52730496"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8hpp.html#a076a52db5e1b8279e262aa9d52730496">ui::drawRect</a> (<a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> x, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> y, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> <a class="el" href="display_8hpp.html#a68c4b5cbc4dd1fa2ab1be0d2cd98d058">width</a>, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> <a class="el" href="display_8hpp.html#a7c06dc533be5be02e359fb75f5df3d79">height</a>, <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">color</a>)</td></tr>
+<tr class="memdesc:a076a52db5e1b8279e262aa9d52730496"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a rectangle.  <br /></td></tr>
+<tr class="separator:a076a52db5e1b8279e262aa9d52730496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88ddcd73c0421903a78e4c97d712413a" id="r_a88ddcd73c0421903a78e4c97d712413a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8hpp.html#a88ddcd73c0421903a78e4c97d712413a">ui::drawBitmap</a> (<a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> x, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> y, uint8_t *bitmap, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> w, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> h, <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">color</a>)</td></tr>
 <tr class="memdesc:a88ddcd73c0421903a78e4c97d712413a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a single-color bitmap.  <br /></td></tr>
 <tr class="separator:a88ddcd73c0421903a78e4c97d712413a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -414,6 +420,64 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ui::endWrite</b> ()</
 
 </div>
 </div>
+<a id="a076a52db5e1b8279e262aa9d52730496" name="a076a52db5e1b8279e262aa9d52730496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a076a52db5e1b8279e262aa9d52730496">&#9670;&#160;</a></span>drawRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::drawRect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a>&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a>&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a rectangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The horizontal coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>The vertical coordinate. </td></tr>
+    <tr><td class="paramname">width</td><td>The horizontal size of the rectangle. </td></tr>
+    <tr><td class="paramname">height</td><td>The vertical size of the rectangle. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the rectangle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1e37d24f9f73eb2bc38c90f8f1c8a5c1" name="a1e37d24f9f73eb2bc38c90f8f1c8a5c1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e37d24f9f73eb2bc38c90f8f1c8a5c1">&#9670;&#160;</a></span>drawRGBBitmap() <span class="overload">[1/2]</span></h2>
 
@@ -587,7 +651,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ui::endWrite</b> ()</
       </table>
 </div><div class="memdoc">
 
-<p>Draw a rectangle with rounded corners. </p>
+<p>Draw a filled rectangle with rounded corners. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The horizontal coordinate. </td></tr>
@@ -625,6 +689,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ui::endWrite</b> ()</
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a247a203128a51523283eb4aeba896ed5" name="a247a203128a51523283eb4aeba896ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a247a203128a51523283eb4aeba896ed5">&#9670;&#160;</a></span>getRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rotation_t ui::getRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current screen rotation. </p>
+<dl class="section return"><dt>Returns</dt><dd>A value indicating the screen rotation. </dd></dl>
 
 </div>
 </div>
