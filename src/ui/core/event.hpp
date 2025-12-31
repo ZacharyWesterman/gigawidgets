@@ -4,6 +4,7 @@
 #include <ctime>
 
 #include "coords.hpp"
+#include "position.hpp"
 
 namespace ui {
 
@@ -33,10 +34,13 @@ struct Event {
 	uint8_t contacts;
 
 	/// @brief A list of coordinates corresponding to each touch point, accounting for screen rotation.
-	Coords coords[5];
+	Coords points[5];
 
 	/// @brief The number of milliseconds that the screen has been pressed continuously.
 	time_t timeHeld;
+
+	/// @brief A list of relative positions on the parent widget that are being touched.
+	Position coords[5];
 };
 
 } // namespace ui

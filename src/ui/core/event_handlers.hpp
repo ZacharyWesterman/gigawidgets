@@ -25,10 +25,15 @@
 	}
 
 #define DERIVE_EVENT_HANDLERS(T) \
+	using Widget::onpress; \
 	_DERIVE_EVENT(T, onpress) \
+	using Widget::onrelease; \
 	_DERIVE_EVENT(T, onrelease) \
+	using Widget::onblur; \
 	_DERIVE_EVENT(T, onblur) \
+	using Widget::onclick; \
 	_DERIVE_EVENT(T, onclick) \
+	using Widget::onhold; \
 	_DERIVE_EVENT_TIME(T, onhold)
 
 namespace ui {

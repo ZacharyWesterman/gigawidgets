@@ -28,10 +28,21 @@ void MultiChildWidget::push(Widget *const child) {
 	redrawSelf = true;
 }
 
-bool MultiChildWidget::handleEvent(const Event &event) {
+bool MultiChildWidget::handleEvent(Event &event) {
 	if (Widget::handleEvent(event)) {
+		const auto b = bounds();
+
+		float inv_width = 1.f / (float)(b.max.x - b.min.x);
+		float inv_height = 1.f / (float)(b.max.y - b.min.y);
+
 		for (auto child : children) {
 			if (child) {
+				for (int i = 0; i < event.contacts; i++) {
+					event.coords[i] = {
+						(event.points[i].x - b.min.x) * inv_width,
+						(event.points[i].y - b.min.y) * inv_height,
+					};
+				}
 				child->handleEvent(event);
 			}
 		}

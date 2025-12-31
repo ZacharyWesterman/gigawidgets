@@ -107,9 +107,17 @@ public:
 	 * @brief Set the position of this widget.
 	 * @param pos The new position, relative to the parent widget.
 	 */
-	inline void setPos(const Position &pos) {
+	inline void setPosition(const Position &pos) {
 		this->pos = pos;
 		redrawParent = true;
+	}
+
+	/**
+	 * @brief Get the position of this widget.
+	 * @return The relative position of this widget on its parent.
+	 */
+	inline Position getPosition() const {
+		return pos;
 	}
 
 	/**
@@ -205,7 +213,7 @@ public:
 	 * @param event The touch event info.
 	 * @return True if this widget was within the event bounds, false otherwise.
 	 */
-	virtual bool handleEvent(const Event &event);
+	virtual bool handleEvent(Event &event);
 
 #ifdef DEBUG
 	/**
