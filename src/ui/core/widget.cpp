@@ -89,7 +89,7 @@ bool Widget::handleEvent(const Event &event) {
 		// trigger the blur event.
 		if (pressed) {
 			if (callbackBlur) {
-				callbackBlur(*this);
+				callbackBlur(*this, event);
 			}
 			pressed = false;
 			return true;
@@ -101,21 +101,21 @@ bool Widget::handleEvent(const Event &event) {
 	switch (event.type) {
 	case EVENT_PRESS:
 		if (callbackPress) {
-			callbackPress(*this);
+			callbackPress(*this, event);
 		}
 		pressed = true;
 		break;
 	case EVENT_HOLD:
 		if (event.timeHeld > ONHOLD_EVENT_DEBOUNCE && callbackHold) {
-			callbackHold(*this, event.timeHeld);
+			callbackHold(*this, event, event.timeHeld);
 		}
 		break;
 	case EVENT_RELEASE:
 		if (callbackRelease) {
-			callbackRelease(*this);
+			callbackRelease(*this, event);
 		}
 		if (pressed && callbackBlur) {
-			callbackBlur(*this);
+			callbackBlur(*this, event);
 		}
 		pressed = false;
 		break;
@@ -124,73 +124,49 @@ bool Widget::handleEvent(const Event &event) {
 	return true;
 }
 
-void Widget::onclick(std::function<void(Widget &)> callback) {
-	callbackRelease = callback;
-};
-
-void Widget::onclick(std::function<void()> callback) {
-	callbackRelease = [callback](Widget &) { callback(); };
-}
-
-void Widget::onpress(std::function<void(Widget &)> callback) {
+void Widget::onpress(std::function<void(Widget &, const Event &)> callback) {
 	callbackPress = callback;
 }
 
-void Widget::onpress(std::function<void()> callback) {
-	callbackPress = [callback](Widget &) { callback(); };
-}
-
-void Widget::onblur(std::function<void(Widget &)> callback) {
+void Widget::onblur(std::function<void(Widget &, const Event &)> callback) {
 	callbackBlur = callback;
 }
 
-void Widget::onblur(std::function<void()> callback) {
-	callbackBlur = [callback](Widget &) { callback(); };
-}
-
-void Widget::onhold(std::function<void(Widget &, unsigned long)> callback) {
+void Widget::onhold(std::function<void(Widget &, const Event &, time_t)> callback) {
 	callbackHold = callback;
 }
 
-void Widget::onhold(std::function<void(unsigned long)> callback) {
-	callbackHold = [callback](Widget &, time_t time_ms) { callback(time_ms); };
-}
-
-void Widget::onrelease(std::function<void(Widget &)> callback) {
+void Widget::onrelease(std::function<void(Widget &, const Event &)> callback) {
 	callbackRelease = callback;
-}
-
-void Widget::onrelease(std::function<void()> callback) {
-	callbackRelease = [callback](Widget &) { callback(); };
 }
 
 void Widget::click() {
 	if (callbackRelease) {
-		callbackRelease(*this);
+		callbackRelease(*this, {});
 	}
 }
 
 void Widget::press() {
 	if (callbackPress) {
-		callbackPress(*this);
+		callbackPress(*this, {});
 	}
 }
 
 void Widget::blur() {
 	if (callbackRelease) {
-		callbackRelease(*this);
+		callbackRelease(*this, {});
 	}
 }
 
 void Widget::release() {
 	if (callbackRelease) {
-		callbackRelease(*this);
+		callbackRelease(*this, {});
 	}
 }
 
 void Widget::hold(time_t time) {
 	if (callbackHold) {
-		callbackHold(*this, time);
+		callbackHold(*this, {}, time);
 	}
 }
 

@@ -49,6 +49,8 @@ public:
 	 * @param new_radius The new radius for the rounded parts of the panel.
 	 */
 	void setBorderRadius(radius_t new_radius);
+
+	DERIVE_EVENT_HANDLERS(Panel)
 };
 
 } // namespace ui

@@ -32,7 +32,7 @@ void setup() {
 	column->push(new ui::Text("This is line 5.", &FreeSerif18pt7b, ui::COLOR_YELLOW));
 
 	// Toggle the child alignment when clicked.
-	column->onclick([column]() { column->setChildAlign(column->getChildAlign() == ui::ALIGN_TOP ? ui::ALIGN_BOTTOM : ui::ALIGN_TOP); });
+	column->onclick([](ui::Column &col) { col.setChildAlign(col.getChildAlign() == ui::ALIGN_TOP ? ui::ALIGN_BOTTOM : ui::ALIGN_TOP); });
 
 	auto body = new ui::Body(column, ui::COLOR_BLACK);
 	ui::setRoot(body);

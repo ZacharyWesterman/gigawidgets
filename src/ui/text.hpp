@@ -83,6 +83,8 @@ public:
 	 * @param new_color The new text color.
 	 */
 	void setColor(color_t new_color);
+
+	DERIVE_EVENT_HANDLERS(Text)
 };
 
 } // namespace ui

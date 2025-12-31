@@ -30,6 +30,8 @@ public:
 	void setBounds(const Bounds &bounds);
 
 	void draw() const override;
+
+	DERIVE_EVENT_HANDLERS(Box)
 };
 
 } // namespace ui

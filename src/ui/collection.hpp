@@ -23,6 +23,8 @@ public:
 	Collection(const Size &size, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
 
 	Size size() const override;
+
+	DERIVE_EVENT_HANDLERS(Collection)
 };
 
 } // namespace ui
