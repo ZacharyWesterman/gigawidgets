@@ -62,4 +62,15 @@ void MultiChildWidget::draw() const {
 	}
 }
 
+#ifdef DEBUG
+void MultiChildWidget::drawBoundingBox(time_t time) const {
+	Widget::drawBoundingBox(time);
+	for (auto child : children) {
+		if (child) {
+			child->drawBoundingBox(time + 500);
+		}
+	}
+}
+#endif
+
 } // namespace ui

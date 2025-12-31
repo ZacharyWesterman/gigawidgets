@@ -206,6 +206,14 @@ public:
 	 * @return True if this widget was within the event bounds, false otherwise.
 	 */
 	virtual bool handleEvent(const Event &event);
+
+#ifdef DEBUG
+	/**
+	 * @brief Render the bounding box of this and any child widgets.
+	 * @note This member function is only available in debug builds.
+	 */
+	virtual void drawBoundingBox(time_t time) const;
+#endif
 };
 
 } // namespace ui

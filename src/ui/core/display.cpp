@@ -58,6 +58,10 @@ void setRotation(rotation_t rotation) {
 	}
 }
 
+rotation_t getRotation() {
+	return lastRotation;
+}
+
 bool rotationChanged() {
 	return uiRotationChanged;
 }
@@ -177,6 +181,10 @@ Event getTouchEvent() {
 
 void fillRoundRect(coord_t x, coord_t y, coord_t width, coord_t height, radius_t radius, color_t color) {
 	display.fillRoundRect(x, y, width, height, radius, color);
+}
+
+void drawRect(coord_t x, coord_t y, coord_t width, coord_t height, color_t color) {
+	display.drawRect(x, y, width, height, color);
 }
 
 void drawBitmap(coord_t x, coord_t y, uint8_t *bitmap, coord_t w, coord_t h, color_t color) {

@@ -40,4 +40,11 @@ bool SingleChildWidget::update(time_t time_ms) {
 	return updated || redrawSelf || rotationChanged();
 }
 
+#ifdef DEBUG
+void SingleChildWidget::drawBoundingBox(time_t time) const {
+	Widget::drawBoundingBox(time);
+	child->drawBoundingBox(time + 500);
+}
+#endif
+
 } // namespace ui

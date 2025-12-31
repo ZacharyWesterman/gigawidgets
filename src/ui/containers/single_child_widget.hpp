@@ -44,6 +44,10 @@ public:
 
 	bool handleEvent(const Event &event) override;
 
+#ifdef DEBUG
+	virtual void drawBoundingBox(time_t time) const override;
+#endif
+
 	DERIVE_EVENT_HANDLERS(SingleChildWidget)
 };
 
