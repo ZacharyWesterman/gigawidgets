@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"pages.html":[],
 "panel_8hpp.html":[2,0,0,0,9],
 "panel_8hpp_source.html":[2,0,0,0,9],
 "position_8hpp.html":[2,0,0,0,1,10],
@@ -51,10 +52,11 @@ var NAVTREEINDEX1 =
 "structui_1_1Coords.html#a15feb62468673dce03c96b1277fe39b6":[1,0,0,9,1],
 "structui_1_1Coords.html#ad52b86eeb060961cf9335925a2010823":[1,0,0,9,0],
 "structui_1_1Event.html":[1,0,0,11],
-"structui_1_1Event.html#a1178834040efb7d41498f85a544dbcb5":[1,0,0,11,1],
-"structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5":[1,0,0,11,3],
-"structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0":[1,0,0,11,4],
-"structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2":[1,0,0,11,2],
+"structui_1_1Event.html#a15c987810571052b7688ef34b24ead00":[1,0,0,11,1],
+"structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5":[1,0,0,11,4],
+"structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0":[1,0,0,11,5],
+"structui_1_1Event.html#a9d29c14deeba3bd0a3e3b33efc5b4969":[1,0,0,11,2],
+"structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2":[1,0,0,11,3],
 "structui_1_1Event.html#ab25a38ceb7fc103d603223a420c6d78d":[1,0,0,11,0],
 "structui_1_1Padding.html":[1,0,0,15],
 "structui_1_1Padding.html#a0cf4b0a5b50e5951fafaa2c421ae3de0":[1,0,0,15,3],

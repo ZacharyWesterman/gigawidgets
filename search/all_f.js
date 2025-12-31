@@ -12,7 +12,7 @@ var searchData=
   ['setminheight_9',['setMinHeight',['../classui_1_1Column.html#ab0e04d79c1f4b4cd12aa4bd930d3aada',1,'ui::Column']]],
   ['setminwidth_10',['setMinWidth',['../classui_1_1Row.html#a5d122e86484a3013dd26a6561a7c0fb1',1,'ui::Row']]],
   ['setparent_11',['setParent',['../classui_1_1Widget.html#afd0e7babb90d380238e17e4be75b7481',1,'ui::Widget']]],
-  ['setpos_12',['setPos',['../classui_1_1Widget.html#a4887c5301b27fe20e53734ddb56b2f84',1,'ui::Widget']]],
+  ['setposition_12',['setPosition',['../classui_1_1Widget.html#a01793b1e54f9dead26bb729d00cb5a00',1,'ui::Widget']]],
   ['setroot_13',['setRoot',['../ui_8hpp.html#a2bc05cb7596a67be883f8617b580c957',1,'ui']]],
   ['setrotation_14',['setRotation',['../display_8hpp.html#ab8a0a15b947e630a557455ac8524f069',1,'ui']]],
   ['setscale_15',['setScale',['../classui_1_1Text.html#af62f6596e5273ce586c13bae9ce87072',1,'ui::Text']]],
