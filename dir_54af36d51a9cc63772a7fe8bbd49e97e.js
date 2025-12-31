@@ -7,6 +7,7 @@ var dir_54af36d51a9cc63772a7fe8bbd49e97e =
     [ "coords.hpp", "coords_8hpp.html", "coords_8hpp" ],
     [ "display.hpp", "display_8hpp.html", "display_8hpp" ],
     [ "event.hpp", "event_8hpp.html", "event_8hpp" ],
+    [ "event_handlers.hpp", "event__handlers_8hpp.html", "event__handlers_8hpp" ],
     [ "fontsize.hpp", "fontsize_8hpp.html", "fontsize_8hpp" ],
     [ "padding.hpp", "padding_8hpp.html", "padding_8hpp" ],
     [ "position.hpp", "position_8hpp.html", "position_8hpp" ],
