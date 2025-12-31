@@ -1,3 +1,4 @@
+/// @file event_handlers.hpp
 #pragma once
 #include <ctime>
 #include <functional>
@@ -5,21 +6,21 @@
 #include "event.hpp"
 
 #define _DERIVE_EVENT(T, FUNC_NAME) \
-	void FUNC_NAME(std::function<void(T &, const Event &)> callback) { \
+	inline void FUNC_NAME(std::function<void(T &, const Event &)> callback) { \
 		Widget::FUNC_NAME([callback](Widget &widget, const Event &event) { callback(reinterpret_cast<T &>(widget), event); }); \
 	} \
-	void FUNC_NAME(std::function<void(T &)> callback) { \
+	inline void FUNC_NAME(std::function<void(T &)> callback) { \
 		Widget::FUNC_NAME([callback](Widget &widget, const Event &) { callback(reinterpret_cast<T &>(widget)); }); \
 	}
 
 #define _DERIVE_EVENT_TIME(T, FUNC_NAME) \
-	void FUNC_NAME(std::function<void(T &, const Event &, time_t)> callback) { \
+	inline void FUNC_NAME(std::function<void(T &, const Event &, time_t)> callback) { \
 		Widget::FUNC_NAME([callback](Widget &widget, const Event &event, time_t time) { callback(reinterpret_cast<T &>(widget), event, time); }); \
 	} \
-	void FUNC_NAME(std::function<void(T &, time_t)> callback) { \
+	inline void FUNC_NAME(std::function<void(T &, time_t)> callback) { \
 		Widget::FUNC_NAME([callback](Widget &widget, const Event &, time_t time) { callback(reinterpret_cast<T &>(widget), time); }); \
 	} \
-	void FUNC_NAME(std::function<void(T &)> callback) { \
+	inline void FUNC_NAME(std::function<void(T &)> callback) { \
 		Widget::FUNC_NAME([callback](Widget &widget, const Event &, time_t) { callback(reinterpret_cast<T &>(widget)); }); \
 	}
 
@@ -156,16 +157,6 @@ public:
 	inline void onclick(std::function<void()> callback) {
 		onclick([callback](T &, const Event &) { callback(); });
 	}
-};
-
-template <class Derived>
-class DeriveEventHandlers : public EventHandlers<Derived> {
-public:
-	using EventHandlers<Derived>::onpress;
-	using EventHandlers<Derived>::onrelease;
-	using EventHandlers<Derived>::onblur;
-	using EventHandlers<Derived>::onhold;
-	using EventHandlers<Derived>::onclick;
 };
 
 } // namespace ui
