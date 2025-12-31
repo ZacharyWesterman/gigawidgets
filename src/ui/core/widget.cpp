@@ -194,4 +194,15 @@ void Widget::hold(time_t time) {
 	}
 }
 
+#ifdef DEBUG
+void Widget::drawBoundingBox(time_t time) const {
+	auto b = bounds();
+
+	float t = std::sin(time / 300.f) / 3.f + 0.67f;
+	color_t c = color(t, t, t);
+
+	drawRect(b.min.x, b.min.y, b.max.x - b.min.x + 2, b.max.y - b.min.y + 2, c);
+}
+#endif
+
 } // namespace ui

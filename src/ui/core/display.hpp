@@ -27,6 +27,12 @@ void begin(bool require_touch = false);
 void setRotation(rotation_t rotation);
 
 /**
+ * @brief Get the current screen rotation.
+ * @return A value indicating the screen rotation.
+ */
+rotation_t getRotation();
+
+/**
  * @brief Check if the screen rotation has changed since the last render cycle.
  * @return True if the rotation has changed, false otherwise.
  */
@@ -124,7 +130,7 @@ uisize_t height();
 Event getTouchEvent();
 
 /**
- * @brief Draw a rectangle with rounded corners.
+ * @brief Draw a filled rectangle with rounded corners.
  * @param x The horizontal coordinate.
  * @param y The vertical coordinate.
  * @param width The horizontal size of the rectangle.
@@ -133,6 +139,16 @@ Event getTouchEvent();
  * @param color The color of the rectangle.
  */
 void fillRoundRect(coord_t x, coord_t y, coord_t width, coord_t height, radius_t radius, color_t color);
+
+/**
+ * @brief Draw a rectangle.
+ * @param x The horizontal coordinate.
+ * @param y The vertical coordinate.
+ * @param width The horizontal size of the rectangle.
+ * @param height The vertical size of the rectangle.
+ * @param color The color of the rectangle.
+ */
+void drawRect(coord_t x, coord_t y, coord_t width, coord_t height, color_t color);
 
 /**
  * @brief Draw a single-color bitmap.

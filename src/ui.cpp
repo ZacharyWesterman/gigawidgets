@@ -12,6 +12,10 @@ static Widget *prevRoot = nullptr;
 static Widget *rootNode = nullptr;
 static time_t lastRender = 0;
 
+#ifdef DEBUG
+bool boundingBoxesVisble = false;
+#endif
+
 void setRoot(Widget *const root) {
 	if (prevRoot) {
 		delete prevRoot;
@@ -63,6 +67,13 @@ void render(bool block) {
 			rootNode->draw();
 		}
 
+#ifdef DEBUG
+		if (boundingBoxesVisble) {
+			rootNode->drawBoundingBox(currentTime);
+			ui::endWrite();
+		}
+#endif
+
 		rootNode->drawDone();
 		if (rChanged) {
 			finalizeRotation();
@@ -76,5 +87,19 @@ void render(bool block) {
 	BeginDrawing();
 #endif
 }
+
+#ifdef DEBUG
+void showBoundingBoxes(bool enable) {
+	boundingBoxesVisble = enable;
+	// A bit of a hack to force a re-render. Fine since this is for debug builds only.
+	auto r = getRotation();
+	setRotation((rotation_t)(r + 2 % 4));
+	if (rootNode) {
+		ui::endWrite();
+		rootNode->draw();
+	}
+	setRotation(r);
+}
+#endif
 
 } // namespace ui
