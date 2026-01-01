@@ -7,7 +7,9 @@
 
 int main() {
 	InitWindow(GIGA_DISPLAY_W_PX * WINDOW_SCALE, GIGA_DISPLAY_H_PX * WINDOW_SCALE, WINDOW_TITLE);
-	SetTargetFPS(30);
+
+	// Target the same max frequency as the native UI would render in.
+	SetTargetFPS(1000 / UI_RENDER_FREQUENCY);
 
 	setup();
 
