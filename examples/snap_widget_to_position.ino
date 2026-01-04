@@ -9,7 +9,7 @@ void setup() {
 
 	ui::setRotation(ui::ROT_270_DEG);
 
-	ui::Position position = {0.5, 0.5};
+	ui::Position position = {0, 0};
 	ui::Alignment alignment = {ui::ALIGN_CENTER, ui::ALIGN_CENTER};
 
 	auto image = new ui::Image(&ui::icon::firefox, position, alignment);
@@ -23,8 +23,8 @@ void setup() {
 
 		// Move to halfway between current and target position
 		ui::Position newPos = {
-			(oldPos.x + targetPos.x) / 2,
-			(oldPos.y + targetPos.y) / 2,
+			(oldPos.x + targetPos.x - 0.5) / 2,
+			(oldPos.y + targetPos.y - 0.5) / 2,
 		};
 
 		image->setPosition(newPos);

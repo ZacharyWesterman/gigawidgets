@@ -28,7 +28,7 @@ void setup() {
 	column->push(new ui::Text("This is line 2.", &FreeSerif18pt7b, ui::COLOR_LIGHT_BLUE));
 	column->push(new ui::Image(&ui::icon::firefox));
 	column->push(new ui::Text("This is line 3.", &FreeSerif18pt7b, ui::COLOR_ORANGE));
-	column->push(new ui::Text("This is line 4.", &FreeSerif18pt7b, ui::COLOR_PINK, {.99f, 0.f}, {ui::ALIGN_RIGHT, ui::ALIGN_TOP}));
+	column->push(new ui::Text("This is line 4.", &FreeSerif18pt7b, ui::COLOR_PINK, position, {ui::ALIGN_RIGHT, ui::ALIGN_TOP}));
 	column->push(new ui::Text("This is line 5.", &FreeSerif18pt7b, ui::COLOR_YELLOW));
 
 	// Toggle the child alignment when clicked.
