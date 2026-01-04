@@ -55,9 +55,11 @@
         "unordered_set": "cpp",
         "regex": "cpp"
     },
-    "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
     "python.analysis.diagnosticSeverityOverrides": {
         "reportInvalidTypeForm": false
-    }
+    },
+    "arduino.analyzeOnSettingChange": false,
+    "arduino.disableIntelliSenseAutoGen": true,
+    "editor.formatOnSave": true
 }
