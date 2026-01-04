@@ -47,9 +47,29 @@ Bounds Widget::bounds() const {
 	const auto sz = size();
 	auto b = parentBounds();
 
+	auto pos_x = pos.x;
+	auto pos_y = pos.y;
+
+	switch (align.v) {
+	case ALIGN_CENTER:
+		pos_y += 0.5;
+		break;
+	case ALIGN_BOTTOM:
+		pos_y += 1;
+		break;
+	}
+	switch (align.h) {
+	case ALIGN_CENTER:
+		pos_x += 0.5;
+		break;
+	case ALIGN_RIGHT:
+		pos_x += 1;
+		break;
+	}
+
 	Coords positionOnParent = {
-		(b.max.x - b.min.x) * pos.x + b.min.x,
-		(b.max.y - b.min.y) * pos.y + b.min.y,
+		(b.max.x - b.min.x) * pos_x + b.min.x,
+		(b.max.y - b.min.y) * pos_y + b.min.y,
 	};
 
 	// Adjust position based on alignment and parent padding
