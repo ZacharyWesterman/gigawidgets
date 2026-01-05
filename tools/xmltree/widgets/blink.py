@@ -1,11 +1,12 @@
 from typing import Optional
 
 from . import Widget, register
+from ..datatypes import Time
 
 
 @register
 class Blink(Widget):
-    time: Optional[int]
+    time: Optional[Time]
     child_count = 1
 
     def __str__(self) -> str:

@@ -32,6 +32,7 @@ from .vertical_ordering import VerticalOrdering  # nopep8
 from .horizontal_ordering import HorizontalOrdering  # nopep8
 from .rotation import Rotation  # nopep8
 from .padding import Padding  # nopep8
+from .time import Time  # nopep8
 
 # pylint: enable=wrong-import-position
 # pylint: enable=wrong-import-order
