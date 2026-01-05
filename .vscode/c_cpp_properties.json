@@ -12,11 +12,11 @@
             "includePath": [
                 "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/cores/arduino",
                 "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/variants/GIGA",
+                "${env:HOME}/Arduino/libraries/Adafruit_GFX_Library",
                 "${env:HOME}/Arduino/libraries/Arduino_GigaDisplayTouch/src",
                 "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Wire",
                 "${env:HOME}/Arduino/libraries/Arduino_GigaDisplay_GFX/src",
                 "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Arduino_H7_Video/src",
-                "${env:HOME}/Arduino/libraries/Adafruit_GFX_Library",
                 "${env:HOME}/Arduino/libraries/Adafruit_BusIO",
                 "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/SPI",
                 "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Portenta_SDRAM/src",
