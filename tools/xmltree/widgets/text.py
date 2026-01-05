@@ -8,6 +8,7 @@ from ..datatypes import (
     Pair,
     Position,
     Alignment,
+    Padding,
 )
 from ..logging import warn
 
@@ -16,6 +17,7 @@ from ..logging import warn
 class Text(Widget):
     pos: Optional[Pair(Position)] = Pair(Position)("0 0")
     align: Optional[Alignment] = Alignment("left top")
+    padding: Optional[Padding] = Padding('0')
 
     font: Optional[Font]
     scale: Optional[int]
@@ -47,13 +49,13 @@ class Text(Widget):
             f'&{self.font}' if self.font else (
                 self.scale if self.scale else 1),
             self.color,
+            self.pos,
+            self.align,
+            self.padding,
         ]
-        if self.pos:
-            args += [self.pos]
-        if self.align:
-            args += [self.align]
+        args = [str(i) for i in args]
 
-        return f'auto {self.var} = new ui::Text({", ".join(str(i) for i in args)});'
+        return f'auto {self.var} = new ui::Text({", ".join(args)});'
 
     def includes(self) -> list[str]:
         return self.font.includes() if self.font else []
