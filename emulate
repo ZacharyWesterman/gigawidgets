@@ -154,7 +154,7 @@ while true; do
         
         if make -C emu WINDOW_SCALE="$window_scale"; then
             if [ ! -z "$pid" ]; then
-                kill "$pid"
+                pkill -P $$
                 wait "$pid"
                 echo '' > "$pidfile"
             fi

@@ -11,9 +11,9 @@ class Position(Datatype):
             return
 
         value = float(data)
-        if value > 1.0 or value < 0.0:
+        if value > 1.0 or value < -1.0:
             warn(
-                'Position outside of bounds of parent. Expected range is from 0.0 to 1.0.'
+                'Position outside of bounds of parent. Expected range is from -1 to 1.'
             )
 
         self.text = str(value)

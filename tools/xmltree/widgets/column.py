@@ -7,6 +7,7 @@ from ..datatypes import (
     Position,
     Alignment,
     VerticalOrdering,
+    Padding,
 )
 
 
@@ -14,15 +15,24 @@ from ..datatypes import (
 class Column(Widget):
     pos: Optional[Pair(Position)] = Pair(Position)("0 0")
     align: Optional[Alignment] = Alignment("left top")
+    padding: Optional[Padding] = Padding('0')
 
     size: Pair(Size)
     order: Optional[VerticalOrdering]
     height: Optional[Size]
 
     def __str__(self) -> str:
+        args = [
+            self.size,
+            self.pos,
+            self.align,
+            self.padding,
+        ]
+        args = [str(i) for i in args]
+
         text = [
             *(str(i) for i in self.children),
-            f'auto {self.var} = new ui::Column({self.size}, {self.pos}, {self.align});',
+            f'auto {self.var} = new ui::Column({",".join(args)});',
             *(f'{self.var}->push({i.var});' for i in self.children),
         ]
 

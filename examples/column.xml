@@ -1,7 +1,11 @@
 <body rotation="90">
-    <column size="50vw 100vh" height=".5cm" order="top-down">
-        <text font="FreeSerif12pt7b" color="red">This is line 1.</text>
-        <text font="FreeSerif12pt7b" color="green">This is line 2.</text>
-        <text font="FreeSerif12pt7b" color="blue">This is line 3.</text>
-    </column>
+    <panel color="gray">
+        <column size="50vw 100vh" height=".5cm" order="top-down" padding="10px">
+            <text font="FreeSerif18pt7b" color="red">This is line 1.</text>
+            <blink time="2s">
+                <text font="FreeSerif18pt7b" color="green">This is line 2.</text>
+            </blink>
+            <text font="FreeSerif18pt7b" color="blue">This is line 3.</text>
+        </column>
+    </panel>
 </body>

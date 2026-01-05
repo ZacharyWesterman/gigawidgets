@@ -7,6 +7,7 @@ from ..datatypes import (
     Color,
     Position,
     Alignment,
+    Padding,
 )
 
 
@@ -14,6 +15,7 @@ from ..datatypes import (
 class Panel(Widget):
     pos: Optional[Pair(Position)] = Pair(Position)("0 0")
     align: Optional[Alignment] = Alignment("left top")
+    padding: Optional[Padding] = Padding('0')
 
     color: Optional[Color] = Color('black')
     size: Optional[Pair(Size)] = Pair(Size)("0 0")
@@ -22,12 +24,20 @@ class Panel(Widget):
     child_count = 1
 
     def __str__(self) -> str:
+        args = [
+            self.children[0].var,
+            self.color,
+            self.size,
+            self.radius,
+            self.pos,
+            self.align,
+            self.padding,
+        ]
+        args = [str(i) for i in args]
+
         text = [
             *(str(i) for i in self.children),
-            f'auto {self.var} = new ui::Panel(' +
-            f'{self.children[0].var}, {self.color}, {self.size}, ' +
-            f'{self.radius}, {self.pos}, {self.align}' +
-            ');',
+            f'auto {self.var} = new ui::Panel({",".join(args)});',
         ]
 
         return '\n'.join(text)

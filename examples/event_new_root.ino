@@ -1,7 +1,7 @@
 // Set a completely new root node on arbitrary click events.
 // Previously, this would cause a segfault.
 
-#include <ui.hpp>
+#include "src/ui.hpp"
 
 void setup() {
 	auto text = new ui::Text("Sample Text", 3);
