@@ -52,17 +52,15 @@ bool MultiChildWidget::handleEvent(Event &event) {
 }
 
 bool MultiChildWidget::update(time_t time_ms) {
-	bool updated = false;
-
 	for (auto child : children) {
 		if (child) {
 			if (child->update(time_ms) || child->redrawRequested() || rotationChanged()) {
-				updated = true;
+				redrawParent = true;
 			}
 		}
 	}
 
-	return updated || redrawSelf || redrawParent;
+	return redrawSelf || redrawParent;
 }
 
 void MultiChildWidget::draw() const {

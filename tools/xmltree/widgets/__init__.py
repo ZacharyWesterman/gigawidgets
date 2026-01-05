@@ -94,7 +94,7 @@ class Widget:
         text = f'ui::Widget* {func_name}() {{{text}\n}}'
 
         icl = '\n'.join(
-            ['#include <ui.hpp>'] +
+            ['#include "src/ui.hpp"'] +
             [
                 f'#include {i}' for i in self.includes()
             ]

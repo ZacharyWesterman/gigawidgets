@@ -37,7 +37,7 @@ class Panel(Widget):
 
         text = [
             *(str(i) for i in self.children),
-            f'auto {self.var} = new ui::Panel({",".join(args)};',
+            f'auto {self.var} = new ui::Panel({",".join(args)});',
         ]
 
         return '\n'.join(text)
