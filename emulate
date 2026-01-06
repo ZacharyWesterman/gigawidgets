@@ -61,7 +61,7 @@ move_file() {
     if [[ "$filename" == *.xml ]]; then
         local tmp
         tmp=$(tmpfile)
-        if ! tools/xml_to_ui.py "$filename" build_ui > "$tmp"; then
+        if ! tools/xml_to_ui.py "$filename" -f build_ui > "$tmp"; then
             rm -f "$tmp"
             return 1
         fi
