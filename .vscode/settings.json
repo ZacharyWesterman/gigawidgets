@@ -61,5 +61,6 @@
     },
     "arduino.analyzeOnSettingChange": false,
     "arduino.disableIntelliSenseAutoGen": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "css.lint.unknownProperties": "ignore"
 }
