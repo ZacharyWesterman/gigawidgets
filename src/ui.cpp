@@ -1,4 +1,6 @@
 #include <Arduino.h>
+#include <algorithm>
+#include <vector>
 
 #include "ui.hpp"
 
@@ -7,6 +9,13 @@
 #endif
 
 namespace ui {
+
+struct TimedCallback {
+	std::function<void()> method;
+	time_t endTime;
+};
+
+std::vector<TimedCallback> timedCallbacks;
 
 static Widget *prevRoot = nullptr;
 static Widget *rootNode = nullptr;
@@ -51,6 +60,18 @@ void render(bool block) {
 			return;
 		}
 		lastRender = currentTime;
+
+		// Check timeout callbacks, executing and then removing any that are due.
+		// Note that callback execution has a resolution of at most the screen refresh rate.
+		auto callbackReady = [currentTime](const TimedCallback &callback) {
+			if (callback.endTime <= currentTime) {
+				callback.method();
+				return true;
+			}
+			return false;
+		};
+		auto removeIf = std::remove_if(timedCallbacks.begin(), timedCallbacks.end(), callbackReady);
+		timedCallbacks.erase(removeIf, timedCallbacks.end());
 
 		if (!rootNode) {
 			return;
@@ -101,5 +122,12 @@ void showBoundingBoxes(bool enable) {
 	setRotation(r);
 }
 #endif
+
+void setTimeout(std::function<void()> callback, time_t timeout) {
+	timedCallbacks.push_back({
+		callback,
+		millis() + timeout,
+	});
+}
 
 } // namespace ui

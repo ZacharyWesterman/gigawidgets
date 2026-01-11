@@ -12,6 +12,8 @@
 #include "ui/row.hpp"
 #include "ui/text.hpp"
 
+#include <functional>
+
 #ifndef UI_RENDER_FREQUENCY
 // Refresh at most every 50ms
 #define UI_RENDER_FREQUENCY 50
@@ -39,5 +41,17 @@ void render(bool block = true);
  */
 void showBoundingBoxes(bool enable);
 #endif
+
+/**
+ * @brief Schedule a function to run after a delay.
+ *
+ * Callback functions will be postponed for *at least* the number
+ * of milliseconds specified, but may wait slightly longer,
+ * depending on refresh rate.
+ *
+ * @param callback The function to run.
+ * @param timeout The number of milliseconds to wait.
+ */
+void setTimeout(std::function<void()> callback, time_t timeout);
 
 } // namespace ui
