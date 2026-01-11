@@ -27,8 +27,13 @@ void digitalWrite(int pinNumber, bool pinStatus);
 
 class serialOut {
 public:
+	void begin(int) const {};
 	void print(const String &str) const;
 	void println(const String &str) const;
+
+	operator bool() const {
+		return true;
+	}
 };
 
 static serialOut Serial;
