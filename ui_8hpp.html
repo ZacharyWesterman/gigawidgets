@@ -117,6 +117,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a86c6dad72f5c03c980e80717b6811ef9" id="r_a86c6dad72f5c03c980e80717b6811ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8hpp.html#a86c6dad72f5c03c980e80717b6811ef9">ui::showBoundingBoxes</a> (bool enable)</td></tr>
 <tr class="memdesc:a86c6dad72f5c03c980e80717b6811ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle whether bounding boxes are displayed for all widgets.  <br /></td></tr>
 <tr class="separator:a86c6dad72f5c03c980e80717b6811ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1446487297e204deebf6706d10612764" id="r_a1446487297e204deebf6706d10612764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8hpp.html#a1446487297e204deebf6706d10612764">ui::setTimeout</a> (std::function&lt; void()&gt; callback, time_t timeout)</td></tr>
+<tr class="memdesc:a1446487297e204deebf6706d10612764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule a function to run after a delay.  <br /></td></tr>
+<tr class="separator:a1446487297e204deebf6706d10612764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad2c2da5e61ff916211317d49d733ec13" name="ad2c2da5e61ff916211317d49d733ec13"></a>
@@ -165,6 +168,44 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">root</td><td>The topmost widget where rendering starts. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1446487297e204deebf6706d10612764" name="a1446487297e204deebf6706d10612764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1446487297e204deebf6706d10612764">&#9670;&#160;</a></span>setTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::setTimeout </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Schedule a function to run after a delay. </p>
+<p>Callback functions will be postponed for <em>at least</em> the number of milliseconds specified, but may wait slightly longer, depending on refresh rate.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>The function to run. </td></tr>
+    <tr><td class="paramname">timeout</td><td>The number of milliseconds to wait. </td></tr>
   </table>
   </dd>
 </dl>
