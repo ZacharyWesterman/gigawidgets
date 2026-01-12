@@ -61,17 +61,15 @@ void render(bool block) {
 		}
 		lastRender = currentTime;
 
-		// Check timeout callbacks, executing and then removing any that are due.
-		// Note that callback execution has a resolution of at most the screen refresh rate.
-		auto callbackReady = [currentTime](const TimedCallback &callback) {
+		// Execute any callbacks that are due to trigger.
+		for (auto &callback : timedCallbacks) {
 			if (callback.endTime <= currentTime) {
 				callback.method();
-				return true;
 			}
-			return false;
-		};
-		auto removeIf = std::remove_if(timedCallbacks.begin(), timedCallbacks.end(), callbackReady);
-		timedCallbacks.erase(removeIf, timedCallbacks.end());
+		}
+
+		// Remove any callbacks that have been triggered.
+		timedCallbacks.erase(std::remove_if(timedCallbacks.begin(), timedCallbacks.end(), [currentTime](const TimedCallback &callback) { return callback.endTime <= currentTime; }), timedCallbacks.end());
 
 		if (!rootNode) {
 			return;
@@ -123,7 +121,7 @@ void showBoundingBoxes(bool enable) {
 }
 #endif
 
-void setTimeout(std::function<void()> callback, time_t timeout) {
+void setTimeout(callback_t callback, time_t timeout) {
 	timedCallbacks.push_back({
 		callback,
 		millis() + timeout,

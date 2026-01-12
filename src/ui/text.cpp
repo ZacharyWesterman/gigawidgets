@@ -6,7 +6,7 @@
 namespace ui {
 
 /// @brief A shared placeholder text for rendering blank text.
-static const String dummyText(" ");
+static const String dummyText("|");
 
 Text::Text(const String &text, const GFXfont *font, color_t color, const Position &pos, const Alignment &align, bool wrap) : text(text), font(font), scale(1), textColor(color), wrap(wrap), Widget(pos, align) {}
 
@@ -26,7 +26,7 @@ void Text::draw() const {
 	GFXcanvas1 canvas(width, height);
 	canvas.setCursor(b.min.x - p.min.x, b.min.y - p.min.y + y_offset);
 	canvas.setTextSize(scale);
-	canvas.setTextColor(textColor);
+	canvas.setTextColor(0xffff);
 	canvas.setTextWrap(wrap);
 	canvas.setFont(font);
 
@@ -57,6 +57,10 @@ void Text::setText(const String &text) {
 	redrawParent = true;
 }
 
+const String &Text::getText() const {
+	return text;
+}
+
 void Text::setWrap(bool wrap) {
 	this->wrap = wrap;
 	redrawParent = true;
@@ -75,6 +79,27 @@ void Text::setScale(fontsize_t scale) {
 void Text::setColor(color_t new_color) {
 	textColor = new_color;
 	redrawSelf = true;
+}
+
+color_t Text::getColor() const {
+	return textColor;
+}
+
+uisize_t Text::getWidthAtChar(unsigned int index) const {
+	if (index == 0) {
+		return 0;
+	}
+
+	GFXcanvas1 canvas(ui::width(), ui::height());
+	canvas.setTextSize(scale);
+	canvas.setTextWrap(wrap);
+	canvas.setFont(font);
+
+	int16_t x, y;
+	uint16_t w, h;
+	canvas.getTextBounds(text.substring(0, index), 0, 0, &x, &y, &w, &h);
+
+	return w;
 }
 
 } // namespace ui

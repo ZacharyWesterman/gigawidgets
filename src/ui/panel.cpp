@@ -40,6 +40,10 @@ void Panel::setColor(color_t new_color) {
 	redrawSelf = true;
 }
 
+color_t Panel::getColor() const {
+	return color;
+}
+
 void Panel::setBorderRadius(radius_t new_radius) {
 	borderRadius = new_radius;
 	redrawParent = true;

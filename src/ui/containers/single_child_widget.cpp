@@ -26,6 +26,10 @@ void SingleChildWidget::setChild(Widget *const child) {
 	child->setParent(this);
 }
 
+Widget *SingleChildWidget::getChild() const {
+	return child;
+}
+
 bool SingleChildWidget::handleEvent(Event &event) {
 	if (Widget::handleEvent(event)) {
 		auto b = bounds();
@@ -48,7 +52,7 @@ bool SingleChildWidget::handleEvent(Event &event) {
 
 bool SingleChildWidget::update(time_t time_ms) {
 	auto updated = child->update(time_ms);
-	redrawSelf = child->redrawRequested();
+	redrawSelf |= child->redrawRequested();
 	return updated || redrawSelf || rotationChanged();
 }
 

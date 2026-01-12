@@ -8,6 +8,7 @@
 #include "ui/core/display.hpp"
 #include "ui/core/units.hpp"
 #include "ui/image.hpp"
+#include "ui/input.hpp"
 #include "ui/panel.hpp"
 #include "ui/row.hpp"
 #include "ui/text.hpp"
@@ -20,6 +21,8 @@
 #endif
 
 namespace ui {
+
+typedef std::function<void()> callback_t;
 
 /**
  * @brief Set the root widget for the UI to render.
@@ -52,6 +55,6 @@ void showBoundingBoxes(bool enable);
  * @param callback The function to run.
  * @param timeout The number of milliseconds to wait.
  */
-void setTimeout(std::function<void()> callback, time_t timeout);
+void setTimeout(callback_t callback, time_t timeout);
 
 } // namespace ui

@@ -17,6 +17,11 @@ public:
 	String(unsigned int value);
 	String(size_t value);
 	String(const std::basic_string<char> &value);
+
+	String substring(unsigned int beginIndex, unsigned int endIndex) const;
+	inline String substring(unsigned int beginIndex) const {
+		return substring(beginIndex, length());
+	}
 };
 
 unsigned long millis();

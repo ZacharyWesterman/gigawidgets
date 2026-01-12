@@ -12,6 +12,10 @@ String::String(size_t value) : std::string(std::to_string(value)) {}
 String::String(float value) : std::string(std::to_string(value)) {}
 String::String(const std::basic_string<char> &value) : std::string(value) {}
 
+String String::substring(unsigned int beginIndex, unsigned int endIndex) const {
+	return substr(beginIndex, endIndex);
+}
+
 unsigned long millis() {
 	static auto begin = std::chrono::system_clock::now();
 	auto elapsed = std::chrono::system_clock::now() - begin;

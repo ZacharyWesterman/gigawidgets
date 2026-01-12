@@ -44,6 +44,8 @@ public:
 	 */
 	void setColor(color_t new_color);
 
+	color_t getColor() const;
+
 	/**
 	 * @brief Set the border radius.
 	 * @param new_radius The new radius for the rounded parts of the panel.

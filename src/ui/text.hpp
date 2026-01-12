@@ -61,6 +61,12 @@ public:
 	void setText(const String &text);
 
 	/**
+	 * @brief Get the currently displayed text.
+	 * @return The current text.
+	 */
+	const String &getText() const;
+
+	/**
 	 * @brief Set whether text wraps.
 	 * @param wrap If true, wrap the text when reaching the right side of the parent widget. If false, don't wrap, just truncate.
 	 */
@@ -83,6 +89,10 @@ public:
 	 * @param new_color The new text color.
 	 */
 	void setColor(color_t new_color);
+
+	color_t getColor() const;
+
+	uisize_t getWidthAtChar(unsigned int index) const;
 
 	DERIVE_EVENT_HANDLERS(Text)
 };
