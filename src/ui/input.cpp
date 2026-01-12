@@ -99,24 +99,22 @@ void Input::drawCursor() const {
 	auto b = child->bounds();
 
 	// Coords for the center bar
-	uisize_t x = b.min.x + width;
+	uisize_t x = b.min.x + width - 1;
 	uisize_t y = b.min.y + 2;
 	uisize_t h = b.max.y - b.min.y - 2;
 	color_t color = ~getColor();
 
 	// Coords for the serifs
 	uisize_t serif_x = x - 3;
-	uisize_t serif_w = 7;
-	uisize_t y1 = y + h;
+	uisize_t serif_w = 9;
+	uisize_t y1 = y + h - 1;
 
 	// Draw the cursor in a sort of I shape.
-	ui::drawFastVLine(x, y, h, color);
-	ui::drawFastVLine(x + 1, y, h, color);
-
-	ui::drawFastHLine(serif_x, y - 1, serif_w, color);
-	ui::drawFastHLine(serif_x, y, serif_w, color);
-	ui::drawFastHLine(serif_x, y1 - 1, serif_w, color);
-	ui::drawFastHLine(serif_x, y1, serif_w, color);
+	for (int i = 0; i < 3; i++) {
+		ui::drawFastVLine(x + i, y, h, color);
+		ui::drawFastHLine(serif_x, y - i, serif_w, color);
+		ui::drawFastHLine(serif_x, y1 + i, serif_w, color);
+	}
 }
 
 } // namespace ui
