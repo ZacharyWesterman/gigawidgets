@@ -48,7 +48,7 @@ Size Text::size() const {
 
 	return {
 		w + 5,
-		h + h / 2,
+		h,
 	};
 }
 
