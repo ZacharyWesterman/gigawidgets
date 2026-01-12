@@ -44,6 +44,10 @@ public:
 
 	bool handleEvent(Event &event) override;
 
+	/**
+	 * @brief Get the current child widget.
+	 * @return A pointer to the child widget.
+	 */
 	Widget *getChild() const;
 
 #ifdef DEBUG

@@ -44,6 +44,10 @@ public:
 	 */
 	void setColor(color_t new_color);
 
+	/**
+	 * @brief Get the current widget color.
+	 * @return The widget color.
+	 */
 	color_t getColor() const;
 
 	/**

@@ -22,6 +22,10 @@
 
 namespace ui {
 
+/**
+ * @typedef callback_t
+ * @brief A callback function that takes no arguments and returns nothing.
+ */
 typedef std::function<void()> callback_t;
 
 /**

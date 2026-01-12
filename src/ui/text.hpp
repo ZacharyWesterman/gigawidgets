@@ -90,8 +90,17 @@ public:
 	 */
 	void setColor(color_t new_color);
 
+	/**
+	 * @brief Get the current widget color.
+	 * @return The widget color.
+	 */
 	color_t getColor() const;
 
+	/**
+	 * @brief Get the width (in pixels) of a substring of the total text.
+	 * @param index The end position of the substring.
+	 * @return The width in pixels of the substring.
+	 */
 	uisize_t getWidthAtChar(unsigned int index) const;
 
 	DERIVE_EVENT_HANDLERS(Text)
