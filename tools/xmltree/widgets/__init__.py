@@ -67,14 +67,14 @@ class Widget:
             if key == 'child_count':
                 continue
 
-            key = key.replace('-', '_')
+            attr_key = key.replace('_', '-')
 
-            if key not in xml.attrib.keys():
+            if attr_key not in xml.attrib.keys():
                 # Attribute is not specified in the XML
 
                 if value != Optional[value]:
                     error(
-                        f'Widget `{xml.tag}` missing required attribute `{key}`')
+                        f'Widget `{xml.tag}` missing required attribute `{key.replace("_", "-")}`')
                     errored = True
                 elif hasattr(self.__class__, key):
                     # Optional attribute with a default value.
@@ -85,7 +85,7 @@ class Widget:
             else:
                 # Construct and assign the value for this attribute
                 obj = value.__args__[0] if value == Optional[value] else value
-                val = xml.attrib.get(key)
+                val = xml.attrib.get(attr_key)
 
                 if key == 'class':
                     key = 'classes'
