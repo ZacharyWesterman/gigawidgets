@@ -5,12 +5,17 @@ window_scale=1
 print_help=0
 watch=0
 dry_run=0
+clean=0
 
 for i in "$@"; do
     case "$i" in
+        --wipe)
+            make -C emu wipe
+            clean=1
+            ;;
         --clean)
             make -C emu clean
-            exit $?
+            clean=1
             ;;
         --scale)
             echo "ERROR: --scale flag must have an argument." >&2
@@ -36,11 +41,16 @@ for i in "$@"; do
     esac
 done
 
+if [ "$clean" == 1 ] && [ -z "$filename" ]; then
+    exit 0
+fi
+
 if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
     echo "Usage: [FLAGS] $0 <ino/xml file>" >&2
     echo >&2
     echo "Flags:" >&2
-    echo "  --clean         | Remove build files and exit." >&2
+    echo "  --clean         | Remove build files." >&2
+    echo "  --wipe          | Remove all build and temp files." >&2
     echo "  --scale=[SCALE] | Scale the window by an integer amount." >&2
     echo "  --watch,   -w   | Watch for source changes, automatically rebuilding when a change is detected." >&2
     echo "  --dry-run, -d   | Verify compilation and exit." >&2

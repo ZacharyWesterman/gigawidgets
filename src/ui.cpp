@@ -49,8 +49,8 @@ void render(bool block) {
 			prevRoot = nullptr;
 		}
 
-		auto currentTime = millis();
-		const auto elapsed = currentTime - lastRender;
+		time_t currentTime = millis();
+		const long elapsed = currentTime - lastRender;
 		if (block) {
 			if (elapsed < UI_RENDER_FREQUENCY) {
 				delay(UI_RENDER_FREQUENCY - elapsed);
