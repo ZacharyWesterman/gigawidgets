@@ -46,6 +46,8 @@ class Widget:
             for key, value in styles.items():
                 if key in ['class', 'child_count', 'children']:
                     continue
+
+                key = key.replace('-', '_')
                 if key not in attrs and not hasattr(self.__class__, key):
                     continue
                 xml.attrib[key] = value
@@ -55,7 +57,7 @@ class Widget:
 
         # Warn about attributes that do not apply to this widget
         for key in xml.attrib.keys():
-            if key == 'child_count' or key not in attrs:
+            if key == 'child_count' or key.replace('-', '_') not in attrs:
                 warn(f'Widget `{xml.tag}` has no such attribute `{key}`')
 
         errored = False
@@ -64,6 +66,8 @@ class Widget:
         for key, value in attrs.items():
             if key == 'child_count':
                 continue
+
+            key = key.replace('-', '_')
 
             if key not in xml.attrib.keys():
                 # Attribute is not specified in the XML
