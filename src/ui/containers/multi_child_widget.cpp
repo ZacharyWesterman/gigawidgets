@@ -88,8 +88,11 @@ Widget *MultiChildWidget::getWidgetById(id_t id) noexcept {
 	}
 
 	for (auto child : children) {
-		if (child && child->id == id) {
-			return child;
+		if (child) {
+			auto widget = child->getWidgetById(id);
+			if (widget) {
+				return widget;
+			}
 		}
 	}
 	return nullptr;

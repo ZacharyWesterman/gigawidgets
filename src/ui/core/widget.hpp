@@ -55,7 +55,7 @@ protected:
 	bool redrawSelf;
 
 public:
-	id_t id = 0;
+	id_t id;
 
 	using EventHandlers<Widget>::onpress;
 	using EventHandlers<Widget>::onrelease;

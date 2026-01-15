@@ -15,7 +15,8 @@ public:
 	String(float value);
 	String(int value);
 	String(unsigned int value);
-	String(size_t value);
+	String(long value);
+	String(unsigned long value);
 	String(const std::basic_string<char> &value);
 
 	String substring(unsigned int beginIndex, unsigned int endIndex) const;

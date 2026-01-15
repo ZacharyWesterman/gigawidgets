@@ -3,7 +3,7 @@
 
 namespace ui {
 
-Widget::Widget(const Position &pos, const Alignment &align, const Padding &padding) : parent(nullptr), pos(pos), align(align), pressed(false), padding(padding), initialRender(false), redrawParent(true), redrawSelf(true) {}
+Widget::Widget(const Position &pos, const Alignment &align, const Padding &padding) : parent(nullptr), pos(pos), align(align), pressed(false), padding(padding), initialRender(false), redrawParent(true), redrawSelf(true), id(0) {}
 
 Widget::~Widget() {}
 

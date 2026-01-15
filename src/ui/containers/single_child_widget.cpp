@@ -67,7 +67,7 @@ Widget *SingleChildWidget::getWidgetById(id_t id) noexcept {
 	if (this->id == id) {
 		return this;
 	}
-	return (child && child->id == id) ? child : nullptr;
+	return child ? child->getWidgetById(id) : nullptr;
 }
 
 } // namespace ui
