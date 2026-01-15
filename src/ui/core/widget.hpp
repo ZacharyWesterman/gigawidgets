@@ -55,6 +55,7 @@ protected:
 	bool redrawSelf;
 
 public:
+	/// @brief An optional (usually unique) identifier that can be used to search for this widget.
 	id_t id;
 
 	using EventHandlers<Widget>::onpress;

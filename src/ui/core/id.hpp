@@ -1,10 +1,14 @@
-///@file id_t.hpp
+///@file id.hpp
 #pragma once
 
 #include <cinttypes>
 
 namespace ui {
 
+/**
+ * @typedef id_t
+ * @brief A (typically unique) identifier for widgets.
+ */
 typedef uint32_t id_t;
 
 namespace hash32 {
@@ -86,6 +90,15 @@ constexpr inline id_t id(const char *str) noexcept {
 
 } // namespace ui
 
+/**
+ * @brief The constexpr conversion operator for IDs.
+ *
+ * This operator allows writing expressions like `"some text"_id`,
+ * which automatically gets converted to an integer at compile time.
+ *
+ * @param str The string to hash.
+ * @return The computed CRC32 hash.
+ */
 inline constexpr ui::id_t operator"" _id(const char *str) noexcept {
 	return ui::id(str);
 }
