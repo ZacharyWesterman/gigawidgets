@@ -50,6 +50,18 @@ void showBoundingBoxes(bool enable);
 #endif
 
 /**
+ * @brief Get the first widget (root or any children) that has the given ID.
+ *
+ * An ID is expected to be a unique, typically non-zero value.
+ * To generate an id, you can either call `ui::id("some text")`,
+ * or (for constant strings only), `"some text"_id`.
+ *
+ * @param id The unique identifier of the widget.
+ * @return A pointer to the widget, or `nullptr` if not found.
+ */
+Widget *getWidgetById(id_t id) noexcept;
+
+/**
  * @brief Schedule a function to run after a delay.
  *
  * Callback functions will be postponed for *at least* the number

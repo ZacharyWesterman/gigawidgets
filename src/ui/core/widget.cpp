@@ -201,4 +201,8 @@ void Widget::drawBoundingBox(time_t time) const {
 }
 #endif
 
+Widget *Widget::getWidgetById(id_t id) noexcept {
+	return (this->id == id) ? this : nullptr;
+}
+
 } // namespace ui

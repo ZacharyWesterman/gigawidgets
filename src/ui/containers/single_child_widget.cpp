@@ -63,4 +63,11 @@ void SingleChildWidget::drawBoundingBox(time_t time) const {
 }
 #endif
 
+Widget *SingleChildWidget::getWidgetById(id_t id) noexcept {
+	if (this->id == id) {
+		return this;
+	}
+	return (child && child->id == id) ? child : nullptr;
+}
+
 } // namespace ui

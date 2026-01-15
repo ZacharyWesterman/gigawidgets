@@ -9,6 +9,7 @@
 #include "coords.hpp"
 #include "event.hpp"
 #include "event_handlers.hpp"
+#include "id.hpp"
 #include "padding.hpp"
 #include "position.hpp"
 #include "size.hpp"
@@ -54,6 +55,8 @@ protected:
 	bool redrawSelf;
 
 public:
+	id_t id = 0;
+
 	using EventHandlers<Widget>::onpress;
 	using EventHandlers<Widget>::onrelease;
 	using EventHandlers<Widget>::onblur;
@@ -222,6 +225,18 @@ public:
 	 */
 	virtual void drawBoundingBox(time_t time) const;
 #endif
+
+	/**
+	 * @brief Get the first widget (this or any children) that has the given ID.
+	 *
+	 * An ID is expected to be a unique, typically non-zero value.
+	 * To generate an id, you can either call `ui::id("some text")`,
+	 * or (for constant strings only), `"some text"_id`.
+	 *
+	 * @param id The unique identifier of the widget.
+	 * @return A pointer to the widget, or `nullptr` if not found.
+	 */
+	virtual Widget *getWidgetById(id_t id) noexcept;
 };
 
 } // namespace ui

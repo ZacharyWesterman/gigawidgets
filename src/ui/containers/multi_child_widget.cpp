@@ -82,4 +82,17 @@ void MultiChildWidget::drawBoundingBox(time_t time) const {
 }
 #endif
 
+Widget *MultiChildWidget::getWidgetById(id_t id) noexcept {
+	if (this->id == id) {
+		return this;
+	}
+
+	for (auto child : children) {
+		if (child && child->id == id) {
+			return child;
+		}
+	}
+	return nullptr;
+}
+
 } // namespace ui
