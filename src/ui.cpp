@@ -121,6 +121,10 @@ void showBoundingBoxes(bool enable) {
 }
 #endif
 
+Widget *getWidgetById(id_t id) noexcept {
+	return rootNode ? rootNode->getWidgetById(id) : nullptr;
+}
+
 void setTimeout(callback_t callback, time_t timeout) {
 	timedCallbacks.push_back({
 		callback,

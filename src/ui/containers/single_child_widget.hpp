@@ -54,6 +54,8 @@ public:
 	virtual void drawBoundingBox(time_t time) const override;
 #endif
 
+	Widget *getWidgetById(id_t id) noexcept override;
+
 	DERIVE_EVENT_HANDLERS(SingleChildWidget)
 };
 
