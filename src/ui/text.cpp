@@ -47,8 +47,8 @@ Size Text::size() const {
 	canvas.getTextBounds(text.length() ? text : dummyText, 0, 0, &x, &y, &w, &h);
 
 	return {
-		w + 5,
-		h,
+		font ? w + 5 : w,
+		font ? h + 5 : h,
 	};
 }
 
