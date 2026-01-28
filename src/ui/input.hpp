@@ -35,7 +35,7 @@ public:
 	 * @param align The alignment of this widget relative to its parent.
 	 * @param padding The padding to apply to the text.
 	 */
-	Input(fontsize_t scale, color_t textColor, color_t backgroundColor, const Size &size = {0}, radius_t borderRadius = 0, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
+	Input(fontsize_t scale, color_t textColor, color_t backgroundColor, const Size &size = {0, 0}, radius_t borderRadius = 0, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
 
 	/**
 	 * @brief Construct an Input widget with a specific font.
@@ -48,7 +48,7 @@ public:
 	 * @param align The alignment of this widget relative to its parent.
 	 * @param padding The padding to apply to the text.
 	 */
-	Input(const GFXfont *font, color_t textColor, color_t backgroundColor, const Size &size = {0}, radius_t borderRadius = 0, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
+	Input(const GFXfont *font, color_t textColor, color_t backgroundColor, const Size &size = {0, 0}, radius_t borderRadius = 0, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, const Padding &padding = {0});
 
 	/**
 	 * @brief Replace the stored text with a new string.

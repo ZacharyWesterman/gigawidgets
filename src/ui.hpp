@@ -9,6 +9,7 @@
 #include "ui/core/units.hpp"
 #include "ui/image.hpp"
 #include "ui/input.hpp"
+#include "ui/keyboard.hpp"
 #include "ui/panel.hpp"
 #include "ui/row.hpp"
 #include "ui/text.hpp"

@@ -142,6 +142,14 @@ public:
 	}
 
 	/**
+	 * @brief Check if this widget has requested to be redrawn.
+	 * @return True if this widget has requested to redraw, false otherwise.
+	 */
+	inline bool needsRedraw() const {
+		return redrawSelf;
+	}
+
+	/**
 	 * @brief Reset any state variables after rendering has finished.
 	 */
 	virtual void drawDone();
