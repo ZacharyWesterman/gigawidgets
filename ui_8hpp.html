@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('ui_8hpp.html',''); initResizable(); })
 
 <div class="header">
   <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ui.hpp File Reference</div></div>
 </div><!--header-->
@@ -106,6 +107,13 @@ $(document).ready(function(){initNavTree('ui_8hpp.html',''); initResizable(); })
 
 <p><a href="ui_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aa2d923be190bee8d3217f870c9bdc565" id="r_aa2d923be190bee8d3217f870c9bdc565"><td class="memItemLeft" align="right" valign="top"><a id="aa2d923be190bee8d3217f870c9bdc565" name="aa2d923be190bee8d3217f870c9bdc565"></a>
+typedef std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ui::callback_t</b></td></tr>
+<tr class="memdesc:aa2d923be190bee8d3217f870c9bdc565"><td class="mdescLeft">&#160;</td><td class="mdescRight">A callback function that takes no arguments and returns nothing. <br /></td></tr>
+<tr class="separator:aa2d923be190bee8d3217f870c9bdc565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2bc05cb7596a67be883f8617b580c957" id="r_a2bc05cb7596a67be883f8617b580c957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8hpp.html#a2bc05cb7596a67be883f8617b580c957">ui::setRoot</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *const root)</td></tr>
@@ -117,11 +125,50 @@ Functions</h2></td></tr>
 <tr class="memitem:a86c6dad72f5c03c980e80717b6811ef9" id="r_a86c6dad72f5c03c980e80717b6811ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8hpp.html#a86c6dad72f5c03c980e80717b6811ef9">ui::showBoundingBoxes</a> (bool enable)</td></tr>
 <tr class="memdesc:a86c6dad72f5c03c980e80717b6811ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle whether bounding boxes are displayed for all widgets.  <br /></td></tr>
 <tr class="separator:a86c6dad72f5c03c980e80717b6811ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1446487297e204deebf6706d10612764" id="r_a1446487297e204deebf6706d10612764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8hpp.html#a1446487297e204deebf6706d10612764">ui::setTimeout</a> (std::function&lt; void()&gt; callback, time_t timeout)</td></tr>
-<tr class="memdesc:a1446487297e204deebf6706d10612764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule a function to run after a delay.  <br /></td></tr>
-<tr class="separator:a1446487297e204deebf6706d10612764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe8d91480b997125ee95019095a6fc8f" id="r_afe8d91480b997125ee95019095a6fc8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classui_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8hpp.html#afe8d91480b997125ee95019095a6fc8f">ui::getWidgetById</a> (<a class="el" href="id_8hpp.html#a83e58d0f8f1a22835c36e373769d48ce">id_t</a> <a class="el" href="id_8hpp.html#a18d6ef06b95cbc1b9b4e1aafb59cbf46">id</a>) noexcept</td></tr>
+<tr class="memdesc:afe8d91480b997125ee95019095a6fc8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first widget (root or any children) that has the given ID.  <br /></td></tr>
+<tr class="separator:afe8d91480b997125ee95019095a6fc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa153cb9cee43890ea9e02fb7a5b5187c" id="r_aa153cb9cee43890ea9e02fb7a5b5187c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8hpp.html#aa153cb9cee43890ea9e02fb7a5b5187c">ui::setTimeout</a> (<a class="el" href="ui_8hpp.html#aa2d923be190bee8d3217f870c9bdc565">callback_t</a> callback, time_t timeout)</td></tr>
+<tr class="memdesc:aa153cb9cee43890ea9e02fb7a5b5187c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule a function to run after a delay.  <br /></td></tr>
+<tr class="separator:aa153cb9cee43890ea9e02fb7a5b5187c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="afe8d91480b997125ee95019095a6fc8f" name="afe8d91480b997125ee95019095a6fc8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe8d91480b997125ee95019095a6fc8f">&#9670;&#160;</a></span>getWidgetById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Widget * ui::getWidgetById </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="id_8hpp.html#a83e58d0f8f1a22835c36e373769d48ce">id_t</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the first widget (root or any children) that has the given ID. </p>
+<p>An ID is expected to be a unique, typically non-zero value. To generate an id, you can either call <code><a class="el" href="id_8hpp.html#a18d6ef06b95cbc1b9b4e1aafb59cbf46" title="Computes the CRC32 hash of a string at runtime.">ui::id</a>("some text")</code>, or (for constant strings only), <code>"some text"_id</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The unique identifier of the widget. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the widget, or <code>nullptr</code> if not found. </dd></dl>
+
+</div>
+</div>
 <a id="ad2c2da5e61ff916211317d49d733ec13" name="ad2c2da5e61ff916211317d49d733ec13"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad2c2da5e61ff916211317d49d733ec13">&#9670;&#160;</a></span>render()</h2>
 
@@ -174,8 +221,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1446487297e204deebf6706d10612764" name="a1446487297e204deebf6706d10612764"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1446487297e204deebf6706d10612764">&#9670;&#160;</a></span>setTimeout()</h2>
+<a id="aa153cb9cee43890ea9e02fb7a5b5187c" name="aa153cb9cee43890ea9e02fb7a5b5187c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa153cb9cee43890ea9e02fb7a5b5187c">&#9670;&#160;</a></span>setTimeout()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,7 +230,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void ui::setTimeout </td>
           <td>(</td>
-          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="ui_8hpp.html#aa2d923be190bee8d3217f870c9bdc565">callback_t</a>&#160;</td>
           <td class="paramname"><em>callback</em>, </td>
         </tr>
         <tr>

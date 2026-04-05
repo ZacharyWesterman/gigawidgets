@@ -17,7 +17,10 @@ var hierarchy =
             [ "ui::Blink", "classui_1_1Blink.html", null ],
             [ "ui::Body", "classui_1_1Body.html", null ],
             [ "ui::Box", "classui_1_1Box.html", null ],
-            [ "ui::Panel", "classui_1_1Panel.html", null ]
+            [ "ui::Panel", "classui_1_1Panel.html", [
+              [ "ui::Input", "classui_1_1Input.html", null ],
+              [ "ui::Keyboard", "classui_1_1Keyboard.html", null ]
+            ] ]
           ] ],
           [ "ui::Text", "classui_1_1Text.html", null ]
         ] ]
@@ -26,6 +29,8 @@ var hierarchy =
     ] ],
     [ "ui::CoreEventHandlers< Widget >", "classui_1_1CoreEventHandlers.html", null ],
     [ "ui::Event", "structui_1_1Event.html", null ],
+    [ "ui::hash32::hash32gen< size, idx, dummy >", "structui_1_1hash32_1_1hash32gen.html", null ],
+    [ "ui::hash32::hash32gen< size, size, dummy >", "structui_1_1hash32_1_1hash32gen_3_01size_00_01size_00_01dummy_01_4.html", null ],
     [ "ui::Padding", "structui_1_1Padding.html", null ],
     [ "ui::Position", "structui_1_1Position.html", null ],
     [ "ui::Renderable", "structui_1_1Renderable.html", [

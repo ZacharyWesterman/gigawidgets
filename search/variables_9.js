@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['scale_0',['scale',['../classui_1_1Text.html#ade1d2ef85ead495007dfd937a7c63f6a',1,'ui::Text']]],
-  ['size_1',['size',['../structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3',1,'ui::Bitmap::size'],['../structui_1_1TransparencyMap.html#abffc9efb89c599a906e0b034f80300ef',1,'ui::TransparencyMap::size']]]
+  ['redrawparent_0',['redrawParent',['../classui_1_1Widget.html#a20543186dd7ef34d391371b08abf15c2',1,'ui::Widget']]],
+  ['redrawself_1',['redrawSelf',['../classui_1_1Widget.html#a39a9cb027602e627af0485e8227663ee',1,'ui::Widget']]],
+  ['right_2',['right',['../structui_1_1Padding.html#ada0931cf0123e8ef1cfc1d73d36514d6',1,'ui::Padding']]]
 ];

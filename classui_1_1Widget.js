@@ -9,8 +9,10 @@ var classui_1_1Widget =
     [ "drawBoundingBox", "classui_1_1Widget.html#af1bf15d4d5b60be0b8f987aaaab5a306", null ],
     [ "drawDone", "classui_1_1Widget.html#a25adfd15fb570c5aa4253a28d18de961", null ],
     [ "getPosition", "classui_1_1Widget.html#a63ef5db5b158ac1e54edb22a25c8d3af", null ],
+    [ "getWidgetById", "classui_1_1Widget.html#ac7941c317bd5b5b2e3cd7c07944dc66e", null ],
     [ "handleEvent", "classui_1_1Widget.html#a99f6c700a02fd72c4b157e69fb9aacc2", null ],
     [ "hold", "classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5", null ],
+    [ "needsRedraw", "classui_1_1Widget.html#a6767b167edd1c9cda348758abd409c6d", null ],
     [ "onblur", "classui_1_1Widget.html#a0696e82cd9d23d0c262a25e724da28dc", null ],
     [ "onhold", "classui_1_1Widget.html#a20b3447e3345f4b6213684f6665e3050", null ],
     [ "onpress", "classui_1_1Widget.html#a1b1688b6a048715e7f946fb3cedf9a6a", null ],
@@ -24,6 +26,7 @@ var classui_1_1Widget =
     [ "setPosition", "classui_1_1Widget.html#a01793b1e54f9dead26bb729d00cb5a00", null ],
     [ "size", "classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49", null ],
     [ "update", "classui_1_1Widget.html#a3c2a521304a419ca57cce6e0730aa332", null ],
+    [ "id", "classui_1_1Widget.html#ae518b2a8ded4eb00d15291c2d000f6ba", null ],
     [ "padding", "classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a", null ],
     [ "redrawParent", "classui_1_1Widget.html#a20543186dd7ef34d391371b08abf15c2", null ],
     [ "redrawSelf", "classui_1_1Widget.html#a39a9cb027602e627af0485e8227663ee", null ]

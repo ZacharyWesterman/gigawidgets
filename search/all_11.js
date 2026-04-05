@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['ui_2ehpp_0',['ui.hpp',['../ui_8hpp.html',1,'']]],
-  ['uisize_5ft_1',['uisize_t',['../size_8hpp.html#acbf7740ffe9891dbc00599b50662750c',1,'ui']]],
-  ['units_2ehpp_2',['units.hpp',['../units_8hpp.html',1,'']]],
-  ['update_3',['update',['../classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695',1,'ui::Blink::update()'],['../classui_1_1Column.html#aef24679c1109a70a282e58d09b236b85',1,'ui::Column::update()'],['../classui_1_1MultiChildWidget.html#afed1d53cfeb599e1074b63bec3ee838e',1,'ui::MultiChildWidget::update()'],['../classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf',1,'ui::SingleChildWidget::update()'],['../classui_1_1Widget.html#a3c2a521304a419ca57cce6e0730aa332',1,'ui::Widget::update()'],['../classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042',1,'ui::Image::update()'],['../classui_1_1Panel.html#a5e23cddfd13824a2f09bc6c08600e993',1,'ui::Panel::update()'],['../classui_1_1Row.html#a95d1a83c07f5c1452e4a91b2bacd5aa7',1,'ui::Row::update()']]],
-  ['upload_20requirements_4',['Real hardware upload requirements',['../index.html#autotoc_md3',1,'']]]
+  ['text_0',['text',['../classui_1_1Text.html',1,'ui::Text'],['../classui_1_1Text.html#a79450e805ad6ed1e449cdd8ba0077777',1,'ui::Text::Text(const String &amp;text, fontsize_t scale=1, color_t color=COLOR_WHITE, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, bool wrap=true)'],['../classui_1_1Text.html#a05c8c9dd2b9630a1eeb1b0577f8d1d5d',1,'ui::Text::Text(const String &amp;text, const GFXfont *font, color_t color=COLOR_WHITE, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, bool wrap=true)'],['../classui_1_1Text.html#a356f4eb34e0a9b10d5780c007b922a0a',1,'ui::Text::text']]],
+  ['text_2ehpp_1',['text.hpp',['../text_8hpp.html',1,'']]],
+  ['textcolor_2',['textColor',['../classui_1_1Text.html#a70dfc810818a525868a3fa8eec0a54e3',1,'ui::Text']]],
+  ['timeheld_3',['timeHeld',['../structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2',1,'ui::Event']]],
+  ['top_4',['top',['../structui_1_1Padding.html#aad4ab1fbd14d614745b4201f0a92a49d',1,'ui::Padding']]],
+  ['transparencymap_5',['transparencymap',['../structui_1_1TransparencyMap.html',1,'ui::TransparencyMap'],['../structui_1_1TransparencyMap.html#ab10106ef4ef32212a002563c67fd37ff',1,'ui::TransparencyMap::TransparencyMap()'],['../structui_1_1CompressedTransparencyMap.html#ab10106ef4ef32212a002563c67fd37ff',1,'ui::CompressedTransparencyMap::TransparencyMap()']]],
+  ['transparentbitmap_6',['transparentbitmap',['../structui_1_1TransparentBitmap.html',1,'ui::TransparentBitmap'],['../structui_1_1TransparentBitmap.html#af653a92167aadf3c039872b5a9947ab5',1,'ui::TransparentBitmap::TransparentBitmap()']]],
+  ['triggered_7',['triggered',['../structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5',1,'ui::Event']]],
+  ['type_8',['type',['../structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0',1,'ui::Event']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['text_0',['Text',['../classui_1_1Text.html',1,'ui']]],
-  ['transparencymap_1',['TransparencyMap',['../structui_1_1TransparencyMap.html',1,'ui']]],
-  ['transparentbitmap_2',['TransparentBitmap',['../structui_1_1TransparentBitmap.html',1,'ui']]]
+  ['renderable_0',['Renderable',['../structui_1_1Renderable.html',1,'ui']]],
+  ['row_1',['Row',['../classui_1_1Row.html',1,'ui']]]
 ];

@@ -123,6 +123,8 @@ Inheritance diagram for ui::SingleChildWidget:</div>
 <area href="classui_1_1Body.html" title="The root widget of a UI." alt="ui::Body" shape="rect" coords="211,224,412,248"/>
 <area href="classui_1_1Box.html" title="Display a single widget within arbitrary bounds." alt="ui::Box" shape="rect" coords="422,224,623,248"/>
 <area href="classui_1_1Panel.html" title="A basic widget that displays a rounded rectangle behind another widget." alt="ui::Panel" shape="rect" coords="633,224,834,248"/>
+<area href="classui_1_1Input.html" title="An interactive class of Widget for handling text input." alt="ui::Input" shape="rect" coords="527,280,728,304"/>
+<area href="classui_1_1Keyboard.html" alt="ui::Keyboard" shape="rect" coords="738,280,939,304"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -149,9 +151,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a98bd961725f4c41036dca844a82ce448" id="r_a98bd961725f4c41036dca844a82ce448"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#a98bd961725f4c41036dca844a82ce448">handleEvent</a> (<a class="el" href="structui_1_1Event.html">Event</a> &amp;event) override</td></tr>
 <tr class="memdesc:a98bd961725f4c41036dca844a82ce448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle events from the touchscreen.  <br /></td></tr>
 <tr class="separator:a98bd961725f4c41036dca844a82ce448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec513eacd8e60c2b33bbe9611281053" id="r_abec513eacd8e60c2b33bbe9611281053"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classui_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#abec513eacd8e60c2b33bbe9611281053">getChild</a> () const</td></tr>
+<tr class="memdesc:abec513eacd8e60c2b33bbe9611281053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current child widget.  <br /></td></tr>
+<tr class="separator:abec513eacd8e60c2b33bbe9611281053"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9be343e5079169b7a3f6cd3591ba037e" id="r_a9be343e5079169b7a3f6cd3591ba037e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#a9be343e5079169b7a3f6cd3591ba037e">drawBoundingBox</a> (time_t time) const override</td></tr>
 <tr class="memdesc:a9be343e5079169b7a3f6cd3591ba037e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the bounding box of this and any child widgets.  <br /></td></tr>
 <tr class="separator:a9be343e5079169b7a3f6cd3591ba037e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3014567eea417599b49cd8bd2fcd98ca" id="r_a3014567eea417599b49cd8bd2fcd98ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classui_1_1Widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1SingleChildWidget.html#a3014567eea417599b49cd8bd2fcd98ca">getWidgetById</a> (<a class="el" href="id_8hpp.html#a83e58d0f8f1a22835c36e373769d48ce">id_t</a> <a class="el" href="classui_1_1Widget.html#ae518b2a8ded4eb00d15291c2d000f6ba">id</a>) noexcept override</td></tr>
+<tr class="memdesc:a3014567eea417599b49cd8bd2fcd98ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first widget (this or any children) that has the given ID.  <br /></td></tr>
+<tr class="separator:a3014567eea417599b49cd8bd2fcd98ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classui_1_1Widget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classui_1_1Widget')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classui_1_1Widget.html">ui::Widget</a></td></tr>
 <tr class="memitem:aab84ce1c0718591a0f20fc2d10c21613 inherit pub_methods_classui_1_1Widget" id="r_aab84ce1c0718591a0f20fc2d10c21613"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#aab84ce1c0718591a0f20fc2d10c21613">Widget</a> (const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
 <tr class="memdesc:aab84ce1c0718591a0f20fc2d10c21613 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default widget constructor.  <br /></td></tr>
@@ -178,6 +186,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Widget</b> ()</td
 <tr class="memitem:add6812540626995a7b35ee0b0a7c6338 inherit pub_methods_classui_1_1Widget" id="r_add6812540626995a7b35ee0b0a7c6338"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#add6812540626995a7b35ee0b0a7c6338">redrawRequested</a> () const</td></tr>
 <tr class="memdesc:add6812540626995a7b35ee0b0a7c6338 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this widget has requested for the parent widget to be redrawn.  <br /></td></tr>
 <tr class="separator:add6812540626995a7b35ee0b0a7c6338 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6767b167edd1c9cda348758abd409c6d inherit pub_methods_classui_1_1Widget" id="r_a6767b167edd1c9cda348758abd409c6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6767b167edd1c9cda348758abd409c6d">needsRedraw</a> () const</td></tr>
+<tr class="memdesc:a6767b167edd1c9cda348758abd409c6d inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this widget has requested to be redrawn.  <br /></td></tr>
+<tr class="separator:a6767b167edd1c9cda348758abd409c6d inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd0e7babb90d380238e17e4be75b7481 inherit pub_methods_classui_1_1Widget" id="r_afd0e7babb90d380238e17e4be75b7481"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#afd0e7babb90d380238e17e4be75b7481">setParent</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *parent)</td></tr>
 <tr class="memdesc:afd0e7babb90d380238e17e4be75b7481 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the parent widget.  <br /></td></tr>
 <tr class="separator:afd0e7babb90d380238e17e4be75b7481 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,6 +317,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawParent</b></td>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></tr>
 <tr class="memdesc:a39a9cb027602e627af0485e8227663ee inherit pro_attribs_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, force a redraw of this widget and any child widgets. <br /></td></tr>
 <tr class="separator:a39a9cb027602e627af0485e8227663ee inherit pro_attribs_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_classui_1_1Widget"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classui_1_1Widget')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classui_1_1Widget.html">ui::Widget</a></td></tr>
+<tr class="memitem:ae518b2a8ded4eb00d15291c2d000f6ba inherit pub_attribs_classui_1_1Widget" id="r_ae518b2a8ded4eb00d15291c2d000f6ba"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="id_8hpp.html#a83e58d0f8f1a22835c36e373769d48ce">id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+<tr class="memdesc:ae518b2a8ded4eb00d15291c2d000f6ba inherit pub_attribs_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">An optional (usually unique) identifier that can be used to search for this widget. <br /></td></tr>
+<tr class="separator:ae518b2a8ded4eb00d15291c2d000f6ba inherit pub_attribs_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The common interface for a widget that contains a single child. </p>
@@ -447,6 +466,64 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 <p>Reset any state variables after rendering has finished. </p>
 
 <p>Reimplemented from <a class="el" href="classui_1_1Widget.html#a25adfd15fb570c5aa4253a28d18de961">ui::Widget</a>.</p>
+
+</div>
+</div>
+<a id="abec513eacd8e60c2b33bbe9611281053" name="abec513eacd8e60c2b33bbe9611281053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec513eacd8e60c2b33bbe9611281053">&#9670;&#160;</a></span>getChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classui_1_1Widget.html">Widget</a> * ui::SingleChildWidget::getChild </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current child widget. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the child widget. </dd></dl>
+
+</div>
+</div>
+<a id="a3014567eea417599b49cd8bd2fcd98ca" name="a3014567eea417599b49cd8bd2fcd98ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3014567eea417599b49cd8bd2fcd98ca">&#9670;&#160;</a></span>getWidgetById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classui_1_1Widget.html">Widget</a> * ui::SingleChildWidget::getWidgetById </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="id_8hpp.html#a83e58d0f8f1a22835c36e373769d48ce">id_t</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the first widget (this or any children) that has the given ID. </p>
+<p>An ID is expected to be a unique, typically non-zero value. To generate an id, you can either call <code><a class="el" href="id_8hpp.html#a18d6ef06b95cbc1b9b4e1aafb59cbf46" title="Computes the CRC32 hash of a string at runtime.">ui::id</a>("some text")</code>, or (for constant strings only), <code>"some text"_id</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The unique identifier of the widget. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the widget, or <code>nullptr</code> if not found. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classui_1_1Widget.html#ac7941c317bd5b5b2e3cd7c07944dc66e">ui::Widget</a>.</p>
 
 </div>
 </div>

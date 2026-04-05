@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['singlechildwidget_0',['SingleChildWidget',['../classui_1_1SingleChildWidget.html',1,'ui']]],
-  ['size_1',['Size',['../structui_1_1Size.html',1,'ui']]]
+  ['padding_0',['Padding',['../structui_1_1Padding.html',1,'ui']]],
+  ['panel_1',['Panel',['../classui_1_1Panel.html',1,'ui']]],
+  ['position_2',['Position',['../structui_1_1Position.html',1,'ui']]]
 ];

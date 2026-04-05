@@ -1,22 +1,14 @@
 var searchData=
 [
-  ['radius_2ehpp_0',['radius.hpp',['../radius_8hpp.html',1,'']]],
-  ['radius_5ft_1',['radius_t',['../radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148',1,'ui']]],
-  ['real_20hardware_20upload_20requirements_2',['Real hardware upload requirements',['../index.html#autotoc_md3',1,'']]],
-  ['redrawparent_3',['redrawParent',['../classui_1_1Widget.html#a20543186dd7ef34d391371b08abf15c2',1,'ui::Widget']]],
-  ['redrawrequested_4',['redrawRequested',['../classui_1_1Widget.html#add6812540626995a7b35ee0b0a7c6338',1,'ui::Widget']]],
-  ['redrawself_5',['redrawSelf',['../classui_1_1Widget.html#a39a9cb027602e627af0485e8227663ee',1,'ui::Widget']]],
-  ['release_6',['release',['../classui_1_1Widget.html#a7f41f588697ffddb9b97b4706a2eff8c',1,'ui::Widget']]],
-  ['removeshader_7',['removeShader',['../classui_1_1Image.html#a6e3afff1e53f42e6f09923adb7ec1fcd',1,'ui::Image']]],
-  ['render_8',['render',['../ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13',1,'ui']]],
-  ['renderable_9',['Renderable',['../structui_1_1Renderable.html',1,'ui']]],
-  ['renderable_2ehpp_10',['renderable.hpp',['../renderable_8hpp.html',1,'']]],
-  ['renderat_11',['renderat',['../structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577',1,'ui::Renderable::renderAt()'],['../structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e',1,'ui::Bitmap::renderAt()'],['../structui_1_1CompressedTransparencyMap.html#ac928ffa2448795354d46f627c980a8f8',1,'ui::CompressedTransparencyMap::renderAt()'],['../structui_1_1TransparencyMap.html#a9380ce6fb8c000ffae11e2b8aca10d21',1,'ui::TransparencyMap::renderAt()'],['../structui_1_1TransparentBitmap.html#a985914402197ddf7b65146f6e82dbcb4',1,'ui::TransparentBitmap::renderAt()']]],
-  ['requirements_12',['requirements',['../index.html#autotoc_md2',1,'Emulation requirements'],['../index.html#autotoc_md3',1,'Real hardware upload requirements'],['../index.html#autotoc_md1',1,'Requirements']]],
-  ['right_13',['right',['../structui_1_1Padding.html#ada0931cf0123e8ef1cfc1d73d36514d6',1,'ui::Padding']]],
-  ['rotation_2ehpp_14',['rotation.hpp',['../rotation_8hpp.html',1,'']]],
-  ['rotation_5ft_15',['rotation_t',['../rotation_8hpp.html#ac35f2fd44194da2d523b20ef83270410',1,'ui']]],
-  ['rotationchanged_16',['rotationChanged',['../display_8hpp.html#a36a3e1f95518ce96f5b8df2778e51ad8',1,'ui']]],
-  ['row_17',['Row',['../classui_1_1Row.html',1,'ui']]],
-  ['row_2ehpp_18',['row.hpp',['../row_8hpp.html',1,'']]]
+  ['padding_0',['padding',['../structui_1_1Padding.html',1,'ui::Padding'],['../structui_1_1Padding.html#a2873495bef81a51332755305ea165d46',1,'ui::Padding::Padding(uisize_t left, uisize_t top, uisize_t right, uisize_t bottom)'],['../structui_1_1Padding.html#a2c35c00eeff0244d2b66b8e2e5fadb76',1,'ui::Padding::Padding(uisize_t left_right, uisize_t top_bottom)'],['../classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a',1,'ui::Widget::padding'],['../structui_1_1Padding.html#afa0d0e718529e385f8c0115fcf15e09f',1,'ui::Padding::Padding()']]],
+  ['padding_2ehpp_1',['padding.hpp',['../padding_8hpp.html',1,'']]],
+  ['panel_2',['panel',['../classui_1_1Panel.html',1,'ui::Panel'],['../classui_1_1Panel.html#a44923683101f6551852d8e4af2d77af8',1,'ui::Panel::Panel()']]],
+  ['panel_2ehpp_3',['panel.hpp',['../panel_8hpp.html',1,'']]],
+  ['parentbounds_4',['parentBounds',['../classui_1_1Widget.html#a3ce26a2110d44208efd1095efa95349b',1,'ui::Widget']]],
+  ['points_5',['points',['../structui_1_1Event.html#a9d29c14deeba3bd0a3e3b33efc5b4969',1,'ui::Event']]],
+  ['position_6',['Position',['../structui_1_1Position.html',1,'ui']]],
+  ['position_2ehpp_7',['position.hpp',['../position_8hpp.html',1,'']]],
+  ['press_8',['press',['../classui_1_1Widget.html#a0fb9029ea00054ed5f6c6d751616352e',1,'ui::Widget']]],
+  ['print_9',['print',['../display_8hpp.html#a321b61414e7786da1596269c4661b9fd',1,'ui']]],
+  ['push_10',['push',['../classui_1_1Column.html#a0e2358f1e1b14e241387abde18c9d570',1,'ui::Column::push()'],['../classui_1_1MultiChildWidget.html#a54585a8f01b07afdbaf8be012e3b72ee',1,'ui::MultiChildWidget::push()'],['../classui_1_1Row.html#a67dfc1116660a285e9f2303befaa11b5',1,'ui::Row::push()']]]
 ];

@@ -1,12 +1,18 @@
 var searchData=
 [
-  ['getchildalign_0',['getchildalign',['../classui_1_1Column.html#ab5be936a960550a25131420d0b2fab0f',1,'ui::Column::getChildAlign()'],['../classui_1_1Row.html#a0b2292c4688dac9dd40d6a085c42922e',1,'ui::Row::getChildAlign()']]],
-  ['getminheight_1',['getMinHeight',['../classui_1_1Column.html#af59f095e89c12b10a1d1e76b0afc17a4',1,'ui::Column']]],
-  ['getminwidth_2',['getMinWidth',['../classui_1_1Row.html#afa7d69fcdfb5f6fb0cc96fd7e56bc42f',1,'ui::Row']]],
-  ['getposition_3',['getPosition',['../classui_1_1Widget.html#a63ef5db5b158ac1e54edb22a25c8d3af',1,'ui::Widget']]],
-  ['getrotation_4',['getRotation',['../display_8hpp.html#a247a203128a51523283eb4aeba896ed5',1,'ui']]],
-  ['getsize_5',['getsize',['../structui_1_1Renderable.html#a6fa678fbb88daa04743ea91aae789ea5',1,'ui::Renderable::getSize()'],['../structui_1_1Bitmap.html#a8d4bab60bbcee6b18c9587e1bc2fdb84',1,'ui::Bitmap::getSize()'],['../structui_1_1TransparencyMap.html#a5934cfade2b96a48ac5a25f757509130',1,'ui::TransparencyMap::getSize()']]],
-  ['gettouchevent_6',['getTouchEvent',['../display_8hpp.html#ace709437101ad11c336fab6de6537047',1,'ui']]],
-  ['glow_7',['glow',['../glow_8hpp.html#a8af2b4c61c6064fcac1a2d5eed22b067',1,'ui::shader']]],
-  ['grayscale_8',['grayscale',['../grayscale_8hpp.html#ad3306e8724e6666441b357dd97349703',1,'ui::shader']]]
+  ['getchild_0',['getChild',['../classui_1_1SingleChildWidget.html#abec513eacd8e60c2b33bbe9611281053',1,'ui::SingleChildWidget']]],
+  ['getchildalign_1',['getchildalign',['../classui_1_1Column.html#ab5be936a960550a25131420d0b2fab0f',1,'ui::Column::getChildAlign()'],['../classui_1_1Row.html#a0b2292c4688dac9dd40d6a085c42922e',1,'ui::Row::getChildAlign()']]],
+  ['getcolor_2',['getcolor',['../classui_1_1Panel.html#a3abb12c8178749903c6141cbca5fa8db',1,'ui::Panel::getColor()'],['../classui_1_1Text.html#ab290efd62e546b2e692bb77ea5a3913b',1,'ui::Text::getColor()']]],
+  ['getcursor_3',['getCursor',['../classui_1_1Input.html#a5e6715dc8bedd5f0df8e93ab19d40ef7',1,'ui::Input']]],
+  ['getminheight_4',['getMinHeight',['../classui_1_1Column.html#af59f095e89c12b10a1d1e76b0afc17a4',1,'ui::Column']]],
+  ['getminwidth_5',['getMinWidth',['../classui_1_1Row.html#afa7d69fcdfb5f6fb0cc96fd7e56bc42f',1,'ui::Row']]],
+  ['getposition_6',['getPosition',['../classui_1_1Widget.html#a63ef5db5b158ac1e54edb22a25c8d3af',1,'ui::Widget']]],
+  ['getrotation_7',['getRotation',['../display_8hpp.html#a247a203128a51523283eb4aeba896ed5',1,'ui']]],
+  ['getsize_8',['getsize',['../structui_1_1TransparencyMap.html#a5934cfade2b96a48ac5a25f757509130',1,'ui::TransparencyMap::getSize()'],['../structui_1_1Bitmap.html#a8d4bab60bbcee6b18c9587e1bc2fdb84',1,'ui::Bitmap::getSize()'],['../structui_1_1Renderable.html#a6fa678fbb88daa04743ea91aae789ea5',1,'ui::Renderable::getSize()']]],
+  ['gettext_9',['gettext',['../classui_1_1Input.html#a2bff5d52d073981ed6431ad23bbb3732',1,'ui::Input::getText()'],['../classui_1_1Text.html#aca3bf6e76c292be89938fb11d89c9fc2',1,'ui::Text::getText()']]],
+  ['gettouchevent_10',['getTouchEvent',['../display_8hpp.html#ace709437101ad11c336fab6de6537047',1,'ui']]],
+  ['getwidgetbyid_11',['getwidgetbyid',['../classui_1_1MultiChildWidget.html#af82cff98217280890c1db585e399e949',1,'ui::MultiChildWidget::getWidgetById()'],['../classui_1_1SingleChildWidget.html#a3014567eea417599b49cd8bd2fcd98ca',1,'ui::SingleChildWidget::getWidgetById()'],['../classui_1_1Widget.html#ac7941c317bd5b5b2e3cd7c07944dc66e',1,'ui::Widget::getWidgetById()'],['../ui_8hpp.html#afe8d91480b997125ee95019095a6fc8f',1,'ui::getWidgetById()']]],
+  ['getwidthatchar_12',['getWidthAtChar',['../classui_1_1Text.html#a052113d03fbee705b2d6c31228ff5f2c',1,'ui::Text']]],
+  ['glow_13',['glow',['../glow_8hpp.html#a8af2b4c61c6064fcac1a2d5eed22b067',1,'ui::shader']]],
+  ['grayscale_14',['grayscale',['../grayscale_8hpp.html#ad3306e8724e6666441b357dd97349703',1,'ui::shader']]]
 ];
