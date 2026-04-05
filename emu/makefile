@@ -15,7 +15,9 @@ LIB_INCLUDES = -I. -Iarduino -Ilib/$(RAYLIB_DIR)/include
 
 CC = g++
 WINDOW_SCALE = 1
-CFLAGS = -DDEBUG -DEMULATE -DARDUINO=300 -DARDUINO_GIGA -DWINDOW_SCALE=$(WINDOW_SCALE) -std=c++11 $(LIB_INCLUDES) $(ARDUINO_INCLUDES) -Wno-narrowing
+CFLAGS = -DDEBUG -DEMULATE -DARDUINO=300 -DARDUINO_GIGA -DWINDOW_SCALE=$(WINDOW_SCALE) \
+-std=c++11 -m64 -Wno-narrowing -Wextra \
+$(LIB_INCLUDES) $(ARDUINO_INCLUDES)
 
 
 all: lib src ino
@@ -42,7 +44,10 @@ lib: $(RAYLIB_TAR_FILE)
 $(RAYLIB_TAR_FILE):
 	wget $(RAYLIB_URL)
 
-.PHONY: clean
+.PHONY: clean wipe
 
 clean:
-	rm -rf src lib ino *.o ino.cpp arduino/*.o $(RAYLIB_TAR_FILE)
+	rm -rf src ino *.o ino.cpp arduino/*.o
+
+wipe: clean
+	rm -rf lib $(RAYLIB_TAR_FILE)

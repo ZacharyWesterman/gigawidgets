@@ -12,11 +12,18 @@ class String : public std::string {
 public:
 	String(const char *value);
 	String();
+	String(char c);
 	String(float value);
 	String(int value);
 	String(unsigned int value);
-	String(size_t value);
+	String(long value);
+	String(unsigned long value);
 	String(const std::basic_string<char> &value);
+
+	String substring(unsigned int beginIndex, unsigned int endIndex) const;
+	inline String substring(unsigned int beginIndex) const {
+		return substring(beginIndex, length());
+	}
 };
 
 unsigned long millis();

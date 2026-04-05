@@ -8,6 +8,8 @@
 #include "ui/core/display.hpp"
 #include "ui/core/units.hpp"
 #include "ui/image.hpp"
+#include "ui/input.hpp"
+#include "ui/keyboard.hpp"
 #include "ui/panel.hpp"
 #include "ui/row.hpp"
 #include "ui/text.hpp"
@@ -20,6 +22,12 @@
 #endif
 
 namespace ui {
+
+/**
+ * @typedef callback_t
+ * @brief A callback function that takes no arguments and returns nothing.
+ */
+typedef std::function<void()> callback_t;
 
 /**
  * @brief Set the root widget for the UI to render.
@@ -43,6 +51,18 @@ void showBoundingBoxes(bool enable);
 #endif
 
 /**
+ * @brief Get the first widget (root or any children) that has the given ID.
+ *
+ * An ID is expected to be a unique, typically non-zero value.
+ * To generate an id, you can either call `ui::id("some text")`,
+ * or (for constant strings only), `"some text"_id`.
+ *
+ * @param id The unique identifier of the widget.
+ * @return A pointer to the widget, or `nullptr` if not found.
+ */
+Widget *getWidgetById(id_t id) noexcept;
+
+/**
  * @brief Schedule a function to run after a delay.
  *
  * Callback functions will be postponed for *at least* the number
@@ -52,6 +72,6 @@ void showBoundingBoxes(bool enable);
  * @param callback The function to run.
  * @param timeout The number of milliseconds to wait.
  */
-void setTimeout(std::function<void()> callback, time_t timeout);
+void setTimeout(callback_t callback, time_t timeout);
 
 } // namespace ui

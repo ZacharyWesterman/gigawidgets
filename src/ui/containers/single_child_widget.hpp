@@ -44,9 +44,17 @@ public:
 
 	bool handleEvent(Event &event) override;
 
+	/**
+	 * @brief Get the current child widget.
+	 * @return A pointer to the child widget.
+	 */
+	Widget *getChild() const;
+
 #ifdef DEBUG
 	virtual void drawBoundingBox(time_t time) const override;
 #endif
+
+	Widget *getWidgetById(id_t id) noexcept override;
 
 	DERIVE_EVENT_HANDLERS(SingleChildWidget)
 };

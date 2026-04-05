@@ -3,7 +3,7 @@
 
 namespace ui {
 
-Widget::Widget(const Position &pos, const Alignment &align, const Padding &padding) : parent(nullptr), pos(pos), align(align), pressed(false), padding(padding), initialRender(false), redrawParent(true), redrawSelf(true) {}
+Widget::Widget(const Position &pos, const Alignment &align, const Padding &padding) : parent(nullptr), pos(pos), align(align), pressed(false), padding(padding), initialRender(false), redrawParent(true), redrawSelf(true), id(0) {}
 
 Widget::~Widget() {}
 
@@ -200,5 +200,9 @@ void Widget::drawBoundingBox(time_t time) const {
 	drawRect(b.min.x, b.min.y, b.max.x - b.min.x + 2, b.max.y - b.min.y + 2, c);
 }
 #endif
+
+Widget *Widget::getWidgetById(id_t id) noexcept {
+	return (this->id == id) ? this : nullptr;
+}
 
 } // namespace ui

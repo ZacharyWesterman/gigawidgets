@@ -9,6 +9,7 @@
 #include "coords.hpp"
 #include "event.hpp"
 #include "event_handlers.hpp"
+#include "id.hpp"
 #include "padding.hpp"
 #include "position.hpp"
 #include "size.hpp"
@@ -54,6 +55,9 @@ protected:
 	bool redrawSelf;
 
 public:
+	/// @brief An optional (usually unique) identifier that can be used to search for this widget.
+	id_t id;
+
 	using EventHandlers<Widget>::onpress;
 	using EventHandlers<Widget>::onrelease;
 	using EventHandlers<Widget>::onblur;
@@ -135,6 +139,14 @@ public:
 	 */
 	inline bool redrawRequested() const {
 		return redrawParent;
+	}
+
+	/**
+	 * @brief Check if this widget has requested to be redrawn.
+	 * @return True if this widget has requested to redraw, false otherwise.
+	 */
+	inline bool needsRedraw() const {
+		return redrawSelf;
 	}
 
 	/**
@@ -222,6 +234,18 @@ public:
 	 */
 	virtual void drawBoundingBox(time_t time) const;
 #endif
+
+	/**
+	 * @brief Get the first widget (this or any children) that has the given ID.
+	 *
+	 * An ID is expected to be a unique, typically non-zero value.
+	 * To generate an id, you can either call `ui::id("some text")`,
+	 * or (for constant strings only), `"some text"_id`.
+	 *
+	 * @param id The unique identifier of the widget.
+	 * @return A pointer to the widget, or `nullptr` if not found.
+	 */
+	virtual Widget *getWidgetById(id_t id) noexcept;
 };
 
 } // namespace ui

@@ -23,7 +23,8 @@ void Row::calcChildBounds(int index) {
 		}
 	}
 
-	uisize_t minWidth = minimumWidth - padding.left - padding.right;
+	uisize_t pad = padding.left + padding.right;
+	uisize_t minWidth = minimumWidth > pad ? minimumWidth - pad : 0;
 	uisize_t width = std::max(minWidth, children[index]->size().x);
 
 	auto xbegin = x + padding.left;

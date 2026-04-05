@@ -46,6 +46,8 @@ class Widget:
             for key, value in styles.items():
                 if key in ['class', 'child_count', 'children']:
                     continue
+
+                key = key.replace('-', '_')
                 if key not in attrs and not hasattr(self.__class__, key):
                     continue
                 xml.attrib[key] = value
@@ -55,7 +57,7 @@ class Widget:
 
         # Warn about attributes that do not apply to this widget
         for key in xml.attrib.keys():
-            if key == 'child_count' or key not in attrs:
+            if key == 'child_count' or key.replace('-', '_') not in attrs:
                 warn(f'Widget `{xml.tag}` has no such attribute `{key}`')
 
         errored = False
@@ -65,12 +67,14 @@ class Widget:
             if key == 'child_count':
                 continue
 
-            if key not in xml.attrib.keys():
+            attr_key = key.replace('_', '-')
+
+            if attr_key not in xml.attrib.keys():
                 # Attribute is not specified in the XML
 
                 if value != Optional[value]:
                     error(
-                        f'Widget `{xml.tag}` missing required attribute `{key}`')
+                        f'Widget `{xml.tag}` missing required attribute `{key.replace("_", "-")}`')
                     errored = True
                 elif hasattr(self.__class__, key):
                     # Optional attribute with a default value.
@@ -81,7 +85,7 @@ class Widget:
             else:
                 # Construct and assign the value for this attribute
                 obj = value.__args__[0] if value == Optional[value] else value
-                val = xml.attrib.get(key)
+                val = xml.attrib.get(attr_key)
 
                 if key == 'class':
                     key = 'classes'
