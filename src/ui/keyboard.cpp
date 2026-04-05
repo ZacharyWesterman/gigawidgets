@@ -11,8 +11,8 @@ namespace ui {
 Keyboard::Keyboard(fontsize_t scale, color_t textColor, color_t buttonColor, color_t backgroundColor) : Panel(new Column(Size{ui::width(), ui::height() / 2}, {0, 0}, {ALIGN_LEFT, ALIGN_BOTTOM}, {0, 0}), backgroundColor, {0, 0}, 0, {0, 0}, {ALIGN_CENTER, ALIGN_BOTTOM}, {0, 5_px}) {
 	const char *rows[] = {
 		"qwertyuiop",
-		"asdfghjkl",
-		"zxcvbnm",
+		"asdfghjkl;",
+		"zxcvbnm,./",
 	};
 
 	auto column = reinterpret_cast<Column *>(child);
@@ -32,7 +32,7 @@ Keyboard::Keyboard(fontsize_t scale, color_t textColor, color_t buttonColor, col
 			// Bug here: I think setColor is causing the parent to re-render,
 			// but it should not.
 			button->onpress([](Panel &btn) { btn.setColor(COLOR_WHITE); });
-			// button->onblur([buttonColor](Panel &btn) { btn.setColor(buttonColor); });
+			button->onblur([buttonColor](Panel &btn) { btn.setColor(buttonColor); });
 		}
 
 		column->push(row);
