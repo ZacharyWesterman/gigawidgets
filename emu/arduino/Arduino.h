@@ -12,6 +12,7 @@ class String : public std::string {
 public:
 	String(const char *value);
 	String();
+	String(char c);
 	String(float value);
 	String(int value);
 	String(unsigned int value);
