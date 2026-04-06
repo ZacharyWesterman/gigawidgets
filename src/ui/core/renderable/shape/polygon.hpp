@@ -13,6 +13,7 @@ namespace ui {
  * @brief A basic 2D polygon.
  */
 struct Polygon : public Shape {
+	bool fill;
 	color_t color;
 	std::vector<Coords> points;
 
