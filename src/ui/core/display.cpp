@@ -206,4 +206,8 @@ void drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, uint8_t *mask, coord_t
 	display.drawRGBBitmap(x, y, bitmap, mask, w, h);
 }
 
+void drawLine(coord_t x0, coord_t y0, coord_t x1, coord_t y1, color_t color) {
+	display.drawLine(x0, y0, x1, y1, color);
+}
+
 } // namespace ui

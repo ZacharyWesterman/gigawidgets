@@ -182,4 +182,13 @@ void drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, coord_t w, coord_t h);
  */
 void drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, uint8_t *mask, coord_t w, coord_t h);
 
+/**
+ * @brief Draw an arbitrary single-pixel line.
+ * @param x0 The starting horizontal coordinate.
+ * @param y0 The starting vertical coordinate.
+ * @param x1 The ending horizontal coordinate.
+ * @param y1 The ending vertical coordinate.
+ */
+void drawLine(coord_t x0, coord_t y0, coord_t x1, coord_t y1, color_t color);
+
 } // namespace ui

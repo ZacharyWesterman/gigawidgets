@@ -61,14 +61,23 @@ void render(bool block) {
 		}
 		lastRender = currentTime;
 
-		// Execute any callbacks that are due to trigger.
+		// Make a list of all callbacks are due to trigger.
+		// Important to break them out first, since callbacks may add more callbacks!
+		std::vector<TimedCallback> dueCallbacks;
 		for (auto &callback : timedCallbacks) {
+			if (callback.endTime <= currentTime) {
+				dueCallbacks.push_back(callback);
+			}
+		}
+
+		// Execute any callbacks that are due to trigger.
+		for (auto &callback : dueCallbacks) {
 			if (callback.endTime <= currentTime) {
 				callback.method();
 			}
 		}
 
-		// Remove any callbacks that have been triggered.
+		// Remove those callbacks from the main list.
 		timedCallbacks.erase(std::remove_if(timedCallbacks.begin(), timedCallbacks.end(), [currentTime](const TimedCallback &callback) { return callback.endTime <= currentTime; }), timedCallbacks.end());
 
 		if (!rootNode) {

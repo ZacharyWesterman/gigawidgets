@@ -6,6 +6,7 @@
 #define GIGA_DISPLAY_W_PX 480
 #define GIGA_DISPLAY_H_PX 800
 #define GIGA_DISPLAY_PPI 235.000580145
+#define PI 3.141592653589
 
 /**
  * @brief The custom units operator for pixels.
@@ -191,4 +192,58 @@ constexpr uint16_t operator""_pt(long double points) {
 constexpr uint16_t operator""_pt(unsigned long long points) {
 	// 1 point = 1/72 inch
 	return points * GIGA_DISPLAY_PPI / 72;
+}
+
+/**
+ * @brief The custom units operator for degrees.
+ *
+ * This operator allows for writing angles like `90_deg`,
+ * which will automatically be converted to radians at compile time.
+ *
+ * @param degrees The angle in degrees.
+ * @return The angle in radians.
+ */
+constexpr long double operator""_deg(long double degrees) {
+	return PI * degrees / 180.0;
+}
+
+/**
+ * @brief The custom units operator for degrees.
+ *
+ * This operator allows for writing angles like `90_deg`,
+ * which will automatically be converted to radians at compile time.
+ *
+ * @param degrees The angle in degrees.
+ * @return The angle in radians.
+ */
+constexpr long double operator""_deg(unsigned long long degrees) {
+	return PI * degrees / 180.0;
+}
+
+/**
+ * @brief The custom units operator for radians.
+ *
+ * This operator is included for consistency,
+ * to allow for writing sizes like `1_rad` instead of just `1.f`.
+ * In reality, no transformation is applied.
+ *
+ * @param pixels The angle in radians.
+ * @return The angle in radians.
+ */
+constexpr long double operator""_rad(long double radians) {
+	return radians;
+}
+
+/**
+ * @brief The custom units operator for radians.
+ *
+ * This operator is included for consistency,
+ * to allow for writing sizes like `1_rad` instead of just `1.f`.
+ * In reality, no transformation is applied.
+ *
+ * @param pixels The angle in radians.
+ * @return The angle in radians.
+ */
+constexpr long double operator""_rad(unsigned long long radians) {
+	return radians;
 }
