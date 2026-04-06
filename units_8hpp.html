@@ -150,6 +150,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ab0b6afbdd5f8d4a068f1ff7c8fb71e3b" id="r_ab0b6afbdd5f8d4a068f1ff7c8fb71e3b"><td class="memItemLeft" align="right" valign="top">constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="units_8hpp.html#ab0b6afbdd5f8d4a068f1ff7c8fb71e3b">operator&quot;&quot;_pt</a> (unsigned long long points)</td></tr>
 <tr class="memdesc:ab0b6afbdd5f8d4a068f1ff7c8fb71e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom units operator for points.  <br /></td></tr>
 <tr class="separator:ab0b6afbdd5f8d4a068f1ff7c8fb71e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28fc6f7d5b1da0c476d7a46cbcddce2d" id="r_a28fc6f7d5b1da0c476d7a46cbcddce2d"><td class="memItemLeft" align="right" valign="top">constexpr long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="units_8hpp.html#a28fc6f7d5b1da0c476d7a46cbcddce2d">operator&quot;&quot;_deg</a> (long double degrees)</td></tr>
+<tr class="memdesc:a28fc6f7d5b1da0c476d7a46cbcddce2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom units operator for degrees.  <br /></td></tr>
+<tr class="separator:a28fc6f7d5b1da0c476d7a46cbcddce2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20aa9618df678960540f784293fda12" id="r_ab20aa9618df678960540f784293fda12"><td class="memItemLeft" align="right" valign="top">constexpr long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="units_8hpp.html#ab20aa9618df678960540f784293fda12">operator&quot;&quot;_deg</a> (unsigned long long degrees)</td></tr>
+<tr class="memdesc:ab20aa9618df678960540f784293fda12"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom units operator for degrees.  <br /></td></tr>
+<tr class="separator:ab20aa9618df678960540f784293fda12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb75b0e2c589a27a56ea3fc94b4d60e7" id="r_afb75b0e2c589a27a56ea3fc94b4d60e7"><td class="memItemLeft" align="right" valign="top">constexpr long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="units_8hpp.html#afb75b0e2c589a27a56ea3fc94b4d60e7">operator&quot;&quot;_rad</a> (long double radians)</td></tr>
+<tr class="memdesc:afb75b0e2c589a27a56ea3fc94b4d60e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom units operator for radians.  <br /></td></tr>
+<tr class="separator:afb75b0e2c589a27a56ea3fc94b4d60e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f4021cdf91767f214236169e2005cdd" id="r_a7f4021cdf91767f214236169e2005cdd"><td class="memItemLeft" align="right" valign="top">constexpr long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="units_8hpp.html#a7f4021cdf91767f214236169e2005cdd">operator&quot;&quot;_rad</a> (unsigned long long radians)</td></tr>
+<tr class="memdesc:a7f4021cdf91767f214236169e2005cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom units operator for radians.  <br /></td></tr>
+<tr class="separator:a7f4021cdf91767f214236169e2005cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a90857093f2c4b7e565cadcbe53d8b08f" name="a90857093f2c4b7e565cadcbe53d8b08f"></a>
@@ -221,6 +233,78 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The size in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="a28fc6f7d5b1da0c476d7a46cbcddce2d" name="a28fc6f7d5b1da0c476d7a46cbcddce2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28fc6f7d5b1da0c476d7a46cbcddce2d">&#9670;&#160;</a></span>operator&quot;&quot;_deg() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr long double operator&quot;&quot;_deg </td>
+          <td>(</td>
+          <td class="paramtype">long double&#160;</td>
+          <td class="paramname"><em>degrees</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The custom units operator for degrees. </p>
+<p>This operator allows for writing angles like <code>90_deg</code>, which will automatically be converted to radians at compile time.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degrees</td><td>The angle in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The angle in radians. </dd></dl>
+
+</div>
+</div>
+<a id="ab20aa9618df678960540f784293fda12" name="ab20aa9618df678960540f784293fda12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20aa9618df678960540f784293fda12">&#9670;&#160;</a></span>operator&quot;&quot;_deg() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr long double operator&quot;&quot;_deg </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long long&#160;</td>
+          <td class="paramname"><em>degrees</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The custom units operator for degrees. </p>
+<p>This operator allows for writing angles like <code>90_deg</code>, which will automatically be converted to radians at compile time.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degrees</td><td>The angle in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The angle in radians. </dd></dl>
 
 </div>
 </div>
@@ -509,6 +593,78 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The size in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="afb75b0e2c589a27a56ea3fc94b4d60e7" name="afb75b0e2c589a27a56ea3fc94b4d60e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb75b0e2c589a27a56ea3fc94b4d60e7">&#9670;&#160;</a></span>operator&quot;&quot;_rad() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr long double operator&quot;&quot;_rad </td>
+          <td>(</td>
+          <td class="paramtype">long double&#160;</td>
+          <td class="paramname"><em>radians</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The custom units operator for radians. </p>
+<p>This operator is included for consistency, to allow for writing sizes like <code>1_rad</code> instead of just <code>1.f</code>. In reality, no transformation is applied.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>The angle in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The angle in radians. </dd></dl>
+
+</div>
+</div>
+<a id="a7f4021cdf91767f214236169e2005cdd" name="a7f4021cdf91767f214236169e2005cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f4021cdf91767f214236169e2005cdd">&#9670;&#160;</a></span>operator&quot;&quot;_rad() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr long double operator&quot;&quot;_rad </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long long&#160;</td>
+          <td class="paramname"><em>radians</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The custom units operator for radians. </p>
+<p>This operator is included for consistency, to allow for writing sizes like <code>1_rad</code> instead of just <code>1.f</code>. In reality, no transformation is applied.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>The angle in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The angle in radians. </dd></dl>
 
 </div>
 </div>

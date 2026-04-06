@@ -8,7 +8,8 @@ var searchData=
   ['drawdone_5',['drawdone',['../classui_1_1Blink.html#a4cf3346efe547b05b471aa4fc2d1dc95',1,'ui::Blink::drawDone()'],['../classui_1_1MultiChildWidget.html#a5ce41cf2a5a1bfacdc5c4dd39b71cd50',1,'ui::MultiChildWidget::drawDone()'],['../classui_1_1SingleChildWidget.html#adece8b81ccd394ca73a1e6feb94e78b4',1,'ui::SingleChildWidget::drawDone()'],['../classui_1_1Widget.html#a25adfd15fb570c5aa4253a28d18de961',1,'ui::Widget::drawDone()'],['../classui_1_1Panel.html#a0c730001252e320315bad056a4ae0805',1,'ui::Panel::drawDone()']]],
   ['drawfasthline_6',['drawFastHLine',['../display_8hpp.html#a9cbc87c1900e42d264c49ecffcb124bd',1,'ui']]],
   ['drawfastvline_7',['drawFastVLine',['../display_8hpp.html#ab33d36fae9cacdd7f3f634f52925d086',1,'ui']]],
-  ['drawpixel_8',['drawPixel',['../display_8hpp.html#a071944da7a287fd04c19ed4ac41a1c9f',1,'ui']]],
-  ['drawrect_9',['drawRect',['../display_8hpp.html#a076a52db5e1b8279e262aa9d52730496',1,'ui']]],
-  ['drawrgbbitmap_10',['drawrgbbitmap',['../display_8hpp.html#a1e37d24f9f73eb2bc38c90f8f1c8a5c1',1,'ui::drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, coord_t w, coord_t h)'],['../display_8hpp.html#ab8c8408fe7a21dd2cffa34452408f707',1,'ui::drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, uint8_t *mask, coord_t w, coord_t h)']]]
+  ['drawline_8',['drawLine',['../display_8hpp.html#a6b0b9a0a5ee1299e8f6e044e5f348e3a',1,'ui']]],
+  ['drawpixel_9',['drawPixel',['../display_8hpp.html#a071944da7a287fd04c19ed4ac41a1c9f',1,'ui']]],
+  ['drawrect_10',['drawRect',['../display_8hpp.html#a076a52db5e1b8279e262aa9d52730496',1,'ui']]],
+  ['drawrgbbitmap_11',['drawrgbbitmap',['../display_8hpp.html#a1e37d24f9f73eb2bc38c90f8f1c8a5c1',1,'ui::drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, coord_t w, coord_t h)'],['../display_8hpp.html#ab8c8408fe7a21dd2cffa34452408f707',1,'ui::drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, uint8_t *mask, coord_t w, coord_t h)']]]
 ];

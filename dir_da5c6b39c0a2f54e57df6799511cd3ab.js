@@ -13,5 +13,6 @@ var dir_da5c6b39c0a2f54e57df6799511cd3ab =
     [ "keyboard.hpp", "keyboard_8hpp.html", "keyboard_8hpp" ],
     [ "panel.hpp", "panel_8hpp.html", "panel_8hpp" ],
     [ "row.hpp", "row_8hpp.html", "row_8hpp" ],
+    [ "shapes.hpp", "shapes_8hpp.html", null ],
     [ "text.hpp", "text_8hpp.html", "text_8hpp" ]
 ];

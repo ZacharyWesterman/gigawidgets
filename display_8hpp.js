@@ -4,6 +4,7 @@ var display_8hpp =
     [ "drawBitmap", "display_8hpp.html#a88ddcd73c0421903a78e4c97d712413a", null ],
     [ "drawFastHLine", "display_8hpp.html#a9cbc87c1900e42d264c49ecffcb124bd", null ],
     [ "drawFastVLine", "display_8hpp.html#ab33d36fae9cacdd7f3f634f52925d086", null ],
+    [ "drawLine", "display_8hpp.html#a6b0b9a0a5ee1299e8f6e044e5f348e3a", null ],
     [ "drawPixel", "display_8hpp.html#a071944da7a287fd04c19ed4ac41a1c9f", null ],
     [ "drawRect", "display_8hpp.html#a076a52db5e1b8279e262aa9d52730496", null ],
     [ "drawRGBBitmap", "display_8hpp.html#a1e37d24f9f73eb2bc38c90f8f1c8a5c1", null ],
