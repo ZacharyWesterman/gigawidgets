@@ -10,7 +10,7 @@ namespace ui {
  * @brief Display an arbitrary (non-animated) renderable to the screen with an optional shader.
  */
 class Image : public Widget {
-	const Renderable *const renderable;
+	const Renderable &renderable;
 	shader_t shader;
 	/// @brief True if the shader requires re-rendering every frame, false otherwise.
 	bool renderEveryFrame;
@@ -22,7 +22,7 @@ public:
 	 * @param pos The position of this image relative to its parent.
 	 * @param align The alignment of this image relative to its parent.
 	 */
-	Image(const Renderable *const renderable, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP});
+	Image(const Renderable &renderable, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP});
 
 	void draw() const override;
 	Size size() const override;
