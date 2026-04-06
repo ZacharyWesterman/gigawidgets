@@ -13,6 +13,8 @@ void Polygon::renderAt(const Coords &coords, const shader_t &shader) const {
 	}
 
 	Bounds bounds = getBounds();
+	Size size = {bounds.max.x - bounds.min.x, bounds.max.y - bounds.min.y};
+	time_t now = millis();
 
 	for (size_t i = 0; i < points.size(); i++) {
 		const size_t prev = (i ? i : points.size()) - 1;
@@ -27,7 +29,12 @@ void Polygon::renderAt(const Coords &coords, const shader_t &shader) const {
 			coords.y + points[next].y - bounds.min.y,
 		};
 
-		drawLine(from.x, from.y, to.x, to.y, color);
+		// Bit of a hack for performance:
+		// polygons don't run shaders on a per-pixel basis;
+		// instead they're run per-line.
+		// This is fine for shaders like negative, grayscale, etc.
+		color_t pixelColor = shader ? shader(color, {from.x, from.y}, size, now) : color;
+		drawLine(from.x, from.y, to.x, to.y, pixelColor);
 	}
 }
 
