@@ -227,7 +227,7 @@ constexpr long double operator""_deg(unsigned long long degrees) {
  * to allow for writing sizes like `1_rad` instead of just `1.f`.
  * In reality, no transformation is applied.
  *
- * @param pixels The angle in radians.
+ * @param radians The angle in radians.
  * @return The angle in radians.
  */
 constexpr long double operator""_rad(long double radians) {
@@ -241,7 +241,7 @@ constexpr long double operator""_rad(long double radians) {
  * to allow for writing sizes like `1_rad` instead of just `1.f`.
  * In reality, no transformation is applied.
  *
- * @param pixels The angle in radians.
+ * @param radians The angle in radians.
  * @return The angle in radians.
  */
 constexpr long double operator""_rad(unsigned long long radians) {
