@@ -1,5 +1,4 @@
 {
-    "C_Cpp.intelliSenseEngine": "Tag Parser",
     "files.associations": {
         "system_error": "cpp",
         "cmath": "cpp",
@@ -62,5 +61,6 @@
     "arduino.analyzeOnSettingChange": false,
     "arduino.disableIntelliSenseAutoGen": true,
     "editor.formatOnSave": true,
-    "css.lint.unknownProperties": "ignore"
+    "css.lint.unknownProperties": "ignore",
+    "C_Cpp.errorSquiggles": "disabled"
 }
