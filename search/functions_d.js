@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['redrawrequested_0',['redrawRequested',['../classui_1_1Widget.html#add6812540626995a7b35ee0b0a7c6338',1,'ui::Widget']]],
-  ['release_1',['release',['../classui_1_1Widget.html#a7f41f588697ffddb9b97b4706a2eff8c',1,'ui::Widget']]],
-  ['removeshader_2',['removeShader',['../classui_1_1Image.html#a6e3afff1e53f42e6f09923adb7ec1fcd',1,'ui::Image']]],
-  ['render_3',['render',['../ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13',1,'ui']]],
-  ['renderat_4',['renderat',['../structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577',1,'ui::Renderable::renderAt()'],['../structui_1_1Bitmap.html#a1d29a28c84fbe1c9c414b8829493f93e',1,'ui::Bitmap::renderAt()'],['../structui_1_1CompressedTransparencyMap.html#ac928ffa2448795354d46f627c980a8f8',1,'ui::CompressedTransparencyMap::renderAt()'],['../structui_1_1Polygon.html#af20aeaa70b0d76f8dad1c0b7f9985ac1',1,'ui::Polygon::renderAt()'],['../classui_1_1Spiral.html#a2e1e234f5d020dc4562080528434e842',1,'ui::Spiral::renderAt()'],['../structui_1_1TransparencyMap.html#a9380ce6fb8c000ffae11e2b8aca10d21',1,'ui::TransparencyMap::renderAt()'],['../structui_1_1TransparentBitmap.html#a985914402197ddf7b65146f6e82dbcb4',1,'ui::TransparentBitmap::renderAt()']]],
-  ['rotationchanged_5',['rotationChanged',['../display_8hpp.html#a36a3e1f95518ce96f5b8df2778e51ad8',1,'ui']]]
+  ['padding_0',['padding',['../structui_1_1Padding.html#afa0d0e718529e385f8c0115fcf15e09f',1,'ui::Padding::Padding(uisize_t size)'],['../structui_1_1Padding.html#a2c35c00eeff0244d2b66b8e2e5fadb76',1,'ui::Padding::Padding(uisize_t left_right, uisize_t top_bottom)'],['../structui_1_1Padding.html#a2873495bef81a51332755305ea165d46',1,'ui::Padding::Padding(uisize_t left, uisize_t top, uisize_t right, uisize_t bottom)']]],
+  ['panel_1',['Panel',['../classui_1_1Panel.html#a44923683101f6551852d8e4af2d77af8',1,'ui::Panel']]],
+  ['parentbounds_2',['parentBounds',['../classui_1_1Widget.html#a3ce26a2110d44208efd1095efa95349b',1,'ui::Widget']]],
+  ['polygon_3',['polygon',['../structui_1_1Polygon.html#af5b3f42ab9372c542e4eac2800d56a1d',1,'ui::Polygon::Polygon(color_t color, const std::initializer_list&lt; Coords &gt; &amp;&amp;points)'],['../structui_1_1Polygon.html#ac57c502f802840749362e72c8d30ebcc',1,'ui::Polygon::Polygon(color_t color)']]],
+  ['press_4',['press',['../classui_1_1Widget.html#a0fb9029ea00054ed5f6c6d751616352e',1,'ui::Widget']]],
+  ['print_5',['print',['../display_8hpp.html#a321b61414e7786da1596269c4661b9fd',1,'ui']]],
+  ['push_6',['push',['../classui_1_1Column.html#a0e2358f1e1b14e241387abde18c9d570',1,'ui::Column::push()'],['../classui_1_1MultiChildWidget.html#a54585a8f01b07afdbaf8be012e3b72ee',1,'ui::MultiChildWidget::push()'],['../classui_1_1Row.html#a67dfc1116660a285e9f2303befaa11b5',1,'ui::Row::push()']]]
 ];

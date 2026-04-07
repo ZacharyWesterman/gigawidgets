@@ -17,9 +17,9 @@ var searchData=
   ['setposition_14',['setPosition',['../classui_1_1Widget.html#a01793b1e54f9dead26bb729d00cb5a00',1,'ui::Widget']]],
   ['setroot_15',['setRoot',['../ui_8hpp.html#a2bc05cb7596a67be883f8617b580c957',1,'ui']]],
   ['setrotation_16',['setRotation',['../display_8hpp.html#ab8a0a15b947e630a557455ac8524f069',1,'ui']]],
-  ['setscale_17',['setscale',['../classui_1_1Text.html#af62f6596e5273ce586c13bae9ce87072',1,'ui::Text::setScale()'],['../classui_1_1Keyboard.html#a58483acae87bff85ef5e9df96c590f44',1,'ui::Keyboard::setScale()']]],
-  ['setshader_18',['setshader',['../classui_1_1Image.html#a2bc13048ee692e4038375d4203ff264e',1,'ui::Image::setShader(const shader_oneframe_t &amp;shader)'],['../classui_1_1Image.html#acf7760b915633ce656a2db89614f083f',1,'ui::Image::setShader(const shader_animated_t &amp;shader)']]],
-  ['settext_19',['settext',['../classui_1_1Input.html#a8de93e6a58d5855735fde37d5f0e56b3',1,'ui::Input::setText()'],['../classui_1_1Text.html#a866e0667756223aab321e25f4918b5e0',1,'ui::Text::setText()']]],
+  ['setscale_17',['setscale',['../classui_1_1Keyboard.html#a58483acae87bff85ef5e9df96c590f44',1,'ui::Keyboard::setScale()'],['../classui_1_1Text.html#af62f6596e5273ce586c13bae9ce87072',1,'ui::Text::setScale()']]],
+  ['setshader_18',['setshader',['../classui_1_1Image.html#acf7760b915633ce656a2db89614f083f',1,'ui::Image::setShader(const shader_animated_t &amp;shader)'],['../classui_1_1Image.html#a2bc13048ee692e4038375d4203ff264e',1,'ui::Image::setShader(const shader_oneframe_t &amp;shader)']]],
+  ['settext_19',['settext',['../classui_1_1Text.html#a866e0667756223aab321e25f4918b5e0',1,'ui::Text::setText()'],['../classui_1_1Input.html#a8de93e6a58d5855735fde37d5f0e56b3',1,'ui::Input::setText()']]],
   ['settextcolor_20',['settextcolor',['../classui_1_1Keyboard.html#a1ceeccb4440e63e8faca4d40f9a88278',1,'ui::Keyboard::setTextColor()'],['../display_8hpp.html#a261fb6e10705d3b47e6dde2de6178553',1,'ui::setTextColor(color_t color)']]],
   ['settextsize_21',['setTextSize',['../display_8hpp.html#aa1862626a9e804ae8a2c8f347ce84539',1,'ui']]],
   ['settextwrap_22',['setTextWrap',['../display_8hpp.html#a0418c68f0e7805470f5acff3a6499d08',1,'ui']]],
@@ -34,12 +34,10 @@ var searchData=
   ['showboundingboxes_31',['showBoundingBoxes',['../ui_8hpp.html#a86c6dad72f5c03c980e80717b6811ef9',1,'ui']]],
   ['single_5fchild_5fwidget_2ehpp_32',['single_child_widget.hpp',['../single__child__widget_8hpp.html',1,'']]],
   ['singlechildwidget_33',['singlechildwidget',['../classui_1_1SingleChildWidget.html',1,'ui::SingleChildWidget'],['../classui_1_1SingleChildWidget.html#a9a55143159a07e508fc904991eb0e9f7',1,'ui::SingleChildWidget::SingleChildWidget()']]],
-  ['size_34',['size',['../classui_1_1Collection.html#a017ed8063a9bba606abe53456b05fae4',1,'ui::Collection::size()'],['../structui_1_1Size.html',1,'ui::Size'],['../structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3',1,'ui::Bitmap::size'],['../structui_1_1TransparencyMap.html#abffc9efb89c599a906e0b034f80300ef',1,'ui::TransparencyMap::size'],['../classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8',1,'ui::Blink::size()'],['../classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c',1,'ui::Text::size()'],['../classui_1_1Panel.html#a799137c43b637be150fd24f89fcb689f',1,'ui::Panel::size()'],['../classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3',1,'ui::Image::size()'],['../classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49',1,'ui::Widget::size()'],['../classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6',1,'ui::SingleChildWidget::size()'],['../classui_1_1Body.html#a985a32b7381a2c0cdbd41c380fdd4c88',1,'ui::Body::size()']]],
+  ['size_34',['size',['../classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49',1,'ui::Widget::size()'],['../structui_1_1Size.html',1,'ui::Size'],['../structui_1_1Bitmap.html#a69124ddc614cb750d6578708ff029ca3',1,'ui::Bitmap::size'],['../structui_1_1TransparencyMap.html#abffc9efb89c599a906e0b034f80300ef',1,'ui::TransparencyMap::size'],['../classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8',1,'ui::Blink::size()'],['../classui_1_1Body.html#a985a32b7381a2c0cdbd41c380fdd4c88',1,'ui::Body::size()'],['../classui_1_1Collection.html#a017ed8063a9bba606abe53456b05fae4',1,'ui::Collection::size()'],['../classui_1_1Text.html#ae372dff0485ae761ace4ae58fa58fb9c',1,'ui::Text::size()'],['../classui_1_1Panel.html#a799137c43b637be150fd24f89fcb689f',1,'ui::Panel::size()'],['../classui_1_1Image.html#ac560e95e7dc92569f2502a65505b95e3',1,'ui::Image::size()'],['../classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6',1,'ui::SingleChildWidget::size()']]],
   ['size_2ehpp_35',['size.hpp',['../size_8hpp.html',1,'']]],
-  ['spiral_36',['Spiral',['../classui_1_1Spiral.html',1,'ui']]],
+  ['spiral_36',['spiral',['../classui_1_1Spiral.html#abf45bfca40db1f99f0c55d38abe5f4ba',1,'ui::Spiral::Spiral()'],['../classui_1_1Spiral.html',1,'ui::Spiral']]],
   ['spiral_2ehpp_37',['spiral.hpp',['../spiral_8hpp.html',1,'']]],
   ['startup_5frainbow_2ehpp_38',['startup_rainbow.hpp',['../startup__rainbow_8hpp.html',1,'']]],
-  ['startuprainbow_39',['startupRainbow',['../startup__rainbow_8hpp.html#ac06869d9b183456ce16a95ee347505c3',1,'ui::shader']]],
-  ['symmetric_5fpolygon_2ehpp_40',['symmetric_polygon.hpp',['../symmetric__polygon_8hpp.html',1,'']]],
-  ['symmetricpolygon_41',['SymmetricPolygon',['../structui_1_1SymmetricPolygon.html',1,'ui']]]
+  ['startuprainbow_39',['startupRainbow',['../startup__rainbow_8hpp.html#ac06869d9b183456ce16a95ee347505c3',1,'ui::shader']]]
 ];

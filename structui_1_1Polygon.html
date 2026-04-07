@@ -116,20 +116,20 @@ Inheritance diagram for ui::Polygon:</div>
  <div class="center">
   <img src="structui_1_1Polygon.png" usemap="#ui::Polygon_map" alt=""/>
   <map id="ui::Polygon_map" name="ui::Polygon_map">
-<area href="structui_1_1Shape.html" title="The common interface for rendering arbitrary shapes." alt="ui::Shape" shape="rect" coords="71,56,203,80"/>
-<area href="structui_1_1Renderable.html" title="An abstract interface for arabitrary renderable objects." alt="ui::Renderable" shape="rect" coords="71,0,203,24"/>
-<area href="structui_1_1Rectangle.html" alt="ui::Rectangle" shape="rect" coords="0,168,132,192"/>
-<area href="structui_1_1SymmetricPolygon.html" alt="ui::SymmetricPolygon" shape="rect" coords="142,168,274,192"/>
+<area href="structui_1_1Shape.html" title="The common interface for rendering arbitrary shapes." alt="ui::Shape" shape="rect" coords="64,56,182,80"/>
+<area href="structui_1_1Renderable.html" title="An abstract interface for arabitrary renderable objects." alt="ui::Renderable" shape="rect" coords="64,0,182,24"/>
+<area href="structui_1_1Rectangle.html" title="A polygon specialization for rectangles." alt="ui::Rectangle" shape="rect" coords="0,168,118,192"/>
+<area href="structui_1_1RegularPolygon.html" title="A polygon specialization for regular, convex polygons." alt="ui::RegularPolygon" shape="rect" coords="128,168,246,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af5b3f42ab9372c542e4eac2800d56a1d" id="r_af5b3f42ab9372c542e4eac2800d56a1d"><td class="memItemLeft" align="right" valign="top"><a id="af5b3f42ab9372c542e4eac2800d56a1d" name="af5b3f42ab9372c542e4eac2800d56a1d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Polygon</b> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color, const std::initializer_list&lt; <a class="el" href="structui_1_1Coords.html">Coords</a> &gt; &amp;&amp;points)</td></tr>
+<tr class="memitem:af5b3f42ab9372c542e4eac2800d56a1d" id="r_af5b3f42ab9372c542e4eac2800d56a1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Polygon.html#af5b3f42ab9372c542e4eac2800d56a1d">Polygon</a> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="structui_1_1Polygon.html#a1f34b75697290f3233a750cbb1f870ca">color</a>, const std::initializer_list&lt; <a class="el" href="structui_1_1Coords.html">Coords</a> &gt; &amp;&amp;<a class="el" href="structui_1_1Polygon.html#a1a5b9ab68ef884f748afeef352ccc0aa">points</a>)</td></tr>
+<tr class="memdesc:af5b3f42ab9372c542e4eac2800d56a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct polygon from a set list of points.  <br /></td></tr>
 <tr class="separator:af5b3f42ab9372c542e4eac2800d56a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac57c502f802840749362e72c8d30ebcc" id="r_ac57c502f802840749362e72c8d30ebcc"><td class="memItemLeft" align="right" valign="top"><a id="ac57c502f802840749362e72c8d30ebcc" name="ac57c502f802840749362e72c8d30ebcc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Polygon</b> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color)</td></tr>
+<tr class="memitem:ac57c502f802840749362e72c8d30ebcc" id="r_ac57c502f802840749362e72c8d30ebcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Polygon.html#ac57c502f802840749362e72c8d30ebcc">Polygon</a> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="structui_1_1Polygon.html#a1f34b75697290f3233a750cbb1f870ca">color</a>)</td></tr>
+<tr class="memdesc:ac57c502f802840749362e72c8d30ebcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a polygon without any points.  <br /></td></tr>
 <tr class="separator:ac57c502f802840749362e72c8d30ebcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af20aeaa70b0d76f8dad1c0b7f9985ac1" id="r_af20aeaa70b0d76f8dad1c0b7f9985ac1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1Polygon.html#af20aeaa70b0d76f8dad1c0b7f9985ac1">renderAt</a> (const <a class="el" href="structui_1_1Coords.html">Coords</a> &amp;coords, const <a class="el" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader) const override</td></tr>
 <tr class="memdesc:af20aeaa70b0d76f8dad1c0b7f9985ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the renderable directly onto the screen.  <br /></td></tr>
@@ -142,17 +142,85 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a5e7ffb7683c5c949dfe4447be854fa24" id="r_a5e7ffb7683c5c949dfe4447be854fa24"><td class="memItemLeft" align="right" valign="top"><a id="a5e7ffb7683c5c949dfe4447be854fa24" name="a5e7ffb7683c5c949dfe4447be854fa24"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>fill</b></td></tr>
+<tr class="memdesc:a5e7ffb7683c5c949dfe4447be854fa24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the shape is filled or just an outline. <br /></td></tr>
 <tr class="separator:a5e7ffb7683c5c949dfe4447be854fa24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f34b75697290f3233a750cbb1f870ca" id="r_a1f34b75697290f3233a750cbb1f870ca"><td class="memItemLeft" align="right" valign="top"><a id="a1f34b75697290f3233a750cbb1f870ca" name="a1f34b75697290f3233a750cbb1f870ca"></a>
 <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>color</b></td></tr>
+<tr class="memdesc:a1f34b75697290f3233a750cbb1f870ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color of the polygon. <br /></td></tr>
 <tr class="separator:a1f34b75697290f3233a750cbb1f870ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a5b9ab68ef884f748afeef352ccc0aa" id="r_a1a5b9ab68ef884f748afeef352ccc0aa"><td class="memItemLeft" align="right" valign="top"><a id="a1a5b9ab68ef884f748afeef352ccc0aa" name="a1a5b9ab68ef884f748afeef352ccc0aa"></a>
 std::vector&lt; <a class="el" href="structui_1_1Coords.html">Coords</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>points</b></td></tr>
+<tr class="memdesc:a1a5b9ab68ef884f748afeef352ccc0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The polygon vertices. <br /></td></tr>
 <tr class="separator:a1a5b9ab68ef884f748afeef352ccc0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A basic 2D polygon. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<dl class="section note"><dt>Note</dt><dd>Setting <code>fill</code> to true on self-intersecting polygons may yield unexpected results. </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af5b3f42ab9372c542e4eac2800d56a1d" name="af5b3f42ab9372c542e4eac2800d56a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5b3f42ab9372c542e4eac2800d56a1d">&#9670;&#160;</a></span>Polygon() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Polygon::Polygon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::initializer_list&lt; <a class="el" href="structui_1_1Coords.html">Coords</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>points</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct polygon from a set list of points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The polygon color. </td></tr>
+    <tr><td class="paramname">points</td><td>A list of points. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac57c502f802840749362e72c8d30ebcc" name="ac57c502f802840749362e72c8d30ebcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57c502f802840749362e72c8d30ebcc">&#9670;&#160;</a></span>Polygon() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Polygon::Polygon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a polygon without any points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The polygon color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a242bc37a01ec5bdc463de7e5bea62bd2" name="a242bc37a01ec5bdc463de7e5bea62bd2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a242bc37a01ec5bdc463de7e5bea62bd2">&#9670;&#160;</a></span>getSize()</h2>
 

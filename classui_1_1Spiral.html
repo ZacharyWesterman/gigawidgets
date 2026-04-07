@@ -122,8 +122,8 @@ Inheritance diagram for ui::Spiral:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abf45bfca40db1f99f0c55d38abe5f4ba" id="r_abf45bfca40db1f99f0c55d38abe5f4ba"><td class="memItemLeft" align="right" valign="top"><a id="abf45bfca40db1f99f0c55d38abe5f4ba" name="abf45bfca40db1f99f0c55d38abe5f4ba"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Spiral</b> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color, float scale, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> innerRadius, float angleTotal, float angleStep=0.2)</td></tr>
+<tr class="memitem:abf45bfca40db1f99f0c55d38abe5f4ba" id="r_abf45bfca40db1f99f0c55d38abe5f4ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Spiral.html#abf45bfca40db1f99f0c55d38abe5f4ba">Spiral</a> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> color, float scale, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> innerRadius, float angleTotal, float angleStep=0.2)</td></tr>
+<tr class="memdesc:abf45bfca40db1f99f0c55d38abe5f4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the spiral.  <br /></td></tr>
 <tr class="separator:abf45bfca40db1f99f0c55d38abe5f4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e1e234f5d020dc4562080528434e842" id="r_a2e1e234f5d020dc4562080528434e842"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Spiral.html#a2e1e234f5d020dc4562080528434e842">renderAt</a> (const <a class="el" href="structui_1_1Coords.html">Coords</a> &amp;coords, const <a class="el" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader) const override</td></tr>
 <tr class="memdesc:a2e1e234f5d020dc4562080528434e842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the renderable directly onto the screen.  <br /></td></tr>
@@ -134,7 +134,66 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A spiral shape. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abf45bfca40db1f99f0c55d38abe5f4ba" name="abf45bfca40db1f99f0c55d38abe5f4ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf45bfca40db1f99f0c55d38abe5f4ba">&#9670;&#160;</a></span>Spiral()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ui::Spiral::Spiral </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a>&#160;</td>
+          <td class="paramname"><em>innerRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angleTotal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angleStep</em> = <code>0.2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct the spiral. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The spiral color. </td></tr>
+    <tr><td class="paramname">scale</td><td>A multiplier that controls the distance between segments after each rotation. </td></tr>
+    <tr><td class="paramname">innerRadius</td><td>The distance from the center at which the spiral starts. </td></tr>
+    <tr><td class="paramname">angleTotal</td><td>The number of radians that the spiral rotates around the center. </td></tr>
+    <tr><td class="paramname">angleStep</td><td>The step size. Larger step sizes are faster to render, but make the curve less round and more angular. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a556a908fc1a4c3389eeefd558767ad98" name="a556a908fc1a4c3389eeefd558767ad98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a556a908fc1a4c3389eeefd558767ad98">&#9670;&#160;</a></span>getSize()</h2>
 
