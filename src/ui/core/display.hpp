@@ -188,6 +188,7 @@ void drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, uint8_t *mask, coord_t
  * @param y0 The starting vertical coordinate.
  * @param x1 The ending horizontal coordinate.
  * @param y1 The ending vertical coordinate.
+ * @param color The color of the line.
  */
 void drawLine(coord_t x0, coord_t y0, coord_t x1, coord_t y1, color_t color);
 

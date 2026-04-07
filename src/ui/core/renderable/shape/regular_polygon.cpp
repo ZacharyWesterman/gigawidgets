@@ -1,11 +1,11 @@
-#include "symmetric_polygon.hpp"
+#include "regular_polygon.hpp"
 #include <cmath>
 
 #define PI 3.141592653589
 
 namespace ui {
 
-SymmetricPolygon::SymmetricPolygon(color_t color, int pointCount, coord_t radius, float angle) : Polygon(color) {
+RegularPolygon::RegularPolygon(color_t color, int pointCount, coord_t radius, float angle) : Polygon(color) {
 	if (pointCount < 2) {
 		return;
 	}
