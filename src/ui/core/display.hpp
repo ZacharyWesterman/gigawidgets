@@ -192,4 +192,14 @@ void drawRGBBitmap(coord_t x, coord_t y, color_t *bitmap, uint8_t *mask, coord_t
  */
 void drawLine(coord_t x0, coord_t y0, coord_t x1, coord_t y1, color_t color);
 
+/**
+ * @brief Draw a circle.
+ * @param x The horizontal coordinate.
+ * @param y The vertical coordinate.
+ * @param radius The circle radius.
+ * @param color The color of the circle.
+ * @param fill Whether to fill the circle or just draw an outline.
+ */
+void drawCircle(coord_t x, coord_t y, radius_t radius, color_t color, bool fill);
+
 } // namespace ui

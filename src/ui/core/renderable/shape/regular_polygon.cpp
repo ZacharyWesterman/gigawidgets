@@ -5,7 +5,7 @@
 
 namespace ui {
 
-RegularPolygon::RegularPolygon(color_t color, int pointCount, coord_t radius, float angle) : Polygon(color) {
+RegularPolygon::RegularPolygon(color_t color, int pointCount, coord_t radius, bool fill, float angle) : Polygon(color, fill) {
 	if (pointCount < 2) {
 		return;
 	}

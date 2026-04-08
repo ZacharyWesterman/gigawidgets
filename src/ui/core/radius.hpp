@@ -1,6 +1,8 @@
 /// @file radius.hpp
 #pragma once
 
+#include <cinttypes>
+
 namespace ui {
 
 /**

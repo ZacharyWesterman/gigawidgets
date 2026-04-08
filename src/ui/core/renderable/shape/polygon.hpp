@@ -25,14 +25,16 @@ struct Polygon : public Shape {
 	 * @brief Construct polygon from a set list of points.
 	 * @param color The polygon color.
 	 * @param points A list of points.
+	 * @param fill Whether to fill the polygon or just draw an outline.
 	 */
-	Polygon(color_t color, const std::initializer_list<Coords> &&points);
+	Polygon(color_t color, const std::initializer_list<Coords> &&points, bool fill = false);
 
 	/**
 	 * @brief Construct a polygon without any points.
 	 * @param color The polygon color.
+	 * @param fill Whether to fill the polygon or just draw an outline.
 	 */
-	Polygon(color_t color);
+	Polygon(color_t color, bool fill = false);
 
 	void renderAt(const Coords &coords, const shader_t &shader) const override;
 
