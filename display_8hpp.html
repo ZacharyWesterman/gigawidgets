@@ -182,6 +182,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ui::endWrite</b> ()</
 <tr class="memitem:a6b0b9a0a5ee1299e8f6e044e5f348e3a" id="r_a6b0b9a0a5ee1299e8f6e044e5f348e3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8hpp.html#a6b0b9a0a5ee1299e8f6e044e5f348e3a">ui::drawLine</a> (<a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> x0, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> y0, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> x1, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> y1, <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">color</a>)</td></tr>
 <tr class="memdesc:a6b0b9a0a5ee1299e8f6e044e5f348e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an arbitrary single-pixel line.  <br /></td></tr>
 <tr class="separator:a6b0b9a0a5ee1299e8f6e044e5f348e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31dccc0583d4216d32222eb83e519db4" id="r_a31dccc0583d4216d32222eb83e519db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8hpp.html#a31dccc0583d4216d32222eb83e519db4">ui::drawCircle</a> (<a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> x, <a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a> y, <a class="el" href="radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148">radius_t</a> radius, <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">color</a>, bool fill)</td></tr>
+<tr class="memdesc:a31dccc0583d4216d32222eb83e519db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a circle.  <br /></td></tr>
+<tr class="separator:a31dccc0583d4216d32222eb83e519db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains low-level functions for rendering directly to the screen. </p>
@@ -271,6 +274,64 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ui::endWrite</b> ()</
     <tr><td class="paramname">w</td><td>The horizontal size of the bitmap. </td></tr>
     <tr><td class="paramname">h</td><td>The vertical size of the bitmap. </td></tr>
     <tr><td class="paramname">color</td><td>The color to render non-zero pixels as. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31dccc0583d4216d32222eb83e519db4" name="a31dccc0583d4216d32222eb83e519db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31dccc0583d4216d32222eb83e519db4">&#9670;&#160;</a></span>drawCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::drawCircle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4">coord_t</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148">radius_t</a>&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fill</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a circle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The horizontal coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>The vertical coordinate. </td></tr>
+    <tr><td class="paramname">radius</td><td>The circle radius. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the circle. </td></tr>
+    <tr><td class="paramname">fill</td><td>Whether to fill the circle or just draw an outline. </td></tr>
   </table>
   </dd>
 </dl>

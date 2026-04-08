@@ -2,6 +2,7 @@ var display_8hpp =
 [
     [ "begin", "display_8hpp.html#aa6d985125b4aac5c03f524a22bb8031e", null ],
     [ "drawBitmap", "display_8hpp.html#a88ddcd73c0421903a78e4c97d712413a", null ],
+    [ "drawCircle", "display_8hpp.html#a31dccc0583d4216d32222eb83e519db4", null ],
     [ "drawFastHLine", "display_8hpp.html#a9cbc87c1900e42d264c49ecffcb124bd", null ],
     [ "drawFastVLine", "display_8hpp.html#ab33d36fae9cacdd7f3f634f52925d086", null ],
     [ "drawLine", "display_8hpp.html#a6b0b9a0a5ee1299e8f6e044e5f348e3a", null ],

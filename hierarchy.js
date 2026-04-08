@@ -38,6 +38,7 @@ var hierarchy =
         [ "ui::TransparentBitmap", "structui_1_1TransparentBitmap.html", null ]
       ] ],
       [ "ui::Shape", "structui_1_1Shape.html", [
+        [ "ui::Circle", "structui_1_1Circle.html", null ],
         [ "ui::Polygon", "structui_1_1Polygon.html", [
           [ "ui::Rectangle", "structui_1_1Rectangle.html", null ],
           [ "ui::RegularPolygon", "structui_1_1RegularPolygon.html", null ]
