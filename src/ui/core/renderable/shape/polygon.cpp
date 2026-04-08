@@ -3,9 +3,9 @@
 
 namespace ui {
 
-Polygon::Polygon(color_t color, const std::initializer_list<Coords> &&points) : fill(false), color(color), points(points) {}
+Polygon::Polygon(color_t color, const std::initializer_list<Coords> &&points, bool fill) : fill(fill), color(color), points(points) {}
 
-Polygon::Polygon(color_t color) : fill(false), color(color) {}
+Polygon::Polygon(color_t color, bool fill) : fill(fill), color(color) {}
 
 void Polygon::renderAt(const Coords &coords, const shader_t &shader) const {
 	if (points.size() < 2) {

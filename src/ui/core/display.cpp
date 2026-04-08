@@ -210,4 +210,12 @@ void drawLine(coord_t x0, coord_t y0, coord_t x1, coord_t y1, color_t color) {
 	display.drawLine(x0, y0, x1, y1, color);
 }
 
+void drawCircle(coord_t x, coord_t y, radius_t radius, color_t color, bool fill) {
+	if (fill) {
+		display.fillCircle(x, y, radius, color);
+	} else {
+		display.drawCircle(x, y, radius, color);
+	}
+}
+
 } // namespace ui
