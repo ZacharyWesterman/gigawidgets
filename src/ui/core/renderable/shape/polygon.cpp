@@ -79,13 +79,25 @@ void Polygon::renderAt(const Coords &coords, const shader_t &shader) const {
 			coord_t x = (y - offset) / slope;
 
 			// Insert intersection point in sorted order.
+			bool duplicate = false;
 			for (size_t n = 0; n < intersect_ct; n++) {
 				const coord_t pt = intersect[n];
-				if (pt - 1 <= x) {
+				// Within 1 pixel is a redundant intersection. Skip those.
+				if (pt == x || pt + 1 == x || pt - 1 == x) {
+					duplicate = true;
+					break;
+				}
+
+				if (pt < x) {
 					continue;
 				}
+
 				intersect[n] = x;
 				x = pt;
+			}
+
+			if (duplicate) {
+				continue;
 			}
 
 			intersect[intersect_ct++] = x;
@@ -108,6 +120,14 @@ void Polygon::renderAt(const Coords &coords, const shader_t &shader) const {
 			// This is fine for shaders like negative, grayscale, etc.
 			color_t pixelColor = shader ? shader(color, {from.x, from.y}, size, now) : color;
 			drawLine(from.x, from.y, to.x, to.y, pixelColor);
+		}
+
+		if (intersect_ct % 2) {
+			for (size_t i = 0; i < intersect_ct; i++) {
+				Serial.print(intersect[i]);
+				Serial.print(" ");
+			}
+			Serial.println("");
 		}
 	}
 }
