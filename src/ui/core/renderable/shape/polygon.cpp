@@ -70,13 +70,12 @@ void Polygon::renderAt(const Coords &coords, const shader_t &shader) const {
 			}
 
 			// Get the intersection X coord.
-
-			const auto slope = (y1 - y0) / (float)(x1 - x0);
-
-			// Make sure to handle slope zero
-
-			const auto offset = y0 - slope * x0;
-			coord_t x = (y - offset) / slope;
+			coord_t x = x1;
+			if (x1 - x0) {
+				const auto slope = (y1 - y0) / (float)(x1 - x0);
+				const auto offset = y0 - slope * x0;
+				x = (y - offset) / slope;
+			}
 
 			// Insert intersection point in sorted order.
 			bool duplicate = false;
@@ -120,14 +119,6 @@ void Polygon::renderAt(const Coords &coords, const shader_t &shader) const {
 			// This is fine for shaders like negative, grayscale, etc.
 			color_t pixelColor = shader ? shader(color, {from.x, from.y}, size, now) : color;
 			drawLine(from.x, from.y, to.x, to.y, pixelColor);
-		}
-
-		if (intersect_ct % 2) {
-			for (size_t i = 0; i < intersect_ct; i++) {
-				Serial.print(intersect[i]);
-				Serial.print(" ");
-			}
-			Serial.println("");
 		}
 	}
 }
