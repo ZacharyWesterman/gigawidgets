@@ -70,22 +70,33 @@ void Polygon::renderAt(const Coords &coords, const shader_t &shader) const {
 			}
 
 			// Get the intersection X coord.
-
-			const auto slope = (y1 - y0) / (float)(x1 - x0);
-
-			// Make sure to handle slope zero
-
-			const auto offset = y0 - slope * x0;
-			coord_t x = (y - offset) / slope;
+			coord_t x = x1;
+			if (x1 - x0) {
+				const auto slope = (y1 - y0) / (float)(x1 - x0);
+				const auto offset = y0 - slope * x0;
+				x = (y - offset) / slope;
+			}
 
 			// Insert intersection point in sorted order.
+			bool duplicate = false;
 			for (size_t n = 0; n < intersect_ct; n++) {
 				const coord_t pt = intersect[n];
-				if (pt - 1 <= x) {
+				// Within 1 pixel is a redundant intersection. Skip those.
+				if (pt == x || pt + 1 == x || pt - 1 == x) {
+					duplicate = true;
+					break;
+				}
+
+				if (pt < x) {
 					continue;
 				}
+
 				intersect[n] = x;
 				x = pt;
+			}
+
+			if (duplicate) {
+				continue;
 			}
 
 			intersect[intersect_ct++] = x;
