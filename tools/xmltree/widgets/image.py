@@ -28,7 +28,7 @@ class Image(Widget):
 
     def __str__(self) -> str:
         args = [
-            f'&{self.source}',
+            self.source,
             self.pos,
             self.align,
         ]

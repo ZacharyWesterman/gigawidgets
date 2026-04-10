@@ -1,5 +1,6 @@
 from ..logging import error
 from . import Datatype
+from pathlib import Path
 
 
 class ImageSource(Datatype):
@@ -9,8 +10,9 @@ class ImageSource(Datatype):
             'firefox',
         ]
 
-        if data in builtin_icons:
-            self.icl = [f'<ui/icons/{data}.hpp>']
+        filename = f'src/ui/icons/{data}.hpp'
+        if Path(filename).exists():
+            self.icl = [f'"{filename}"']
             self.text = f'ui::icon::{data}'
         else:
             error(f'Unknown image source `{data}`')
