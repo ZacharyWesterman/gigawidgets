@@ -96,6 +96,9 @@ class Widget:
         child_ct = 0
         self.children = []
         for child in xml:
+            # Skip comments
+            if type(child.tag) is not str:
+                continue
             self.children += [construct(child, selectors)]
             child_ct += 1
 
