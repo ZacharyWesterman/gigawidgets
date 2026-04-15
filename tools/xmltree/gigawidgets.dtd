@@ -5,7 +5,7 @@
 -->
 
 <!-- Root element: exactly one widget -->
-<!ELEMENT body (column | row | panel | blink | text | input | image)>
+<!ELEMENT body (collection | column | row | panel | blink | text | input | image)>
 <!ATTLIST body
     color CDATA #IMPLIED
     rotation (0 | 90 | 180 | 270) #IMPLIED
@@ -13,8 +13,18 @@
     class CDATA #IMPLIED
 >
 
+<!-- Container: Collection - can contain any widgets -->
+<!ELEMENT collection (collection | column | row | panel | blink | text | input | image)*>
+<!ATTLIST collection
+    pos CDATA #IMPLIED
+    align CDATA #IMPLIED
+    padding CDATA #IMPLIED
+    size CDATA #REQUIRED
+    class CDATA #IMPLIED
+>
+
 <!-- Container: Column - can contain any widgets -->
-<!ELEMENT column (column | row | panel | blink | text | input | image)*>
+<!ELEMENT column (collection | column | row | panel | blink | text | input | image)*>
 <!ATTLIST column
     pos CDATA #IMPLIED
     align CDATA #IMPLIED
@@ -26,19 +36,19 @@
 >
 
 <!-- Container: Row - can contain any widgets -->
-<!ELEMENT row (column | row | panel | blink | text | input | image)*>
+<!ELEMENT row (collection | column | row | panel | blink | text | input | image)*>
 <!ATTLIST row
     pos CDATA #IMPLIED
     align CDATA #IMPLIED
     padding CDATA #IMPLIED
     size CDATA #REQUIRED
-    order (LEFT | RIGHT | LEFT-TO-RIGHT | RIGHT-TO-LEFT) #IMPLIED
+    order (left | right | left-to-right | right-to-left) #IMPLIED
     width CDATA #IMPLIED
     class CDATA #IMPLIED
 >
 
 <!-- Container: Panel - exactly one child widget with background -->
-<!ELEMENT panel (column | row | panel | blink | text | input | image)>
+<!ELEMENT panel (collection | column | row | panel | blink | text | input | image)>
 <!ATTLIST panel
     pos CDATA #IMPLIED
     align CDATA #IMPLIED
@@ -50,7 +60,7 @@
 >
 
 <!-- Container: Blink - exactly one child widget with blinking animation -->
-<!ELEMENT blink (column | row | panel | blink | text | input | image)>
+<!ELEMENT blink (collection | column | row | panel | blink | text | input | image)>
 <!ATTLIST blink
     time CDATA #IMPLIED
     class CDATA #IMPLIED
