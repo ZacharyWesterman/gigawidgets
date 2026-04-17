@@ -130,22 +130,31 @@ class Widget:
         raise NotImplementedError(
             f'`__str__()` not implemented for `{self.__class__.__name__}`')
 
-    def function(self, func_name: str, set_root: bool = False) -> str:
-        text = f'\n{self}'
-        if set_root:
-            text += f'\nui::setRoot({self.var})'
-        text += f'\nreturn {self.var};'
-        text = text.replace('\n', '\n  ')
-        text = f'ui::Widget* {func_name}() {{{text}\n}}'
-
-        icl = '\n'.join(
+    def function(self, func_name: str, include: list[str], set_root: bool = False) -> str:
+        text = '\n'.join(
             ['#include "src/ui.hpp"'] +
             [
                 f'#include {i}' for i in self.includes()
             ]
-        )
+        ) + '\n'
 
-        return f'{icl}\n\n{text}'
+        for i in include:
+            if not Path(i).is_file():
+                warn(
+                    f'Unable to include "{i}": file does not exist or is not readable.'
+                )
+                continue
+            with open(i, 'r') as fp:
+                text += f'\n{fp.read()}'
+
+        body = f'\n{self}'
+        if set_root:
+            body += f'\nui::setRoot({self.var})'
+        body += f'\nreturn {self.var};'
+        body = body.replace('\n', '\n  ')
+        text += f'\nui::Widget* {func_name}() {{{body}\n}}'
+
+        return text
 
     def includes(self) -> list[str]:
         if hasattr(self, 'children'):

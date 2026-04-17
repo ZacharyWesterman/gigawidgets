@@ -20,6 +20,11 @@ parser.add_argument(
     default=[],
     help='One or more CSS files for default styling.'
 )
+parser.add_argument(
+    '--include', '-I', type=str, action='append',
+    default=[],
+    help='One or more C++ source files to include in the generated code.'
+)
 args = parser.parse_args()
 
 try:
@@ -33,4 +38,4 @@ css = xmltree.parse_css(args.style)
 selectors = xmltree.apply_styles(root, css)
 widget = xmltree.construct(root, selectors)
 
-print(widget.function(func_name=args.function))
+print(widget.function(func_name=args.function, include=args.include))

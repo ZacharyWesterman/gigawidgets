@@ -11,6 +11,10 @@
     rotation (0 | 90 | 180 | 270) #IMPLIED
     padding CDATA #IMPLIED
     class CDATA #IMPLIED
+    onclick CDATA #IMPLIED
+    onblur CDATA #IMPLIED
+    onpress CDATA #IMPLIED
+    onrelease CDATA #IMPLIED
 >
 
 <!-- Container: Collection - can contain any widgets -->
@@ -21,6 +25,10 @@
     padding CDATA #IMPLIED
     size CDATA #REQUIRED
     class CDATA #IMPLIED
+    onclick CDATA #IMPLIED
+    onblur CDATA #IMPLIED
+    onpress CDATA #IMPLIED
+    onrelease CDATA #IMPLIED
 >
 
 <!-- Container: Column - can contain any widgets -->
@@ -33,6 +41,10 @@
     order (top | bottom | top-down | bottom-up) #IMPLIED
     height CDATA #IMPLIED
     class CDATA #IMPLIED
+    onclick CDATA #IMPLIED
+    onblur CDATA #IMPLIED
+    onpress CDATA #IMPLIED
+    onrelease CDATA #IMPLIED
 >
 
 <!-- Container: Row - can contain any widgets -->
@@ -45,6 +57,10 @@
     order (left | right | left-to-right | right-to-left) #IMPLIED
     width CDATA #IMPLIED
     class CDATA #IMPLIED
+    onclick CDATA #IMPLIED
+    onblur CDATA #IMPLIED
+    onpress CDATA #IMPLIED
+    onrelease CDATA #IMPLIED
 >
 
 <!-- Container: Panel - exactly one child widget with background -->
@@ -57,6 +73,10 @@
     size CDATA #IMPLIED
     radius CDATA #IMPLIED
     class CDATA #IMPLIED
+    onclick CDATA #IMPLIED
+    onblur CDATA #IMPLIED
+    onpress CDATA #IMPLIED
+    onrelease CDATA #IMPLIED
 >
 
 <!-- Container: Blink - exactly one child widget with blinking animation -->
@@ -64,6 +84,10 @@
 <!ATTLIST blink
     time CDATA #IMPLIED
     class CDATA #IMPLIED
+    onclick CDATA #IMPLIED
+    onblur CDATA #IMPLIED
+    onpress CDATA #IMPLIED
+    onrelease CDATA #IMPLIED
 >
 
 <!-- Leaf: Text - displays text content, no children allowed -->
@@ -88,6 +112,10 @@
     scale CDATA #IMPLIED
     color CDATA #IMPLIED
     class CDATA #IMPLIED
+    onclick CDATA #IMPLIED
+    onblur CDATA #IMPLIED
+    onpress CDATA #IMPLIED
+    onrelease CDATA #IMPLIED
 >
 
 <!-- Leaf: Input - text input field, no children allowed -->
@@ -116,6 +144,10 @@
     text-color CDATA #IMPLIED
     value CDATA #IMPLIED
     class CDATA #IMPLIED
+    onclick CDATA #IMPLIED
+    onblur CDATA #IMPLIED
+    onpress CDATA #IMPLIED
+    onrelease CDATA #IMPLIED
 >
 
 <!-- Leaf: Image - displays an image/icon, no children allowed -->
@@ -126,6 +158,10 @@
     source CDATA #REQUIRED
     shader (grayscale | halfGrayscaleV | negative | glow | startupRainbow) #IMPLIED
     class CDATA #IMPLIED
+    onclick CDATA #IMPLIED
+    onblur CDATA #IMPLIED
+    onpress CDATA #IMPLIED
+    onrelease CDATA #IMPLIED
 >
 
 <!-- 
