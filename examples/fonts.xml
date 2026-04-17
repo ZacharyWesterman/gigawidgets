@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE body SYSTEM "../tools/xmltree/gigawidgets.dtd">
+<body>
+    <column size="100vw 100vh">
+        <text scale="2" color="#b09090">Fonts available in 9, 12, 18, and 24 pt:</text>
+        <text font="FreeMono9pt7b">FreeMono9pt7b</text>
+        <text font="FreeMonoBold9pt7b">FreeMonoBold9pt7b</text>
+        <text font="FreeMonoBoldOblique9pt7b">FreeMonoBoldOblique9pt7b</text>
+        <text font="FreeMonoOblique9pt7b">FreeMonoOblique9pt7b</text>
+        <text font="FreeSans9pt7b">FreeSans9pt7b</text>
+        <text font="FreeSansBold9pt7b">FreeSansBold9pt7b</text>
+        <text font="FreeSansBoldOblique9pt7b">FreeSansBoldOblique9pt7b</text>
+        <text font="FreeSansOblique9pt7b">FreeSansOblique9pt7b</text>
+        <text font="FreeSerif9pt7b">FreeSerif9pt7b</text>
+        <text font="FreeSerifBold9pt7b">FreeSerifBold9pt7b</text>
+        <text font="FreeSerifBoldItalic9pt7b">FreeSerifBoldItalic9pt7b</text>
+        <text font="FreeSerifItalic9pt7b">FreeSerifItalic9pt7b</text>
+
+        <text scale="2" color="#b09090">Tiny fonts:</text>
+        <text font="Org_01">Org_01</text>
+        <text font="Picopixel">Picopixel</text>
+        <text font="Tiny3x3a2pt7b">Tiny3x3a2pt7b</text>
+        <text font="TomThumb">TomThumb</text>
+    </column>
+</body>
