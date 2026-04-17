@@ -53,6 +53,8 @@ class Input(Widget):
         if self.value != '':
             text += [f'{self.var}->setText("{self.value}");']
 
+        text += self.event_handlers
+
         return '\n'.join(text)
 
     def includes(self) -> list[str]:

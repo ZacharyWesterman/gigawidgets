@@ -33,9 +33,12 @@ class Image(Widget):
             self.align,
         ]
 
-        text = f'auto {self.var} = new ui::Image({", ".join(str(i) for i in args)});'
+        text = [
+            f'auto {self.var} = new ui::Image({", ".join(str(i) for i in args)});']
 
         if self.shader:
-            text += f'\n{self.var}->setShader({self.shader});'
+            text += [f'\n{self.var}->setShader({self.shader});']
 
-        return text
+        text += self.event_handlers
+
+        return '\n'.join(text)

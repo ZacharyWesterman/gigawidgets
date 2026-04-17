@@ -31,4 +31,6 @@ class Body(Widget):
         if self.rotation:
             text += [f'ui::setRotation({self.rotation});']
 
+        text += self.event_handlers
+
         return '\n'.join(text)

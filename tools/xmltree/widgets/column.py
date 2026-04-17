@@ -42,4 +42,6 @@ class Column(Widget):
         if self.height:
             text += [f'{self.var}->setMinHeight({self.height});']
 
+        text += self.event_handlers
+
         return '\n'.join(text)

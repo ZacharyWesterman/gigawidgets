@@ -40,4 +40,6 @@ class Panel(Widget):
             f'auto {self.var} = new ui::Panel({",".join(args)});',
         ]
 
+        text += self.event_handlers
+
         return '\n'.join(text)

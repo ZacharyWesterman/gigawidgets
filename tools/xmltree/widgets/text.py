@@ -55,7 +55,10 @@ class Text(Widget):
         ]
         args = [str(i) for i in args]
 
-        return f'auto {self.var} = new ui::Text({", ".join(args)});'
+        text = [f'auto {self.var} = new ui::Text({", ".join(args)});']
+        text += self.event_handlers
+
+        return '\n'.join(text)
 
     def includes(self) -> list[str]:
         return self.font.includes() if self.font else []

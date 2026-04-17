@@ -52,8 +52,17 @@ class Widget:
                     continue
                 xml.attrib[key] = value
 
-        attrs['class'] = Optional[list[str]]
-        setattr(self.__class__, 'class', [])
+        # Allow these attributes to be used on every widget
+        always_defined = (
+            ('class', Optional[list[str]], []),
+            ('onclick', Optional[str], None),
+            ('onblur', Optional[str], None),
+            ('onpress', Optional[str], None),
+            ('onrelease', Optional[str], None),
+        )
+        for i in always_defined:
+            attrs[i[0]] = i[1]
+            setattr(self.__class__, i[0], i[2])
 
         # Warn about attributes that do not apply to this widget
         for key in xml.attrib.keys():
@@ -147,6 +156,14 @@ class Widget:
             return list(set(icl))
 
         return []
+
+    @property
+    def event_handlers(self) -> list[str]:
+        lines = []
+        for i in ['onclick', 'onblur', 'onpress', 'onrelease']:
+            if getattr(self, i):
+                lines += [f'{self.var}->{i}({getattr(self, i)});']
+        return lines
 
 
 def construct(xml, selectors: list) -> Widget:

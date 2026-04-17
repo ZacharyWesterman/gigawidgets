@@ -42,4 +42,6 @@ class Row(Widget):
         if self.width:
             text += [f'{self.var}->setMinWidth({self.width});']
 
+        text += self.event_handlers
+
         return '\n'.join(text)
