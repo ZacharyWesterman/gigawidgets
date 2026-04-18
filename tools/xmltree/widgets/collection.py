@@ -33,6 +33,6 @@ class Collection(Widget):
             *(f'{self.var}->push({i.var});' for i in self.children),
         ]
 
-        text += self.event_handlers
+        text += self.shared_settings
 
         return '\n'.join(text)

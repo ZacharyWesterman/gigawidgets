@@ -42,6 +42,6 @@ class Column(Widget):
         if self.height:
             text += [f'{self.var}->setMinHeight({self.height});']
 
-        text += self.event_handlers
+        text += self.shared_settings
 
         return '\n'.join(text)

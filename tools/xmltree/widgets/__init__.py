@@ -60,6 +60,7 @@ class Widget:
             ('onpress', Optional[str], None),
             ('onrelease', Optional[str], None),
             ('onhold', Optional[str], None),
+            ('id', Optional[str], None),
         )
         for i in always_defined:
             attrs[i[0]] = i[1]
@@ -168,11 +169,15 @@ class Widget:
         return []
 
     @property
-    def event_handlers(self) -> list[str]:
+    def shared_settings(self) -> list[str]:
         lines = []
         for i in ['onclick', 'onblur', 'onpress', 'onrelease', 'onhold']:
             if getattr(self, i):
                 lines += [f'{self.var}->{i}({getattr(self, i)});']
+
+        if getattr(self, 'id'):
+            lines += [f'{self.var}->id = "{getattr(self, "id")}"_id;']
+
         return lines
 
 

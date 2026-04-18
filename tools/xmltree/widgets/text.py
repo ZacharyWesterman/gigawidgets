@@ -56,7 +56,7 @@ class Text(Widget):
         args = [str(i) for i in args]
 
         text = [f'auto {self.var} = new ui::Text({", ".join(args)});']
-        text += self.event_handlers
+        text += self.shared_settings
 
         return '\n'.join(text)
 

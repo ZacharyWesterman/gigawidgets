@@ -39,6 +39,6 @@ class Image(Widget):
         if self.shader:
             text += [f'\n{self.var}->setShader({self.shader});']
 
-        text += self.event_handlers
+        text += self.shared_settings
 
         return '\n'.join(text)

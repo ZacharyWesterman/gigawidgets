@@ -22,6 +22,6 @@ class Blink(Widget):
             f'auto {self.var} = new ui::Blink({",".join(args)});',
         ]
 
-        text += self.event_handlers
+        text += self.shared_settings
 
         return '\n'.join(text)

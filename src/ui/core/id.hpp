@@ -102,3 +102,16 @@ constexpr inline id_t id(const char *str) noexcept {
 inline constexpr ui::id_t operator"" _id(const char *str) noexcept {
 	return ui::id(str);
 }
+
+/**
+ * @brief The constexpr conversion operator for IDs.
+ *
+ * This operator allows writing expressions like `"some text"_id`,
+ * which automatically gets converted to an integer at compile time.
+ *
+ * @param str The string to hash.
+ * @return The computed CRC32 hash.
+ */
+inline constexpr ui::id_t operator"" _id(const char *str, unsigned long) noexcept {
+	return ui::id(str);
+}

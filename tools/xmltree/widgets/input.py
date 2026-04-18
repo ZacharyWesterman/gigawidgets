@@ -53,7 +53,7 @@ class Input(Widget):
         if self.value != '':
             text += [f'{self.var}->setText("{self.value}");']
 
-        text += self.event_handlers
+        text += self.shared_settings
 
         return '\n'.join(text)
 
