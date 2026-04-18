@@ -9,16 +9,14 @@ void setup() {
 
 	ui::setRotation(ui::ROT_270_DEG);
 
-	ui::Position position = {0, 0};
-	ui::Alignment alignment = {ui::ALIGN_CENTER, ui::ALIGN_CENTER};
-
-	auto image = new ui::Image(&ui::icon::firefox, position, alignment);
-	auto body = new ui::Body(image, ui::COLOR_BLACK);
+	auto img = new ui::Image(ui::icon::firefox, {0, 0}, {ui::ALIGN_CENTER, ui::ALIGN_CENTER});
+	auto body = new ui::Body(img, ui::COLOR_BLACK);
 	ui::setRoot(body);
 
 	// When the Body is pressed and held for a bit,
-	body->onhold([image](const ui::Event &event) {
-		auto oldPos = image->getPosition();
+	body->onhold([](ui::Body &body, const ui::Event &event) {
+		auto &image = *body.getChild();
+		auto oldPos = image.getPosition();
 		auto targetPos = event.coords[0];
 
 		// Move to halfway between current and target position
@@ -27,7 +25,7 @@ void setup() {
 			(oldPos.y + targetPos.y - 0.5) / 2,
 		};
 
-		image->setPosition(newPos);
+		image.setPosition(newPos);
 	});
 }
 
