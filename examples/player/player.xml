@@ -13,6 +13,7 @@
                 <text font="FreeSerif18pt7b">Album Name</text>
                 <text font="FreeSerif18pt7b">Artist Name</text>
                 <text font="FreeSerif18pt7b">1/20</text>
+                <text id="status" font="FreeSerif18pt7b" color="gray">Paused</text>
             </column>
         </row>
 

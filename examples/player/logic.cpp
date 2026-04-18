@@ -15,4 +15,9 @@ void toggle_player(ui::Image &self) {
 	playing = !playing;
 	self.setRender(playing ? ui::icon::pause : ui::icon::play);
 	self.removeShader();
+
+	ui::Text *status = (ui::Text *)ui::getWidgetById("status"_id);
+	if (status) {
+		status->setText(playing ? "Playing" : "Paused");
+	}
 }
