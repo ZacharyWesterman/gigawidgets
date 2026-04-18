@@ -54,7 +54,16 @@ bool Row::update(time_t time) {
 
 	// If any of the children need updating, recalculate the bounds for all of them.
 	for (size_t i = 0; i < children.size(); i++) {
-		calcChildBounds(i);
+		if (!children[i]) {
+			continue;
+		}
+		if (children[i]->redrawRequested() || children[i]->needsRedraw()) {
+			calcChildBounds(i);
+			redrawSelf = true;
+			if (children[i]->needsRedraw()) {
+				redrawParent = true;
+			}
+		}
 	}
 
 	return true;
