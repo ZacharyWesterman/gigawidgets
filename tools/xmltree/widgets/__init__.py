@@ -59,6 +59,7 @@ class Widget:
             ('onblur', Optional[str], None),
             ('onpress', Optional[str], None),
             ('onrelease', Optional[str], None),
+            ('onhold', Optional[str], None),
         )
         for i in always_defined:
             attrs[i[0]] = i[1]
@@ -169,7 +170,7 @@ class Widget:
     @property
     def event_handlers(self) -> list[str]:
         lines = []
-        for i in ['onclick', 'onblur', 'onpress', 'onrelease']:
+        for i in ['onclick', 'onblur', 'onpress', 'onrelease', 'onhold']:
             if getattr(self, i):
                 lines += [f'{self.var}->{i}({getattr(self, i)});']
         return lines
