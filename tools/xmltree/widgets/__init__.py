@@ -217,4 +217,7 @@ for i in [
     for i in Path(__file__).parent.iterdir()
     if i.name != '__init__.py' and not i.is_dir()
 ]:
-    __import__(f'xmltree.widgets.{i}')
+    try:
+        __import__(f'xmltree.widgets.{i}')
+    except ModuleNotFoundError:
+        __import__(f'tools.xmltree.widgets.{i}')

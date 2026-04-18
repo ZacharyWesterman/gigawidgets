@@ -2,9 +2,8 @@
 
 from argparse import ArgumentParser
 import lxml.etree
-from sys import stderr
 import xmltree
-from xmltree.logging import warn
+from xmltree.logging import error
 
 parser = ArgumentParser(
     prog='xml_to_ui',
@@ -30,8 +29,7 @@ args = parser.parse_args()
 try:
     root = lxml.etree.parse(args.filename).getroot()
 except Exception as e:
-    print(f'ERROR: {e}', file=stderr)
-    print(f'Failed to parse `{args.filename}` as XML.', file=stderr)
+    error(f'{e}\nFailed to parse `{args.filename}` as XML.')
     exit(1)
 
 css = xmltree.parse_css(args.style)
