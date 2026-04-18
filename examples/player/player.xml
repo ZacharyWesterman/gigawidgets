@@ -2,9 +2,9 @@
 <!DOCTYPE body SYSTEM "../../tools/xmltree/gigawidgets.dtd">
 <body color="#254" rotation="90">
     <column size="100vh 100vw">
-        <row size="100vh 70vw">
+        <row size="100vh 75vw">
             <!-- Album Art -->
-            <panel size="50vh 70vw" color="#4a8">
+            <panel size="50vh 75vw" color="#4a8">
                 <image align="center center" source="image" />
             </panel>
             <!-- Song/Artist/Album details -->
@@ -17,14 +17,13 @@
         </row>
 
         <!-- Controls -->
-        <panel size="100vh 30vw" color="#386">
-            <row size="69vh 30vw" padding="5px" align="center center">
-                <image source="backward_fast" />
-                <image source="backward" />
-                <!-- <image source="play" /> -->
-                <image source="pause" />
-                <image source="forward" />
-                <image source="forward_fast" />
+        <panel size="100vh 25vw" color="#386">
+            <row size="69vh 25vw" padding="5px" align="center center">
+                <image source="backward_fast" onpress="mark" onrelease="unmark" />
+                <image source="backward" onpress="mark" onrelease="unmark" />
+                <image source="play" onpress="mark" onrelease="toggle_player" />
+                <image source="forward" onpress="mark" onrelease="unmark" />
+                <image source="forward_fast" onpress="mark" onrelease="unmark" />
             </row>
         </panel>
     </column>

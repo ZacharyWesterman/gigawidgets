@@ -10,7 +10,7 @@ namespace ui {
  * @brief Display an arbitrary (non-animated) renderable to the screen with an optional shader.
  */
 class Image : public Widget {
-	const Renderable &renderable;
+	Renderable const *renderable;
 	shader_t shader;
 	/// @brief True if the shader requires re-rendering every frame, false otherwise.
 	bool renderEveryFrame;
@@ -44,6 +44,12 @@ public:
 	 * @brief Remove the shader from the image, if any exists.
 	 */
 	void removeShader();
+
+	/**
+	 * @brief Change the current rendered object.
+	 * @param renderable The render target.
+	 */
+	void setRender(const Renderable &renderable);
 
 	DERIVE_EVENT_HANDLERS(Image)
 };

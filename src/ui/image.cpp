@@ -4,15 +4,15 @@
 
 namespace ui {
 
-Image::Image(const Renderable &renderable, const Position &pos, const Alignment &align) : renderable(renderable), renderEveryFrame(false), Widget(pos, align) {}
+Image::Image(const Renderable &renderable, const Position &pos, const Alignment &align) : renderable(&renderable), renderEveryFrame(false), Widget(pos, align) {}
 
 void Image::draw() const {
 	const auto b = bounds();
-	renderable.renderAt(b.min, shader);
+	renderable->renderAt(b.min, shader);
 }
 
 Size Image::size() const {
-	return renderable.getSize();
+	return renderable->getSize();
 }
 
 bool Image::update(time_t time_ms) {
@@ -38,6 +38,11 @@ void Image::removeShader() {
 	this->shader = {};
 	redrawSelf = true;
 	renderEveryFrame = false;
+}
+
+void Image::setRender(const Renderable &renderable) {
+	this->renderable = &renderable;
+	redrawSelf = true;
 }
 
 } // namespace ui
