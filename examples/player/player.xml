@@ -8,12 +8,16 @@
                 <image align="center center" source="image" />
             </panel>
             <!-- Song/Artist/Album details -->
-            <column size="50vh 30vw" align="right center" padding="0.2cm 0">
+            <column size="50vh 50vw" align="right center" padding="0.2cm 0">
                 <text font="FreeSerifBold24pt7b">Song Name</text>
                 <text font="FreeSerif18pt7b">Album Name</text>
                 <text font="FreeSerif18pt7b">Artist Name</text>
                 <text font="FreeSerif18pt7b">1/20</text>
-                <text id="status" font="FreeSerif18pt7b" color="gray">Paused</text>
+
+                <!-- Play/Pause text. Wrapped in a panel to reduce flickering when re-rendering. -->
+                <panel size="30vh 10vw" color="#254">
+                    <text id="status" font="FreeSerif18pt7b" color="gray">Paused</text>
+                </panel>
             </column>
         </row>
 

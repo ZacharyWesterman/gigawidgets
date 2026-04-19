@@ -23,13 +23,15 @@ class Body(Widget):
         ]
         args = [str(i) for i in args]
 
-        text = [
-            *(str(i) for i in self.children),
-            f'auto {self.var} = new ui::Body({",".join(args)});'
-        ]
+        text = []
 
         if self.rotation:
             text += [f'ui::setRotation({self.rotation});']
+
+        text += [
+            *(str(i) for i in self.children),
+            f'auto {self.var} = new ui::Body({",".join(args)});'
+        ]
 
         text += self.shared_settings
 
