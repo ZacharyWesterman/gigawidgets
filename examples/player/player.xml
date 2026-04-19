@@ -24,11 +24,11 @@
         <!-- Controls -->
         <panel size="100vw 25vh" color="#386">
             <row size="69vw 25vh" padding="5px" align="center center">
-                <image source="backward_fast" onpress="mark" onrelease="unmark" />
-                <image source="backward" onpress="mark" onrelease="unmark" />
-                <image source="play" onpress="mark" onrelease="toggle_player" />
-                <image source="forward" onpress="mark" onrelease="unmark" />
-                <image source="forward_fast" onpress="mark" onrelease="unmark" />
+                <image source="backward_fast" onpress="mark" onblur="unmark" />
+                <image source="backward" onpress="mark" onblur="unmark" />
+                <image source="play" onpress="mark" onrelease="toggle_player" onblur="unmark" />
+                <image source="forward" onpress="mark" onblur="unmark" />
+                <image source="forward_fast" onpress="mark" onblur="unmark" />
             </row>
         </panel>
     </column>
