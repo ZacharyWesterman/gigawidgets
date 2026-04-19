@@ -37,3 +37,6 @@ class Keyboard(Widget):
         text += self.shared_settings
 
         return '\n'.join(text)
+
+    def includes(self) -> list[str]:
+        return self.font.includes() if self.font else []
