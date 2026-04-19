@@ -49,7 +49,7 @@ public:
 	 * @param align The alignment of the text relative to its parent.
 	 * @param wrap If true, wrap the text when reaching the right side of the parent widget. If false, don't wrap, just truncate.
 	 */
-	Text(const String &text, const GFXfont *font, color_t color = COLOR_WHITE, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, bool wrap = true);
+	Text(const String &text, const GFXfont &font, color_t color = COLOR_WHITE, const Position &pos = {0, 0}, const Alignment &align = {ALIGN_LEFT, ALIGN_TOP}, bool wrap = true);
 
 	void draw() const override;
 	Size size() const override;
@@ -76,7 +76,7 @@ public:
 	 * @brief Set the font to render text in.
 	 * @param font The new font to render the text in. If null, defaults to the built-in font.
 	 */
-	void setFont(GFXfont *const font);
+	void setFont(const GFXfont &font);
 
 	/**
 	 * @brief Set the scaling factor for the text.

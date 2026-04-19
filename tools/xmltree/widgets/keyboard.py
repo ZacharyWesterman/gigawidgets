@@ -24,7 +24,7 @@ class Keyboard(Widget):
             )
 
         args = [
-            f'&{self.font}' if self.font else (
+            self.font if self.font else (
                 self.scale if self.scale else 1),
             self.text_color,
             self.color,
