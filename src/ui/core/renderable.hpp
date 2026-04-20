@@ -48,7 +48,7 @@ typedef std::function<color_t(color_t color, const Coords &coords, const Size &s
 typedef shader_animated_t shader_t;
 
 /**
- * @brief An abstract interface for arabitrary renderable objects.
+ * @brief An abstract interface for arbitrary renderable objects.
  *
  * Renderable objects can include constructs like images, animations, etc.
  */
