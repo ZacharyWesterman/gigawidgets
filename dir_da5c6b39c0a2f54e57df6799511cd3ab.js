@@ -12,7 +12,7 @@ var dir_da5c6b39c0a2f54e57df6799511cd3ab =
     [ "image.hpp", "image_8hpp.html", "image_8hpp" ],
     [ "input.hpp", "input_8hpp.html", "input_8hpp" ],
     [ "keyboard.hpp", "keyboard_8hpp.html", "keyboard_8hpp" ],
-    [ "keyboard_layout.hpp", "keyboard__layout_8hpp_source.html", null ],
+    [ "keyboard_layout.hpp", "keyboard__layout_8hpp.html", "keyboard__layout_8hpp" ],
     [ "panel.hpp", "panel_8hpp.html", "panel_8hpp" ],
     [ "row.hpp", "row_8hpp.html", "row_8hpp" ],
     [ "shapes.hpp", "shapes_8hpp.html", null ],
