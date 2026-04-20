@@ -33,6 +33,7 @@ from .horizontal_ordering import HorizontalOrdering  # nopep8
 from .rotation import Rotation  # nopep8
 from .padding import Padding  # nopep8
 from .time import Time  # nopep8
+from .keyboard_layout import KeyboardLayout  # nopep8
 
 # pylint: enable=wrong-import-position
 # pylint: enable=wrong-import-order
