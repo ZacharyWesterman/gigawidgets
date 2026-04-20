@@ -1,7 +1,7 @@
 var classui_1_1Input =
 [
     [ "Input", "classui_1_1Input.html#a8a9d0b4232dc7b8836d217713ce6354b", null ],
-    [ "Input", "classui_1_1Input.html#af55e927a2c99cbc343ad29dc42d0a34b", null ],
+    [ "Input", "classui_1_1Input.html#a43174e4441a13cf23bb5d916f1433efb", null ],
     [ "draw", "classui_1_1Input.html#ac7ebefb50393d05cc5c7eb210c588aa4", null ],
     [ "getCursor", "classui_1_1Input.html#a5e6715dc8bedd5f0df8e93ab19d40ef7", null ],
     [ "getText", "classui_1_1Input.html#a2bff5d52d073981ed6431ad23bbb3732", null ],

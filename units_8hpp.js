@@ -14,8 +14,8 @@ var units_8hpp =
     [ "operator\"\"_px", "units_8hpp.html#abfd01646e2a7fe2e3310a02ada968c24", null ],
     [ "operator\"\"_rad", "units_8hpp.html#afb75b0e2c589a27a56ea3fc94b4d60e7", null ],
     [ "operator\"\"_rad", "units_8hpp.html#a7f4021cdf91767f214236169e2005cdd", null ],
-    [ "operator\"\"_vh", "units_8hpp.html#a7b2164aee851d0140bbe1e0d842a93ea", null ],
-    [ "operator\"\"_vh", "units_8hpp.html#a442b74085eb95c86ea59d99ea2e06674", null ],
-    [ "operator\"\"_vw", "units_8hpp.html#a805912e11c8ae6dcd76dd6f3d8aa5142", null ],
-    [ "operator\"\"_vw", "units_8hpp.html#a932cc243ddf2e04c8d4de50b27eba3b6", null ]
+    [ "operator\"\"_vh", "units_8hpp.html#a1d9fa2129e25b2a7e5c82203bef05718", null ],
+    [ "operator\"\"_vh", "units_8hpp.html#abaafe9b7c025e2f0383225179e2f56a9", null ],
+    [ "operator\"\"_vw", "units_8hpp.html#a8da891baaa513917f1874408cf92d5b1", null ],
+    [ "operator\"\"_vw", "units_8hpp.html#a96b9546162bed6281015470fb9113fde", null ]
 ];

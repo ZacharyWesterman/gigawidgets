@@ -135,6 +135,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a03795a4d315599063822b3c076b6227e" id="r_a03795a4d315599063822b3c076b6227e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="id_8hpp.html#a83e58d0f8f1a22835c36e373769d48ce">ui::id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="id_8hpp.html#a03795a4d315599063822b3c076b6227e">operator&quot;&quot;_id</a> (const char *str) noexcept</td></tr>
 <tr class="memdesc:a03795a4d315599063822b3c076b6227e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constexpr conversion operator for IDs.  <br /></td></tr>
 <tr class="separator:a03795a4d315599063822b3c076b6227e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd668ae3b4e22b04f583e6b229543d40" id="r_afd668ae3b4e22b04f583e6b229543d40"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="id_8hpp.html#a83e58d0f8f1a22835c36e373769d48ce">ui::id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="id_8hpp.html#afd668ae3b4e22b04f583e6b229543d40">operator&quot;&quot;_id</a> (const char *str, size_t) noexcept</td></tr>
+<tr class="memdesc:afd668ae3b4e22b04f583e6b229543d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constexpr conversion operator for IDs.  <br /></td></tr>
+<tr class="separator:afd668ae3b4e22b04f583e6b229543d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a8ca10c879161374998c16f58248b017f" name="a8ca10c879161374998c16f58248b017f"></a>
@@ -221,7 +224,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a03795a4d315599063822b3c076b6227e" name="a03795a4d315599063822b3c076b6227e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03795a4d315599063822b3c076b6227e">&#9670;&#160;</a></span>operator&quot;&quot;_id()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a03795a4d315599063822b3c076b6227e">&#9670;&#160;</a></span>operator&quot;&quot;_id() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,6 +238,52 @@ Functions</h2></td></tr>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The constexpr conversion operator for IDs. </p>
+<p>This operator allows writing expressions like <code>"some text"_id</code>, which automatically gets converted to an integer at compile time.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to hash. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The computed CRC32 hash. </dd></dl>
+
+</div>
+</div>
+<a id="afd668ae3b4e22b04f583e6b229543d40" name="afd668ae3b4e22b04f583e6b229543d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd668ae3b4e22b04f583e6b229543d40">&#9670;&#160;</a></span>operator&quot;&quot;_id() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="id_8hpp.html#a83e58d0f8f1a22835c36e373769d48ce">ui::id_t</a> operator&quot;&quot;_id </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
