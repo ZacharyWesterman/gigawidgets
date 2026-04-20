@@ -1,4 +1,4 @@
-/// @file querty.hpp
+/// @file qwerty.hpp
 #pragma once
 #include "../keyboard_layout.hpp"
 

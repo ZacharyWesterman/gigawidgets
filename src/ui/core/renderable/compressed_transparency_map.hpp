@@ -1,4 +1,4 @@
-/// @file bitmap.hpp
+/// @file compressed_transparency_map.hpp
 #pragma once
 
 #include "transparency_map.hpp"

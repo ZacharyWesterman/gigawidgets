@@ -1,4 +1,4 @@
-/// @file bitmap.hpp
+/// @file transparency_map.hpp
 #pragma once
 
 #include "../renderable.hpp"

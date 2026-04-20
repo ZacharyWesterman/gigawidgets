@@ -1,4 +1,4 @@
-/// @file bitmap.hpp
+/// @file transparent_bitmap.hpp
 #pragma once
 
 #include "bitmap.hpp"
