@@ -46,7 +46,7 @@ class Text(Widget):
 
         args = [
             f'"{text}"',
-            f'&{self.font}' if self.font else (
+            self.font if self.font else (
                 self.scale if self.scale else 1),
             self.color,
             self.pos,
@@ -55,7 +55,10 @@ class Text(Widget):
         ]
         args = [str(i) for i in args]
 
-        return f'auto {self.var} = new ui::Text({", ".join(args)});'
+        text = [f'auto {self.var} = new ui::Text({", ".join(args)});']
+        text += self.shared_settings
+
+        return '\n'.join(text)
 
     def includes(self) -> list[str]:
         return self.font.includes() if self.font else []

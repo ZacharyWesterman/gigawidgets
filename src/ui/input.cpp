@@ -6,7 +6,7 @@ namespace ui {
 
 Input::Input(fontsize_t scale, color_t textColor, color_t backgroundColor, const Size &size, radius_t borderRadius, const Position &pos, const Alignment &align, const Padding &padding) : Panel(new Text("", scale, textColor, {0, 0}, {ALIGN_LEFT, ALIGN_CENTER}, false), backgroundColor, size, borderRadius, pos, align, padding), cursor(0), lastRender(0), showCursor(true) {}
 
-Input::Input(const GFXfont *font, color_t textColor, color_t backgroundColor, const Size &size, radius_t borderRadius, const Position &pos, const Alignment &align, const Padding &padding) : Panel(new Text("", font, textColor, {0, 0}, {ALIGN_LEFT, ALIGN_CENTER}, false), backgroundColor, size, borderRadius, pos, align, padding), cursor(0), lastRender(0), showCursor(true) {}
+Input::Input(const GFXfont &font, color_t textColor, color_t backgroundColor, const Size &size, radius_t borderRadius, const Position &pos, const Alignment &align, const Padding &padding) : Panel(new Text("", font, textColor, {0, 0}, {ALIGN_LEFT, ALIGN_CENTER}, false), backgroundColor, size, borderRadius, pos, align, padding), cursor(0), lastRender(0), showCursor(true) {}
 
 void Input::setText(const String &text) {
 	auto child = reinterpret_cast<Text *>(getChild());

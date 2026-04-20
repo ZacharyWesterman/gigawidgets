@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+
+from argparse import ArgumentParser
+from pathlib import Path
+import lxml.etree
+import tools.xmltree
+from tools.xmltree.logging import error
+import json
+
+parser = ArgumentParser(
+    prog='package',
+    description='Bundle a GigaWidgets project into an Arduino-ready .ino file.'
+)
+parser.add_argument('input', help='The project directory.')
+parser.add_argument(
+    '--output', '-o', type=str,
+    action='store', help='The output file.'
+)
+args = parser.parse_args()
+
+# Search through the directory and get a list of xml, css, and cpp files,
+# and make sure there is a "config.json" file at the root.
+
+project_dir = Path(args.input)
+
+if not project_dir.is_dir():
+    error(f'Unable to open `{args.input}`: not a directory.')
+    exit(1)
+
+config_path = project_dir / 'config.json'
+if not config_path.is_file():
+    error(
+        f'GigaWidgets config file `{config_path}` is either missing or unreadable.')
+    exit(1)
+
+with open(str(config_path), 'r') as fp:
+    config = json.load(fp)
+
+# Scan for supported file types.
+xml_files = []
+css_files = []
+cpp_files = []
+
+
+def search(dir: Path) -> None:
+    global xml_files, css_files, cpp_files
+
+    for i in dir.iterdir():
+        if i.is_dir():
+            search(i)
+            continue
+
+        if i.suffix == '.xml':
+            xml_files += [i]
+        elif i.suffix == '.css':
+            css_files += [i]
+        elif i.suffix == '.cpp':
+            cpp_files += [i]
+
+
+# Make sure UI build settings are all correct
+search(project_dir)
+if len(xml_files) == 0:
+    error('No XML files found, unable to build UI!')
+    exit(1)
+
+root_name = config.get('root')
+
+if len(xml_files) > 1 and root_name is None:
+    error(
+        f'UI starting point is ambiguous. Specify a "root" name in `{config_path}`.'
+    )
+    exit(1)
+elif root_name is None:
+    root_name = xml_files[0].stem
+
+if root_name not in [i.stem for i in xml_files]:
+    error(
+        f'No matching file found for UI starting point `{root_name}`.'
+    )
+    exit(1)
+
+fp = open(args.output, 'w') if args.output else None
+
+
+def output(text: str) -> None:
+    if fp is None:
+        print(text)
+    else:
+        fp.write(text)
+
+
+css = tools.xmltree.parse_css(css_files)
+
+for (i, path) in enumerate(xml_files):
+    try:
+        root = lxml.etree.parse(str(path)).getroot()
+    except Exception as e:
+        error(f'{e}\nFailed to parse `{args.filename}` as XML.')
+        exit(1)
+
+    selectors = tools.xmltree.apply_styles(root, css)
+    widget = tools.xmltree.construct(root, selectors)
+
+    output(
+        widget.function(
+            func_name=path.stem,
+            include=cpp_files if i == 0 else [],
+        )
+    )
+
+# Output the starting UI
+output(f'''
+void setup() {{
+    ui::setRoot({root_name}());
+}}
+void loop() {{
+    ui::render();
+}}
+''')

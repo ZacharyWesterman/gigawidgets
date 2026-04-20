@@ -1,30 +1,34 @@
 <?xml version="1.0"?>
 <!DOCTYPE body SYSTEM "../../tools/xmltree/gigawidgets.dtd">
 <body color="#254" rotation="90">
-    <column size="100vh 100vw">
-        <row size="100vh 70vw">
+    <column size="100vw 100vh">
+        <row size="100vw 75vh">
             <!-- Album Art -->
-            <panel size="50vh 70vw" color="#4a8">
+            <panel size="50vw 75vh" color="#4a8">
                 <image align="center center" source="image" />
             </panel>
             <!-- Song/Artist/Album details -->
-            <column size="50vh 30vw" align="right center" padding="0.2cm 0">
+            <column size="50vw 50vh" align="right center" padding="0.2cm 0">
                 <text font="FreeSerifBold24pt7b">Song Name</text>
                 <text font="FreeSerif18pt7b">Album Name</text>
                 <text font="FreeSerif18pt7b">Artist Name</text>
                 <text font="FreeSerif18pt7b">1/20</text>
+
+                <!-- Play/Pause text. Wrapped in a panel to reduce flickering when re-rendering. -->
+                <panel size="30vw 10vh" color="#254">
+                    <text id="status" font="FreeSerif18pt7b" color="gray">Paused</text>
+                </panel>
             </column>
         </row>
 
         <!-- Controls -->
-        <panel size="100vh 30vw" color="#386">
-            <row size="69vh 30vw" padding="5px" align="center center">
-                <image source="backward_fast" />
-                <image source="backward" />
-                <!-- <image source="play" /> -->
-                <image source="pause" />
-                <image source="forward" />
-                <image source="forward_fast" />
+        <panel size="100vw 25vh" color="#386">
+            <row size="69vw 25vh" padding="5px" align="center center">
+                <image source="backward_fast" onpress="mark" onblur="unmark" />
+                <image source="backward" onpress="mark" onblur="unmark" />
+                <image source="play" onpress="mark" onrelease="toggle_player" onblur="unmark" />
+                <image source="forward" onpress="mark" onblur="unmark" />
+                <image source="forward_fast" onpress="mark" onblur="unmark" />
             </row>
         </panel>
     </column>

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+args=()
 filename=''
 window_scale=1
 print_help=0
@@ -12,32 +13,37 @@ for i in "$@"; do
         --wipe)
             make -C emu wipe
             clean=1
-            ;;
+        ;;
         --clean)
             make -C emu clean
             clean=1
-            ;;
+        ;;
         --scale)
             echo "ERROR: --scale flag must have an argument." >&2
             exit 1
-            ;;
+        ;;
         --scale=*)
             window_scale="${i#*=}"
-            ;;
+        ;;
         --watch|-w)
             watch=1
-            ;;
+        ;;
         --dry-run|-d)
             dry_run=1
-            ;;
+        ;;
         --help|-h) print_help=1 ;;
         *)
+            if [ "$filename" != '' ]; then
+                args+=("$i")
+                continue
+            fi
+            
             filename="$i"
             if [ ! -f "$filename" ]; then
                 echo "ERROR: no such file '$filename'" >&2
                 exit 1
             fi
-            ;;
+        ;;
     esac
 done
 
@@ -55,6 +61,8 @@ if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
     echo "  --watch,   -w   | Watch for source changes, automatically rebuilding when a change is detected." >&2
     echo "  --dry-run, -d   | Verify compilation and exit." >&2
     echo "  --help     -h   | Display this message." >&2
+    echo
+    echo "Any other flags after the filename are passed to the XML generating utility."
     [ "$print_help" == 0 ] && exit 1
     exit 0
 fi
@@ -71,7 +79,7 @@ move_file() {
     if [[ "$filename" == *.xml ]]; then
         local tmp
         tmp=$(tmpfile)
-        if ! tools/xml_to_ui.py "$filename" -f build_ui > "$tmp"; then
+        if ! tools/xml_to_ui.py "$filename" -f build_ui "${args[@]}" > "$tmp"; then
             rm -f "$tmp"
             return 1
         fi
@@ -97,7 +105,7 @@ build() {
     move_file || return 1
     rsync -a src emu/ -u || return 1
     make -C emu WINDOW_SCALE="$window_scale" || return 1
-
+    
     echo -e "\e[32mBuild Successful.\e[0m"
     return 0
 }
@@ -168,15 +176,15 @@ while true; do
                 wait "$pid"
                 echo '' > "$pidfile"
             fi
-
+            
             cp emu/ino emu/ino.watch
             ./emu/ino.watch &
             pid=$!
             echo "$pid" > "$pidfile"
         fi
-
+        
         echo 0 > "$buildfile"
-    elif [ ! -z "$pid" ] && ! ps -p "$pid" >/dev/null; then
+        elif [ ! -z "$pid" ] && ! ps -p "$pid" >/dev/null; then
         __exit
     fi
 done

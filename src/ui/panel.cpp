@@ -8,12 +8,9 @@ namespace ui {
 Panel::Panel(Widget *child, color_t color, const Size &size, radius_t borderRadius, const Position &pos, const Alignment &align, const Padding &padding) : color(color), panelSize(size), borderRadius(borderRadius), SingleChildWidget(child, pos, align, padding) {}
 
 void Panel::draw() const {
-	// if (child->redrawRequested() || redrawSelf || redrawParent || rotationChanged()) {
 	const auto b = bounds();
 	fillRoundRect(b.min.x, b.min.y, b.max.x - b.min.x, b.max.y - b.min.y, borderRadius, color);
-	// }
 	child->draw();
-	Serial.println("draw");
 }
 
 bool Panel::update(time_t time_ms) {

@@ -40,4 +40,6 @@ class Panel(Widget):
             f'auto {self.var} = new ui::Panel({",".join(args)});',
         ]
 
+        text += self.shared_settings
+
         return '\n'.join(text)

@@ -52,8 +52,19 @@ class Widget:
                     continue
                 xml.attrib[key] = value
 
-        attrs['class'] = Optional[list[str]]
-        setattr(self.__class__, 'class', [])
+        # Allow these attributes to be used on every widget
+        always_defined = (
+            ('class', Optional[list[str]], []),
+            ('onclick', Optional[str], None),
+            ('onblur', Optional[str], None),
+            ('onpress', Optional[str], None),
+            ('onrelease', Optional[str], None),
+            ('onhold', Optional[str], None),
+            ('id', Optional[str], None),
+        )
+        for i in always_defined:
+            attrs[i[0]] = i[1]
+            setattr(self.__class__, i[0], i[2])
 
         # Warn about attributes that do not apply to this widget
         for key in xml.attrib.keys():
@@ -121,22 +132,31 @@ class Widget:
         raise NotImplementedError(
             f'`__str__()` not implemented for `{self.__class__.__name__}`')
 
-    def function(self, func_name: str, set_root: bool = False) -> str:
-        text = f'\n{self}'
-        if set_root:
-            text += f'\nui::setRoot({self.var})'
-        text += f'\nreturn {self.var};'
-        text = text.replace('\n', '\n  ')
-        text = f'ui::Widget* {func_name}() {{{text}\n}}'
-
-        icl = '\n'.join(
+    def function(self, func_name: str, include: list[str], set_root: bool = False) -> str:
+        text = '\n'.join(
             ['#include "src/ui.hpp"'] +
             [
                 f'#include {i}' for i in self.includes()
             ]
-        )
+        ) + '\n'
 
-        return f'{icl}\n\n{text}'
+        for i in include:
+            if not Path(i).is_file():
+                warn(
+                    f'Unable to include "{i}": file does not exist or is not readable.'
+                )
+                continue
+            with open(i, 'r') as fp:
+                text += f'\n{fp.read()}'
+
+        body = f'\n{self}'
+        if set_root:
+            body += f'\nui::setRoot({self.var})'
+        body += f'\nreturn {self.var};'
+        body = body.replace('\n', '\n  ')
+        text += f'\nui::Widget* {func_name}() {{{body}\n}}'
+
+        return text
 
     def includes(self) -> list[str]:
         if hasattr(self, 'children'):
@@ -147,6 +167,18 @@ class Widget:
             return list(set(icl))
 
         return []
+
+    @property
+    def shared_settings(self) -> list[str]:
+        lines = []
+        for i in ['onclick', 'onblur', 'onpress', 'onrelease', 'onhold']:
+            if getattr(self, i):
+                lines += [f'{self.var}->{i}({getattr(self, i)});']
+
+        if getattr(self, 'id'):
+            lines += [f'{self.var}->id = "{getattr(self, "id")}"_id;']
+
+        return lines
 
 
 def construct(xml, selectors: list) -> Widget:
@@ -190,4 +222,7 @@ for i in [
     for i in Path(__file__).parent.iterdir()
     if i.name != '__init__.py' and not i.is_dir()
 ]:
-    __import__(f'xmltree.widgets.{i}')
+    try:
+        __import__(f'xmltree.widgets.{i}')
+    except ModuleNotFoundError:
+        __import__(f'tools.xmltree.widgets.{i}')

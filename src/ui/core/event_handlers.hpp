@@ -17,6 +17,9 @@
 	inline void FUNC_NAME(std::function<void(T &, const Event &, time_t)> callback) { \
 		Widget::FUNC_NAME([callback](Widget &widget, const Event &event, time_t time) { callback(reinterpret_cast<T &>(widget), event, time); }); \
 	} \
+	inline void FUNC_NAME(std::function<void(T &, const Event &)> callback) { \
+		Widget::FUNC_NAME([callback](Widget &widget, const Event &event, time_t) { callback(reinterpret_cast<T &>(widget), event); }); \
+	} \
 	inline void FUNC_NAME(std::function<void(T &, time_t)> callback) { \
 		Widget::FUNC_NAME([callback](Widget &widget, const Event &, time_t time) { callback(reinterpret_cast<T &>(widget), time); }); \
 	} \

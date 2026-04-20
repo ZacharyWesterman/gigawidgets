@@ -32,7 +32,7 @@ public:
 	 * @param buttonColor The button color.
 	 * @param backgroundColor The background color.
 	 */
-	Keyboard(const GFXfont *font, color_t textColor, color_t buttonColor, color_t backgroundColor);
+	Keyboard(const GFXfont &font, color_t textColor, color_t buttonColor, color_t backgroundColor);
 
 	/**
 	 * @brief Set the font to render text in.

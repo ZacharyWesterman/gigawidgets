@@ -8,7 +8,7 @@ namespace ui {
 /// @brief A shared placeholder text for rendering blank text.
 static const String dummyText("|");
 
-Text::Text(const String &text, const GFXfont *font, color_t color, const Position &pos, const Alignment &align, bool wrap) : text(text), font(font), scale(1), textColor(color), wrap(wrap), Widget(pos, align) {}
+Text::Text(const String &text, const GFXfont &font, color_t color, const Position &pos, const Alignment &align, bool wrap) : text(text), font(&font), scale(1), textColor(color), wrap(wrap), Widget(pos, align) {}
 
 Text::Text(const String &text, fontsize_t scale, color_t color, const Position &pos, const Alignment &align, bool wrap) : text(text), font(nullptr), scale(scale), textColor(color), wrap(wrap), Widget(pos, align) {}
 
@@ -66,12 +66,14 @@ void Text::setWrap(bool wrap) {
 	redrawParent = true;
 }
 
-void Text::setFont(GFXfont *const font) {
-	this->wrap = font;
+void Text::setFont(const GFXfont &font) {
+	this->font = &font;
+	this->scale = 1;
 	redrawParent = true;
 }
 
 void Text::setScale(fontsize_t scale) {
+	this->font = nullptr;
 	this->scale = scale;
 	redrawParent = true;
 }

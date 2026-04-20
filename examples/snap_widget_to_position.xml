@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE body SYSTEM "../tools/xmltree/gigawidgets.dtd">
+<body rotation="270"
+    onhold="[](ui::Body &amp; self, const ui::Event &amp;event) {
+        auto&amp; image = *self.getChild();
+		auto oldPos = image.getPosition();
+		auto targetPos = event.coords[0];
+
+		/* Move to halfway between current and target position */
+		ui::Position newPos = {
+			(oldPos.x + targetPos.x - 0.5) / 2,
+			(oldPos.y + targetPos.y - 0.5) / 2,
+		};
+
+		image.setPosition(newPos);
+	}">
+    <image source="firefox" align="center center" />
+</body>

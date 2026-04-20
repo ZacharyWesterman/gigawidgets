@@ -39,6 +39,6 @@ Keyboard::Keyboard(fontsize_t scale, color_t textColor, color_t buttonColor, col
 	}
 }
 
-Keyboard::Keyboard(const GFXfont *font, color_t textColor, color_t buttonColor, color_t backgroundColor) : Panel(new Column(Size{ui::width(), ui::height() / 2}, {0, 0}, {ALIGN_LEFT, ALIGN_BOTTOM}, {10_px}), backgroundColor) {}
+Keyboard::Keyboard(const GFXfont &font, color_t textColor, color_t buttonColor, color_t backgroundColor) : Panel(new Column(Size{ui::width(), ui::height() / 2}, {0, 0}, {ALIGN_LEFT, ALIGN_BOTTOM}, {10_px}), backgroundColor) {}
 
 } // namespace ui

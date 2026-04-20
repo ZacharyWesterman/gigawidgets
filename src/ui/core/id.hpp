@@ -2,6 +2,7 @@
 #pragma once
 
 #include <cinttypes>
+#include <cstddef>
 
 namespace ui {
 
@@ -100,5 +101,18 @@ constexpr inline id_t id(const char *str) noexcept {
  * @return The computed CRC32 hash.
  */
 inline constexpr ui::id_t operator"" _id(const char *str) noexcept {
+	return ui::id(str);
+}
+
+/**
+ * @brief The constexpr conversion operator for IDs.
+ *
+ * This operator allows writing expressions like `"some text"_id`,
+ * which automatically gets converted to an integer at compile time.
+ *
+ * @param str The string to hash.
+ * @return The computed CRC32 hash.
+ */
+inline constexpr ui::id_t operator"" _id(const char *str, size_t) noexcept {
 	return ui::id(str);
 }

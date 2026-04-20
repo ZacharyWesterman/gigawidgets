@@ -36,7 +36,7 @@ class Input(Widget):
             )
 
         args = [
-            f'&{self.font}' if self.font else (
+            self.font if self.font else (
                 self.scale if self.scale else 1),
             self.text_color,
             self.color,
@@ -52,6 +52,8 @@ class Input(Widget):
 
         if self.value != '':
             text += [f'{self.var}->setText("{self.value}");']
+
+        text += self.shared_settings
 
         return '\n'.join(text)
 

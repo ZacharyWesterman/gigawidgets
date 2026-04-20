@@ -118,53 +118,45 @@ constexpr uint16_t operator""_in(unsigned long long inches) {
  * @brief The custom units operator for view width percent.
  *
  * This operator allows for writing sizes like `12.5_vw`,
- * which will automatically be converted to pixels at compile time.
+ * which will automatically be converted to *12.5% of the display width* at run time.
  *
  * @param view_width_percent The size in view width percent.
  * @return The size in pixels.
  */
-constexpr uint16_t operator""_vw(long double view_width_percent) {
-	return view_width_percent * GIGA_DISPLAY_W_PX / 100;
-}
+uint16_t operator""_vw(long double view_width_percent);
 
 /**
  * @brief The custom units operator for view width percent.
  *
  * This operator allows for writing sizes like `25_vw`,
- * which will automatically be converted to pixels at compile time.
+ * which will automatically be converted to *25% of the display width* at run time.
  *
  * @param view_width_percent The size in view width percent.
  * @return The size in pixels.
  */
-constexpr uint16_t operator""_vw(unsigned long long view_width_percent) {
-	return view_width_percent * GIGA_DISPLAY_W_PX / 100;
-}
+uint16_t operator""_vw(unsigned long long view_width_percent);
 
 /**
  * @brief The custom units operator for view height percent.
  *
  * This operator allows for writing sizes like `12.5_vh`,
- * which will automatically be converted to pixels at compile time.
+ * which will automatically be converted to *12.5% of the display height* at run time.
  *
  * @param view_height_percent The size in view height percent.
  * @return The size in pixels.
  */
-constexpr uint16_t operator""_vh(long double view_height_percent) {
-	return view_height_percent * GIGA_DISPLAY_H_PX / 100;
-}
+uint16_t operator""_vh(long double view_height_percent);
 
 /**
  * @brief The custom units operator for view height percent.
  *
  * This operator allows for writing sizes like `25_vh`,
- * which will automatically be converted to pixels at compile time.
+ * which will automatically be converted to *25% of the display height* at run time.
  *
  * @param view_height_percent The size in view height percent.
  * @return The size in pixels.
  */
-constexpr uint16_t operator""_vh(unsigned long long view_height_percent) {
-	return view_height_percent * GIGA_DISPLAY_H_PX / 100;
-}
+uint16_t operator""_vh(unsigned long long view_height_percent);
 
 /**
  * @brief The custom units operator for points.
