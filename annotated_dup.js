@@ -6,8 +6,8 @@ var annotated_dup =
         [ "hash32gen< size, size, dummy >", "structui_1_1hash32_1_1hash32gen_3_01size_00_01size_00_01dummy_01_4.html", null ]
       ] ],
       [ "layout", null, [
-        [ "KeyboardLayout", "structui_1_1layout_1_1KeyboardLayout.html", null ],
-        [ "QwertyLayout", "structui_1_1layout_1_1QwertyLayout.html", null ]
+        [ "KeyboardLayout", "structui_1_1layout_1_1KeyboardLayout.html", "structui_1_1layout_1_1KeyboardLayout" ],
+        [ "QwertyLayout", "structui_1_1layout_1_1QwertyLayout.html", "structui_1_1layout_1_1QwertyLayout" ]
       ] ],
       [ "Alignment", "structui_1_1Alignment.html", "structui_1_1Alignment" ],
       [ "Bitmap", "structui_1_1Bitmap.html", "structui_1_1Bitmap" ],

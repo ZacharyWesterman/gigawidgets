@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.6</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.7</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -104,6 +104,8 @@ $(document).ready(function(){initNavTree('structui_1_1layout_1_1KeyboardLayout.h
   <div class="headertitle"><div class="title">ui::layout::KeyboardLayout Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="keyboard__layout_8hpp_source.html">keyboard_layout.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ui::layout::KeyboardLayout:</div>
 <div class="dyncontent">
@@ -116,16 +118,163 @@ Inheritance diagram for ui::layout::KeyboardLayout:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aee8d7e1fd31e5f05d57d09068d4c2e9a" id="r_aee8d7e1fd31e5f05d57d09068d4c2e9a"><td class="memItemLeft" align="right" valign="top"><a id="aee8d7e1fd31e5f05d57d09068d4c2e9a" name="aee8d7e1fd31e5f05d57d09068d4c2e9a"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>row1</b> (bool upper, bool alt) const =0</td></tr>
+<tr class="memitem:aee8d7e1fd31e5f05d57d09068d4c2e9a" id="r_aee8d7e1fd31e5f05d57d09068d4c2e9a"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1layout_1_1KeyboardLayout.html#aee8d7e1fd31e5f05d57d09068d4c2e9a">row1</a> (bool upper, bool alt) const =0</td></tr>
+<tr class="memdesc:aee8d7e1fd31e5f05d57d09068d4c2e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first keyboard row.  <br /></td></tr>
 <tr class="separator:aee8d7e1fd31e5f05d57d09068d4c2e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9df35dbffed4bf30624fa802e2eb904a" id="r_a9df35dbffed4bf30624fa802e2eb904a"><td class="memItemLeft" align="right" valign="top"><a id="a9df35dbffed4bf30624fa802e2eb904a" name="a9df35dbffed4bf30624fa802e2eb904a"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>row2</b> (bool upper, bool alt) const =0</td></tr>
+<tr class="memitem:a9df35dbffed4bf30624fa802e2eb904a" id="r_a9df35dbffed4bf30624fa802e2eb904a"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1layout_1_1KeyboardLayout.html#a9df35dbffed4bf30624fa802e2eb904a">row2</a> (bool upper, bool alt) const =0</td></tr>
+<tr class="memdesc:a9df35dbffed4bf30624fa802e2eb904a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the second keyboard row.  <br /></td></tr>
 <tr class="separator:a9df35dbffed4bf30624fa802e2eb904a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad42a0b4a499ae72e80e05407095f42c5" id="r_ad42a0b4a499ae72e80e05407095f42c5"><td class="memItemLeft" align="right" valign="top"><a id="ad42a0b4a499ae72e80e05407095f42c5" name="ad42a0b4a499ae72e80e05407095f42c5"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>row3</b> (bool upper, bool alt) const =0</td></tr>
+<tr class="memitem:ad42a0b4a499ae72e80e05407095f42c5" id="r_ad42a0b4a499ae72e80e05407095f42c5"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui_1_1layout_1_1KeyboardLayout.html#ad42a0b4a499ae72e80e05407095f42c5">row3</a> (bool upper, bool alt) const =0</td></tr>
+<tr class="memdesc:ad42a0b4a499ae72e80e05407095f42c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the third keyboard row.  <br /></td></tr>
 <tr class="separator:ad42a0b4a499ae72e80e05407095f42c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A generic interface for keyboard layouts. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aee8d7e1fd31e5f05d57d09068d4c2e9a" name="aee8d7e1fd31e5f05d57d09068d4c2e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8d7e1fd31e5f05d57d09068d4c2e9a">&#9670;&#160;</a></span>row1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char * ui::layout::KeyboardLayout::row1 </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>alt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the first keyboard row. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">upper</td><td>Whether to return shift/uppercase keys. </td></tr>
+    <tr><td class="paramname">alt</td><td>Whether to return alt keys. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of characters to display as keyboard buttons. </dd></dl>
+
+<p>Implemented in <a class="el" href="structui_1_1layout_1_1QwertyLayout.html#a0c50485933201ed08ccf5c490a5bbe8a">ui::layout::QwertyLayout</a>.</p>
+
+</div>
+</div>
+<a id="a9df35dbffed4bf30624fa802e2eb904a" name="a9df35dbffed4bf30624fa802e2eb904a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df35dbffed4bf30624fa802e2eb904a">&#9670;&#160;</a></span>row2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char * ui::layout::KeyboardLayout::row2 </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>alt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the second keyboard row. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">upper</td><td>Whether to return shift/uppercase keys. </td></tr>
+    <tr><td class="paramname">alt</td><td>Whether to return alt keys. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of characters to display as keyboard buttons. </dd></dl>
+
+<p>Implemented in <a class="el" href="structui_1_1layout_1_1QwertyLayout.html#ada9ea458847a337f787529734e7c6d67">ui::layout::QwertyLayout</a>.</p>
+
+</div>
+</div>
+<a id="ad42a0b4a499ae72e80e05407095f42c5" name="ad42a0b4a499ae72e80e05407095f42c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42a0b4a499ae72e80e05407095f42c5">&#9670;&#160;</a></span>row3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char * ui::layout::KeyboardLayout::row3 </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>alt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the third keyboard row. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">upper</td><td>Whether to return shift/uppercase keys. </td></tr>
+    <tr><td class="paramname">alt</td><td>Whether to return alt keys. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of characters to display as keyboard buttons. </dd></dl>
+
+<p>Implemented in <a class="el" href="structui_1_1layout_1_1QwertyLayout.html#af3e937a25431cad517c85b6a8aaf227c">ui::layout::QwertyLayout</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/ui/<a class="el" href="keyboard__layout_8hpp_source.html">keyboard_layout.hpp</a></li>
 </ul>
