@@ -1,4 +1,4 @@
-/// @file keyboard_layout.class
+/// @file keyboard_layout.hpp
 #pragma once
 
 namespace ui {
