@@ -6,7 +6,7 @@ namespace ui {
 namespace layout {
 
 /**
- * The QWERTY keyboard layout.
+ * @brief The QWERTY keyboard layout.
  */
 struct QwertyLayout : public KeyboardLayout {
 	const char *row1(bool upper, bool alt) const override;

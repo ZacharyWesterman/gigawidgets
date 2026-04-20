@@ -5,7 +5,7 @@ namespace ui {
 namespace layout {
 
 /**
- * A generic interface for keyboard layouts.
+ * @brief A generic interface for keyboard layouts.
  */
 struct KeyboardLayout {
 	/**
