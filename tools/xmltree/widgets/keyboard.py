@@ -4,6 +4,7 @@ from . import Widget, register
 from ..datatypes import (
     Color,
     Font,
+    KeyboardLayout,
 )
 from ..logging import warn
 
@@ -12,9 +13,12 @@ from ..logging import warn
 class Keyboard(Widget):
     font: Optional[Font]
     scale: Optional[int]
+
     color: Optional[Color] = Color('light-gray')
     background_color: Optional[Color] = Color('gray')
     text_color: Optional[Color] = Color('black')
+    layout: Optional[KeyboardLayout] = KeyboardLayout('qwerty')
+
     child_count = 0
 
     def __str__(self) -> str:
@@ -24,6 +28,7 @@ class Keyboard(Widget):
             )
 
         args = [
+            self.layout,
             self.font if self.font else (
                 self.scale if self.scale else 1),
             self.text_color,
@@ -39,4 +44,7 @@ class Keyboard(Widget):
         return '\n'.join(text)
 
     def includes(self) -> list[str]:
-        return self.font.includes() if self.font else []
+        icl = self.font.includes() if self.font else []
+        icl += self.layout.includes() if self.layout else []
+
+        return icl
