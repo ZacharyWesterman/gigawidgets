@@ -207,6 +207,7 @@ var NAVTREEINDEX0 =
 "color_8hpp_source.html":[2,0,0,0,1,3],
 "column_8hpp.html":[2,0,0,0,8],
 "column_8hpp_source.html":[2,0,0,0,8],
+"compressed__transparency__map_8hpp.html":[2,0,0,0,1,0,2],
 "compressed__transparency__map_8hpp_source.html":[2,0,0,0,1,0,2],
 "coords_8hpp.html":[2,0,0,0,1,4],
 "coords_8hpp.html#af6ea83be9fbba88ce0c8f9e37bd0c3d4":[2,0,0,0,1,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "display_8hpp.html#ace709437101ad11c336fab6de6537047":[2,0,0,0,1,5,15],
 "display_8hpp.html#adf7c58b582249debe5319733ce915868":[2,0,0,0,1,5,12],
 "display_8hpp_source.html":[2,0,0,0,1,5],
-"event_8hpp.html":[2,0,0,0,1,6],
-"event_8hpp.html#a9471404f6db30dd75601ebba589c3b0e":[2,0,0,0,1,6,1]
+"event_8hpp.html":[2,0,0,0,1,6]
 };
