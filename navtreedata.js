@@ -52,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "alignment_8hpp.html",
-"display_8hpp.html#adf7c58b582249debe5319733ce915868"
+"event_8hpp.html#a9471404f6db30dd75601ebba589c3b0ea0421bfda562be31a7a39c06915d1ab8f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

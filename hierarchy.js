@@ -31,6 +31,9 @@ var hierarchy =
     [ "ui::Event", "structui_1_1Event.html", null ],
     [ "ui::hash32::hash32gen< size, idx, dummy >", "structui_1_1hash32_1_1hash32gen.html", null ],
     [ "ui::hash32::hash32gen< size, size, dummy >", "structui_1_1hash32_1_1hash32gen_3_01size_00_01size_00_01dummy_01_4.html", null ],
+    [ "ui::layout::KeyboardLayout", "structui_1_1layout_1_1KeyboardLayout.html", [
+      [ "ui::layout::QwertyLayout", "structui_1_1layout_1_1QwertyLayout.html", null ]
+    ] ],
     [ "ui::Padding", "structui_1_1Padding.html", null ],
     [ "ui::Position", "structui_1_1Position.html", null ],
     [ "ui::Renderable", "structui_1_1Renderable.html", [

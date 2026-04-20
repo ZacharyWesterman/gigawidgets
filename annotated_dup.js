@@ -5,6 +5,10 @@ var annotated_dup =
         [ "hash32gen", "structui_1_1hash32_1_1hash32gen.html", null ],
         [ "hash32gen< size, size, dummy >", "structui_1_1hash32_1_1hash32gen_3_01size_00_01size_00_01dummy_01_4.html", null ]
       ] ],
+      [ "layout", null, [
+        [ "KeyboardLayout", "structui_1_1layout_1_1KeyboardLayout.html", null ],
+        [ "QwertyLayout", "structui_1_1layout_1_1QwertyLayout.html", null ]
+      ] ],
       [ "Alignment", "structui_1_1Alignment.html", "structui_1_1Alignment" ],
       [ "Bitmap", "structui_1_1Bitmap.html", "structui_1_1Bitmap" ],
       [ "Blink", "classui_1_1Blink.html", "classui_1_1Blink" ],
