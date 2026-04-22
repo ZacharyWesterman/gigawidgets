@@ -4,7 +4,9 @@
 namespace ui {
 
 SingleChildWidget::SingleChildWidget(Widget *const child, const Position &pos, const Alignment &align, const Padding &padding) : child(child), Widget(pos, align, padding) {
-	child->setParent(this);
+	if (child) {
+		child->setParent(this);
+	}
 }
 
 SingleChildWidget::~SingleChildWidget() {
@@ -21,7 +23,9 @@ void SingleChildWidget::drawDone() {
 }
 
 void SingleChildWidget::setChild(Widget *const child) {
-	delete this->child;
+	if (this->child) {
+		delete this->child;
+	}
 	this->child = child;
 	child->setParent(this);
 }
