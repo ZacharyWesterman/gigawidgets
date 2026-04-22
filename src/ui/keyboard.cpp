@@ -25,7 +25,7 @@ void Keyboard::rebuild(std::function<Text *(char, color_t)> makeText) {
 	auto column = new Column(Size{width, height}, {0, 0}, {ALIGN_CENTER, ALIGN_TOP}, {0, 0});
 	setChild(column);
 
-	const auto buttonWidth = std::min(60, width / 10);
+	const auto buttonWidth = std::min(60, width / 11 - 2);
 	const int buttonHeight = std::min(60, height / 4);
 
 	// First row doesn't have any special buttons, just spread it out in the middle
