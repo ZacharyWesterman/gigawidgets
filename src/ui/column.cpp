@@ -58,8 +58,8 @@ bool Column::update(time_t time) {
 		}
 		if (children[i]->redrawRequested() || children[i]->needsRedraw()) {
 			calcChildBounds(i);
-			redrawSelf = true;
-			if (children[i]->needsRedraw()) {
+			if (children[i]->redrawRequested()) {
+				redrawSelf = true;
 				redrawParent = true;
 			}
 		}
