@@ -8,6 +8,7 @@ var classui_1_1MultiChildWidget =
     [ "getWidgetById", "classui_1_1MultiChildWidget.html#af82cff98217280890c1db585e399e949", null ],
     [ "handleEvent", "classui_1_1MultiChildWidget.html#a77a2e75bf3852e0745a2ac69b1d2b434", null ],
     [ "push", "classui_1_1MultiChildWidget.html#a54585a8f01b07afdbaf8be012e3b72ee", null ],
-    [ "update", "classui_1_1MultiChildWidget.html#afed1d53cfeb599e1074b63bec3ee838e", null ],
+    [ "render", "classui_1_1MultiChildWidget.html#a3eab6de8befd467d76f8f01017f0c79f", null ],
+    [ "update", "classui_1_1MultiChildWidget.html#a2fbd75152c5b746bae778cb366b1b0e1", null ],
     [ "children", "classui_1_1MultiChildWidget.html#a41498a1a22d9b68fe61141031311b770", null ]
 ];

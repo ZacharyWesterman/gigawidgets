@@ -5,5 +5,5 @@ var classui_1_1Blink =
     [ "draw", "classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199", null ],
     [ "drawDone", "classui_1_1Blink.html#a4cf3346efe547b05b471aa4fc2d1dc95", null ],
     [ "size", "classui_1_1Blink.html#aa08420808c151a180dbf3485e7b579c8", null ],
-    [ "update", "classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695", null ]
+    [ "update", "classui_1_1Blink.html#a4baac8f59fa105a6a9e3453873120669", null ]
 ];

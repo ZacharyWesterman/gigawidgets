@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.9</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.14</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -143,13 +143,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e13c8bfff3f6638dbfd813fbfd530de" id="r_a4e13c8bfff3f6638dbfd813fbfd530de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a4e13c8bfff3f6638dbfd813fbfd530de">draw</a> () const =0</td></tr>
 <tr class="memdesc:a4e13c8bfff3f6638dbfd813fbfd530de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the widget to the screen.  <br /></td></tr>
 <tr class="separator:a4e13c8bfff3f6638dbfd813fbfd530de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e3bd64bee5a98a8916a88961d8ec27" id="r_ac5e3bd64bee5a98a8916a88961d8ec27"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#ac5e3bd64bee5a98a8916a88961d8ec27">render</a> (bool force) const</td></tr>
+<tr class="memdesc:ac5e3bd64bee5a98a8916a88961d8ec27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively render this widget and any child widgets that need it.  <br /></td></tr>
+<tr class="separator:ac5e3bd64bee5a98a8916a88961d8ec27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c972f87a8311912094924be09218e26" id="r_a3c972f87a8311912094924be09218e26"><td class="memItemLeft" align="right" valign="top"><a id="a3c972f87a8311912094924be09218e26" name="a3c972f87a8311912094924be09218e26"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Widget</b> ()</td></tr>
 <tr class="memdesc:a3c972f87a8311912094924be09218e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default widget destructor. <br /></td></tr>
 <tr class="separator:a3c972f87a8311912094924be09218e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c2a521304a419ca57cce6e0730aa332" id="r_a3c2a521304a419ca57cce6e0730aa332"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a3c2a521304a419ca57cce6e0730aa332">update</a> (time_t time)</td></tr>
-<tr class="memdesc:a3c2a521304a419ca57cce6e0730aa332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update any internal state of the widget, and check if it needs to be re-rendered.  <br /></td></tr>
-<tr class="separator:a3c2a521304a419ca57cce6e0730aa332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661a7c43850204eafc9556b299288365" id="r_a661a7c43850204eafc9556b299288365"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a661a7c43850204eafc9556b299288365">update</a> (time_t time)</td></tr>
+<tr class="memdesc:a661a7c43850204eafc9556b299288365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update any internal state of the widget, and check if it needs to be re-rendered.  <br /></td></tr>
+<tr class="separator:a661a7c43850204eafc9556b299288365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46e62c602135d86aaa99788bbf306a49" id="r_a46e62c602135d86aaa99788bbf306a49"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structui_1_1Size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49">size</a> () const =0</td></tr>
 <tr class="memdesc:a46e62c602135d86aaa99788bbf306a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the widget.  <br /></td></tr>
 <tr class="separator:a46e62c602135d86aaa99788bbf306a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,9 +168,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Widget</b> ()</td
 <tr class="memitem:a6835f31d0c1f59064f6e340d2b3a8d1a" id="r_a6835f31d0c1f59064f6e340d2b3a8d1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6835f31d0c1f59064f6e340d2b3a8d1a">setAlign</a> (const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align)</td></tr>
 <tr class="memdesc:a6835f31d0c1f59064f6e340d2b3a8d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the alignment of this widget.  <br /></td></tr>
 <tr class="separator:a6835f31d0c1f59064f6e340d2b3a8d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add6812540626995a7b35ee0b0a7c6338" id="r_add6812540626995a7b35ee0b0a7c6338"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#add6812540626995a7b35ee0b0a7c6338">redrawRequested</a> () const</td></tr>
-<tr class="memdesc:add6812540626995a7b35ee0b0a7c6338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this widget has requested for the parent widget to be redrawn.  <br /></td></tr>
-<tr class="separator:add6812540626995a7b35ee0b0a7c6338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4997dc0a72c4f05a365ad62d687ece40" id="r_a4997dc0a72c4f05a365ad62d687ece40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a4997dc0a72c4f05a365ad62d687ece40">requestRedraw</a> ()</td></tr>
+<tr class="memdesc:a4997dc0a72c4f05a365ad62d687ece40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell this widget that it needs to be re-rendered.  <br /></td></tr>
+<tr class="separator:a4997dc0a72c4f05a365ad62d687ece40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ccd51c796ebe84f8b894a74cbacc7f" id="r_a49ccd51c796ebe84f8b894a74cbacc7f"><td class="memItemLeft" align="right" valign="top"><a id="a49ccd51c796ebe84f8b894a74cbacc7f" name="a49ccd51c796ebe84f8b894a74cbacc7f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>requestParentRedraw</b> ()</td></tr>
+<tr class="separator:a49ccd51c796ebe84f8b894a74cbacc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6767b167edd1c9cda348758abd409c6d" id="r_a6767b167edd1c9cda348758abd409c6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6767b167edd1c9cda348758abd409c6d">needsRedraw</a> () const</td></tr>
 <tr class="memdesc:a6767b167edd1c9cda348758abd409c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this widget has requested to be redrawn.  <br /></td></tr>
 <tr class="separator:a6767b167edd1c9cda348758abd409c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -305,10 +311,6 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="structui_1_1Padding.html">Padding</a>&#160;</td><td class="memItemRight" valign="bottom"><b>padding</b></td></tr>
 <tr class="memdesc:a7aacf2d0dd89b4dd3eacad1965e4b56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The padding that will be applied to any child widgets. <br /></td></tr>
 <tr class="separator:a7aacf2d0dd89b4dd3eacad1965e4b56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20543186dd7ef34d391371b08abf15c2" id="r_a20543186dd7ef34d391371b08abf15c2"><td class="memItemLeft" align="right" valign="top"><a id="a20543186dd7ef34d391371b08abf15c2" name="a20543186dd7ef34d391371b08abf15c2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawParent</b></td></tr>
-<tr class="memdesc:a20543186dd7ef34d391371b08abf15c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, force a redraw of the parent and any of its child widgets. <br /></td></tr>
-<tr class="separator:a20543186dd7ef34d391371b08abf15c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39a9cb027602e627af0485e8227663ee" id="r_a39a9cb027602e627af0485e8227663ee"><td class="memItemLeft" align="right" valign="top"><a id="a39a9cb027602e627af0485e8227663ee" name="a39a9cb027602e627af0485e8227663ee"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></tr>
 <tr class="memdesc:a39a9cb027602e627af0485e8227663ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, force a redraw of this widget and any child widgets. <br /></td></tr>
@@ -417,7 +419,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </div><div class="memdoc">
 
 <p>Render the widget to the screen. </p>
-<p>This only gets called when widgets indicate that a redraw is needed of either themselves or their parents. Widgets that implement this method should take care to render as little as they can get away with, to help performance. </p>
+<p>This only gets called when widgets indicate that a redraw is needed of either themselves or their parents. Widgets that implement this method should <b>only</b> render graphics specific to this widget, not any children. </p>
 
 <p>Implemented in <a class="el" href="classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199">ui::Blink</a>, <a class="el" href="classui_1_1Body.html#ab3d117b82577c54ddf7a672081b6ccff">ui::Body</a>, <a class="el" href="classui_1_1Box.html#a0574b19b94af64731ef236a49a1fb0af">ui::Box</a>, <a class="el" href="classui_1_1MultiChildWidget.html#a11ce6ccfcefa02501602a474bfe22b5d">ui::MultiChildWidget</a>, <a class="el" href="classui_1_1Image.html#a279edf8f3da547b5e12262c5e2e75475">ui::Image</a>, <a class="el" href="classui_1_1Input.html#ac7ebefb50393d05cc5c7eb210c588aa4">ui::Input</a>, <a class="el" href="classui_1_1Panel.html#aba97ec14b02c86ce55fd3e8018d0fcca">ui::Panel</a>, and <a class="el" href="classui_1_1Text.html#aeee84bcdebcba6d7c1f6bf8b98d24570">ui::Text</a>.</p>
 
@@ -800,8 +802,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 
 </div>
 </div>
-<a id="add6812540626995a7b35ee0b0a7c6338" name="add6812540626995a7b35ee0b0a7c6338"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add6812540626995a7b35ee0b0a7c6338">&#9670;&#160;</a></span>redrawRequested()</h2>
+<a id="ac5e3bd64bee5a98a8916a88961d8ec27" name="ac5e3bd64bee5a98a8916a88961d8ec27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e3bd64bee5a98a8916a88961d8ec27">&#9670;&#160;</a></span>render()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -810,10 +812,47 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ui::Widget::redrawRequested </td>
+          <td class="memname">virtual void ui::Widget::render </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Recursively render this widget and any child widgets that need it. </p>
+<p>This member function does not directly draw graphics to the screen, instead it decides whether this widget will get redrawn based on its current state and that of any parents, and if needed, redraw it and any child widgets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>Force this widget to redraw due to parents being redrawn. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classui_1_1MultiChildWidget.html#a3eab6de8befd467d76f8f01017f0c79f">ui::MultiChildWidget</a>, and <a class="el" href="classui_1_1SingleChildWidget.html#a3838c127e700a1ffc693f7b113aee073">ui::SingleChildWidget</a>.</p>
+
+</div>
+</div>
+<a id="a4997dc0a72c4f05a365ad62d687ece40" name="a4997dc0a72c4f05a365ad62d687ece40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4997dc0a72c4f05a365ad62d687ece40">&#9670;&#160;</a></span>requestRedraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Widget::requestRedraw </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -823,8 +862,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 </table>
 </div><div class="memdoc">
 
-<p>Check if this widget has requested for the parent widget to be redrawn. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if this widget has requested to redraw the parent, false otherwise. </dd></dl>
+<p>Tell this widget that it needs to be re-rendered. </p>
+<p>This is usually called by a child widget when it moves or otherwise needs its background to be redrawn. </p>
 
 </div>
 </div>
@@ -953,8 +992,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 
 </div>
 </div>
-<a id="a3c2a521304a419ca57cce6e0730aa332" name="a3c2a521304a419ca57cce6e0730aa332"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c2a521304a419ca57cce6e0730aa332">&#9670;&#160;</a></span>update()</h2>
+<a id="a661a7c43850204eafc9556b299288365" name="a661a7c43850204eafc9556b299288365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661a7c43850204eafc9556b299288365">&#9670;&#160;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -963,7 +1002,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool ui::Widget::update </td>
+          <td class="memname">virtual void ui::Widget::update </td>
           <td>(</td>
           <td class="paramtype">time_t&#160;</td>
           <td class="paramname"><em>time</em></td><td>)</td>
@@ -984,9 +1023,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if this widget needs to be re-rendered. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classui_1_1Column.html#aef24679c1109a70a282e58d09b236b85">ui::Column</a>, <a class="el" href="classui_1_1Input.html#afe4554d1fa0e407853352433a54cbeb7">ui::Input</a>, <a class="el" href="classui_1_1Row.html#a95d1a83c07f5c1452e4a91b2bacd5aa7">ui::Row</a>, <a class="el" href="classui_1_1Blink.html#ac33e28c4921a6b8e59b6eadc37989695">ui::Blink</a>, <a class="el" href="classui_1_1MultiChildWidget.html#afed1d53cfeb599e1074b63bec3ee838e">ui::MultiChildWidget</a>, <a class="el" href="classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf">ui::SingleChildWidget</a>, <a class="el" href="classui_1_1Image.html#a36a2f0cd3a0b2aa5ffd2f7ce45957042">ui::Image</a>, and <a class="el" href="classui_1_1Panel.html#a5e23cddfd13824a2f09bc6c08600e993">ui::Panel</a>.</p>
+<p>Reimplemented in <a class="el" href="classui_1_1Column.html#a90700ec16dc61e12b3119d0412f9e48e">ui::Column</a>, <a class="el" href="classui_1_1Input.html#a8eb81b048040f0eff8bd67bd22b1ba5c">ui::Input</a>, <a class="el" href="classui_1_1Row.html#abf2fa67f5e9a1ab9da4bd0700192ea42">ui::Row</a>, <a class="el" href="classui_1_1Blink.html#a4baac8f59fa105a6a9e3453873120669">ui::Blink</a>, <a class="el" href="classui_1_1Box.html#a3f69291b95f69f341e977eb57c8771e4">ui::Box</a>, <a class="el" href="classui_1_1MultiChildWidget.html#a2fbd75152c5b746bae778cb366b1b0e1">ui::MultiChildWidget</a>, <a class="el" href="classui_1_1SingleChildWidget.html#a9548b5035b9b0805fc20e8f69f621af3">ui::SingleChildWidget</a>, <a class="el" href="classui_1_1Image.html#a66430904e800b2aeb63b7bf41198c2af">ui::Image</a>, and <a class="el" href="classui_1_1Panel.html#af2ab85d5082305c0cf996e0582755cf7">ui::Panel</a>.</p>
 
 </div>
 </div>

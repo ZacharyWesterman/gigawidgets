@@ -9,5 +9,5 @@ var classui_1_1Input =
     [ "nearestCursor", "classui_1_1Input.html#a65c6609717b76bc9addd63459fdc9ec3", null ],
     [ "setCursor", "classui_1_1Input.html#a200529834512ccc7c07475835960aee8", null ],
     [ "setText", "classui_1_1Input.html#a8de93e6a58d5855735fde37d5f0e56b3", null ],
-    [ "update", "classui_1_1Input.html#afe4554d1fa0e407853352433a54cbeb7", null ]
+    [ "update", "classui_1_1Input.html#a8eb81b048040f0eff8bd67bd22b1ba5c", null ]
 ];

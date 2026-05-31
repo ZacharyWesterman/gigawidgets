@@ -19,15 +19,15 @@ var classui_1_1Widget =
     [ "onrelease", "classui_1_1Widget.html#a9b9dec5df468434314403ca3cc872d8c", null ],
     [ "parentBounds", "classui_1_1Widget.html#a3ce26a2110d44208efd1095efa95349b", null ],
     [ "press", "classui_1_1Widget.html#a0fb9029ea00054ed5f6c6d751616352e", null ],
-    [ "redrawRequested", "classui_1_1Widget.html#add6812540626995a7b35ee0b0a7c6338", null ],
     [ "release", "classui_1_1Widget.html#a7f41f588697ffddb9b97b4706a2eff8c", null ],
+    [ "render", "classui_1_1Widget.html#ac5e3bd64bee5a98a8916a88961d8ec27", null ],
+    [ "requestRedraw", "classui_1_1Widget.html#a4997dc0a72c4f05a365ad62d687ece40", null ],
     [ "setAlign", "classui_1_1Widget.html#a6835f31d0c1f59064f6e340d2b3a8d1a", null ],
     [ "setParent", "classui_1_1Widget.html#afd0e7babb90d380238e17e4be75b7481", null ],
     [ "setPosition", "classui_1_1Widget.html#a01793b1e54f9dead26bb729d00cb5a00", null ],
     [ "size", "classui_1_1Widget.html#a46e62c602135d86aaa99788bbf306a49", null ],
-    [ "update", "classui_1_1Widget.html#a3c2a521304a419ca57cce6e0730aa332", null ],
+    [ "update", "classui_1_1Widget.html#a661a7c43850204eafc9556b299288365", null ],
     [ "id", "classui_1_1Widget.html#ae518b2a8ded4eb00d15291c2d000f6ba", null ],
     [ "padding", "classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a", null ],
-    [ "redrawParent", "classui_1_1Widget.html#a20543186dd7ef34d391371b08abf15c2", null ],
     [ "redrawSelf", "classui_1_1Widget.html#a39a9cb027602e627af0485e8227663ee", null ]
 ];

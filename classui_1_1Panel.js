@@ -7,5 +7,5 @@ var classui_1_1Panel =
     [ "setBorderRadius", "classui_1_1Panel.html#abf10a1f5d29d64d0dcb474c6e103c9b5", null ],
     [ "setColor", "classui_1_1Panel.html#a5c4d2bf8b31913fda5d537dc4893c3f3", null ],
     [ "size", "classui_1_1Panel.html#a799137c43b637be150fd24f89fcb689f", null ],
-    [ "update", "classui_1_1Panel.html#a5e23cddfd13824a2f09bc6c08600e993", null ]
+    [ "update", "classui_1_1Panel.html#af2ab85d5082305c0cf996e0582755cf7", null ]
 ];

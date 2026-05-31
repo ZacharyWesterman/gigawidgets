@@ -7,8 +7,9 @@ var classui_1_1SingleChildWidget =
     [ "getChild", "classui_1_1SingleChildWidget.html#abec513eacd8e60c2b33bbe9611281053", null ],
     [ "getWidgetById", "classui_1_1SingleChildWidget.html#a3014567eea417599b49cd8bd2fcd98ca", null ],
     [ "handleEvent", "classui_1_1SingleChildWidget.html#a98bd961725f4c41036dca844a82ce448", null ],
+    [ "render", "classui_1_1SingleChildWidget.html#a3838c127e700a1ffc693f7b113aee073", null ],
     [ "setChild", "classui_1_1SingleChildWidget.html#aeda011e657a52ee632690111cd99f03c", null ],
     [ "size", "classui_1_1SingleChildWidget.html#a7da4c395823d09b753a26c746edfd0a6", null ],
-    [ "update", "classui_1_1SingleChildWidget.html#a927ec2ad9d6b72051aa18eccc2f0b2bf", null ],
+    [ "update", "classui_1_1SingleChildWidget.html#a9548b5035b9b0805fc20e8f69f621af3", null ],
     [ "child", "classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5", null ]
 ];
