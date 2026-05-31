@@ -151,7 +151,9 @@ public:
 	}
 
 	inline void requestParentRedraw() {
-		requestParentRedraw();
+		if (parent) {
+			parent->requestRedraw();
+		}
 	}
 
 	/**
