@@ -13,6 +13,15 @@ MultiChildWidget::~MultiChildWidget() {
 	}
 }
 
+void MultiChildWidget::render(bool force) const {
+	Widget::render(force);
+	for (auto child : children) {
+		if (child) {
+			child->render(force || redrawSelf);
+		}
+	}
+}
+
 void MultiChildWidget::drawDone() {
 	Widget::drawDone();
 	for (auto child : children) {
@@ -56,21 +65,14 @@ bool MultiChildWidget::update(time_t time_ms) {
 	for (auto child : children) {
 		if (child) {
 			updated |= child->update(time_ms);
-			if (child->redrawRequested() || rotationChanged()) {
-				redrawSelf = true;
-			}
 		}
 	}
 
-	return updated || redrawSelf || redrawParent;
+	return updated || redrawSelf;
 }
 
 void MultiChildWidget::draw() const {
-	for (auto child : children) {
-		if (child && (redrawSelf || redrawParent || child->needsRedraw())) {
-			child->draw();
-		}
-	}
+	// No specific graphics to draw here.
 }
 
 #ifdef DEBUG

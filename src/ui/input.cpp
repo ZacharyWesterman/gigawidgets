@@ -79,7 +79,6 @@ void Input::draw() const {
 
 bool Input::update(time_t time) {
 	const bool updated = Panel::update(time);
-	redrawSelf = child->redrawRequested();
 
 	if (time - lastRender >= 500) {
 		// Update the cursor, but don't force

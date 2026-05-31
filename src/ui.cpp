@@ -91,11 +91,10 @@ void render(bool block) {
 
 		const auto rChanged = rotationChanged();
 
-		if (rootNode->update(millis()) || rootNode->needsRedraw() || rootNode->redrawRequested() || rChanged) {
-			ui::endWrite();
-			rootNode->draw();
-			rootNode->drawDone();
-		}
+		rootNode->update(millis());
+		ui::endWrite();
+		rootNode->render(rChanged);
+		rootNode->drawDone();
 
 #ifdef DEBUG
 		if (boundingBoxesVisble) {

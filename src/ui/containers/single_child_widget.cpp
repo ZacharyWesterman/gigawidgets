@@ -17,6 +17,13 @@ Size SingleChildWidget::size() const {
 	return child->size();
 }
 
+void SingleChildWidget::render(bool force) const {
+	Widget::render(force);
+	if (child) {
+		child->render(force || redrawSelf);
+	}
+}
+
 void SingleChildWidget::drawDone() {
 	Widget::drawDone();
 	child->drawDone();
@@ -57,9 +64,12 @@ bool SingleChildWidget::handleEvent(Event &event) {
 bool SingleChildWidget::update(time_t time_ms) {
 	auto updated = child->update(time_ms);
 	redrawSelf = child->needsRedraw();
-	redrawParent = child->redrawRequested();
 
-	return updated || redrawSelf || redrawParent || rotationChanged();
+	if (redrawSelf && parent) {
+		parent->requestRedraw();
+	}
+
+	return updated || redrawSelf || rotationChanged();
 }
 
 #ifdef DEBUG

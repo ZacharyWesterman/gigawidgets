@@ -34,9 +34,6 @@ class Widget : public EventHandlers<Widget> {
 	/// @brief The (optional) callback function that gets called when the touchscreen is either released or the user drags outside of this widget's bounds.
 	std::function<void(Widget &element, const Event &event)> callbackBlur;
 
-	/// @brief The parent widget, if any.
-	Widget *parent;
-
 	/// @brief If false, this widget has never been rendered. If true, it's been rendered at least once.
 	bool initialRender;
 	/// @brief The position of this widget relative to its parent.
@@ -47,10 +44,11 @@ class Widget : public EventHandlers<Widget> {
 	bool pressed;
 
 protected:
+	/// @brief The parent widget, if any.
+	Widget *parent;
+
 	/// @brief The padding that will be applied to any child widgets.
 	Padding padding;
-	/// @brief If true, force a redraw of the parent and any of its child widgets.
-	bool redrawParent;
 	/// @brief If true, force a redraw of this widget and any child widgets.
 	bool redrawSelf;
 
@@ -76,10 +74,19 @@ public:
 	 * @brief Render the widget to the screen.
 	 *
 	 * This only gets called when widgets indicate that a redraw is needed of either themselves or their parents.
-	 * Widgets that implement this method should take care to render as little as they can get away with,
-	 * to help performance.
+	 * Widgets that implement this method should **only** render graphics specific to this widget, not any children.
 	 */
 	virtual void draw() const = 0;
+
+	/**
+	 * @brief Recursively render this widget and any child widgets that need it.
+	 *
+	 * This member function does not directly draw graphics to the screen, instead it decides whether this widget will get redrawn
+	 * based on its current state and that of any parents, and if needed, redraw it and any child widgets.
+	 *
+	 * @param force Force this widget to redraw due to parents being redrawn.
+	 */
+	virtual void render(bool force) const;
 
 	/**
 	 * @brief The default widget destructor.
@@ -113,7 +120,9 @@ public:
 	 */
 	inline void setPosition(const Position &pos) {
 		this->pos = pos;
-		redrawParent = true;
+		if (parent) {
+			parent->requestRedraw();
+		}
 	}
 
 	/**
@@ -130,15 +139,19 @@ public:
 	 */
 	inline void setAlign(const Alignment &align) {
 		this->align = align;
-		redrawParent = true;
+		if (parent) {
+			parent->requestRedraw();
+		}
 	}
 
 	/**
-	 * @brief Check if this widget has requested for the parent widget to be redrawn.
-	 * @return True if this widget has requested to redraw the parent, false otherwise.
+	 * @brief Tell this widget that it needs to be re-rendered.
+	 *
+	 * This is usually called by a child widget when it moves or otherwise needs its
+	 * background to be redrawn.
 	 */
-	inline bool redrawRequested() const {
-		return redrawParent;
+	inline void requestRedraw() {
+		redrawSelf = true;
 	}
 
 	/**

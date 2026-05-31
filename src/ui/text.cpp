@@ -54,7 +54,9 @@ Size Text::size() const {
 
 void Text::setText(const String &text) {
 	this->text = text;
-	redrawParent = true;
+	if (parent) {
+		parent->requestRedraw();
+	}
 }
 
 const String &Text::getText() const {
@@ -63,19 +65,25 @@ const String &Text::getText() const {
 
 void Text::setWrap(bool wrap) {
 	this->wrap = wrap;
-	redrawParent = true;
+	if (parent) {
+		parent->requestRedraw();
+	}
 }
 
 void Text::setFont(const GFXfont &font) {
 	this->font = &font;
 	this->scale = 1;
-	redrawParent = true;
+	if (parent) {
+		parent->requestRedraw();
+	}
 }
 
 void Text::setScale(fontsize_t scale) {
 	this->font = nullptr;
 	this->scale = scale;
-	redrawParent = true;
+	if (parent) {
+		parent->requestRedraw();
+	}
 }
 
 void Text::setColor(color_t new_color) {

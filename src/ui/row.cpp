@@ -57,11 +57,10 @@ bool Row::update(time_t time) {
 		if (!children[i]) {
 			continue;
 		}
-		if (children[i]->redrawRequested() || children[i]->needsRedraw()) {
+		if (redrawSelf || children[i]->needsRedraw()) {
 			calcChildBounds(i);
-			if (children[i]->redrawRequested()) {
-				redrawSelf = true;
-				redrawParent = true;
+			if (redrawSelf && parent) {
+				parent->requestRedraw();
 			}
 		}
 	}
@@ -77,13 +76,17 @@ void Row::push(Widget *const child) {
 void Row::setMinWidth(uisize_t minWidth) {
 	minimumWidth = minWidth;
 	redrawSelf = true;
-	redrawParent = true;
+	if (parent) {
+		parent->requestRedraw();
+	}
 }
 
 void Row::setChildAlign(align_t align) {
 	childAlignment = align;
 	redrawSelf = true;
-	redrawParent = true;
+	if (parent) {
+		parent->requestRedraw();
+	}
 }
 
 } // namespace ui
