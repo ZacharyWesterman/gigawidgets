@@ -26,7 +26,7 @@ public:
 
 	void draw() const override;
 	Size size() const override;
-	bool update(time_t time_ms) override;
+	void update(time_t time_ms) override;
 
 	/**
 	 * @brief Set the image shader to a new one that requires re-rendering every frame.

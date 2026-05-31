@@ -31,7 +31,7 @@ public:
 	 */
 	~MultiChildWidget() override;
 
-	bool update(time_t time_ms) override;
+	void update(time_t time_ms) override;
 	void render(bool force) const override;
 	void drawDone() override;
 	void draw() const override;

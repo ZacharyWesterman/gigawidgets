@@ -7,13 +7,8 @@ Widget::Widget(const Position &pos, const Alignment &align, const Padding &paddi
 
 Widget::~Widget() {}
 
-bool Widget::update(time_t time_ms) {
-	if (initialRender) {
-		return rotationChanged() || redrawSelf;
-	}
-
-	initialRender = true;
-	return true;
+void Widget::update(time_t time_ms) {
+	// By default, widgets don't have any updating logic.
 }
 
 void Widget::render(bool force) const {

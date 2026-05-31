@@ -96,9 +96,8 @@ public:
 	/**
 	 * @brief Update any internal state of the widget, and check if it needs to be re-rendered.
 	 * @param time The current time in milliseconds.
-	 * @return True if this widget needs to be re-rendered.
 	 */
-	virtual bool update(time_t time);
+	virtual void update(time_t time);
 
 	/**
 	 * @brief Get the size of the widget.

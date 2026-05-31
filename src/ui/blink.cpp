@@ -10,8 +10,8 @@ void Blink::draw() const {
 	// Nothing specific to draw here, but in render() will decide whether to draw the child.
 }
 
-bool Blink::update(time_t time_ms) {
-	const bool updated = SingleChildWidget::update(time_ms);
+void Blink::update(time_t time_ms) {
+	SingleChildWidget::update(time_ms);
 	if (child->needsRedraw()) {
 		redrawSelf = true;
 		requestParentRedraw();
@@ -23,10 +23,7 @@ bool Blink::update(time_t time_ms) {
 		if (!visible) {
 			requestParentRedraw(); // force-redraw the parent if the child was visible but is now hidden.
 		}
-		return true;
 	}
-
-	return updated;
 }
 
 Size Blink::size() const {

@@ -60,15 +60,12 @@ bool MultiChildWidget::handleEvent(Event &event) {
 	return false;
 }
 
-bool MultiChildWidget::update(time_t time_ms) {
-	bool updated = false;
+void MultiChildWidget::update(time_t time_ms) {
 	for (auto child : children) {
 		if (child) {
-			updated |= child->update(time_ms);
+			child->update(time_ms);
 		}
 	}
-
-	return updated || redrawSelf;
 }
 
 void MultiChildWidget::draw() const {

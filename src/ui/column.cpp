@@ -44,12 +44,8 @@ void Column::calcChildBounds(int index) {
 	child->setBounds(childBounds);
 }
 
-bool Column::update(time_t time) {
-	bool updated = MultiChildWidget::update(time);
-	// Don't recalculate bounds if not needed.
-	if (!updated) {
-		return false;
-	}
+void Column::update(time_t time) {
+	MultiChildWidget::update(time);
 
 	// If a redraw was requested, recalculate the bounds for all the children.
 	if (redrawSelf) {
@@ -61,8 +57,6 @@ bool Column::update(time_t time) {
 			requestParentRedraw();
 		}
 	}
-
-	return true;
 }
 
 void Column::push(Widget *const child) {

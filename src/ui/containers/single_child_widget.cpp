@@ -61,9 +61,8 @@ bool SingleChildWidget::handleEvent(Event &event) {
 	return false;
 }
 
-bool SingleChildWidget::update(time_t time_ms) {
-	auto updated = child->update(time_ms);
-	return updated || redrawSelf || rotationChanged();
+void SingleChildWidget::update(time_t time_ms) {
+	child->update(time_ms);
 }
 
 #ifdef DEBUG

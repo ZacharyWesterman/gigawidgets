@@ -12,10 +12,8 @@ void Panel::draw() const {
 	fillRoundRect(b.min.x, b.min.y, b.max.x - b.min.x, b.max.y - b.min.y, borderRadius, color);
 }
 
-bool Panel::update(time_t time_ms) {
-	auto updated = child->update(time_ms);
-	redrawSelf |= child->needsRedraw();
-	return updated || redrawSelf || rotationChanged();
+void Panel::update(time_t time_ms) {
+	child->update(time_ms);
 }
 
 void Panel::drawDone() {

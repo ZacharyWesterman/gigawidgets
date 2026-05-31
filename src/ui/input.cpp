@@ -77,8 +77,8 @@ void Input::draw() const {
 	}
 }
 
-bool Input::update(time_t time) {
-	const bool updated = Panel::update(time);
+void Input::update(time_t time) {
+	Panel::update(time);
 
 	if (time - lastRender >= 500) {
 		// Update the cursor, but don't force
@@ -87,8 +87,6 @@ bool Input::update(time_t time) {
 		showCursor = !showCursor;
 		redrawSelf = true;
 	}
-
-	return updated || redrawSelf;
 }
 
 void Input::drawCursor() const {
