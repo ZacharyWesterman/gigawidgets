@@ -58,9 +58,7 @@ bool Column::update(time_t time) {
 				continue;
 			}
 			calcChildBounds(i);
-			if (parent) {
-				parent->requestRedraw();
-			}
+			requestParentRedraw();
 		}
 	}
 
@@ -75,17 +73,13 @@ void Column::push(Widget *const child) {
 void Column::setMinHeight(uisize_t minHeight) {
 	minimumHeight = minHeight;
 	redrawSelf = true;
-	if (parent) {
-		parent->requestRedraw();
-	}
+	requestParentRedraw();
 }
 
 void Column::setChildAlign(align_t align) {
 	childAlignment = align;
 	redrawSelf = true;
-	if (parent) {
-		parent->requestRedraw();
-	}
+	requestParentRedraw();
 }
 
 } // namespace ui

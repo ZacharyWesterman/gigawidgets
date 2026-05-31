@@ -14,18 +14,14 @@ bool Blink::update(time_t time_ms) {
 	const bool updated = SingleChildWidget::update(time_ms);
 	if (child->needsRedraw()) {
 		redrawSelf = true;
-		if (parent) {
-			parent->requestRedraw();
-		}
+		requestParentRedraw();
 	}
 
 	if (time_ms - lastRender >= delay) {
 		lastRender = time_ms;
 		visible = !visible;
 		if (!visible) {
-			if (parent) {
-				parent->requestRedraw(); // force-redraw the parent if the child was visible but is now hidden.
-			}
+			requestParentRedraw(); // force-redraw the parent if the child was visible but is now hidden.
 		}
 		return true;
 	}

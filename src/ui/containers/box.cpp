@@ -12,9 +12,7 @@ Bounds Box::bounds() const {
 void Box::setBounds(const Bounds &bounds) {
 	widgetBounds = bounds;
 	redrawSelf = true;
-	if (parent) {
-		parent->requestRedraw();
-	}
+	requestParentRedraw();
 }
 
 void Box::draw() const {
@@ -23,8 +21,8 @@ void Box::draw() const {
 
 bool Box::update(time_t time_ms) {
 	SingleChildWidget::update(time_ms);
-	if (redrawSelf && parent) {
-		parent->requestRedraw();
+	if (redrawSelf) {
+		requestParentRedraw();
 	}
 	return redrawSelf;
 }

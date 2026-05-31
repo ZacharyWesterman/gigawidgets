@@ -25,6 +25,9 @@ namespace ui {
  * @brief The common interface for all UI objects.
  */
 class Widget : public EventHandlers<Widget> {
+	/// @brief The parent widget, if any.
+	Widget *parent;
+
 	/// @brief The (optional) callback function that gets called when the touchscreen is pressed within this widget's bounds.
 	std::function<void(Widget &element, const Event &event)> callbackPress;
 	/// @brief The (optional) callback function that gets called when the touchscreen is held within this widget's bounds.
@@ -44,9 +47,6 @@ class Widget : public EventHandlers<Widget> {
 	bool pressed;
 
 protected:
-	/// @brief The parent widget, if any.
-	Widget *parent;
-
 	/// @brief The padding that will be applied to any child widgets.
 	Padding padding;
 	/// @brief If true, force a redraw of this widget and any child widgets.
@@ -120,9 +120,7 @@ public:
 	 */
 	inline void setPosition(const Position &pos) {
 		this->pos = pos;
-		if (parent) {
-			parent->requestRedraw();
-		}
+		requestParentRedraw();
 	}
 
 	/**
@@ -139,9 +137,7 @@ public:
 	 */
 	inline void setAlign(const Alignment &align) {
 		this->align = align;
-		if (parent) {
-			parent->requestRedraw();
-		}
+		requestParentRedraw();
 	}
 
 	/**
@@ -152,6 +148,10 @@ public:
 	 */
 	inline void requestRedraw() {
 		redrawSelf = true;
+	}
+
+	inline void requestParentRedraw() {
+		requestParentRedraw();
 	}
 
 	/**

@@ -43,9 +43,7 @@ void Image::removeShader() {
 void Image::setRender(const Renderable &renderable) {
 	this->renderable = &renderable;
 	redrawSelf = true;
-	if (parent) {
-		parent->requestRedraw();
-	}
+	requestParentRedraw();
 }
 
 } // namespace ui

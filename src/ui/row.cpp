@@ -60,9 +60,7 @@ bool Row::update(time_t time) {
 				continue;
 			}
 			calcChildBounds(i);
-			if (parent) {
-				parent->requestRedraw();
-			}
+			requestParentRedraw();
 		}
 	}
 
@@ -77,17 +75,13 @@ void Row::push(Widget *const child) {
 void Row::setMinWidth(uisize_t minWidth) {
 	minimumWidth = minWidth;
 	redrawSelf = true;
-	if (parent) {
-		parent->requestRedraw();
-	}
+	requestParentRedraw();
 }
 
 void Row::setChildAlign(align_t align) {
 	childAlignment = align;
 	redrawSelf = true;
-	if (parent) {
-		parent->requestRedraw();
-	}
+	requestParentRedraw();
 }
 
 } // namespace ui

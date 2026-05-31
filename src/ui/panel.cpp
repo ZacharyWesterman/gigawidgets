@@ -46,9 +46,7 @@ color_t Panel::getColor() const {
 
 void Panel::setBorderRadius(radius_t new_radius) {
 	borderRadius = new_radius;
-	if (parent) {
-		parent->requestRedraw();
-	}
+	requestParentRedraw();
 }
 
 } // namespace ui
