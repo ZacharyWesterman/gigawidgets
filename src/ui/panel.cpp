@@ -9,15 +9,26 @@ Panel::Panel(Widget *child, color_t color, const Size &size, radius_t borderRadi
 
 void Panel::draw() const {
 	const auto b = bounds();
-	fillRoundRect(b.min.x, b.min.y, b.max.x - b.min.x, b.max.y - b.min.y, borderRadius, color);
+
+	Serial.print(redrawSelf);
+	Serial.println(redrawParent);
+
+	if (redrawSelf || redrawParent) {
+		fillRoundRect(b.min.x, b.min.y, b.max.x - b.min.x, b.max.y - b.min.y, borderRadius, color);
+	}
 	child->draw();
 }
 
 bool Panel::update(time_t time_ms) {
-	return SingleChildWidget::update(time_ms) || redrawSelf;
+	auto updated = child->update(time_ms);
+	redrawSelf |= child->needsRedraw();
+	return updated || redrawSelf || redrawParent || rotationChanged();
 }
 
 void Panel::drawDone() {
+	if (redrawSelf || redrawParent) {
+		Serial.println("done");
+	}
 	redrawSelf = false;
 	redrawParent = false;
 	child->drawDone();

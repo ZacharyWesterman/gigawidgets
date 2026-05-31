@@ -57,7 +57,7 @@ bool MultiChildWidget::update(time_t time_ms) {
 		if (child) {
 			updated |= child->update(time_ms);
 			if (child->redrawRequested() || rotationChanged()) {
-				redrawParent = true;
+				redrawSelf = true;
 			}
 		}
 	}
@@ -67,7 +67,7 @@ bool MultiChildWidget::update(time_t time_ms) {
 
 void MultiChildWidget::draw() const {
 	for (auto child : children) {
-		if (child) {
+		if (child && (redrawSelf || redrawParent || child->needsRedraw())) {
 			child->draw();
 		}
 	}

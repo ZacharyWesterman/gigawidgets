@@ -1,4 +1,5 @@
 #include "box.hpp"
+#include <Arduino.h>
 
 namespace ui {
 
@@ -10,6 +11,8 @@ Bounds Box::bounds() const {
 
 void Box::setBounds(const Bounds &bounds) {
 	widgetBounds = bounds;
+	redrawSelf = true;
+	redrawParent = true;
 }
 
 void Box::draw() const {

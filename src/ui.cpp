@@ -90,9 +90,11 @@ void render(bool block) {
 		}
 
 		const auto rChanged = rotationChanged();
-		if (rootNode->update(millis()) || rootNode->redrawRequested() || rChanged) {
+
+		if (rootNode->update(millis()) || rootNode->needsRedraw() || rootNode->redrawRequested() || rChanged) {
 			ui::endWrite();
 			rootNode->draw();
+			rootNode->drawDone();
 		}
 
 #ifdef DEBUG
@@ -102,7 +104,6 @@ void render(bool block) {
 		}
 #endif
 
-		rootNode->drawDone();
 		if (rChanged) {
 			finalizeRotation();
 		}
