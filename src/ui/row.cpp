@@ -52,14 +52,15 @@ bool Row::update(time_t time) {
 		return false;
 	}
 
-	// If any of the children need updating, recalculate the bounds for all of them.
-	for (size_t i = 0; i < children.size(); i++) {
-		if (!children[i]) {
-			continue;
-		}
-		if (redrawSelf || children[i]->needsRedraw()) {
+	// If a redraw was requested, recalculate the bounds for all the children.
+	if (redrawSelf) {
+		Serial.println("Redraw");
+		for (size_t i = 0; i < children.size(); i++) {
+			if (!children[i]) {
+				continue;
+			}
 			calcChildBounds(i);
-			if (redrawSelf && parent) {
+			if (parent) {
 				parent->requestRedraw();
 			}
 		}

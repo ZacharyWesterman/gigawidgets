@@ -30,6 +30,7 @@ public:
 	void setBounds(const Bounds &bounds);
 
 	void draw() const override;
+	bool update(time_t time_ms) override;
 
 	DERIVE_EVENT_HANDLERS(Box)
 };

@@ -21,4 +21,12 @@ void Box::draw() const {
 	// No graphics to draw here.
 }
 
+bool Box::update(time_t time_ms) {
+	SingleChildWidget::update(time_ms);
+	if (redrawSelf && parent) {
+		parent->requestRedraw();
+	}
+	return redrawSelf;
+}
+
 } // namespace ui
