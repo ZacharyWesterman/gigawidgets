@@ -3,21 +3,21 @@
 
 namespace ui {
 
-Widget::Widget(const Position &pos, const Alignment &align, const Padding &padding) : parent(nullptr), pos(pos), align(align), pressed(false), padding(padding), initialRender(false), redrawParent(true), redrawSelf(true), id(0) {}
+Widget::Widget(const Position &pos, const Alignment &align, const Padding &padding) : parent(nullptr), pos(pos), align(align), pressed(false), padding(padding), initialRender(false), redrawSelf(true), id(0) {}
 
 Widget::~Widget() {}
 
-bool Widget::update(time_t time_ms) {
-	if (initialRender) {
-		return rotationChanged() || redrawSelf;
-	}
+void Widget::update(time_t time_ms) {
+	// By default, widgets don't have any updating logic.
+}
 
-	initialRender = true;
-	return true;
+void Widget::render(bool force) const {
+	if (force || redrawSelf) {
+		draw();
+	}
 }
 
 void Widget::drawDone() {
-	redrawParent = false;
 	redrawSelf = false;
 }
 

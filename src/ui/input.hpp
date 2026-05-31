@@ -91,7 +91,7 @@ public:
 	int nearestCursor(const Coords &coords) const;
 
 	void draw() const override;
-	bool update(time_t time) override;
+	void update(time_t time) override;
 
 	DERIVE_EVENT_HANDLERS(Input)
 };

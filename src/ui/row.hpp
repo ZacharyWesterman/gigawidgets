@@ -23,7 +23,7 @@ class Row : public Collection {
 public:
 	using Collection::Collection;
 
-	bool update(time_t time) override;
+	void update(time_t time) override;
 
 	void push(Widget *const child) override;
 

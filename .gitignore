@@ -1,5 +1,3 @@
-build/
-secret/
 html/
 doxygen.log
 emu/src/
@@ -10,3 +8,4 @@ emu/ino.watch
 *.gz
 emu/lib/
 __pycache__/
+.build/

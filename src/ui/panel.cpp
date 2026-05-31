@@ -9,28 +9,15 @@ Panel::Panel(Widget *child, color_t color, const Size &size, radius_t borderRadi
 
 void Panel::draw() const {
 	const auto b = bounds();
-
-	Serial.print(redrawSelf);
-	Serial.println(redrawParent);
-
-	if (redrawSelf || redrawParent) {
-		fillRoundRect(b.min.x, b.min.y, b.max.x - b.min.x, b.max.y - b.min.y, borderRadius, color);
-	}
-	child->draw();
+	fillRoundRect(b.min.x, b.min.y, b.max.x - b.min.x, b.max.y - b.min.y, borderRadius, color);
 }
 
-bool Panel::update(time_t time_ms) {
-	auto updated = child->update(time_ms);
-	redrawSelf |= child->needsRedraw();
-	return updated || redrawSelf || redrawParent || rotationChanged();
+void Panel::update(time_t time_ms) {
+	child->update(time_ms);
 }
 
 void Panel::drawDone() {
-	if (redrawSelf || redrawParent) {
-		Serial.println("done");
-	}
 	redrawSelf = false;
-	redrawParent = false;
 	child->drawDone();
 }
 
@@ -57,7 +44,7 @@ color_t Panel::getColor() const {
 
 void Panel::setBorderRadius(radius_t new_radius) {
 	borderRadius = new_radius;
-	redrawParent = true;
+	requestParentRedraw();
 }
 
 } // namespace ui

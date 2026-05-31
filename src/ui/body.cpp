@@ -8,11 +8,7 @@ namespace ui {
 Body::Body(Widget *const child, color_t backgroundColor, const Padding &padding) : backgroundColor(backgroundColor), SingleChildWidget(child, {0, 0}, {ALIGN_LEFT, ALIGN_TOP}, padding) {}
 
 void Body::draw() const {
-	if (child->redrawRequested() || redrawSelf || rotationChanged()) {
-		// Requires a full re-render
-		fillScreen(backgroundColor);
-	}
-	child->draw();
+	fillScreen(backgroundColor);
 }
 
 Size Body::size() const {

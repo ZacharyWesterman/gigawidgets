@@ -44,28 +44,19 @@ void Column::calcChildBounds(int index) {
 	child->setBounds(childBounds);
 }
 
-bool Column::update(time_t time) {
-	bool updated = MultiChildWidget::update(time);
-	// Don't recalculate bounds if not needed.
-	if (!updated) {
-		return false;
-	}
+void Column::update(time_t time) {
+	MultiChildWidget::update(time);
 
-	// If any of the children need updating, recalculate the bounds for all of them.
-	for (size_t i = 0; i < children.size(); i++) {
-		if (!children[i]) {
-			continue;
-		}
-		if (children[i]->redrawRequested() || children[i]->needsRedraw()) {
-			calcChildBounds(i);
-			if (children[i]->redrawRequested()) {
-				redrawSelf = true;
-				redrawParent = true;
+	// If a redraw was requested, recalculate the bounds for all the children.
+	if (redrawSelf) {
+		for (size_t i = 0; i < children.size(); i++) {
+			if (!children[i]) {
+				continue;
 			}
+			calcChildBounds(i);
+			requestParentRedraw();
 		}
 	}
-
-	return true;
 }
 
 void Column::push(Widget *const child) {
@@ -76,13 +67,13 @@ void Column::push(Widget *const child) {
 void Column::setMinHeight(uisize_t minHeight) {
 	minimumHeight = minHeight;
 	redrawSelf = true;
-	redrawParent = true;
+	requestParentRedraw();
 }
 
 void Column::setChildAlign(align_t align) {
 	childAlignment = align;
 	redrawSelf = true;
-	redrawParent = true;
+	requestParentRedraw();
 }
 
 } // namespace ui

@@ -15,11 +15,10 @@ Size Image::size() const {
 	return renderable->getSize();
 }
 
-bool Image::update(time_t time_ms) {
+void Image::update(time_t time_ms) {
 	if (renderEveryFrame) {
-		return true;
+		redrawSelf = true;
 	}
-	return Widget::update(time_ms);
 }
 
 void Image::setShader(const shader_animated_t &shader) {
@@ -43,7 +42,7 @@ void Image::removeShader() {
 void Image::setRender(const Renderable &renderable) {
 	this->renderable = &renderable;
 	redrawSelf = true;
-	redrawParent = true;
+	requestParentRedraw();
 }
 
 } // namespace ui

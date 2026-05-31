@@ -12,11 +12,18 @@ Bounds Box::bounds() const {
 void Box::setBounds(const Bounds &bounds) {
 	widgetBounds = bounds;
 	redrawSelf = true;
-	redrawParent = true;
+	requestParentRedraw();
 }
 
 void Box::draw() const {
-	child->draw();
+	// No graphics to draw here.
+}
+
+void Box::update(time_t time_ms) {
+	SingleChildWidget::update(time_ms);
+	if (redrawSelf) {
+		requestParentRedraw();
+	}
 }
 
 } // namespace ui
