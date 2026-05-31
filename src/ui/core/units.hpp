@@ -239,3 +239,95 @@ constexpr long double operator""_rad(long double radians) {
 constexpr long double operator""_rad(unsigned long long radians) {
 	return radians;
 }
+
+/**
+ * @brief The custom units operator for milliseconds.
+ *
+ * This operator is included for consistency,
+ * to allow for writing time spans like `1_ms` instead of just `1`.
+ * In reality, no transformation is applied.
+ *
+ * @param time The time in milliseconds.
+ * @return The time in milliseconds.
+ */
+constexpr unsigned long operator""_ms(unsigned long long time) {
+	return time;
+}
+
+/**
+ * @brief The custom units operator for seconds.
+ *
+ * This operator allows for writing time spans like `5_sec`,
+ * which will automatically be converted to milliseconds at compile time.
+ *
+ * @param time The time in seconds.
+ * @return The time in milliseconds.
+ */
+constexpr unsigned long operator""_sec(unsigned long long time) {
+	return time * 1000;
+}
+
+/**
+ * @brief The custom units operator for seconds.
+ *
+ * This operator allows for writing time spans like `5_sec`,
+ * which will automatically be converted to milliseconds at compile time.
+ *
+ * @param time The time in seconds.
+ * @return The time in milliseconds.
+ */
+constexpr unsigned long operator""_sec(long double time) {
+	return time * 1000;
+}
+
+/**
+ * @brief The custom units operator for minutes.
+ *
+ * This operator allows for writing time spans like `5_min`,
+ * which will automatically be converted to milliseconds at compile time.
+ *
+ * @param time The time in minutes.
+ * @return The time in milliseconds.
+ */
+constexpr unsigned long operator""_min(unsigned long long time) {
+	return time * 1000 * 60;
+}
+
+/**
+ * @brief The custom units operator for minutes.
+ *
+ * This operator allows for writing time spans like `5_min`,
+ * which will automatically be converted to milliseconds at compile time.
+ *
+ * @param time The time in minutes.
+ * @return The time in milliseconds.
+ */
+constexpr unsigned long operator""_min(long double time) {
+	return time * 1000 * 60;
+}
+
+/**
+ * @brief The custom units operator for hours.
+ *
+ * This operator allows for writing time spans like `5_hr`,
+ * which will automatically be converted to milliseconds at compile time.
+ *
+ * @param time The time in hours.
+ * @return The time in milliseconds.
+ */
+constexpr unsigned long operator""_hr(unsigned long long time) {
+	return time * 1000 * 60 * 60;
+}
+
+/**
+ * @brief The custom units operator for hours.
+ *
+ * This operator allows for writing time spans like `5_hr`,
+ * which will automatically be converted to milliseconds at compile time.
+ *
+ * @param time The time in hours.
+ * @return The time in milliseconds.
+ */
+constexpr unsigned long operator""_hr(long double time) {
+	return time * 1000 * 60 * 60;
+}
