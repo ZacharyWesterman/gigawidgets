@@ -147,7 +147,7 @@ class Widget:
                 )
                 continue
             with open(i, 'r') as fp:
-                text += f'\n{fp.read()}'
+                text += f'\n#line 1 "{i}"\n{fp.read()}'
 
         body = f'\n{self}'
         if set_root:
