@@ -33,6 +33,17 @@ constexpr color_t color(const float red, const float green, const float blue) {
 }
 
 /**
+ * @brief Convert single-byte color components into an RGB565 value.
+ * @param red The red component.
+ * @param green The green component.
+ * @param blue The blue component.
+ * @return The equivalent RGB565 color value.
+ */
+constexpr color_t rgb(const uint8_t red, const uint8_t green, const uint8_t blue) {
+	return ((red & 0xF8) << 8) | ((green & 0xFC) << 3) | (blue >> 3);
+}
+
+/**
  * @brief Split an RGB565 color value into normalized components.
  * @param color The RGB565 color to split.
  * @param red The normalized red component to output.
