@@ -5,9 +5,9 @@
 
 namespace ui {
 
-enum class ImageType {
-	UNKNOWN,
-	JPEG, // Currently only JPEG supported!
+enum ImageType {
+	IMAGE_UNKNOWN,
+	IMAGE_JPEG, // Currently only JPEG supported!
 };
 
 struct ImageFile : public Renderable {
@@ -21,6 +21,7 @@ struct ImageFile : public Renderable {
 protected:
 	unsigned int getInt(size_t index, uint8_t count) const;
 };
+
 } // namespace ui
 
 #include "image_file/jpeg.hpp"

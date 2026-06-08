@@ -20,6 +20,7 @@ These are also required when emulating.
 - The following Arduino libraries:
   - `Arduino_GigaDisplayTouch`
   - `Arduino_GigaDisplay_GFX`
+  - `JPEGDEC`
 
 ---
 

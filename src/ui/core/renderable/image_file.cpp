@@ -4,14 +4,14 @@ namespace ui {
 
 ImageType ImageFile::getType(uint8_t *const bytes, size_t length) {
 	if (!bytes) {
-		return ImageType::UNKNOWN;
+		return IMAGE_UNKNOWN;
 	}
 
 	if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[length - 2] == 0xff && bytes[length - 1] == 0xd9) {
-		return ImageType::JPEG;
+		return IMAGE_JPEG;
 	}
 
-	return ImageType::UNKNOWN;
+	return IMAGE_UNKNOWN;
 }
 
 ImageFile::ImageFile(uint8_t *bytes, size_t length) : bytes(bytes), length(length) {}
