@@ -1,17 +1,17 @@
-/// @file jpeg.hpp
+/// @file png.hpp
 #pragma once
 
 #include "../image_file.hpp"
 
-#if defined(__has_include) && __has_include(<JPEGDEC.h>)
-#define IMAGE_SUPPORT_JPEG
+#if defined(__has_include) && __has_include(<PNGdec.h>)
+#define IMAGE_SUPPORT_PNG
 #endif
 
-#ifdef IMAGE_SUPPORT_JPEG
+#ifdef IMAGE_SUPPORT_PNG
 
 namespace ui {
 
-struct Jpeg : public ImageFile {
+struct Png : public ImageFile {
 	using ImageFile::ImageFile;
 
 	void renderAt(const Coords &coords, const shader_t &shader = 0) const override;

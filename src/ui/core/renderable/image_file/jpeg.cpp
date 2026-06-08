@@ -4,7 +4,7 @@
 
 #ifdef IMAGE_SUPPORT_JPEG
 
-#ifdef __linux__
+#if defined(__linux__) && !defined(memcpy_P)
 #define memcpy_P memcpy
 #endif
 
@@ -22,6 +22,7 @@ time_t jpegTime = 0;
 int jpegRender(JPEGDRAW *pDraw) {
 	for (int y = 0; y < pDraw->iHeight; y++) {
 		int real_y = pDraw->y + y;
+		int image_y = real_y - jpegCoords.y;
 
 		for (int x = 0; x < pDraw->iWidth; x++) {
 			int real_x = pDraw->x + x;
@@ -30,9 +31,11 @@ int jpegRender(JPEGDRAW *pDraw) {
 				break;
 			}
 
+			int image_x = real_x - jpegCoords.x;
+
 			color_t pixel = pDraw->pPixels[y * pDraw->iWidth + x];
 			if (jpegShader) {
-				pixel = jpegShader(pixel, {real_x, real_y}, jpegSize, jpegTime);
+				pixel = jpegShader(pixel, {image_x, image_y}, jpegSize, jpegTime);
 			}
 
 			drawPixel(real_x, real_y, pixel);
@@ -84,5 +87,5 @@ size_t Jpeg::afterMarker(uint8_t marker, size_t startIndex) const {
 } // namespace ui
 
 #else
-#warning JPEGDEC library is not installed, so JPEG support is disabled.
+#warning JPEGDEC library is not installed, so JPEG rendering support is disabled.
 #endif
