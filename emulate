@@ -7,6 +7,7 @@ print_help=0
 watch=0
 dry_run=0
 clean=0
+concurrent_build=''
 
 for i in "$@"; do
     case "$i" in
@@ -31,7 +32,16 @@ for i in "$@"; do
         --dry-run|-d)
             dry_run=1
         ;;
-        --help|-h) print_help=1 ;;
+        --help|-h)
+            print_help=1
+        ;;
+        -j*|--threads=*|--threads)
+            threads="${i#*=}"
+            threads="${threads/--threads/}"
+            threads="${threads/-j/}"
+            [ "$threads" == '' ] && threads=$(nproc)
+            concurrent_build="-j$threads"
+        ;;
         *)
             if [ "$filename" != '' ]; then
                 args+=("$i")
@@ -55,12 +65,13 @@ if [ -z "$filename" ] || [ "$print_help" == 1 ]; then
     echo "Usage: [FLAGS] $0 <ino/xml file>" >&2
     echo >&2
     echo "Flags:" >&2
-    echo "  --clean         | Remove build files." >&2
-    echo "  --wipe          | Remove all build and temp files." >&2
-    echo "  --scale=[SCALE] | Scale the window by an integer amount." >&2
-    echo "  --watch,   -w   | Watch for source changes, automatically rebuilding when a change is detected." >&2
-    echo "  --dry-run, -d   | Verify compilation and exit." >&2
-    echo "  --help     -h   | Display this message." >&2
+    echo "  --clean           | Remove build files." >&2
+    echo "  --wipe            | Remove all build and temp files." >&2
+    echo "  --scale=[SCALE]   | Scale the window by an integer amount." >&2
+    echo "  --watch,   -w     | Watch for source changes, automatically rebuilding when a change is detected." >&2
+    echo "  --dry-run, -d     | Verify compilation and exit." >&2
+    echo "  --help     -h     | Display this message." >&2
+    echo "  --threads=XX -jXX | Compile using XX number of threads, or the max available if no number specified." >&2
     echo
     echo "Any other flags after the filename are passed to the XML generating utility."
     [ "$print_help" == 0 ] && exit 1
@@ -104,7 +115,7 @@ move_file() {
 build() {
     move_file || return 1
     rsync -a src emu/ -u || return 1
-    make -C emu WINDOW_SCALE="$window_scale" || return 1
+    make -C emu WINDOW_SCALE="$window_scale" $concurrent_build || return 1
     
     echo -e "\e[32mBuild Successful.\e[0m"
     return 0
@@ -170,7 +181,7 @@ while true; do
     if [ "$buildflag" == 1 ]; then
         sleep 0.5
         
-        if make -C emu WINDOW_SCALE="$window_scale"; then
+        if make -C emu WINDOW_SCALE="$window_scale" $concurrent_build; then
             if [ ! -z "$pid" ]; then
                 pkill -P $$
                 wait "$pid"
