@@ -8,7 +8,6 @@
 #define memcpy_P memcpy
 #endif
 
-#include <Arduino.h>
 #include <JPEGDEC.h>
 
 namespace ui {

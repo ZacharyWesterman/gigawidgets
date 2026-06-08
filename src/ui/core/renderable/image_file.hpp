@@ -1,10 +1,6 @@
 /// @file jpeg.hpp
 #pragma once
 
-// Comment out the image formats you don't want to support
-#define IMAGE_SUPPORT_JPEG
-#define IMAGE_SUPPORT_PNG
-
 #include "../renderable.hpp"
 #include <initializer_list>
 

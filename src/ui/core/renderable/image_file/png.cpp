@@ -8,7 +8,6 @@
 #define memcpy_P memcpy
 #endif
 
-#include <Arduino.h>
 #include <PNGdec.h>
 
 namespace ui {
@@ -52,21 +51,7 @@ void Png::renderAt(const Coords &coords, const shader_t &shader) const {
 }
 
 Size Png::getSize() const {
-	const auto startOfFrame = afterMarker(0xc0);
-
-	if (!startOfFrame) {
-		// Error in the data, no "Baseline DCT" start of frame.
-		return {0, 0};
-	}
-
-	// Assuming SOF0. more support to come in future.
-	// const auto headerLength = getInt(startOfFrame, 2);
-	// const auto precision = getInt(startOfFrame + 2, 1);
-	const auto cols = getInt(startOfFrame + 3, 2);
-	const auto rows = getInt(startOfFrame + 5, 2);
-	// const auto imageComponents = getInt(startOfFrame + 7, 1);
-
-	return {rows, cols};
+	return {0, 0}; // TODO: get image dimensions!
 }
 
 size_t Png::afterMarker(uint8_t marker, size_t startIndex) const {

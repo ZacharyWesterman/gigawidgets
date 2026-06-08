@@ -1,6 +1,9 @@
 /// @file jpeg.hpp
 #pragma once
 
+// Comment this out to disable JPEG support
+#define IMAGE_SUPPORT_JPEG
+
 #include "../image_file.hpp"
 
 #if !defined(IMAGE_SUPPORT_JPEG) && defined(__has_include) && __has_include(<JPEGDEC.h>)

@@ -1,6 +1,9 @@
 /// @file png.hpp
 #pragma once
 
+// Comment this out to disable PNG support.
+#define IMAGE_SUPPORT_PNG
+
 #include "../image_file.hpp"
 
 #if !defined(IMAGE_SUPPORT_PNG) && defined(__has_include) && __has_include(<PNGdec.h>)
