@@ -1,5 +1,5 @@
 #include "compressed_transparency_map.hpp"
-#include "../display.hpp"
+#include "../../display.hpp"
 
 namespace ui {
 

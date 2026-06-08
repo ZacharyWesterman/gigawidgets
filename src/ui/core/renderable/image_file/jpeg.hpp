@@ -3,6 +3,9 @@
 
 #include "../image_file.hpp"
 
+#if __has_include(<JPEGDEC.h>)
+#define IMAGE_SUPPORT_JPEG
+
 namespace ui {
 
 struct Jpeg : public ImageFile {
@@ -16,3 +19,5 @@ private:
 };
 
 } // namespace ui
+
+#endif

@@ -1,5 +1,8 @@
+
 #include "jpeg.hpp"
 #include "../../display.hpp"
+
+#ifdef IMAGE_SUPPORT_JPEG
 
 #ifdef __linux__
 #define memcpy_P memcpy
@@ -79,3 +82,7 @@ size_t Jpeg::afterMarker(uint8_t marker, size_t startIndex) const {
 }
 
 } // namespace ui
+
+#else
+#warning JPEGDEC library is not installed, so JPEG support is disabled.
+#endif

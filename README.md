@@ -17,10 +17,12 @@ Emulation is only *officially* supported on Linux. If you can get it running on 
 These are also required when emulating.
 
 - The "Arduino Community Edition" VS Code extension, if uploading with VS Code.
-- The following Arduino libraries:
+- The following Arduino libraries are required:
   - `Arduino_GigaDisplayTouch`
   - `Arduino_GigaDisplay_GFX`
+- The following Arduino libraries are optional, but reccommended.
   - `JPEGDEC`
+  - `BMPdec`
 
 ---
 

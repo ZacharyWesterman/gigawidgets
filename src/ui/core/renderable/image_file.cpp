@@ -2,13 +2,27 @@
 
 namespace ui {
 
-ImageType ImageFile::getType(uint8_t *const bytes, size_t length) {
-	if (!bytes) {
-		return IMAGE_UNKNOWN;
+bool ImageFile::hasSequence(uint8_t *const bytes, size_t length, const std::initializer_list<uint8_t> &&sequence, size_t index) {
+	if (!bytes || (index + sequence.begin() - sequence.end()) >= (long int)length) {
+		return false;
 	}
 
-	if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[length - 2] == 0xff && bytes[length - 1] == 0xd9) {
+	for (uint8_t byte : sequence) {
+		if (bytes[index++] != byte) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+ImageType ImageFile::getType(uint8_t *const bytes, size_t length) {
+	if (hasSequence(bytes, length, {0xff, 0xd8}, 0) && hasSequence(bytes, length, {0xff, 0xd9}, length - 2)) {
 		return IMAGE_JPEG;
+	}
+
+	if (hasSequence(bytes, length, {0x89, 'P', 'N', 'G', 0x0d, 0x0a, 0x1a, 0x0a}, 0)) {
+		return IMAGE_PNG;
 	}
 
 	return IMAGE_UNKNOWN;

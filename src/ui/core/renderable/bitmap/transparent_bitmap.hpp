@@ -1,7 +1,7 @@
 /// @file transparent_bitmap.hpp
 #pragma once
 
-#include "bitmap.hpp"
+#include "../bitmap.hpp"
 
 namespace ui {
 

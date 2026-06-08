@@ -1,5 +1,5 @@
 #include "transparent_bitmap.hpp"
-#include "../display.hpp"
+#include "../../display.hpp"
 
 namespace ui {
 

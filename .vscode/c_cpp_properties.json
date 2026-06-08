@@ -16,6 +16,7 @@
                 "${env:HOME}/Arduino/libraries/Arduino_GigaDisplayTouch/src",
                 "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Wire",
                 "${env:HOME}/Arduino/libraries/Arduino_GigaDisplay_GFX/src",
+                "${env:HOME}/Arduino/libraries/JPEGDEC/src",
                 "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/Arduino_H7_Video/src",
                 "${env:HOME}/Arduino/libraries/Adafruit_BusIO",
                 "${env:HOME}/.arduino15/packages/arduino/hardware/mbed_giga/4.4.1/libraries/SPI",
@@ -36,6 +37,7 @@
             "cStandard": "c11",
             "cppStandard": "c++11",
             "defines": [
+                "IMAGE_SUPPORT_JPEG",
                 "ARDUINO=10607",
                 "ARDUINO_GIGA",
                 "ARDUINO_ARCH_MBED_GIGA",
