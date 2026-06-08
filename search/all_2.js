@@ -9,7 +9,7 @@ var searchData=
   ['click_6',['click',['../classui_1_1Widget.html#a255fb68faa381b86b8a4a5e9836bd67a',1,'ui::Widget']]],
   ['collection_7',['collection',['../classui_1_1Collection.html',1,'ui::Collection'],['../classui_1_1Row.html#a72f4128e53e13960296c149f35595ef0',1,'ui::Row::Collection()'],['../classui_1_1Column.html#a72f4128e53e13960296c149f35595ef0',1,'ui::Column::Collection()'],['../classui_1_1Collection.html#a72f4128e53e13960296c149f35595ef0',1,'ui::Collection::Collection()']]],
   ['collection_2ehpp_8',['collection.hpp',['../collection_8hpp.html',1,'']]],
-  ['color_9',['color',['../color_8hpp.html#a279adbc45436ee54b61be4812ebea282',1,'ui::color()'],['../structui_1_1TransparencyMap.html#ade3e8e251dcd2ee259f926dc11b0937d',1,'ui::TransparencyMap::color'],['../structui_1_1Polygon.html#a1f34b75697290f3233a750cbb1f870ca',1,'ui::Polygon::color'],['../structui_1_1Circle.html#a08e800383e24f9a9c74d446d8fc80996',1,'ui::Circle::color']]],
+  ['color_9',['color',['../color_8hpp.html#a279adbc45436ee54b61be4812ebea282',1,'ui::color()'],['../structui_1_1Polygon.html#a1f34b75697290f3233a750cbb1f870ca',1,'ui::Polygon::color'],['../structui_1_1Circle.html#a08e800383e24f9a9c74d446d8fc80996',1,'ui::Circle::color'],['../structui_1_1TransparencyMap.html#ade3e8e251dcd2ee259f926dc11b0937d',1,'ui::TransparencyMap::color']]],
   ['color_2ehpp_10',['color.hpp',['../color_8hpp.html',1,'']]],
   ['color_5fblack_11',['COLOR_BLACK',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9da36be96aaaf2fe96986c36c678ede2229',1,'ui']]],
   ['color_5fblue_12',['COLOR_BLUE',['../color_8hpp.html#ade894ba3ef7dfea66b8a2b7c06304c9dacebbdd4af79eafa9b011a95725d23d64',1,'ui']]],

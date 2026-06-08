@@ -14,7 +14,9 @@ var dir_da5c6b39c0a2f54e57df6799511cd3ab =
     [ "keyboard.hpp", "keyboard_8hpp.html", "keyboard_8hpp" ],
     [ "keyboard_layout.hpp", "keyboard__layout_8hpp.html", "keyboard__layout_8hpp" ],
     [ "panel.hpp", "panel_8hpp.html", "panel_8hpp" ],
+    [ "renderables.hpp", "renderables_8hpp_source.html", null ],
     [ "row.hpp", "row_8hpp.html", "row_8hpp" ],
+    [ "shaders.hpp", "shaders_8hpp_source.html", null ],
     [ "shapes.hpp", "shapes_8hpp.html", null ],
     [ "text.hpp", "text_8hpp.html", "text_8hpp" ]
 ];
