@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.22</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.23</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -154,6 +154,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a279adbc45436ee54b61be4812ebea282" id="r_a279adbc45436ee54b61be4812ebea282"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">ui::color</a> (const float red, const float green, const float blue)</td></tr>
 <tr class="memdesc:a279adbc45436ee54b61be4812ebea282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert normalized color components into an RGB565 value.  <br /></td></tr>
 <tr class="separator:a279adbc45436ee54b61be4812ebea282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af160bdc963e923a61fb9da8aae2985b5" id="r_af160bdc963e923a61fb9da8aae2985b5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8hpp.html#af160bdc963e923a61fb9da8aae2985b5">ui::rgb</a> (const uint8_t red, const uint8_t green, const uint8_t blue)</td></tr>
+<tr class="memdesc:af160bdc963e923a61fb9da8aae2985b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert single-byte color components into an RGB565 value.  <br /></td></tr>
+<tr class="separator:af160bdc963e923a61fb9da8aae2985b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5006b678e79506956ed1dc53d0f7a9c3" id="r_a5006b678e79506956ed1dc53d0f7a9c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8hpp.html#a5006b678e79506956ed1dc53d0f7a9c3">ui::colorComponents</a> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">color</a>, float &amp;red, float &amp;green, float &amp;blue)</td></tr>
 <tr class="memdesc:a5006b678e79506956ed1dc53d0f7a9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split an RGB565 color value into normalized components.  <br /></td></tr>
 <tr class="separator:a5006b678e79506956ed1dc53d0f7a9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -400,6 +403,59 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af160bdc963e923a61fb9da8aae2985b5" name="af160bdc963e923a61fb9da8aae2985b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af160bdc963e923a61fb9da8aae2985b5">&#9670;&#160;</a></span>rgb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr color_t ui::rgb </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>red</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>green</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>blue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert single-byte color components into an RGB565 value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">red</td><td>The red component. </td></tr>
+    <tr><td class="paramname">green</td><td>The green component. </td></tr>
+    <tr><td class="paramname">blue</td><td>The blue component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The equivalent RGB565 color value. </dd></dl>
 
 </div>
 </div>

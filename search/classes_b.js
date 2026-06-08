@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['shape_0',['Shape',['../structui_1_1Shape.html',1,'ui']]],
-  ['singlechildwidget_1',['SingleChildWidget',['../classui_1_1SingleChildWidget.html',1,'ui']]],
-  ['size_2',['Size',['../structui_1_1Size.html',1,'ui']]],
-  ['spiral_3',['Spiral',['../classui_1_1Spiral.html',1,'ui']]]
+  ['rectangle_0',['Rectangle',['../structui_1_1Rectangle.html',1,'ui']]],
+  ['regularpolygon_1',['RegularPolygon',['../structui_1_1RegularPolygon.html',1,'ui']]],
+  ['renderable_2',['Renderable',['../structui_1_1Renderable.html',1,'ui']]],
+  ['row_3',['Row',['../classui_1_1Row.html',1,'ui']]]
 ];

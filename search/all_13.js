@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['ui_2ehpp_0',['ui.hpp',['../ui_8hpp.html',1,'']]],
-  ['uisize_5ft_1',['uisize_t',['../size_8hpp.html#acbf7740ffe9891dbc00599b50662750c',1,'ui']]],
-  ['units_2ehpp_2',['units.hpp',['../units_8hpp.html',1,'']]],
-  ['update_3',['update',['../classui_1_1Blink.html#a4baac8f59fa105a6a9e3453873120669',1,'ui::Blink::update()'],['../classui_1_1Column.html#a90700ec16dc61e12b3119d0412f9e48e',1,'ui::Column::update()'],['../classui_1_1Box.html#a3f69291b95f69f341e977eb57c8771e4',1,'ui::Box::update()'],['../classui_1_1MultiChildWidget.html#a2fbd75152c5b746bae778cb366b1b0e1',1,'ui::MultiChildWidget::update()'],['../classui_1_1SingleChildWidget.html#a9548b5035b9b0805fc20e8f69f621af3',1,'ui::SingleChildWidget::update()'],['../classui_1_1Widget.html#a661a7c43850204eafc9556b299288365',1,'ui::Widget::update()'],['../classui_1_1Image.html#a66430904e800b2aeb63b7bf41198c2af',1,'ui::Image::update()'],['../classui_1_1Input.html#a8eb81b048040f0eff8bd67bd22b1ba5c',1,'ui::Input::update()'],['../classui_1_1Panel.html#af2ab85d5082305c0cf996e0582755cf7',1,'ui::Panel::update()'],['../classui_1_1Row.html#abf2fa67f5e9a1ab9da4bd0700192ea42',1,'ui::Row::update()']]],
-  ['upload_20requirements_4',['Real hardware upload requirements',['../index.html#autotoc_md3',1,'']]]
+  ['text_0',['text',['../classui_1_1Text.html',1,'ui::Text'],['../classui_1_1Text.html#a356f4eb34e0a9b10d5780c007b922a0a',1,'ui::Text::text'],['../classui_1_1Text.html#a79450e805ad6ed1e449cdd8ba0077777',1,'ui::Text::Text(const String &amp;text, fontsize_t scale=1, color_t color=COLOR_WHITE, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, bool wrap=true)'],['../classui_1_1Text.html#a5ee379147118c6a8297d0cfc97cb7a0d',1,'ui::Text::Text(const String &amp;text, const GFXfont &amp;font, color_t color=COLOR_WHITE, const Position &amp;pos={0, 0}, const Alignment &amp;align={ALIGN_LEFT, ALIGN_TOP}, bool wrap=true)']]],
+  ['text_2ehpp_1',['text.hpp',['../text_8hpp.html',1,'']]],
+  ['textcolor_2',['textColor',['../classui_1_1Text.html#a70dfc810818a525868a3fa8eec0a54e3',1,'ui::Text']]],
+  ['timeheld_3',['timeHeld',['../structui_1_1Event.html#aa9623180f9796dfc1858044f146fd5a2',1,'ui::Event']]],
+  ['top_4',['top',['../structui_1_1Padding.html#aad4ab1fbd14d614745b4201f0a92a49d',1,'ui::Padding']]],
+  ['transparency_5fmap_2ehpp_5',['transparency_map.hpp',['../transparency__map_8hpp.html',1,'']]],
+  ['transparencymap_6',['transparencymap',['../structui_1_1TransparencyMap.html',1,'ui::TransparencyMap'],['../structui_1_1CompressedTransparencyMap.html#ab10106ef4ef32212a002563c67fd37ff',1,'ui::CompressedTransparencyMap::TransparencyMap()'],['../structui_1_1TransparencyMap.html#ab10106ef4ef32212a002563c67fd37ff',1,'ui::TransparencyMap::TransparencyMap()']]],
+  ['transparent_5fbitmap_2ehpp_7',['transparent_bitmap.hpp',['../transparent__bitmap_8hpp.html',1,'']]],
+  ['transparentbitmap_8',['transparentbitmap',['../structui_1_1TransparentBitmap.html',1,'ui::TransparentBitmap'],['../structui_1_1TransparentBitmap.html#af653a92167aadf3c039872b5a9947ab5',1,'ui::TransparentBitmap::TransparentBitmap()']]],
+  ['triggered_9',['triggered',['../structui_1_1Event.html#a38009f7115cef96a76813eb75bbc7cd5',1,'ui::Event']]],
+  ['type_10',['type',['../structui_1_1Event.html#a862ba00cc89b35a364a30812dc2145e0',1,'ui::Event']]]
 ];
