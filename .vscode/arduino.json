@@ -7,7 +7,7 @@
     "buildPreferences": [
         [
             "compiler.cpp.extra_flags",
-            "-Wno-narrowing -DIMAGE_SUPPORT_JPEG"
+            "-Wno-narrowing -Wno-psabi -Wno-reorder -Wno-switch"
         ]
     ]
 }

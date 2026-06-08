@@ -20,7 +20,7 @@ These are also required when emulating.
 - The following Arduino libraries are required:
   - `Arduino_GigaDisplayTouch`
   - `Arduino_GigaDisplay_GFX`
-- The following Arduino libraries are optional, but reccommended.
+- The following Arduino libraries are optional, but recommended. They are enabled by default, but you can disable whichever formats you don't want to support by editing `src/ui/core/renderable/image_file.hpp`.
   - `JPEGDEC`
   - `BMPdec`
 
