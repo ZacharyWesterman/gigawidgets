@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE body SYSTEM "../../tools/xmltree/gigawidgets.dtd">
+<body onpress="press_action" onrelease="release_action">
+    <column size="50vw 25vw">
+        <text id="text">Kitty!</text>
+        <image id="image" source="cat.jpg" />
+    </column>
+</body>
