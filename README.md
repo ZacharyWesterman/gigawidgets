@@ -23,6 +23,7 @@ These are also required when emulating.
 - The following Arduino libraries are optional, but recommended. They are enabled by default, but you can disable whichever formats you don't want to support by editing `src/ui/core/renderable/image_file/<FILE_FORMAT>.hpp`.
   - `JPEGDEC`
   - `BMPdec`
+    - **WARNING:** Only non-interlaced PNG images are supported. Interlaced PNG will not render correctly!
 
 ---
 
@@ -35,6 +36,11 @@ An emulator is available to test sketches and for rapid prototyping of this libr
 Only the GigaWidgets library (and those it relies on) are currently supported for emulation.
 
 `Serial` and `String` are also supported as basic wrappers for `std::cout` and `std::string`, respectively.
+
+**Warning:** If you used the emulator, it's a good idea to run `./emulate --wipe` before uploading,
+to prevent emulator code from affecting the arduino code cache. It won't hurt anything to have it there,
+but the action of uploading, then running the emulator is highly likely to trigger a *full rebuild* on
+the next upload, which is very very slow.
 
 ---
 
