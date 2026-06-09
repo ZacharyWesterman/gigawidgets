@@ -6,7 +6,10 @@
 #define GIGA_DISPLAY_W_PX 480
 #define GIGA_DISPLAY_H_PX 800
 #define GIGA_DISPLAY_PPI 235.000580145
+
+#ifndef PI
 #define PI 3.141592653589
+#endif
 
 /**
  * @brief The custom units operator for pixels.
