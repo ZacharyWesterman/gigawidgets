@@ -31,6 +31,7 @@ var annotated_dup =
       [ "MultiChildWidget", "classui_1_1MultiChildWidget.html", "classui_1_1MultiChildWidget" ],
       [ "Padding", "structui_1_1Padding.html", "structui_1_1Padding" ],
       [ "Panel", "classui_1_1Panel.html", "classui_1_1Panel" ],
+      [ "Png", "structui_1_1Png.html", "structui_1_1Png" ],
       [ "Polygon", "structui_1_1Polygon.html", "structui_1_1Polygon" ],
       [ "Position", "structui_1_1Position.html", "structui_1_1Position" ],
       [ "Rectangle", "structui_1_1Rectangle.html", "structui_1_1Rectangle" ],

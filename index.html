@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.27</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.28</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -122,9 +122,12 @@ Real hardware upload requirements</h2>
 <li><code>Arduino_GigaDisplay_GFX</code></li>
 </ul>
 </li>
-<li>The following Arduino libraries are optional, but reccommended.<ul>
+<li>The following Arduino libraries are optional, but recommended. They are enabled by default, but you can disable whichever formats you don't want to support by editing <code>src/ui/core/renderable/image_file/&lt;FILE_FORMAT&gt;.hpp</code>.<ul>
 <li><code>JPEGDEC</code></li>
-<li><code>BMPdec</code></li>
+<li><code>BMPdec</code><ul>
+<li><b>WARNING:</b> Only non-interlaced PNG images are supported. Interlaced PNG will not render correctly!</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -133,6 +136,7 @@ Real hardware upload requirements</h2>
 <div class="fragment"><div class="line">./emulate your_sketch.ino</div>
 </div><!-- fragment --><p>Only the GigaWidgets library (and those it relies on) are currently supported for emulation.</p>
 <p><code>Serial</code> and <code>String</code> are also supported as basic wrappers for <code>std::cout</code> and <code>std::string</code>, respectively.</p>
+<p><b>Warning:</b> If you used the emulator, it's a good idea to run <code>./emulate --wipe</code> before uploading, to prevent emulator code from affecting the arduino code cache. It won't hurt anything to have it there, but the action of uploading, then running the emulator is highly likely to trigger a <em>full rebuild</em> on the next upload, which is very very slow.</p>
 <hr  />
 <p><a href="https://zacharywesterman.github.io/gigawidgets">The documentation</a> is automatically generated with Doxygen.</p>
 <p>Be sure and check out <a href="https://github.com/zacharywesterman/gigawidgets/treen/main/examples">the examples</a> for some simple UI examples. </p>
