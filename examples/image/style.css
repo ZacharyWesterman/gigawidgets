@@ -3,16 +3,14 @@ body {
     rotation: 90;
 }
 
-image {
+image column text {
     align: center center;
-    shader: "glow<1000>";
 }
 
-column {
-    align: center center;
+image {
+    shader: "glow<1000>";
 }
 
 text {
     scale: 4;
-    align: center center;
 }
