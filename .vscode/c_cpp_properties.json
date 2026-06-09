@@ -40,6 +40,7 @@
             "defines": [
                 "IMAGE_SUPPORT_JPEG",
                 "IMAGE_SUPPORT_PNG",
+                "IMAGE_SUPPORT_BMP",
                 "ARDUINO=10607",
                 "ARDUINO_GIGA",
                 "ARDUINO_ARCH_MBED_GIGA",
