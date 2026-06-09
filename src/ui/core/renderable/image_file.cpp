@@ -17,6 +17,10 @@ bool ImageFile::hasSequence(uint8_t *const bytes, size_t length, const std::init
 }
 
 ImageType ImageFile::getType(uint8_t *const bytes, size_t length) {
+	if (hasSequence(bytes, length, {'B', 'M'}, 0)) {
+		return IMAGE_BMP;
+	}
+
 	if (hasSequence(bytes, length, {0xff, 0xd8}, 0) && hasSequence(bytes, length, {0xff, 0xd9}, length - 2)) {
 		return IMAGE_JPEG;
 	}
@@ -34,6 +38,16 @@ unsigned int ImageFile::getInt(size_t index, uint8_t count) const {
 	unsigned int value = 0;
 
 	for (uint8_t i = index; i < index + count; i++) {
+		value <<= 8;
+		value += bytes[i];
+	}
+
+	return value;
+}
+
+unsigned int ImageFile::getIntLE(size_t index, uint8_t count) const {
+	unsigned int value = 0;
+	for (uint8_t i = index + count - 1; i >= index; i--) {
 		value <<= 8;
 		value += bytes[i];
 	}

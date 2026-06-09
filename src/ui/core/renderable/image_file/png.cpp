@@ -76,5 +76,5 @@ Size Png::getSize() const {
 } // namespace ui
 
 #else
-#warning PNGdec library is not installed, so PNG rendering support is disabled.
+#warning PNG rendering support is disabled.
 #endif

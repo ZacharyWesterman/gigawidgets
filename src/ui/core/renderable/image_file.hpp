@@ -10,6 +10,7 @@ enum ImageType {
 	IMAGE_UNKNOWN,
 	IMAGE_JPEG,
 	IMAGE_PNG,
+	IMAGE_BMP,
 };
 
 struct ImageFile : public Renderable {
@@ -23,6 +24,7 @@ struct ImageFile : public Renderable {
 
 protected:
 	unsigned int getInt(size_t index, uint8_t count) const;
+	unsigned int getIntLE(size_t index, uint8_t count) const;
 };
 
 } // namespace ui

@@ -86,5 +86,5 @@ size_t Jpeg::afterMarker(uint8_t marker, size_t startIndex) const {
 } // namespace ui
 
 #else
-#warning JPEGDEC library is not installed, so JPEG rendering support is disabled.
+#warning JPEG rendering support is disabled.
 #endif
