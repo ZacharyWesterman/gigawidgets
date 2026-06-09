@@ -6,10 +6,6 @@
 
 #include "../image_file.hpp"
 
-#if !defined(IMAGE_SUPPORT_JPEG) && defined(__has_include) && __has_include(<JPEGDEC.h>)
-#define IMAGE_SUPPORT_JPEG
-#endif
-
 #ifdef IMAGE_SUPPORT_JPEG
 
 namespace ui {

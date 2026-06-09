@@ -6,10 +6,6 @@
 
 #include "../image_file.hpp"
 
-#if !defined(IMAGE_SUPPORT_PNG) && defined(__has_include) && __has_include(<PNGdec.h>)
-#define IMAGE_SUPPORT_PNG
-#endif
-
 #ifdef IMAGE_SUPPORT_PNG
 
 namespace ui {
