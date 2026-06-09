@@ -13,15 +13,23 @@ class Shader(Datatype):
             'startupRainbow': 'animated/',
         }
 
-        name_camel = re.sub(r'[-_]\w', lambda s: s[0][1].upper(), data)
+        # Allow quoting shader names
+        data = data.replace('"', '')
+
+        name = re.match(r'[^<]*', data)
+        name = name.group() if name else ''
+        template = re.search(r'<[^>]*>', data)
+        template = f'{template.group()}' if template else ''
+
+        name_camel = re.sub(r'[-_]\w', lambda s: s[0][1].upper(), name)
         name_snake = re.sub(
             r'[a-z][A-Z]', lambda s: f'{s[0][0]}_{s[0][1].lower()}', name_camel
         )
 
         if name_camel in builtin_shaders:
-            self.text = f'ui::shader::{name_camel}'
+            self.text = f'ui::shader::{name_camel}{template}'
             self.icl = [
-                f'<ui/shaders/{builtin_shaders[name_camel]}{name_snake}.hpp>'
+                f'"src/ui/shaders/{builtin_shaders[name_camel]}{name_snake}.hpp"'
             ]
         else:
             error(f'Unknown shader `{data}`')

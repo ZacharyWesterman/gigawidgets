@@ -6,6 +6,7 @@ import lxml.etree
 import tools.xmltree
 from tools.xmltree.logging import error
 import json
+from os import chdir
 
 parser = ArgumentParser(
     prog='package',
@@ -27,7 +28,9 @@ if not project_dir.is_dir():
     error(f'Unable to open `{args.input}`: not a directory.')
     exit(1)
 
-config_path = project_dir / 'config.json'
+chdir(str(project_dir))
+
+config_path = Path('config.json')
 if not config_path.is_file():
     error(
         f'GigaWidgets config file `{config_path}` is either missing or unreadable.')
@@ -59,7 +62,7 @@ def search(dir: Path) -> None:
 
 
 # Make sure UI build settings are all correct
-search(project_dir)
+search(Path('.'))
 if len(xml_files) == 0:
     error('No XML files found, unable to build UI!')
     exit(1)
@@ -102,12 +105,19 @@ for (i, path) in enumerate(xml_files):
     selectors = tools.xmltree.apply_styles(root, css)
     widget = tools.xmltree.construct(root, selectors)
 
+    func_name = path.stem
+    if func_name == 'main':
+        func_name = '_main'
+
     output(
         widget.function(
-            func_name=path.stem,
+            func_name=func_name,
             include=cpp_files if i == 0 else [],
         )
     )
+
+if root_name == 'main':
+    root_name = '_main'
 
 # Output the starting UI
 output(f'''

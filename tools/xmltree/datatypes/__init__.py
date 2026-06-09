@@ -13,6 +13,9 @@ class Datatype:
     def includes(self) -> list[str]:
         return getattr(self, 'icl', [])
 
+    def globals(self) -> list[str]:
+        return getattr(self, 'globaldef', [])
+
 
 # pylint: disable=wrong-import-order
 # pylint: disable=wrong-import-position

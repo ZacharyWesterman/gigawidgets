@@ -26,6 +26,9 @@ class Image(Widget):
 
         return icl
 
+    def globals(self) -> list[str]:
+        return self.source.globals()
+
     def __str__(self) -> str:
         args = [
             self.source,

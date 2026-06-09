@@ -137,7 +137,8 @@ class Widget:
             ['#include "src/ui.hpp"'] +
             [
                 f'#include {i}' for i in self.includes()
-            ]
+            ] +
+            self.globals()
         ) + '\n'
 
         for i in include:
@@ -167,6 +168,14 @@ class Widget:
             return list(set(icl))
 
         return []
+
+    def globals(self) -> list[str]:
+        icl = []
+        if hasattr(self, 'children'):
+            for child in self.children:
+                icl += child.globals()
+
+        return icl
 
     @property
     def shared_settings(self) -> list[str]:
