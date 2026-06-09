@@ -11,13 +11,12 @@
 namespace ui {
 
 struct Png : public ImageFile {
+	uint8_t transparencyThreshold = 128;
+
 	using ImageFile::ImageFile;
 
 	void renderAt(const Coords &coords, const shader_t &shader = 0) const override;
 	Size getSize() const override;
-
-private:
-	size_t afterMarker(uint8_t marker, size_t startIndex = 0) const;
 };
 
 } // namespace ui
