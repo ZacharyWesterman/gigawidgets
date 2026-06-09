@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.28</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.36</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -106,12 +106,13 @@ $(document).ready(function(){initNavTree('structui_1_1ImageFile.html',''); initR
 <table class="directory">
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>bytes</b> (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>getInt</b>(size_t index, uint8_t count) const (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structui_1_1Renderable.html#a6fa678fbb88daa04743ea91aae789ea5">getSize</a>() const =0</td><td class="entry"><a class="el" href="structui_1_1Renderable.html">ui::Renderable</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>getType</b>(uint8_t *const bytes, size_t length) (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>hasSequence</b>(uint8_t *const bytes, size_t length, const std::initializer_list&lt; uint8_t &gt; &amp;&amp;sequence, size_t index) (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>ImageFile</b>(uint8_t *const bytes, size_t length) (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>length</b> (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577">renderAt</a>(const Coords &amp;coords, const shader_t &amp;shader=0) const =0</td><td class="entry"><a class="el" href="structui_1_1Renderable.html">ui::Renderable</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getIntLE</b>(size_t index, uint8_t count) const (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structui_1_1Renderable.html#a6fa678fbb88daa04743ea91aae789ea5">getSize</a>() const =0</td><td class="entry"><a class="el" href="structui_1_1Renderable.html">ui::Renderable</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getType</b>(uint8_t *const bytes, size_t length) (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>hasSequence</b>(uint8_t *const bytes, size_t length, const std::initializer_list&lt; uint8_t &gt; &amp;&amp;sequence, size_t index) (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ImageFile</b>(uint8_t *const bytes, size_t length) (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>length</b> (defined in <a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a>)</td><td class="entry"><a class="el" href="structui_1_1ImageFile.html">ui::ImageFile</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structui_1_1Renderable.html#a414bdfa2a38ba315ca5aa2e12255a577">renderAt</a>(const Coords &amp;coords, const shader_t &amp;shader=0) const =0</td><td class="entry"><a class="el" href="structui_1_1Renderable.html">ui::Renderable</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

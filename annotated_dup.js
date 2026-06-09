@@ -12,6 +12,7 @@ var annotated_dup =
       [ "Alignment", "structui_1_1Alignment.html", "structui_1_1Alignment" ],
       [ "Bitmap", "structui_1_1Bitmap.html", "structui_1_1Bitmap" ],
       [ "Blink", "classui_1_1Blink.html", "classui_1_1Blink" ],
+      [ "Bmp", "structui_1_1Bmp.html", "structui_1_1Bmp" ],
       [ "Body", "classui_1_1Body.html", "classui_1_1Body" ],
       [ "Bounds", "structui_1_1Bounds.html", "structui_1_1Bounds" ],
       [ "Box", "classui_1_1Box.html", "classui_1_1Box" ],

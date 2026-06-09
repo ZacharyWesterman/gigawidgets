@@ -41,6 +41,7 @@ var hierarchy =
         [ "ui::TransparentBitmap", "structui_1_1TransparentBitmap.html", null ]
       ] ],
       [ "ui::ImageFile", "structui_1_1ImageFile.html", [
+        [ "ui::Bmp", "structui_1_1Bmp.html", null ],
         [ "ui::Jpeg", "structui_1_1Jpeg.html", null ],
         [ "ui::Png", "structui_1_1Png.html", null ]
       ] ],
