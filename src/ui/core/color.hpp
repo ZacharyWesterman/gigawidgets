@@ -44,6 +44,15 @@ constexpr color_t rgb(const uint8_t red, const uint8_t green, const uint8_t blue
 }
 
 /**
+ * @brief Convert HSV color components into an RGB565 value.
+ * @param hue The hue component, assumed to be in the range 0-359 inclusive.
+ * @param saturation The saturation component, assumed to be within 0.0-1.0 inclusive.
+ * @param value The value component, assumed to be within 0.0-1.0 inclusive.
+ * @return The equivalent RGB565 color value.
+ */
+color_t hsv(const int hue, const float saturation, const float value);
+
+/**
  * @brief Split an RGB565 color value into normalized components.
  * @param color The RGB565 color to split.
  * @param red The normalized red component to output.

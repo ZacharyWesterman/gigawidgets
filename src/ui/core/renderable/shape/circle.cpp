@@ -6,7 +6,12 @@ namespace ui {
 Circle::Circle(color_t color, radius_t radius, bool fill) : color(color), radius(radius), fill(fill) {}
 
 void Circle::renderAt(const Coords &coords, const shader_t &shader) const {
-	drawCircle(coords.x + radius, coords.y + radius, radius, color, fill);
+	color_t shapeColor = color;
+	if (shader) {
+		shapeColor = shader(shapeColor, coords, getSize(), millis());
+	}
+
+	drawCircle(coords.x + radius, coords.y + radius, radius, shapeColor, fill);
 }
 
 Size Circle::getSize() const {

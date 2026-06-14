@@ -27,3 +27,8 @@ struct Alignment {
 };
 
 } // namespace ui
+
+#define CENTERED_IN_PARENT \
+	{0, 0}, { \
+		ui::ALIGN_CENTER, ui::ALIGN_CENTER \
+	}
