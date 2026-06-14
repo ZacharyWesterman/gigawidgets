@@ -79,7 +79,7 @@ bool Png::isInterlaced() const {
 	pngData.openRAM(bytes, length, pngRender);
 	const bool val = pngData.isInterlaced();
 	pngData.close();
-	return value;
+	return val;
 }
 
 } // namespace ui
