@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.42</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.45</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -113,25 +113,30 @@ $(document).ready(function(){initNavTree('png_8hpp_source.html',''); initResizab
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>ui {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structui_1_1Png.html">   13</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Png.html">Png</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structui_1_1ImageFile.html">ImageFile</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    uint8_t transparencyThreshold = 128;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">using </span>ImageFile::ImageFile;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structui_1_1Png.html#adb13b4ecb54272df22c4d5251e2b7df4">   18</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structui_1_1Png.html#adb13b4ecb54272df22c4d5251e2b7df4">renderAt</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader = 0) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structui_1_1Png.html#a853f2b4dfd34023f4b1fdec012d4ea1d">   19</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="structui_1_1Png.html#a853f2b4dfd34023f4b1fdec012d4ea1d">getSize</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structui_1_1Png.html">   18</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Png.html">Png</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structui_1_1ImageFile.html">ImageFile</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structui_1_1Png.html#a5caa8009d5985156623faebe44616d25">   26</a></span>    uint8_t <a class="code hl_variable" href="structui_1_1Png.html#a5caa8009d5985156623faebe44616d25">transparencyThreshold</a> = 128;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">using </span><a class="code hl_function" href="structui_1_1ImageFile.html#a01e89df1edba2a81a71647ef0a849fdc">ImageFile::ImageFile</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structui_1_1Png.html#adb13b4ecb54272df22c4d5251e2b7df4">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structui_1_1Png.html#adb13b4ecb54272df22c4d5251e2b7df4">renderAt</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader = 0) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structui_1_1Png.html#a853f2b4dfd34023f4b1fdec012d4ea1d">   31</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="structui_1_1Png.html#a853f2b4dfd34023f4b1fdec012d4ea1d">getSize</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structui_1_1Png.html#a921a9fd01608194c63fd9cd368161a4d">   37</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structui_1_1Png.html#a921a9fd01608194c63fd9cd368161a4d">isInterlaced</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>} <span class="comment">// namespace ui</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="arenderable_8hpp_html_a8e765b43b59de2763f0ec0235e5fedac"><div class="ttname"><a href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">ui::shader_t</a></div><div class="ttdeci">shader_animated_t shader_t</div><div class="ttdoc">A pixel shader that may or may not update based on the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:48</div></div>
 <div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdoc">A struct for storing the pixel coordinates of various UI elements.</div><div class="ttdef"><b>Definition</b> coords.hpp:17</div></div>
-<div class="ttc" id="astructui_1_1ImageFile_html"><div class="ttname"><a href="structui_1_1ImageFile.html">ui::ImageFile</a></div><div class="ttdef"><b>Definition</b> image_file.hpp:16</div></div>
-<div class="ttc" id="astructui_1_1Png_html"><div class="ttname"><a href="structui_1_1Png.html">ui::Png</a></div><div class="ttdef"><b>Definition</b> png.hpp:13</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html"><div class="ttname"><a href="structui_1_1ImageFile.html">ui::ImageFile</a></div><div class="ttdoc">The common interface for images read from raw data.</div><div class="ttdef"><b>Definition</b> image_file.hpp:23</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html_a01e89df1edba2a81a71647ef0a849fdc"><div class="ttname"><a href="structui_1_1ImageFile.html#a01e89df1edba2a81a71647ef0a849fdc">ui::ImageFile::ImageFile</a></div><div class="ttdeci">ImageFile(uint8_t *const bytes, size_t length)</div><div class="ttdoc">Constructor.</div></div>
+<div class="ttc" id="astructui_1_1Png_html"><div class="ttname"><a href="structui_1_1Png.html">ui::Png</a></div><div class="ttdoc">A renderable for PNG encoded image data.</div><div class="ttdef"><b>Definition</b> png.hpp:18</div></div>
+<div class="ttc" id="astructui_1_1Png_html_a5caa8009d5985156623faebe44616d25"><div class="ttname"><a href="structui_1_1Png.html#a5caa8009d5985156623faebe44616d25">ui::Png::transparencyThreshold</a></div><div class="ttdeci">uint8_t transparencyThreshold</div><div class="ttdoc">The minimum alpha value to consider fully opaque.</div><div class="ttdef"><b>Definition</b> png.hpp:26</div></div>
 <div class="ttc" id="astructui_1_1Png_html_a853f2b4dfd34023f4b1fdec012d4ea1d"><div class="ttname"><a href="structui_1_1Png.html#a853f2b4dfd34023f4b1fdec012d4ea1d">ui::Png::getSize</a></div><div class="ttdeci">Size getSize() const override</div><div class="ttdoc">Get the size of the renderable.</div></div>
+<div class="ttc" id="astructui_1_1Png_html_a921a9fd01608194c63fd9cd368161a4d"><div class="ttname"><a href="structui_1_1Png.html#a921a9fd01608194c63fd9cd368161a4d">ui::Png::isInterlaced</a></div><div class="ttdeci">bool isInterlaced() const</div><div class="ttdoc">Check if this PNG image is interlaced.</div></div>
 <div class="ttc" id="astructui_1_1Png_html_adb13b4ecb54272df22c4d5251e2b7df4"><div class="ttname"><a href="structui_1_1Png.html#adb13b4ecb54272df22c4d5251e2b7df4">ui::Png::renderAt</a></div><div class="ttdeci">void renderAt(const Coords &amp;coords, const shader_t &amp;shader=0) const override</div><div class="ttdoc">Display the renderable directly onto the screen.</div></div>
 <div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->

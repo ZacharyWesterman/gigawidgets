@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.42</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.45</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -109,31 +109,42 @@ $(document).ready(function(){initNavTree('image__file_8hpp_source.html',''); ini
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>ui {</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">enum</span> ImageType {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    IMAGE_UNKNOWN,</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    IMAGE_JPEG,</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    IMAGE_PNG,</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    IMAGE_BMP,</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structui_1_1ImageFile.html">   16</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1ImageFile.html">ImageFile</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structui_1_1Renderable.html">Renderable</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> ImageType getType(uint8_t *<span class="keyword">const</span> bytes, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> hasSequence(uint8_t *<span class="keyword">const</span> bytes, <span class="keywordtype">size_t</span> length, <span class="keyword">const</span> std::initializer_list&lt;uint8_t&gt; &amp;&amp;sequence, <span class="keywordtype">size_t</span> index);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    uint8_t *<span class="keyword">const</span> bytes;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">size_t</span> length;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_struct" href="structui_1_1ImageFile.html">ImageFile</a>(uint8_t *<span class="keyword">const</span> bytes, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">enum</span> ImageType {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    IMAGE_UNKNOWN,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    IMAGE_JPEG,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    IMAGE_PNG,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    IMAGE_BMP,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structui_1_1ImageFile.html">   23</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1ImageFile.html">ImageFile</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structui_1_1Renderable.html">Renderable</a> {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getInt(<span class="keywordtype">size_t</span> index, uint8_t count) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getIntLE(<span class="keywordtype">size_t</span> index, uint8_t count) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structui_1_1ImageFile.html#a00850de8cba1a365ab5ae38cfad9ebdd">   31</a></span>    <span class="keyword">static</span> ImageType <a class="code hl_function" href="structui_1_1ImageFile.html#a00850de8cba1a365ab5ae38cfad9ebdd">getType</a>(uint8_t *<span class="keyword">const</span> <a class="code hl_variable" href="structui_1_1ImageFile.html#a56d667684fcd8002984d425c8994236b">bytes</a>, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structui_1_1ImageFile.html#ab2876067566e94845473178bbc6c7e14">length</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structui_1_1ImageFile.html#aff81e2ff0e6c9c3617afacef917a190a">   40</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="structui_1_1ImageFile.html#aff81e2ff0e6c9c3617afacef917a190a">hasSequence</a>(uint8_t *<span class="keyword">const</span> <a class="code hl_variable" href="structui_1_1ImageFile.html#a56d667684fcd8002984d425c8994236b">bytes</a>, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structui_1_1ImageFile.html#ab2876067566e94845473178bbc6c7e14">length</a>, <span class="keyword">const</span> std::initializer_list&lt;uint8_t&gt; &amp;&amp;sequence, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structui_1_1ImageFile.html#a56d667684fcd8002984d425c8994236b">   48</a></span>    uint8_t *<span class="keyword">const</span> <a class="code hl_variable" href="structui_1_1ImageFile.html#a56d667684fcd8002984d425c8994236b">bytes</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structui_1_1ImageFile.html#ab2876067566e94845473178bbc6c7e14">   53</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structui_1_1ImageFile.html#ab2876067566e94845473178bbc6c7e14">length</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structui_1_1ImageFile.html#a01e89df1edba2a81a71647ef0a849fdc">   60</a></span>    <a class="code hl_function" href="structui_1_1ImageFile.html#a01e89df1edba2a81a71647ef0a849fdc">ImageFile</a>(uint8_t *<span class="keyword">const</span> <a class="code hl_variable" href="structui_1_1ImageFile.html#a56d667684fcd8002984d425c8994236b">bytes</a>, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structui_1_1ImageFile.html#ab2876067566e94845473178bbc6c7e14">length</a>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structui_1_1ImageFile.html#a7bc9b23258dce9421c1fee278c55369c">   69</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="structui_1_1ImageFile.html#a7bc9b23258dce9421c1fee278c55369c">getInt</a>(<span class="keywordtype">size_t</span> index, uint8_t count) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structui_1_1ImageFile.html#ae6df99c8ecafdcfa0d0e9577889209e0">   77</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="structui_1_1ImageFile.html#ae6df99c8ecafdcfa0d0e9577889209e0">getIntLE</a>(<span class="keywordtype">size_t</span> index, uint8_t count) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <span class="comment">// namespace ui</span></div>
-<div class="ttc" id="astructui_1_1ImageFile_html"><div class="ttname"><a href="structui_1_1ImageFile.html">ui::ImageFile</a></div><div class="ttdef"><b>Definition</b> image_file.hpp:16</div></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>} <span class="comment">// namespace ui</span></div>
+<div class="ttc" id="astructui_1_1ImageFile_html"><div class="ttname"><a href="structui_1_1ImageFile.html">ui::ImageFile</a></div><div class="ttdoc">The common interface for images read from raw data.</div><div class="ttdef"><b>Definition</b> image_file.hpp:23</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html_a00850de8cba1a365ab5ae38cfad9ebdd"><div class="ttname"><a href="structui_1_1ImageFile.html#a00850de8cba1a365ab5ae38cfad9ebdd">ui::ImageFile::getType</a></div><div class="ttdeci">static ImageType getType(uint8_t *const bytes, size_t length)</div><div class="ttdoc">Determine the image type based on the file data.</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html_a01e89df1edba2a81a71647ef0a849fdc"><div class="ttname"><a href="structui_1_1ImageFile.html#a01e89df1edba2a81a71647ef0a849fdc">ui::ImageFile::ImageFile</a></div><div class="ttdeci">ImageFile(uint8_t *const bytes, size_t length)</div><div class="ttdoc">Constructor.</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html_a56d667684fcd8002984d425c8994236b"><div class="ttname"><a href="structui_1_1ImageFile.html#a56d667684fcd8002984d425c8994236b">ui::ImageFile::bytes</a></div><div class="ttdeci">uint8_t *const bytes</div><div class="ttdoc">The buffer that the image data is stored in.</div><div class="ttdef"><b>Definition</b> image_file.hpp:48</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html_a7bc9b23258dce9421c1fee278c55369c"><div class="ttname"><a href="structui_1_1ImageFile.html#a7bc9b23258dce9421c1fee278c55369c">ui::ImageFile::getInt</a></div><div class="ttdeci">unsigned int getInt(size_t index, uint8_t count) const</div><div class="ttdoc">Read a big-endian integer from raw bytes.</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html_ab2876067566e94845473178bbc6c7e14"><div class="ttname"><a href="structui_1_1ImageFile.html#ab2876067566e94845473178bbc6c7e14">ui::ImageFile::length</a></div><div class="ttdeci">size_t length</div><div class="ttdoc">The size of the data buffer.</div><div class="ttdef"><b>Definition</b> image_file.hpp:53</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html_ae6df99c8ecafdcfa0d0e9577889209e0"><div class="ttname"><a href="structui_1_1ImageFile.html#ae6df99c8ecafdcfa0d0e9577889209e0">ui::ImageFile::getIntLE</a></div><div class="ttdeci">unsigned int getIntLE(size_t index, uint8_t count) const</div><div class="ttdoc">Read a little-endian integer from raw bytes.</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html_aff81e2ff0e6c9c3617afacef917a190a"><div class="ttname"><a href="structui_1_1ImageFile.html#aff81e2ff0e6c9c3617afacef917a190a">ui::ImageFile::hasSequence</a></div><div class="ttdeci">static bool hasSequence(uint8_t *const bytes, size_t length, const std::initializer_list&lt; uint8_t &gt; &amp;&amp;sequence, size_t index)</div><div class="ttdoc">Check if a buffer contains a specific sequence of bytes at the given index.</div></div>
 <div class="ttc" id="astructui_1_1Renderable_html"><div class="ttname"><a href="structui_1_1Renderable.html">ui::Renderable</a></div><div class="ttdoc">An abstract interface for arbitrary renderable objects.</div><div class="ttdef"><b>Definition</b> renderable.hpp:55</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

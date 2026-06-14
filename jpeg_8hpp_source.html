@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.42</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.45</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -113,25 +113,26 @@ $(document).ready(function(){initNavTree('jpeg_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>ui {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structui_1_1Jpeg.html">   13</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Jpeg.html">Jpeg</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structui_1_1ImageFile.html">ImageFile</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">using </span>ImageFile::ImageFile;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structui_1_1Jpeg.html#ae9b3f3c9671d12906ff541deb85c32e0">   16</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structui_1_1Jpeg.html#ae9b3f3c9671d12906ff541deb85c32e0">renderAt</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader = 0) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structui_1_1Jpeg.html#ab33919e649f1bf60e511e9abc52a2fcd">   17</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="structui_1_1Jpeg.html#ab33919e649f1bf60e511e9abc52a2fcd">getSize</a>() <span class="keyword">const override</span>;</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structui_1_1Jpeg.html">   16</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1Jpeg.html">Jpeg</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structui_1_1ImageFile.html">ImageFile</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">using </span><a class="code hl_function" href="structui_1_1ImageFile.html#a01e89df1edba2a81a71647ef0a849fdc">ImageFile::ImageFile</a>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">size_t</span> afterMarker(uint8_t marker, <span class="keywordtype">size_t</span> startIndex = 0) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structui_1_1Jpeg.html#ae9b3f3c9671d12906ff541deb85c32e0">   19</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structui_1_1Jpeg.html#ae9b3f3c9671d12906ff541deb85c32e0">renderAt</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">shader_t</a> &amp;shader = 0) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structui_1_1Jpeg.html#ab33919e649f1bf60e511e9abc52a2fcd">   20</a></span>    <a class="code hl_struct" href="structui_1_1Size.html">Size</a> <a class="code hl_function" href="structui_1_1Jpeg.html#ab33919e649f1bf60e511e9abc52a2fcd">getSize</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">size_t</span> afterMarker(uint8_t marker, <span class="keywordtype">size_t</span> startIndex = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <span class="comment">// namespace ui</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="arenderable_8hpp_html_a8e765b43b59de2763f0ec0235e5fedac"><div class="ttname"><a href="renderable_8hpp.html#a8e765b43b59de2763f0ec0235e5fedac">ui::shader_t</a></div><div class="ttdeci">shader_animated_t shader_t</div><div class="ttdoc">A pixel shader that may or may not update based on the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:48</div></div>
 <div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdoc">A struct for storing the pixel coordinates of various UI elements.</div><div class="ttdef"><b>Definition</b> coords.hpp:17</div></div>
-<div class="ttc" id="astructui_1_1ImageFile_html"><div class="ttname"><a href="structui_1_1ImageFile.html">ui::ImageFile</a></div><div class="ttdef"><b>Definition</b> image_file.hpp:16</div></div>
-<div class="ttc" id="astructui_1_1Jpeg_html"><div class="ttname"><a href="structui_1_1Jpeg.html">ui::Jpeg</a></div><div class="ttdef"><b>Definition</b> jpeg.hpp:13</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html"><div class="ttname"><a href="structui_1_1ImageFile.html">ui::ImageFile</a></div><div class="ttdoc">The common interface for images read from raw data.</div><div class="ttdef"><b>Definition</b> image_file.hpp:23</div></div>
+<div class="ttc" id="astructui_1_1ImageFile_html_a01e89df1edba2a81a71647ef0a849fdc"><div class="ttname"><a href="structui_1_1ImageFile.html#a01e89df1edba2a81a71647ef0a849fdc">ui::ImageFile::ImageFile</a></div><div class="ttdeci">ImageFile(uint8_t *const bytes, size_t length)</div><div class="ttdoc">Constructor.</div></div>
+<div class="ttc" id="astructui_1_1Jpeg_html"><div class="ttname"><a href="structui_1_1Jpeg.html">ui::Jpeg</a></div><div class="ttdoc">A renderable for JPEG encoded image data.</div><div class="ttdef"><b>Definition</b> jpeg.hpp:16</div></div>
 <div class="ttc" id="astructui_1_1Jpeg_html_ab33919e649f1bf60e511e9abc52a2fcd"><div class="ttname"><a href="structui_1_1Jpeg.html#ab33919e649f1bf60e511e9abc52a2fcd">ui::Jpeg::getSize</a></div><div class="ttdeci">Size getSize() const override</div><div class="ttdoc">Get the size of the renderable.</div></div>
 <div class="ttc" id="astructui_1_1Jpeg_html_ae9b3f3c9671d12906ff541deb85c32e0"><div class="ttname"><a href="structui_1_1Jpeg.html#ae9b3f3c9671d12906ff541deb85c32e0">ui::Jpeg::renderAt</a></div><div class="ttdeci">void renderAt(const Coords &amp;coords, const shader_t &amp;shader=0) const override</div><div class="ttdoc">Display the renderable directly onto the screen.</div></div>
 <div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>

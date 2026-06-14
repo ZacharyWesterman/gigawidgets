@@ -25,7 +25,7 @@ var annotated_dup =
       [ "Event", "structui_1_1Event.html", "structui_1_1Event" ],
       [ "EventHandlers", "classui_1_1EventHandlers.html", "classui_1_1EventHandlers" ],
       [ "Image", "classui_1_1Image.html", "classui_1_1Image" ],
-      [ "ImageFile", "structui_1_1ImageFile.html", null ],
+      [ "ImageFile", "structui_1_1ImageFile.html", "structui_1_1ImageFile" ],
       [ "Input", "classui_1_1Input.html", "classui_1_1Input" ],
       [ "Jpeg", "structui_1_1Jpeg.html", "structui_1_1Jpeg" ],
       [ "Keyboard", "classui_1_1Keyboard.html", "classui_1_1Keyboard" ],

@@ -15,5 +15,6 @@ var searchData=
   ['bounds_12',['bounds',['../structui_1_1Bounds.html',1,'ui::Bounds'],['../classui_1_1Blink.html#acd7dac8f0f31f2c320a9c1fdee1e2a47',1,'ui::Blink::bounds()'],['../classui_1_1Body.html#a751f718ff310d1bc4c46c5da3f85158d',1,'ui::Body::bounds()'],['../classui_1_1Box.html#a4c8bd8c605405e86292a4f303e7ce3b8',1,'ui::Box::bounds()'],['../classui_1_1Widget.html#a35d1e9dde4160c11b37460e6b993abd4',1,'ui::Widget::bounds()']]],
   ['bounds_2ehpp_13',['bounds.hpp',['../bounds_8hpp.html',1,'']]],
   ['box_14',['box',['../classui_1_1Box.html#af908d1d68e0ce1172641bdf45a80d875',1,'ui::Box::Box()'],['../classui_1_1Box.html',1,'ui::Box']]],
-  ['box_2ehpp_15',['box.hpp',['../box_8hpp.html',1,'']]]
+  ['box_2ehpp_15',['box.hpp',['../box_8hpp.html',1,'']]],
+  ['bytes_16',['bytes',['../structui_1_1ImageFile.html#a56d667684fcd8002984d425c8994236b',1,'ui::ImageFile']]]
 ];

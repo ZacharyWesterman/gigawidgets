@@ -21,6 +21,7 @@ var classui_1_1Widget =
     [ "press", "classui_1_1Widget.html#a0fb9029ea00054ed5f6c6d751616352e", null ],
     [ "release", "classui_1_1Widget.html#a7f41f588697ffddb9b97b4706a2eff8c", null ],
     [ "render", "classui_1_1Widget.html#ac5e3bd64bee5a98a8916a88961d8ec27", null ],
+    [ "requestParentRedraw", "classui_1_1Widget.html#a49ccd51c796ebe84f8b894a74cbacc7f", null ],
     [ "requestRedraw", "classui_1_1Widget.html#a4997dc0a72c4f05a365ad62d687ece40", null ],
     [ "setAlign", "classui_1_1Widget.html#a6835f31d0c1f59064f6e340d2b3a8d1a", null ],
     [ "setParent", "classui_1_1Widget.html#afd0e7babb90d380238e17e4be75b7481", null ],

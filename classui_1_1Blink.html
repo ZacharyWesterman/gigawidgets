@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.42</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.45</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -130,6 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9dc2e00870c90af4e01de0fea55a199" id="r_aa9dc2e00870c90af4e01de0fea55a199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Blink.html#aa9dc2e00870c90af4e01de0fea55a199">draw</a> () const override</td></tr>
 <tr class="memdesc:aa9dc2e00870c90af4e01de0fea55a199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the widget to the screen.  <br /></td></tr>
 <tr class="separator:aa9dc2e00870c90af4e01de0fea55a199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a576674bfed9d932f0077c7a949e25973" id="r_a576674bfed9d932f0077c7a949e25973"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Blink.html#a576674bfed9d932f0077c7a949e25973">render</a> (bool force) const override</td></tr>
+<tr class="memdesc:a576674bfed9d932f0077c7a949e25973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively render this widget and any child widgets that need it.  <br /></td></tr>
+<tr class="separator:a576674bfed9d932f0077c7a949e25973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4baac8f59fa105a6a9e3453873120669" id="r_a4baac8f59fa105a6a9e3453873120669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Blink.html#a4baac8f59fa105a6a9e3453873120669">update</a> (time_t time_ms) override</td></tr>
 <tr class="memdesc:a4baac8f59fa105a6a9e3453873120669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update any internal state of the widget, and check if it needs to be re-rendered.  <br /></td></tr>
 <tr class="separator:a4baac8f59fa105a6a9e3453873120669"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,8 +199,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Widget</b> ()</td
 <tr class="memitem:a4997dc0a72c4f05a365ad62d687ece40 inherit pub_methods_classui_1_1Widget" id="r_a4997dc0a72c4f05a365ad62d687ece40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a4997dc0a72c4f05a365ad62d687ece40">requestRedraw</a> ()</td></tr>
 <tr class="memdesc:a4997dc0a72c4f05a365ad62d687ece40 inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell this widget that it needs to be re-rendered.  <br /></td></tr>
 <tr class="separator:a4997dc0a72c4f05a365ad62d687ece40 inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49ccd51c796ebe84f8b894a74cbacc7f inherit pub_methods_classui_1_1Widget" id="r_a49ccd51c796ebe84f8b894a74cbacc7f"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>requestParentRedraw</b> ()</td></tr>
+<tr class="memitem:a49ccd51c796ebe84f8b894a74cbacc7f inherit pub_methods_classui_1_1Widget" id="r_a49ccd51c796ebe84f8b894a74cbacc7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a49ccd51c796ebe84f8b894a74cbacc7f">requestParentRedraw</a> ()</td></tr>
+<tr class="memdesc:a49ccd51c796ebe84f8b894a74cbacc7f inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell the parent widget that it needs to be re-rendered.  <br /></td></tr>
 <tr class="separator:a49ccd51c796ebe84f8b894a74cbacc7f inherit pub_methods_classui_1_1Widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6767b167edd1c9cda348758abd409c6d inherit pub_methods_classui_1_1Widget" id="r_a6767b167edd1c9cda348758abd409c6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Widget.html#a6767b167edd1c9cda348758abd409c6d">needsRedraw</a> () const</td></tr>
 <tr class="memdesc:a6767b167edd1c9cda348758abd409c6d inherit pub_methods_classui_1_1Widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this widget has requested to be redrawn.  <br /></td></tr>
@@ -461,6 +464,43 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
 <p>Reset any state variables after rendering has finished. </p>
 
 <p>Reimplemented from <a class="el" href="classui_1_1Widget.html#a25adfd15fb570c5aa4253a28d18de961">ui::Widget</a>.</p>
+
+</div>
+</div>
+<a id="a576674bfed9d932f0077c7a949e25973" name="a576674bfed9d932f0077c7a949e25973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a576674bfed9d932f0077c7a949e25973">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Blink::render </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Recursively render this widget and any child widgets that need it. </p>
+<p>This member function does not directly draw graphics to the screen, instead it decides whether this widget will get redrawn based on its current state and that of any parents, and if needed, redraw it and any child widgets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>Force this widget to redraw due to parents being redrawn. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classui_1_1Widget.html#ac5e3bd64bee5a98a8916a88961d8ec27">ui::Widget</a>.</p>
 
 </div>
 </div>
