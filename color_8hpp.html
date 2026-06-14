@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.50</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.52</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -160,6 +160,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a03ee77fef94955947ad7c7aee3bb4c78" id="r_a03ee77fef94955947ad7c7aee3bb4c78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8hpp.html#a03ee77fef94955947ad7c7aee3bb4c78">ui::hsv</a> (const int hue, const float saturation, const float value)</td></tr>
 <tr class="memdesc:a03ee77fef94955947ad7c7aee3bb4c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert HSV color components into an RGB565 value.  <br /></td></tr>
 <tr class="separator:a03ee77fef94955947ad7c7aee3bb4c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7bb7669e8df2ffcfe7a5c5c71f55d57" id="r_ad7bb7669e8df2ffcfe7a5c5c71f55d57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8hpp.html#ad7bb7669e8df2ffcfe7a5c5c71f55d57">ui::hsvComponents</a> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">color</a>, int &amp;hue, float &amp;saturation, float &amp;value)</td></tr>
+<tr class="memdesc:ad7bb7669e8df2ffcfe7a5c5c71f55d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an RGB565 value into HSV color components.  <br /></td></tr>
+<tr class="separator:ad7bb7669e8df2ffcfe7a5c5c71f55d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5006b678e79506956ed1dc53d0f7a9c3" id="r_a5006b678e79506956ed1dc53d0f7a9c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8hpp.html#a5006b678e79506956ed1dc53d0f7a9c3">ui::colorComponents</a> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="el" href="color_8hpp.html#a279adbc45436ee54b61be4812ebea282">color</a>, float &amp;red, float &amp;green, float &amp;blue)</td></tr>
 <tr class="memdesc:a5006b678e79506956ed1dc53d0f7a9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split an RGB565 color value into normalized components.  <br /></td></tr>
 <tr class="separator:a5006b678e79506956ed1dc53d0f7a9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -451,6 +454,57 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The equivalent RGB565 color value. </dd></dl>
+
+</div>
+</div>
+<a id="ad7bb7669e8df2ffcfe7a5c5c71f55d57" name="ad7bb7669e8df2ffcfe7a5c5c71f55d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7bb7669e8df2ffcfe7a5c5c71f55d57">&#9670;&#160;</a></span>hsvComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::hsvComponents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>hue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>saturation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert an RGB565 value into HSV color components. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The RGB565 color to split. </td></tr>
+    <tr><td class="paramname">hue</td><td>The hue component to output. </td></tr>
+    <tr><td class="paramname">saturation</td><td>The saturation component to output. </td></tr>
+    <tr><td class="paramname">value</td><td>The value component to output. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>gigawidgets: src/ui/shaders/animated/startup_rainbow.hpp Source File</title>
+<title>gigawidgets: src/ui/shaders/animated/rainbow_cycle.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('startup__rainbow_8hpp_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('rainbow__cycle_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,27 +98,36 @@ $(document).ready(function(){initNavTree('startup__rainbow_8hpp_source.html','')
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">startup_rainbow.hpp</div></div>
+  <div class="headertitle"><div class="title">rainbow_cycle.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="startup__rainbow_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="rainbow__cycle_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../../core/color.hpp&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../../core/coords.hpp&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../../core/size.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../../core/color.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../../core/coords.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../../core/size.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>ui::shader {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>shader {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="startup__rainbow_8hpp.html#ac06869d9b183456ce16a95ee347505c3">   23</a></span><a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="code hl_function" href="startup__rainbow_8hpp.html#ac06869d9b183456ce16a95ee347505c3">startupRainbow</a>(<a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> pixel, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> &amp;size, time_t time);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <span class="comment">// namespace shader</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> frequency&gt;</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="rainbow__cycle_8hpp.html#aaa4f80c671e873f5323c46c24968ebf7">   19</a></span><a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> <a class="code hl_function" href="rainbow__cycle_8hpp.html#aaa4f80c671e873f5323c46c24968ebf7">rainbow_cycle</a>(<a class="code hl_typedef" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> pixel, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Size.html">Size</a> &amp;size, time_t time) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">int</span> h;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">float</span> s, v;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="color_8hpp.html#ad7bb7669e8df2ffcfe7a5c5c71f55d57">hsvComponents</a>(pixel, h, s, v);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    h += time * 360 / frequency;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="color_8hpp.html#a03ee77fef94955947ad7c7aee3bb4c78">hsv</a>(h, s, v);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace ui::shader</span></div>
+<div class="ttc" id="acolor_8hpp_html_a03ee77fef94955947ad7c7aee3bb4c78"><div class="ttname"><a href="color_8hpp.html#a03ee77fef94955947ad7c7aee3bb4c78">ui::hsv</a></div><div class="ttdeci">color_t hsv(const int hue, const float saturation, const float value)</div><div class="ttdoc">Convert HSV color components into an RGB565 value.</div></div>
 <div class="ttc" id="acolor_8hpp_html_ad0e32988a8ab7bbc1a746f35409aa25d"><div class="ttname"><a href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">ui::color_t</a></div><div class="ttdeci">uint16_t color_t</div><div class="ttdoc">An RGB565 color value. 5 bits red, 6 bits green, 5 bits blue.</div><div class="ttdef"><b>Definition</b> color.hpp:13</div></div>
-<div class="ttc" id="astartup__rainbow_8hpp_html_ac06869d9b183456ce16a95ee347505c3"><div class="ttname"><a href="startup__rainbow_8hpp.html#ac06869d9b183456ce16a95ee347505c3">ui::shader::startupRainbow</a></div><div class="ttdeci">color_t startupRainbow(color_t pixel, const Coords &amp;coords, const Size &amp;size, time_t time)</div><div class="ttdoc">A pixel shader that that animates a rainbow transition from black to white.</div></div>
+<div class="ttc" id="acolor_8hpp_html_ad7bb7669e8df2ffcfe7a5c5c71f55d57"><div class="ttname"><a href="color_8hpp.html#ad7bb7669e8df2ffcfe7a5c5c71f55d57">ui::hsvComponents</a></div><div class="ttdeci">void hsvComponents(color_t color, int &amp;hue, float &amp;saturation, float &amp;value)</div><div class="ttdoc">Convert an RGB565 value into HSV color components.</div></div>
+<div class="ttc" id="arainbow__cycle_8hpp_html_aaa4f80c671e873f5323c46c24968ebf7"><div class="ttname"><a href="rainbow__cycle_8hpp.html#aaa4f80c671e873f5323c46c24968ebf7">ui::shader::rainbow_cycle</a></div><div class="ttdeci">color_t rainbow_cycle(color_t pixel, const Coords &amp;coords, const Size &amp;size, time_t time)</div><div class="ttdoc">A pixel shader that smoothly rotates the original color's hue through the rainbow.</div><div class="ttdef"><b>Definition</b> rainbow_cycle.hpp:19</div></div>
 <div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdoc">A struct for storing the pixel coordinates of various UI elements.</div><div class="ttdef"><b>Definition</b> coords.hpp:17</div></div>
 <div class="ttc" id="astructui_1_1Size_html"><div class="ttname"><a href="structui_1_1Size.html">ui::Size</a></div><div class="ttdoc">A struct that holds the number of pixels that a widget would take up on the screen.</div><div class="ttdef"><b>Definition</b> size.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -126,7 +135,7 @@ $(document).ready(function(){initNavTree('startup__rainbow_8hpp_source.html','')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_d483d63164b872ed1c2586d931b47e10.html">shaders</a></li><li class="navelem"><a class="el" href="dir_45b290f7339e626a1ad50c0afcb1a9e3.html">animated</a></li><li class="navelem"><a class="el" href="startup__rainbow_8hpp.html">startup_rainbow.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_d483d63164b872ed1c2586d931b47e10.html">shaders</a></li><li class="navelem"><a class="el" href="dir_45b290f7339e626a1ad50c0afcb1a9e3.html">animated</a></li><li class="navelem"><a class="el" href="rainbow__cycle_8hpp.html">rainbow_cycle.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

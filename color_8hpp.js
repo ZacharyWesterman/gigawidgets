@@ -6,5 +6,6 @@ var color_8hpp =
     [ "color", "color_8hpp.html#a279adbc45436ee54b61be4812ebea282", null ],
     [ "colorComponents", "color_8hpp.html#a5006b678e79506956ed1dc53d0f7a9c3", null ],
     [ "hsv", "color_8hpp.html#a03ee77fef94955947ad7c7aee3bb4c78", null ],
+    [ "hsvComponents", "color_8hpp.html#ad7bb7669e8df2ffcfe7a5c5c71f55d57", null ],
     [ "rgb", "color_8hpp.html#af160bdc963e923a61fb9da8aae2985b5", null ]
 ];

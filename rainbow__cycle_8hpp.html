@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>gigawidgets: src/ui/core/rotation.hpp File Reference</title>
+<title>gigawidgets: src/ui/shaders/animated/rainbow_cycle.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('rotation_8hpp.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('rainbow__cycle_8hpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -99,29 +99,86 @@ $(document).ready(function(){initNavTree('rotation_8hpp.html',''); initResizable
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a>  </div>
-  <div class="headertitle"><div class="title">rotation.hpp File Reference</div></div>
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">rainbow_cycle.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a href="rotation_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="rainbow__cycle_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ac35f2fd44194da2d523b20ef83270410" id="r_ac35f2fd44194da2d523b20ef83270410"><td class="memItemLeft" align="right" valign="top"><a id="ac35f2fd44194da2d523b20ef83270410" name="ac35f2fd44194da2d523b20ef83270410"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rotation_8hpp.html#ac35f2fd44194da2d523b20ef83270410">ui::rotation_t</a> { <b>ROT_0_DEG</b>
-, <b>ROT_90_DEG</b>
-, <b>ROT_180_DEG</b>
-, <b>ROT_270_DEG</b>
- }</td></tr>
-<tr class="memdesc:ac35f2fd44194da2d523b20ef83270410"><td class="mdescLeft">&#160;</td><td class="mdescRight">The four possible screen rotations. <br /></td></tr>
-<tr class="separator:ac35f2fd44194da2d523b20ef83270410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aaa4f80c671e873f5323c46c24968ebf7" id="r_aaa4f80c671e873f5323c46c24968ebf7"><td class="memTemplParams" colspan="2">template&lt;unsigned int frequency&gt; </td></tr>
+<tr class="memitem:aaa4f80c671e873f5323c46c24968ebf7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="rainbow__cycle_8hpp.html#aaa4f80c671e873f5323c46c24968ebf7">ui::shader::rainbow_cycle</a> (<a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a> pixel, const <a class="el" href="structui_1_1Coords.html">Coords</a> &amp;coords, const <a class="el" href="structui_1_1Size.html">Size</a> &amp;size, time_t time)</td></tr>
+<tr class="memdesc:aaa4f80c671e873f5323c46c24968ebf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pixel shader that smoothly rotates the original color's hue through the rainbow.  <br /></td></tr>
+<tr class="separator:aaa4f80c671e873f5323c46c24968ebf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aaa4f80c671e873f5323c46c24968ebf7" name="aaa4f80c671e873f5323c46c24968ebf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4f80c671e873f5323c46c24968ebf7">&#9670;&#160;</a></span>rainbow_cycle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int frequency&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">color_t ui::shader::rainbow_cycle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="color_8hpp.html#ad0e32988a8ab7bbc1a746f35409aa25d">color_t</a>&#160;</td>
+          <td class="paramname"><em>pixel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Coords.html">Coords</a> &amp;&#160;</td>
+          <td class="paramname"><em>coords</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structui_1_1Size.html">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A pixel shader that smoothly rotates the original color's hue through the rainbow. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">frequency</td><td>The number of milliseconds it takes to make one full cycle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixel</td><td>The original pixel color. </td></tr>
+    <tr><td class="paramname">coords</td><td>The coords of the current pixel. </td></tr>
+    <tr><td class="paramname">size</td><td>The total size of the image. </td></tr>
+    <tr><td class="paramname">time</td><td>The current clock time in milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_54af36d51a9cc63772a7fe8bbd49e97e.html">core</a></li><li class="navelem"><a class="el" href="rotation_8hpp.html">rotation.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="dir_d483d63164b872ed1c2586d931b47e10.html">shaders</a></li><li class="navelem"><a class="el" href="dir_45b290f7339e626a1ad50c0afcb1a9e3.html">animated</a></li><li class="navelem"><a class="el" href="rainbow__cycle_8hpp.html">rainbow_cycle.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

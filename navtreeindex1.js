@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"display_8hpp.html#a7148afbdd7cf4312f089dbbcf66368db":[3,0,0,0,1,5,11],
 "display_8hpp.html#a7c06dc533be5be02e359fb75f5df3d79":[3,0,0,0,1,5,17],
 "display_8hpp.html#a88ddcd73c0421903a78e4c97d712413a":[3,0,0,0,1,5,1],
 "display_8hpp.html#a9cbc87c1900e42d264c49ecffcb124bd":[3,0,0,0,1,5,4],
@@ -135,6 +136,9 @@ var NAVTREEINDEX1 =
 "radius_8hpp.html":[3,0,0,0,1,12],
 "radius_8hpp.html#a3b16fbcf5c9eb249694a1d7beb97f148":[3,0,0,0,1,12,0],
 "radius_8hpp_source.html":[3,0,0,0,1,12],
+"rainbow__cycle_8hpp.html":[3,0,0,0,4,0,1],
+"rainbow__cycle_8hpp.html#aaa4f80c671e873f5323c46c24968ebf7":[3,0,0,0,4,0,1,0],
+"rainbow__cycle_8hpp_source.html":[3,0,0,0,4,0,1],
 "rectangle_8hpp.html":[3,0,0,0,1,0,2,4],
 "rectangle_8hpp_source.html":[3,0,0,0,1,0,2,4],
 "regular__polygon_8hpp.html":[3,0,0,0,1,0,2,5],
@@ -168,9 +172,9 @@ var NAVTREEINDEX1 =
 "skrunk_8hpp_source.html":[3,0,0,0,2,8],
 "spiral_8hpp.html":[3,0,0,0,1,0,2,6],
 "spiral_8hpp_source.html":[3,0,0,0,1,0,2,6],
-"startup__rainbow_8hpp.html":[3,0,0,0,4,0,1],
-"startup__rainbow_8hpp.html#ac06869d9b183456ce16a95ee347505c3":[3,0,0,0,4,0,1,0],
-"startup__rainbow_8hpp_source.html":[3,0,0,0,4,0,1],
+"startup__rainbow_8hpp.html":[3,0,0,0,4,0,2],
+"startup__rainbow_8hpp.html#ac06869d9b183456ce16a95ee347505c3":[3,0,0,0,4,0,2,0],
+"startup__rainbow_8hpp_source.html":[3,0,0,0,4,0,2],
 "structui_1_1Alignment.html":[2,0,0,2],
 "structui_1_1Alignment.html#a6a49bf368706100303800e64744a2d53":[2,0,0,2,0],
 "structui_1_1Alignment.html#ad9b4978edb2bff0a7813192df9b2a137":[2,0,0,2,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "structui_1_1Polygon.html#a1a5b9ab68ef884f748afeef352ccc0aa":[2,0,0,27,6],
 "structui_1_1Polygon.html#a1f34b75697290f3233a750cbb1f870ca":[2,0,0,27,4],
 "structui_1_1Polygon.html#a242bc37a01ec5bdc463de7e5bea62bd2":[2,0,0,27,2],
-"structui_1_1Polygon.html#a5e7ffb7683c5c949dfe4447be854fa24":[2,0,0,27,5],
-"structui_1_1Polygon.html#ad01c44535a46bc5feab67ff934088217":[2,0,0,27,0],
-"structui_1_1Polygon.html#ae6b0760b2fe5cc813daa84542554f771":[2,0,0,27,1],
-"structui_1_1Polygon.html#af20aeaa70b0d76f8dad1c0b7f9985ac1":[2,0,0,27,3],
-"structui_1_1Position.html":[2,0,0,28]
+"structui_1_1Polygon.html#a5e7ffb7683c5c949dfe4447be854fa24":[2,0,0,27,5]
 };

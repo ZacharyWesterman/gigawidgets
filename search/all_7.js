@@ -10,5 +10,6 @@ var searchData=
   ['hassequence_7',['hasSequence',['../structui_1_1ImageFile.html#aff81e2ff0e6c9c3617afacef917a190a',1,'ui::ImageFile']]],
   ['height_8',['height',['../display_8hpp.html#a7c06dc533be5be02e359fb75f5df3d79',1,'ui']]],
   ['hold_9',['hold',['../classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5',1,'ui::Widget']]],
-  ['hsv_10',['hsv',['../color_8hpp.html#a03ee77fef94955947ad7c7aee3bb4c78',1,'ui']]]
+  ['hsv_10',['hsv',['../color_8hpp.html#a03ee77fef94955947ad7c7aee3bb4c78',1,'ui']]],
+  ['hsvcomponents_11',['hsvComponents',['../color_8hpp.html#ad7bb7669e8df2ffcfe7a5c5c71f55d57',1,'ui']]]
 ];
