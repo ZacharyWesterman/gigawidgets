@@ -19,6 +19,34 @@ color_t hsv(const int hue, const float saturation, const float value) {
 	return rgb(r, g, b);
 }
 
+void hsvComponents(color_t color, int &hue, float &saturation, float &value) {
+	float r, g, b;
+	colorComponents(color, r, g, b);
+
+	const float max_rgb = std::fmax(r, std::fmax(g, b));
+	const float min_rgb = std::fmin(r, std::fmin(g, b));
+	const float delta = max_rgb - min_rgb;
+
+	value = delta;
+	saturation = max_rgb ? (delta / max_rgb) : 0.f;
+
+	if (!delta) {
+		hue = 0;
+		return;
+	}
+
+	float h = 0;
+	if (max_rgb == r) {
+		h = std::fmod((g - b) / delta, 6.f);
+	} else if (max_rgb == g) {
+		h = (b - r) / delta + 2.f;
+	} else {
+		h = (r - g) / delta + 4.f;
+	}
+
+	hue = h * 60.f;
+}
+
 void colorComponents(color_t color, float &red, float &green, float &blue) {
 	red = (float)(color >> 8) / 255.f;
 	green = (float)(color >> 3 & 0xff) / 255.f;

@@ -7,4 +7,5 @@
 
 // Animated shaders
 #include "animated/glow.hpp"
+#include "animated/rainbow_cycle.hpp"
 #include "animated/startup_rainbow.hpp"

@@ -2,9 +2,10 @@
 
 #include "src/ui.hpp"
 #include "src/ui/renderables.hpp"
+#include "src/ui/shaders.hpp"
 #include <cmath>
 
-ui::Ellipse shape(ui::COLOR_RED, 1_cm, 2_cm, true);
+ui::Ellipse shape(ui::hsv(0, 1, 1), 1_cm, 2_cm, true);
 ui::Image *image = nullptr;
 
 float linear_map(float value, float input_min, float input_max, float output_min, float output_max) {
@@ -18,10 +19,9 @@ void update_radii_every_frame() {
 	shape.radius1 = linear_map(-std::sin(seconds), -1, 1, 1_cm, 1.5_cm);
 	shape.radius2 = linear_map(std::sin(seconds), -1, 1, 1_cm, 1.5_cm);
 
-	// Pride month
-	shape.color = ui::hsv(seconds * 40, 1.f, 1.f);
-
 	// Immediately draw next frame.
+	// 1. Have to force a redraw here since the Image doesn't know the shape changed.
+	// 2. Have to specify that the PARENT redraws, otherwise will get weird overdraw.
 	image->requestParentRedraw();
 	ui::setTimeout(update_radii_every_frame, 1);
 }
@@ -30,6 +30,7 @@ void setup() {
 	image = new ui::Image(shape, CENTERED_IN_PARENT);
 	auto body = new ui::Body(image, ui::COLOR_BLACK);
 
+	image->setShader(ui::shader::rainbow_cycle<5000>);
 	ui::setTimeout(update_radii_every_frame, 1);
 
 	ui::setRoot(body);
