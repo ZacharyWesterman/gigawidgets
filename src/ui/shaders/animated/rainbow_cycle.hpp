@@ -21,7 +21,7 @@ color_t rainbow_cycle(color_t pixel, const Coords &coords, const Size &size, tim
 	float s, v;
 	hsvComponents(pixel, h, s, v);
 
-	h = time * 360 / frequency;
+	h += time * 360 / frequency;
 
 	return hsv(h, s, v);
 }
