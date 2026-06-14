@@ -12,6 +12,9 @@
 
 namespace ui {
 
+/**
+ * @brief A renderable for BMP encoded image data.
+ */
 struct Bmp : public ImageFile {
 	using ImageFile::ImageFile;
 

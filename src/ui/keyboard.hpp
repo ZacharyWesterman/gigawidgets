@@ -32,7 +32,6 @@ public:
 	/**
 	 * @brief Construct keyboard with text rendered in the built-in font.
 	 * @param layout The keyboard layout, e.g. "qwerty".
-	 * @param scale A scaling factor for the text, e.g. 2x, 3x etc.
 	 * @param textColor The text color.
 	 * @param buttonColor The button color.
 	 * @param backgroundColor The background color.

@@ -62,7 +62,9 @@ void Png::renderAt(const Coords &coords, const shader_t &shader) const {
 	pngTime = millis();
 
 	pngData.openRAM(bytes, length, pngRender);
-	pngData.decode(nullptr, PNG_FAST_PALETTE);
+	if (!pngData.isInterlaced()) {
+		pngData.decode(nullptr, PNG_FAST_PALETTE);
+	}
 	pngData.close();
 }
 
@@ -71,6 +73,13 @@ Size Png::getSize() const {
 	size_t height = getInt(20, 4);
 
 	return {width, height};
+}
+
+bool Png::isInterlaced() const {
+	pngData.openRAM(bytes, length, pngRender);
+	const bool val = pngData.isInterlaced();
+	pngData.close();
+	return value;
 }
 
 } // namespace ui

@@ -142,13 +142,20 @@ public:
 	/**
 	 * @brief Tell this widget that it needs to be re-rendered.
 	 *
-	 * This is usually called by a child widget when it moves or otherwise needs its
-	 * background to be redrawn.
+	 * This is usually called by a child widget when it changes colors
+	 * or otherwise needs its background to be redrawn, but doesn't
+	 * necessarily need the parent widget to be redrawn.
 	 */
 	inline void requestRedraw() {
 		redrawSelf = true;
 	}
 
+	/**
+	 * @brief Tell the parent widget that it needs to be re-rendered.
+	 *
+	 * This is usually called by a child widget whcn it is moved or
+	 * otherwise needs the parent to be redrawn.
+	 */
 	inline void requestParentRedraw() {
 		if (parent) {
 			parent->requestRedraw();

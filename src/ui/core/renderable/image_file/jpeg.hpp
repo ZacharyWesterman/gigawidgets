@@ -10,6 +10,9 @@
 
 namespace ui {
 
+/**
+ * @brief A renderable for JPEG encoded image data.
+ */
 struct Jpeg : public ImageFile {
 	using ImageFile::ImageFile;
 
