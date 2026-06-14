@@ -29,6 +29,7 @@ var NAVTREE =
       [ "Emulation requirements", "index.html#autotoc_md2", null ],
       [ "Real hardware upload requirements", "index.html#autotoc_md3", null ]
     ] ],
+    [ "Features", "index.html#autotoc_md4", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -53,7 +54,7 @@ var NAVTREEINDEX =
 [
 "alignment_8hpp.html",
 "display_8hpp.html#aa1862626a9e804ae8a2c8f347ce84539",
-"ui_8hpp.html#aa2d923be190bee8d3217f870c9bdc565"
+"ui_8hpp.html#aa153cb9cee43890ea9e02fb7a5b5187c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

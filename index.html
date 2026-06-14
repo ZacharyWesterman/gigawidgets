@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.41</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.42</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> This project allows simple widget-based construction and rendering of a GUI on an Arduino Giga with an attached Giga Display Shield. It could easily be extended to other displays, but the first and foremost target is the aforementioned.</p>
-<p>This project is a WIP and is not currently stable enough for use in other projects.</p>
+<p>This project is a WIP, but at this point it should be stable enough for use in other projects.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Requirements</h1>
 <h2><a class="anchor" id="autotoc_md2"></a>
@@ -123,13 +123,34 @@ Real hardware upload requirements</h2>
 </ul>
 </li>
 <li>The following Arduino libraries are optional, but recommended. They are enabled by default, but you can disable whichever formats you don't want to support by editing <code>src/ui/core/renderable/image_file/&lt;FILE_FORMAT&gt;.hpp</code>.<ul>
-<li><code>JPEGDEC</code></li>
-<li><code>BMPdec</code><ul>
-<li><b>WARNING:</b> Only non-interlaced PNG images are supported. Interlaced PNG will not render correctly!</li>
+<li><code>JPEGDEC</code> - Provides support for rendering JPG-encoded data.</li>
+<li><code>PNGdec</code> - Provides support for rendering PNG-encoded data.</li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Features</h1>
+<ul>
+<li>Build a GUI in a way that makes sense, without having to worry about rendering details.</li>
+<li>Efficient UI rendering (only re-render the smallest area of the screen we can get away with)</li>
+<li>Not a CPU hog (by default, each call to <code><a class="el" href="ui_8hpp.html#ad2c2da5e61ff916211317d49d733ec13" title="Update all UI elements and re-render any areas that need it.">ui::render()</a></code> blocks until the target framerate is achieved).</li>
+<li>Support for timed callbacks (<code><a class="el" href="ui_8hpp.html#aa153cb9cee43890ea9e02fb7a5b5187c" title="Schedule a function to run after a delay.">ui::setTimeout</a></code>).</li>
+<li>A tool to package a project containing XML, CSS, CPP and image files into a single ino file.</li>
+<li>Image support for a wide range of formats:<ul>
+<li>JPEG</li>
+<li>PNG<ul>
+<li>Single-bit transparency.</li>
+<li>Only non-interlaced PNG images are supported. Interlaced PNG will not render correctly!</li>
+</ul>
+</li>
+<li>BMP</li>
+<li>And other custom bitmap formats which are both faster to decode than JPEG or PNG, and more efficient to store than BMP. See <code>tools/image_to_cpp.py</code>.<ul>
+<li>Like with PNG, single-bit transparency is supported.</li>
 </ul>
 </li>
 </ul>
 </li>
+<li>Define arbitrary pixel shaders that can be applied to <em>any</em> image or geometric shape, regardless of format.</li>
 </ul>
 <hr  />
 <p>An emulator is available to test sketches and for rapid prototyping of this library. To emulate a sketch, run:</p>
