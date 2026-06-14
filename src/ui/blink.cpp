@@ -10,19 +10,22 @@ void Blink::draw() const {
 	// Nothing specific to draw here, but in render() will decide whether to draw the child.
 }
 
+void Blink::render(bool force) const {
+	if (visible) {
+		SingleChildWidget::render(force);
+	}
+}
+
 void Blink::update(time_t time_ms) {
 	SingleChildWidget::update(time_ms);
-	if (child->needsRedraw()) {
-		redrawSelf = true;
+	if (redrawSelf) {
 		requestParentRedraw();
 	}
 
 	if (time_ms - lastRender >= delay) {
 		lastRender = time_ms;
 		visible = !visible;
-		if (!visible) {
-			requestParentRedraw(); // force-redraw the parent if the child was visible but is now hidden.
-		}
+		requestParentRedraw(); // force-redraw the parent if the child was visible but is now hidden.
 	}
 }
 

@@ -26,6 +26,7 @@ public:
 	Blink(Widget *child, time_t time = 1000);
 
 	void draw() const override;
+	void render(bool force) const override;
 	void update(time_t time_ms) override;
 
 	Size size() const override;
