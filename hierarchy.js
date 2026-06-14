@@ -47,6 +47,7 @@ var hierarchy =
       ] ],
       [ "ui::Shape", "structui_1_1Shape.html", [
         [ "ui::Circle", "structui_1_1Circle.html", null ],
+        [ "ui::Ellipse", "structui_1_1Ellipse.html", null ],
         [ "ui::Polygon", "structui_1_1Polygon.html", [
           [ "ui::Rectangle", "structui_1_1Rectangle.html", null ],
           [ "ui::RegularPolygon", "structui_1_1RegularPolygon.html", null ]

@@ -9,5 +9,6 @@ var searchData=
   ['hash32gen_3c_20size_2c_20size_2c_20dummy_20_3e_6',['hash32gen&lt; size, size, dummy &gt;',['../structui_1_1hash32_1_1hash32gen_3_01size_00_01size_00_01dummy_01_4.html',1,'ui::hash32']]],
   ['hassequence_7',['hasSequence',['../structui_1_1ImageFile.html#aff81e2ff0e6c9c3617afacef917a190a',1,'ui::ImageFile']]],
   ['height_8',['height',['../display_8hpp.html#a7c06dc533be5be02e359fb75f5df3d79',1,'ui']]],
-  ['hold_9',['hold',['../classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5',1,'ui::Widget']]]
+  ['hold_9',['hold',['../classui_1_1Widget.html#adea6a1c5a75f30820db9a4114c0291c5',1,'ui::Widget']]],
+  ['hsv_10',['hsv',['../color_8hpp.html#a03ee77fef94955947ad7c7aee3bb4c78',1,'ui']]]
 ];

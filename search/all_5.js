@@ -1,7 +1,7 @@
 var searchData=
 [
   ['features_0',['Features',['../index.html#autotoc_md4',1,'']]],
-  ['fill_1',['fill',['../structui_1_1Circle.html#a1b58f24c960045fbd644da1b6cff0ec6',1,'ui::Circle::fill'],['../structui_1_1Polygon.html#a5e7ffb7683c5c949dfe4447be854fa24',1,'ui::Polygon::fill']]],
+  ['fill_1',['fill',['../structui_1_1Circle.html#a1b58f24c960045fbd644da1b6cff0ec6',1,'ui::Circle::fill'],['../structui_1_1Ellipse.html#a226e8dd8bb8146e6e9f966154d0e089f',1,'ui::Ellipse::fill'],['../structui_1_1Polygon.html#a5e7ffb7683c5c949dfe4447be854fa24',1,'ui::Polygon::fill']]],
   ['fillroundrect_2',['fillRoundRect',['../display_8hpp.html#a6e8248f35d269fd3b8cd5f968fe226ff',1,'ui']]],
   ['fillscreen_3',['fillScreen',['../display_8hpp.html#adf7c58b582249debe5319733ce915868',1,'ui']]],
   ['finalizerotation_4',['finalizeRotation',['../display_8hpp.html#a0cfb1fc775c623779a03de292221cc76',1,'ui']]],

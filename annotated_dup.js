@@ -22,6 +22,7 @@ var annotated_dup =
       [ "CompressedTransparencyMap", "structui_1_1CompressedTransparencyMap.html", "structui_1_1CompressedTransparencyMap" ],
       [ "Coords", "structui_1_1Coords.html", "structui_1_1Coords" ],
       [ "CoreEventHandlers", "classui_1_1CoreEventHandlers.html", "classui_1_1CoreEventHandlers" ],
+      [ "Ellipse", "structui_1_1Ellipse.html", "structui_1_1Ellipse" ],
       [ "Event", "structui_1_1Event.html", "structui_1_1Event" ],
       [ "EventHandlers", "classui_1_1EventHandlers.html", "classui_1_1EventHandlers" ],
       [ "Image", "classui_1_1Image.html", "classui_1_1Image" ],
