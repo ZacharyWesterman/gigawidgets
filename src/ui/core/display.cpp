@@ -218,4 +218,12 @@ void drawCircle(coord_t x, coord_t y, radius_t radius, color_t color, bool fill)
 	}
 }
 
+void drawEllipse(coord_t x, coord_t y, radius_t radius1, radius_t radius2, color_t color, bool fill) {
+	if (fill) {
+		display.fillEllipse(x, y, radius1, radius2, color);
+	} else {
+		display.drawEllipse(x, y, radius1, radius2, color);
+	}
+}
+
 } // namespace ui

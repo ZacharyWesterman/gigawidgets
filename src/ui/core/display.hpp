@@ -202,4 +202,15 @@ void drawLine(coord_t x0, coord_t y0, coord_t x1, coord_t y1, color_t color);
  */
 void drawCircle(coord_t x, coord_t y, radius_t radius, color_t color, bool fill);
 
+/**
+ * @brief Draw an ellipse.
+ * @param x The horizontal coordinate.
+ * @param y The vertical coordinate.
+ * @param radius1 The horizontal radius.
+ * @param radius2 The vertical radius.
+ * @param color The color of the ellipse.
+ * @param fill Whether to fill the ellipse or just draw an outline.
+ */
+void drawEllipse(coord_t x, coord_t y, radius_t radius1, radius_t radius2, color_t color, bool fill);
+
 } // namespace ui
