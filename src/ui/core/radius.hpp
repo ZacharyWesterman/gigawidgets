@@ -7,8 +7,8 @@ namespace ui {
 
 /**
  * @typedef radius_t
- * @brief A non-negative size for the radius of curves on certain widgets.
+ * @brief A non-negative size for the pixel radius of curved shapes.
  */
-typedef uint8_t radius_t;
+typedef uint16_t radius_t;
 
 } // namespace ui
