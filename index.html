@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.52</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;0.3.53</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -105,16 +105,6 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <p>This project is a WIP, but at this point it should be stable enough for use in other projects.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Requirements</h1>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Emulation requirements</h2>
-<p>Emulation is only <em>officially</em> supported on Linux. If you can get it running on Windows, power to you!</p>
-<ul>
-<li><code>rsync</code></li>
-<li>A C++ compiler (if not <code>g++</code>, you'll have to tweak <code>emulate</code> to add the <code>CC=&lt;your_compiler&gt;</code> flag to the <code>make command</code>)</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Real hardware upload requirements</h2>
-<p>These are also required when emulating.</p>
 <ul>
 <li>The "Arduino Community Edition" VS Code extension, if uploading with VS Code.</li>
 <li>The following Arduino libraries are required:<ul>
@@ -128,7 +118,7 @@ Real hardware upload requirements</h2>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md2"></a>
 Features</h1>
 <ul>
 <li>Build a GUI in a way that makes sense, without having to worry about rendering details.</li>
@@ -153,12 +143,10 @@ Features</h1>
 <li>Define arbitrary pixel shaders that can be applied to <em>any</em> image or geometric shape, regardless of format.</li>
 </ul>
 <hr  />
-<p>An emulator is available to test sketches and for rapid prototyping of this library. To emulate a sketch, run:</p>
-<div class="fragment"><div class="line">./emulate your_sketch.ino</div>
-</div><!-- fragment --><p>Only the GigaWidgets library (and those it relies on) are currently supported for emulation.</p>
-<p><code>Serial</code> and <code>String</code> are also supported as basic wrappers for <code>std::cout</code> and <code>std::string</code>, respectively.</p>
-<p><b>Warning:</b> If you used the emulator, it's a good idea to run <code>./emulate --wipe</code> before uploading, to prevent emulator code from affecting the arduino code cache. It won't hurt anything to have it there, but the action of uploading, then running the emulator is highly likely to trigger a <em>full rebuild</em> on the next upload, which is very very slow.</p>
-<hr  />
+<p>An emulator is available to test sketches and for rapid prototyping of this library. See my <a href="https://zacharywesterman.github.io/arduino-giga-emulator">Arduino emulation project</a>.</p>
+<p>If that's installed, you can emulate a sketch or xml file by running:</p>
+<div class="fragment"><div class="line">emulate your_sketch.ino</div>
+</div><!-- fragment --><hr  />
 <p><a href="https://zacharywesterman.github.io/gigawidgets">The documentation</a> is automatically generated with Doxygen.</p>
 <p>Be sure and check out <a href="https://github.com/zacharywesterman/gigawidgets/treen/main/examples">the examples</a> for some simple UI examples. </p>
 </div></div><!-- PageDoc -->

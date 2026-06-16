@@ -25,11 +25,8 @@
 var NAVTREE =
 [
   [ "gigawidgets", "index.html", [
-    [ "Requirements", "index.html#autotoc_md1", [
-      [ "Emulation requirements", "index.html#autotoc_md2", null ],
-      [ "Real hardware upload requirements", "index.html#autotoc_md3", null ]
-    ] ],
-    [ "Features", "index.html#autotoc_md4", null ],
+    [ "Requirements", "index.html#autotoc_md1", null ],
+    [ "Features", "index.html#autotoc_md2", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -54,7 +51,7 @@ var NAVTREEINDEX =
 [
 "alignment_8hpp.html",
 "display_8hpp.html#a7148afbdd7cf4312f089dbbcf66368db",
-"structui_1_1Polygon.html#ad01c44535a46bc5feab67ff934088217"
+"structui_1_1Polygon.html#af20aeaa70b0d76f8dad1c0b7f9985ac1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

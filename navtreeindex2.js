@@ -1,7 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"structui_1_1Polygon.html#ad01c44535a46bc5feab67ff934088217":[2,0,0,27,0],
-"structui_1_1Polygon.html#ae6b0760b2fe5cc813daa84542554f771":[2,0,0,27,1],
 "structui_1_1Polygon.html#af20aeaa70b0d76f8dad1c0b7f9985ac1":[2,0,0,27,3],
 "structui_1_1Position.html":[2,0,0,28],
 "structui_1_1Position.html#a29516931e561dfc2c9b688b455143be2":[2,0,0,28,0],
