@@ -7,15 +7,6 @@ This project is a WIP, but at this point it should be stable enough for use in o
 
 ## Requirements
 
-### Emulation requirements
-Emulation is only *officially* supported on Linux. If you can get it running on Windows, power to you!
-
-- `rsync`
-- A C++ compiler (if not `g++`, you'll have to tweak `emulate` to add the `CC=<your_compiler>` flag to the `make command`)
-
-### Real hardware upload requirements
-These are also required when emulating.
-
 - The "Arduino Community Edition" VS Code extension, if uploading with VS Code.
 - The following Arduino libraries are required:
   - `Arduino_GigaDisplayTouch`
@@ -44,20 +35,13 @@ These are also required when emulating.
 
 ---
 
-An emulator is available to test sketches and for rapid prototyping of this library. To emulate a sketch, run:
+An emulator is available to test sketches and for rapid prototyping of this library. See my [Arduino emulation project](https://zacharywesterman.github.io/arduino-giga-emulator).
+
+If that's installed, you can emulate a sketch or xml file by running:
 
 ```
-./emulate your_sketch.ino
+emulate your_sketch.ino
 ```
-
-Only the GigaWidgets library (and those it relies on) are currently supported for emulation.
-
-`Serial` and `String` are also supported as basic wrappers for `std::cout` and `std::string`, respectively.
-
-**Warning:** If you used the emulator, it's a good idea to run `./emulate --wipe` before uploading,
-to prevent emulator code from affecting the arduino code cache. It won't hurt anything to have it there,
-but the action of uploading, then running the emulator is highly likely to trigger a *full rebuild* on
-the next upload, which is very very slow.
 
 ---
 
