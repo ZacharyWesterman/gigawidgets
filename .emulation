@@ -1,0 +1,6 @@
+#Special flags or adjustments needed when emulating.
+compiler_flags = 
+linker_flags = 
+sources = JPEGDEC.cpp PNGdec.cpp
+objects = png_inffast.o png_adler32.o png_crc32.o png_infback.o png_inffast.o png_inflate.o png_inftrees.o png_zutil.o
+includes = Adafruit_GFX_Library Arduino_GigaDisplayTouch/src Arduino_GigaDisplay_GFX/src JPEGDEC/src PNGdec/src
