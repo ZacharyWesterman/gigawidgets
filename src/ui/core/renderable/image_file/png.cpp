@@ -4,10 +4,6 @@
 
 #ifdef IMAGE_SUPPORT_PNG
 
-#if defined(__linux__) && !defined(memcpy_P)
-#define memcpy_P memcpy
-#endif
-
 #include <PNGdec.h>
 
 namespace ui {

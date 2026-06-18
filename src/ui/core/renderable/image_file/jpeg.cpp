@@ -4,10 +4,6 @@
 
 #ifdef IMAGE_SUPPORT_JPEG
 
-#if defined(__linux__) && !defined(memcpy_P)
-#define memcpy_P memcpy
-#endif
-
 #include <JPEGDEC.h>
 
 namespace ui {
