@@ -3,7 +3,10 @@ var hierarchy =
     [ "ui::Alignment", "structui_1_1Alignment.html", null ],
     [ "ui::Bounds", "structui_1_1Bounds.html", null ],
     [ "ui::Coords", "structui_1_1Coords.html", null ],
-    [ "ui::CoreEventHandlers< T >", "classui_1_1CoreEventHandlers.html", [
+    [ "ui::CoreEventHandlers&lt; T &gt;", "classui_1_1CoreEventHandlers.html", [
+      [ "ui::EventHandlers< T >", "classui_1_1EventHandlers.html", null ]
+    ] ],
+    [ "ui::CoreEventHandlers&lt; Widget &gt;", "classui_1_1CoreEventHandlers.html", [
       [ "ui::EventHandlers< Widget >", "classui_1_1EventHandlers.html", [
         [ "ui::Widget", "classui_1_1Widget.html", [
           [ "ui::Image", "classui_1_1Image.html", null ],
@@ -24,13 +27,12 @@ var hierarchy =
           ] ],
           [ "ui::Text", "classui_1_1Text.html", null ]
         ] ]
-      ] ],
-      [ "ui::EventHandlers< T >", "classui_1_1EventHandlers.html", null ]
+      ] ]
     ] ],
-    [ "ui::CoreEventHandlers< Widget >", "classui_1_1CoreEventHandlers.html", null ],
     [ "ui::Event", "structui_1_1Event.html", null ],
-    [ "ui::hash32::hash32gen< size, idx, dummy >", "structui_1_1hash32_1_1hash32gen.html", null ],
-    [ "ui::hash32::hash32gen< size, size, dummy >", "structui_1_1hash32_1_1hash32gen_3_01size_00_01size_00_01dummy_01_4.html", null ],
+    [ "ui::GraphPoint", "structui_1_1GraphPoint.html", null ],
+    [ "ui::hash32::hash32gen&lt; size, idx, dummy &gt;", "structui_1_1hash32_1_1hash32gen.html", null ],
+    [ "ui::hash32::hash32gen&lt; size, size, dummy &gt;", "structui_1_1hash32_1_1hash32gen_3_01size_00_01size_00_01dummy_01_4.html", null ],
     [ "ui::layout::KeyboardLayout", "structui_1_1layout_1_1KeyboardLayout.html", [
       [ "ui::layout::QwertyLayout", "structui_1_1layout_1_1QwertyLayout.html", null ]
     ] ],
@@ -39,6 +41,9 @@ var hierarchy =
     [ "ui::Renderable", "structui_1_1Renderable.html", [
       [ "ui::Bitmap", "structui_1_1Bitmap.html", [
         [ "ui::TransparentBitmap", "structui_1_1TransparentBitmap.html", null ]
+      ] ],
+      [ "ui::Graph", "structui_1_1Graph.html", [
+        [ "ui::LineGraph", "structui_1_1LineGraph.html", null ]
       ] ],
       [ "ui::ImageFile", "structui_1_1ImageFile.html", [
         [ "ui::Bmp", "structui_1_1Bmp.html", null ],

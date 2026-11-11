@@ -50,9 +50,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "alignment_8hpp.html",
-"display_8hpp.html#a7148afbdd7cf4312f089dbbcf66368db",
-"structui_1_1Polygon.html#af20aeaa70b0d76f8dad1c0b7f9985ac1"
+"functions_func_e.html",
+"units_8hpp.html#a1a52fda5be5723257b5a4434e132d3e5"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

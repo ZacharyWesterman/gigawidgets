@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gigawidgets_0',['GigaWidgets',['../index.html',1,'']]]
+  ['features_0',['Features',['../index.html#autotoc_md2',1,'']]]
 ];
