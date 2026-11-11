@@ -25,7 +25,7 @@ void setup() {
 	// Create basic UI
 	ui::setRotation(ui::ROT_90_DEG);
 
-	image = new ui::Image(graph, CENTERED_IN_PARENT);
+	image = new ui::Image(graph);
 
 	auto panel = new ui::Panel(
 		image, //child widget
