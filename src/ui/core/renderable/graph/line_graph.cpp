@@ -43,7 +43,7 @@ void LineGraph::renderAt(const Coords &coords, const shader_t &shader) const {
 	time_t now = millis();
 	for (size_t l = 0; l < lines.size(); l++) {
 		const auto &line = lines[l];
-		color_t pixelColor = DEFAULT_COLORS[l % (sizeof(DEFAULT_COLORS) / sizeof(color_t))];
+		color_t pixelColor = colors.size() > l ? colors[l] : DEFAULT_COLORS[l % (sizeof(DEFAULT_COLORS) / sizeof(color_t))];
 		if (shader) {
 			pixelColor = shader(pixelColor, {0, 0}, viewport, now);
 		}

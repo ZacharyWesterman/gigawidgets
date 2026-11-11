@@ -41,8 +41,11 @@ void setup() {
 	ui::setRoot(body);
 
 	// Graph has a few lines
-	graph.lines = {{}, {}, {}, {}, {}, {}, {}, {}};
+	graph.lines = {{}, {}, {}, {}};
+    // Set how much space the graph takes up.
 	graph.viewport = {100_vw - 10_px, 50_vh - 10_px};
+    // You can set your own colors too. If not set, it will use a list of default colors.
+    graph.colors = {ui::COLOR_WHITE, ui::COLOR_RED, ui::COLOR_GREEN, ui::COLOR_BLUE};
 
 	// Add line to graph every so often.
 	ui::setTimeout(add_point_to_all_lines, 1);
