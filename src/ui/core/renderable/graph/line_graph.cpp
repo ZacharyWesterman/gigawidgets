@@ -1,6 +1,5 @@
 #include "line_graph.hpp"
 #include "../../display.hpp"
-#include <iostream>
 #include <limits>
 
 namespace ui {
@@ -30,8 +29,6 @@ void LineGraph::renderAt(const Coords &coords, const shader_t &shader) const {
 			min_y = point.y < min_y ? point.y : min_y;
 		}
 	}
-
-	std::cout << "maxy " << max_y << " miny " << min_y << std::endl;
 
 	float x_scale = 0;
 	float y_scale = 0;

@@ -3,8 +3,6 @@
 #include "src/ui.hpp"
 #include "src/ui/renderables.hpp"
 #include "src/ui/shaders.hpp"
-#include <cmath>
-#include <iostream>
 
 ui::LineGraph graph;
 ui::Image *image = nullptr;
