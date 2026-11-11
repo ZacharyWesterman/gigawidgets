@@ -1,4 +1,5 @@
 /// @file all.hpp
+#pragma once
 
 #include "circle.hpp"
 #include "ellipse.hpp"
