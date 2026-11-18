@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE body SYSTEM "../../tools/xmltree/gigawidgets.dtd">
+<body rotation="90">
+    <column size="50vw 25vw">
+        <image id="image" source="code:load_graph()" />
+    </column>
+</body>

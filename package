@@ -6,7 +6,7 @@ import lxml.etree
 import tools.xmltree
 from tools.xmltree.logging import error
 import json
-from os import chdir
+from os import chdir, curdir
 
 parser = ArgumentParser(
     prog='package',
@@ -27,6 +27,8 @@ project_dir = Path(args.input)
 if not project_dir.is_dir():
     error(f'Unable to open `{args.input}`: not a directory.')
     exit(1)
+
+outfp = open(args.output, 'w') if args.output else None
 
 chdir(str(project_dir))
 
@@ -83,14 +85,12 @@ if root_name not in [i.stem for i in xml_files]:
     )
     exit(1)
 
-fp = open(args.output, 'w') if args.output else None
-
 
 def output(text: str) -> None:
-    if fp is None:
+    if outfp is None:
         print(text)
     else:
-        fp.write(text)
+        outfp.write(text)
 
 
 css = tools.xmltree.parse_css(css_files)

@@ -2,12 +2,14 @@ from ..logging import error
 from . import Datatype
 from pathlib import Path
 
-_img_defs = []
+_IMG_DEFS = []
 
 
 class ImageSource(Datatype):
     def __init__(self, data: str):
-        global _img_defs
+        if data.startswith('code:'):
+            self.text = f'({data[5:]})'
+            return
 
         path = Path(data)
         builtin_path = Path(f'src/ui/icons/{data}.hpp')
@@ -47,11 +49,12 @@ class ImageSource(Datatype):
 
         imagebytes = [f'{i}' for i in filedata]
 
-        if imagebytes in _img_defs:
-            image_id = _img_defs.index(imagebytes)
+        global _IMG_DEFS
+        if imagebytes in _IMG_DEFS:
+            image_id = _IMG_DEFS.index(imagebytes)
         else:
-            image_id = len(_img_defs)
-            _img_defs += [imagebytes]
+            image_id = len(_IMG_DEFS)
+            _IMG_DEFS += [imagebytes]
             self.globaldef = [
                 f'unsigned char __img_{image_id}_data[] = {{{",".join(imagebytes)}}};',
                 f'const ui::{imagetype} __img_{image_id}(__img_{image_id}_data, {len(imagebytes)});',
