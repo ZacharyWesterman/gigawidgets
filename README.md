@@ -35,7 +35,7 @@ This project is a WIP, but at this point it should be stable enough for use in o
 
 ---
 
-An emulator is available to test sketches and for rapid prototyping of this library. See my [Arduino emulation project](https://zacharywesterman.github.io/arduino-giga-emulator).
+An emulator is available to test sketches and for rapid prototyping of this library. See my [Arduino emulation project](https://github.com/zacharywesterman/arduino-giga-emulator).
 
 If that's installed, you can emulate a sketch or xml file by running:
 

@@ -9,3 +9,5 @@ emu/ino.watch
 emu/lib/
 __pycache__/
 .build/
+.bundle/
+*.zip
