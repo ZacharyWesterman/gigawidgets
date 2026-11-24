@@ -2,6 +2,7 @@ var classui_1_1Input =
 [
     [ "Input", "classui_1_1Input.html#a8a9d0b4232dc7b8836d217713ce6354b", null ],
     [ "Input", "classui_1_1Input.html#a43174e4441a13cf23bb5d916f1433efb", null ],
+    [ "backspace", "classui_1_1Input.html#a6b7247d87de207eca2e44839cda624c0", null ],
     [ "draw", "classui_1_1Input.html#ac7ebefb50393d05cc5c7eb210c588aa4", null ],
     [ "getCursor", "classui_1_1Input.html#a5e6715dc8bedd5f0df8e93ab19d40ef7", null ],
     [ "getText", "classui_1_1Input.html#a2bff5d52d073981ed6431ad23bbb3732", null ],

@@ -31,7 +31,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;1.0.61</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;1.0.62</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -125,6 +125,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1e7b418ebd72e4707236c52567eb0424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct keyboard with text rendered in the built-in font.  <br /></td></tr>
 <tr class="memitem:a65de64b1b83140f77a2b67c52db4bf82" id="r_a65de64b1b83140f77a2b67c52db4bf82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65de64b1b83140f77a2b67c52db4bf82">Keyboard</a> (const <a class="el" href="structui_1_1layout_1_1KeyboardLayout.html">layout::KeyboardLayout</a> &amp;layout, const GFXfont &amp;font, <a class="el" href="color_8hpp.html#af3780cb9edbf73c281c24a1543a1b5f2">color_t</a> textColor, <a class="el" href="color_8hpp.html#af3780cb9edbf73c281c24a1543a1b5f2">color_t</a> buttonColor, <a class="el" href="color_8hpp.html#af3780cb9edbf73c281c24a1543a1b5f2">color_t</a> backgroundColor)</td></tr>
 <tr class="memdesc:a65de64b1b83140f77a2b67c52db4bf82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct keyboard with text rendered in the given font.  <br /></td></tr>
+<tr class="memitem:a03433cc6fe0a1f3910d302400baa4701" id="r_a03433cc6fe0a1f3910d302400baa4701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03433cc6fe0a1f3910d302400baa4701">onchange</a> (std::function&lt; void(char)&gt; func)</td></tr>
+<tr class="memdesc:a03433cc6fe0a1f3910d302400baa4701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the function to be called when a character button is pressed.  <br /></td></tr>
+<tr class="memitem:a1dc5bdfbbbcb19b131be9b6e710ceb56" id="r_a1dc5bdfbbbcb19b131be9b6e710ceb56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dc5bdfbbbcb19b131be9b6e710ceb56">onback</a> (std::function&lt; void()&gt; func)</td></tr>
+<tr class="memdesc:a1dc5bdfbbbcb19b131be9b6e710ceb56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the function to be called when the backspace button is pressed.  <br /></td></tr>
+<tr class="memitem:a3e72591212d3c201cfc9371c3399475e" id="r_a3e72591212d3c201cfc9371c3399475e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e72591212d3c201cfc9371c3399475e">onsubmit</a> (std::function&lt; void()&gt; func)</td></tr>
+<tr class="memdesc:a3e72591212d3c201cfc9371c3399475e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the function to be called when the enter button is pressed.  <br /></td></tr>
+<tr class="memitem:a6832b92e8e86bab74902ee1645e2a5d0" id="r_a6832b92e8e86bab74902ee1645e2a5d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6832b92e8e86bab74902ee1645e2a5d0">onshift</a> (std::function&lt; void()&gt; func)</td></tr>
+<tr class="memdesc:a6832b92e8e86bab74902ee1645e2a5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the function to be called when the shift button is pressed.  <br /></td></tr>
+<tr class="memitem:a3fbd10f13d004da1858291fe8bb04f2c" id="r_a3fbd10f13d004da1858291fe8bb04f2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fbd10f13d004da1858291fe8bb04f2c">onalt</a> (std::function&lt; void()&gt; func)</td></tr>
+<tr class="memdesc:a3fbd10f13d004da1858291fe8bb04f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the function to be called when the alt button is pressed.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classui_1_1Panel"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classui_1_1Panel')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classui_1_1Panel.html">ui::Panel</a></td></tr>
 <tr class="memitem:a44923683101f6551852d8e4af2d77af8 inherit pub_methods_classui_1_1Panel" id="r_a44923683101f6551852d8e4af2d77af8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classui_1_1Panel.html#a44923683101f6551852d8e4af2d77af8">Panel</a> (<a class="el" href="classui_1_1Widget.html">Widget</a> *<a class="el" href="classui_1_1SingleChildWidget.html#aed1ad7b5ffa0b67a2640fa0707cf5fc5">child</a>, <a class="el" href="color_8hpp.html#af3780cb9edbf73c281c24a1543a1b5f2">color_t</a> color, const <a class="el" href="structui_1_1Size.html">Size</a> &amp;<a class="el" href="classui_1_1Panel.html#a799137c43b637be150fd24f89fcb689f">size</a>={0, 0}, <a class="el" href="radius_8hpp.html#a0235be5f602f6d3d113954f304575006">radius_t</a> borderRadius=0, const <a class="el" href="structui_1_1Position.html">Position</a> &amp;pos={0, 0}, const <a class="el" href="structui_1_1Alignment.html">Alignment</a> &amp;align={ALIGN_LEFT, ALIGN_TOP}, const <a class="el" href="structui_1_1Padding.html">Padding</a> &amp;<a class="el" href="classui_1_1Widget.html#a7aacf2d0dd89b4dd3eacad1965e4b56a">padding</a>={0})</td></tr>
 <tr class="memdesc:a44923683101f6551852d8e4af2d77af8 inherit pub_methods_classui_1_1Panel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a panel with optional configuration.  <br /></td></tr>
@@ -332,6 +342,172 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>redrawSelf</b></td></
     <tr><td class="paramname">textColor</td><td>The text color. </td></tr>
     <tr><td class="paramname">buttonColor</td><td>The button color. </td></tr>
     <tr><td class="paramname">backgroundColor</td><td>The background color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a3fbd10f13d004da1858291fe8bb04f2c" name="a3fbd10f13d004da1858291fe8bb04f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fbd10f13d004da1858291fe8bb04f2c">&#9670;&#160;</a></span>onalt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Keyboard::onalt </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the function to be called when the alt button is pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The function to call. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1dc5bdfbbbcb19b131be9b6e710ceb56" name="a1dc5bdfbbbcb19b131be9b6e710ceb56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc5bdfbbbcb19b131be9b6e710ceb56">&#9670;&#160;</a></span>onback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Keyboard::onback </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the function to be called when the backspace button is pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The function to call. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a03433cc6fe0a1f3910d302400baa4701" name="a03433cc6fe0a1f3910d302400baa4701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03433cc6fe0a1f3910d302400baa4701">&#9670;&#160;</a></span>onchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Keyboard::onchange </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(char)&gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the function to be called when a character button is pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The function to call. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6832b92e8e86bab74902ee1645e2a5d0" name="a6832b92e8e86bab74902ee1645e2a5d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6832b92e8e86bab74902ee1645e2a5d0">&#9670;&#160;</a></span>onshift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Keyboard::onshift </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the function to be called when the shift button is pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The function to call. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3e72591212d3c201cfc9371c3399475e" name="a3e72591212d3c201cfc9371c3399475e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e72591212d3c201cfc9371c3399475e">&#9670;&#160;</a></span>onsubmit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui::Keyboard::onsubmit </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the function to be called when the enter button is pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The function to call. </td></tr>
   </table>
   </dd>
 </dl>

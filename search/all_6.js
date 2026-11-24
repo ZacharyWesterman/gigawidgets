@@ -21,7 +21,8 @@ var searchData=
   ['glow_2ehpp_18',['glow.hpp',['../glow_8hpp.html',1,'']]],
   ['graph_19',['Graph',['../structui_1_1Graph.html',1,'ui::Graph'],['../structui_1_1Graph.html#acaf4da0999aca9c6991815fd6363bf83',1,'ui::Graph::Graph()'],['../structui_1_1Graph.html#a829509536b807cce0a7d7653ddf3fece',1,'ui::Graph::Graph(Size viewport)'],['../structui_1_1LineGraph.html#acaf4da0999aca9c6991815fd6363bf83',1,'ui::LineGraph::Graph()'],['../structui_1_1LineGraph.html#a829509536b807cce0a7d7653ddf3fece',1,'ui::LineGraph::Graph(Size viewport)']]],
   ['graph_2ehpp_20',['graph.hpp',['../graph_8hpp.html',1,'']]],
-  ['graphpoint_21',['GraphPoint',['../structui_1_1GraphPoint.html',1,'ui']]],
-  ['grayscale_22',['grayscale',['../grayscale_8hpp.html#ad3306e8724e6666441b357dd97349703',1,'ui::shader']]],
-  ['grayscale_2ehpp_23',['grayscale.hpp',['../grayscale_8hpp.html',1,'']]]
+  ['graphline_21',['GraphLine',['../line__graph_8hpp.html#a1d2eb1ad7e9c3150ac403f3a51157d77',1,'ui']]],
+  ['graphpoint_22',['GraphPoint',['../structui_1_1GraphPoint.html',1,'ui']]],
+  ['grayscale_23',['grayscale',['../grayscale_8hpp.html#ad3306e8724e6666441b357dd97349703',1,'ui::shader']]],
+  ['grayscale_2ehpp_24',['grayscale.hpp',['../grayscale_8hpp.html',1,'']]]
 ];

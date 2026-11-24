@@ -31,7 +31,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gigawidgets<span id="projectnumber">&#160;1.0.61</span>
+   <div id="projectname">gigawidgets<span id="projectnumber">&#160;1.0.62</span>
    </div>
    <div id="projectbrief">A wxWidgets-style UI library for the Arduino Giga Display Shield.</div>
   </td>
@@ -107,34 +107,37 @@ $(function(){initNavTree('line__graph_8hpp_source.html','',''); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>ui {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structui_1_1GraphPoint.html">    9</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1GraphPoint.html">GraphPoint</a> {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">float</span> x;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">float</span> y;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>};</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structui_1_1GraphPoint.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1GraphPoint.html">GraphPoint</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structui_1_1GraphPoint.html#add17c6957201f3d39c21b60c8f40cc42">   12</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structui_1_1GraphPoint.html#add17c6957201f3d39c21b60c8f40cc42">x</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structui_1_1GraphPoint.html#a44031c0419db52aea9bde3f039210a19">   14</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structui_1_1GraphPoint.html#a44031c0419db52aea9bde3f039210a19">y</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
 </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">typedef</span> std::vector&lt;GraphPoint&gt; GraphLine;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structui_1_1LineGraph.html">   16</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1LineGraph.html">LineGraph</a> : <span class="keyword">public</span> <a class="code hl_function" href="structui_1_1LineGraph.html#acaf4da0999aca9c6991815fd6363bf83">Graph</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structui_1_1LineGraph.html#a7b5890c979e17c581ba1915c5d4eb9f0">   18</a></span>    std::vector&lt;GraphLine&gt; <a class="code hl_variable" href="structui_1_1LineGraph.html#a7b5890c979e17c581ba1915c5d4eb9f0">lines</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">using </span><a class="code hl_function" href="structui_1_1Graph.html#acaf4da0999aca9c6991815fd6363bf83">Graph::Graph</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structui_1_1LineGraph.html#ab400aefd76af0278054bdd0034367194">   22</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structui_1_1LineGraph.html#ab400aefd76af0278054bdd0034367194">renderAt</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a80467b367921a4aaf6f29081f95f6ac9">shader_t</a> &amp;shader = 0) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
-</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="line__graph_8hpp.html#a1d2eb1ad7e9c3150ac403f3a51157d77">   18</a></span><span class="keyword">typedef</span> std::vector&lt;GraphPoint&gt; <a class="code hl_typedef" href="line__graph_8hpp.html#a1d2eb1ad7e9c3150ac403f3a51157d77">GraphLine</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structui_1_1LineGraph.html">   21</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structui_1_1LineGraph.html">LineGraph</a> : <span class="keyword">public</span> <a class="code hl_function" href="structui_1_1LineGraph.html#acaf4da0999aca9c6991815fd6363bf83">Graph</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structui_1_1LineGraph.html#a7b5890c979e17c581ba1915c5d4eb9f0">   23</a></span>    std::vector&lt;GraphLine&gt; <a class="code hl_variable" href="structui_1_1LineGraph.html#a7b5890c979e17c581ba1915c5d4eb9f0">lines</a>;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">using </span><a class="code hl_function" href="structui_1_1Graph.html#acaf4da0999aca9c6991815fd6363bf83">Graph::Graph</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structui_1_1LineGraph.html#ab400aefd76af0278054bdd0034367194">   27</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structui_1_1LineGraph.html#ab400aefd76af0278054bdd0034367194">renderAt</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structui_1_1Coords.html">Coords</a> &amp;coords, <span class="keyword">const</span> <a class="code hl_typedef" href="renderable_8hpp.html#a80467b367921a4aaf6f29081f95f6ac9">shader_t</a> &amp;shader = 0) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <span class="comment">// namespace ui</span></div>
 <div class="ttc" id="agraph_8hpp_html"><div class="ttname"><a href="graph_8hpp.html">graph.hpp</a></div></div>
+<div class="ttc" id="aline__graph_8hpp_html_a1d2eb1ad7e9c3150ac403f3a51157d77"><div class="ttname"><a href="line__graph_8hpp.html#a1d2eb1ad7e9c3150ac403f3a51157d77">ui::GraphLine</a></div><div class="ttdeci">std::vector&lt; GraphPoint &gt; GraphLine</div><div class="ttdoc">A list of points, representing a line.</div><div class="ttdef"><b>Definition</b> line_graph.hpp:18</div></div>
 <div class="ttc" id="arenderable_8hpp_html_a80467b367921a4aaf6f29081f95f6ac9"><div class="ttname"><a href="renderable_8hpp.html#a80467b367921a4aaf6f29081f95f6ac9">ui::shader_t</a></div><div class="ttdeci">shader_animated_t shader_t</div><div class="ttdoc">A pixel shader that may or may not update based on the current time.</div><div class="ttdef"><b>Definition</b> renderable.hpp:48</div></div>
 <div class="ttc" id="astructui_1_1Coords_html"><div class="ttname"><a href="structui_1_1Coords.html">ui::Coords</a></div><div class="ttdoc">A struct for storing the pixel coordinates of various UI elements.</div><div class="ttdef"><b>Definition</b> coords.hpp:17</div></div>
-<div class="ttc" id="astructui_1_1GraphPoint_html"><div class="ttname"><a href="structui_1_1GraphPoint.html">ui::GraphPoint</a></div><div class="ttdef"><b>Definition</b> line_graph.hpp:9</div></div>
+<div class="ttc" id="astructui_1_1GraphPoint_html"><div class="ttname"><a href="structui_1_1GraphPoint.html">ui::GraphPoint</a></div><div class="ttdoc">A storage struct representing a point on a graph.</div><div class="ttdef"><b>Definition</b> line_graph.hpp:10</div></div>
+<div class="ttc" id="astructui_1_1GraphPoint_html_a44031c0419db52aea9bde3f039210a19"><div class="ttname"><a href="structui_1_1GraphPoint.html#a44031c0419db52aea9bde3f039210a19">ui::GraphPoint::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">The vertical component.</div><div class="ttdef"><b>Definition</b> line_graph.hpp:14</div></div>
+<div class="ttc" id="astructui_1_1GraphPoint_html_add17c6957201f3d39c21b60c8f40cc42"><div class="ttname"><a href="structui_1_1GraphPoint.html#add17c6957201f3d39c21b60c8f40cc42">ui::GraphPoint::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">The horizontal component.</div><div class="ttdef"><b>Definition</b> line_graph.hpp:12</div></div>
 <div class="ttc" id="astructui_1_1Graph_html_acaf4da0999aca9c6991815fd6363bf83"><div class="ttname"><a href="structui_1_1Graph.html#acaf4da0999aca9c6991815fd6363bf83">ui::Graph::Graph</a></div><div class="ttdeci">Graph()</div><div class="ttdoc">Construct a graph without setting the viewport.</div></div>
-<div class="ttc" id="astructui_1_1LineGraph_html"><div class="ttname"><a href="structui_1_1LineGraph.html">ui::LineGraph</a></div><div class="ttdef"><b>Definition</b> line_graph.hpp:16</div></div>
-<div class="ttc" id="astructui_1_1LineGraph_html_a7b5890c979e17c581ba1915c5d4eb9f0"><div class="ttname"><a href="structui_1_1LineGraph.html#a7b5890c979e17c581ba1915c5d4eb9f0">ui::LineGraph::lines</a></div><div class="ttdeci">std::vector&lt; GraphLine &gt; lines</div><div class="ttdoc">A list of lines to render.</div><div class="ttdef"><b>Definition</b> line_graph.hpp:18</div></div>
+<div class="ttc" id="astructui_1_1LineGraph_html"><div class="ttname"><a href="structui_1_1LineGraph.html">ui::LineGraph</a></div><div class="ttdoc">A renderable for graphing one or more lines.</div><div class="ttdef"><b>Definition</b> line_graph.hpp:21</div></div>
+<div class="ttc" id="astructui_1_1LineGraph_html_a7b5890c979e17c581ba1915c5d4eb9f0"><div class="ttname"><a href="structui_1_1LineGraph.html#a7b5890c979e17c581ba1915c5d4eb9f0">ui::LineGraph::lines</a></div><div class="ttdeci">std::vector&lt; GraphLine &gt; lines</div><div class="ttdoc">A list of lines to render.</div><div class="ttdef"><b>Definition</b> line_graph.hpp:23</div></div>
 <div class="ttc" id="astructui_1_1LineGraph_html_ab400aefd76af0278054bdd0034367194"><div class="ttname"><a href="structui_1_1LineGraph.html#ab400aefd76af0278054bdd0034367194">ui::LineGraph::renderAt</a></div><div class="ttdeci">virtual void renderAt(const Coords &amp;coords, const shader_t &amp;shader=0) const override</div><div class="ttdoc">Display the renderable directly onto the screen.</div></div>
 <div class="ttc" id="astructui_1_1LineGraph_html_acaf4da0999aca9c6991815fd6363bf83"><div class="ttname"><a href="structui_1_1LineGraph.html#acaf4da0999aca9c6991815fd6363bf83">ui::LineGraph::Graph</a></div><div class="ttdeci">Graph()</div><div class="ttdoc">Construct a graph without setting the viewport.</div></div>
 </div><!-- fragment --></div><!-- contents -->

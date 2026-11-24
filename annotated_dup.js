@@ -30,7 +30,7 @@ var annotated_dup =
       [ "TransparencyMap", "structui_1_1TransparencyMap.html", "structui_1_1TransparencyMap" ],
       [ "TransparentBitmap", "structui_1_1TransparentBitmap.html", "structui_1_1TransparentBitmap" ],
       [ "Graph", "structui_1_1Graph.html", "structui_1_1Graph" ],
-      [ "GraphPoint", "structui_1_1GraphPoint.html", null ],
+      [ "GraphPoint", "structui_1_1GraphPoint.html", "structui_1_1GraphPoint" ],
       [ "LineGraph", "structui_1_1LineGraph.html", "structui_1_1LineGraph" ],
       [ "ImageFile", "structui_1_1ImageFile.html", "structui_1_1ImageFile" ],
       [ "Bmp", "structui_1_1Bmp.html", "structui_1_1Bmp" ],
@@ -48,6 +48,7 @@ var annotated_dup =
       [ "Image", "classui_1_1Image.html", "classui_1_1Image" ],
       [ "Input", "classui_1_1Input.html", "classui_1_1Input" ],
       [ "Keyboard", "classui_1_1Keyboard.html", "classui_1_1Keyboard" ],
+      [ "Numpad", "classui_1_1Numpad.html", "classui_1_1Numpad" ],
       [ "Panel", "classui_1_1Panel.html", "classui_1_1Panel" ],
       [ "Row", "classui_1_1Row.html", "classui_1_1Row" ],
       [ "Text", "classui_1_1Text.html", "classui_1_1Text" ]

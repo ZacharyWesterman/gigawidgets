@@ -22,7 +22,8 @@ var hierarchy =
             [ "ui::Box", "classui_1_1Box.html", null ],
             [ "ui::Panel", "classui_1_1Panel.html", [
               [ "ui::Input", "classui_1_1Input.html", null ],
-              [ "ui::Keyboard", "classui_1_1Keyboard.html", null ]
+              [ "ui::Keyboard", "classui_1_1Keyboard.html", null ],
+              [ "ui::Numpad", "classui_1_1Numpad.html", null ]
             ] ]
           ] ],
           [ "ui::Text", "classui_1_1Text.html", null ]
