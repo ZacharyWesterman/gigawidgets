@@ -10,6 +10,7 @@
 #include "ui/image.hpp"
 #include "ui/input.hpp"
 #include "ui/keyboard.hpp"
+#include "ui/numpad.hpp"
 #include "ui/panel.hpp"
 #include "ui/row.hpp"
 #include "ui/text.hpp"

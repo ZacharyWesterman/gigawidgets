@@ -23,8 +23,20 @@ void Input::insert(char c) {
 	auto child = reinterpret_cast<Text *>(getChild());
 	auto text = child->getText();
 
-	child->setText(text.substring(0, cursor) + c + text.substring(cursor));
+	child->setText(text.substring(0, cursor) + String(c) + text.substring(cursor));
 	cursor++;
+}
+
+void Input::backspace() {
+	auto child = reinterpret_cast<Text *>(getChild());
+	auto text = child->getText();
+
+	if (cursor == 0) {
+		return;
+	}
+
+	child->setText(text.substring(0, cursor - 1) + text.substring(cursor));
+	cursor--;
 }
 
 int Input::getCursor() const {

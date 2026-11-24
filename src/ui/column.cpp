@@ -45,8 +45,6 @@ void Column::calcChildBounds(int index) {
 }
 
 void Column::update(time_t time) {
-	MultiChildWidget::update(time);
-
 	// If a redraw was requested, recalculate the bounds for all the children.
 	if (redrawSelf) {
 		for (size_t i = 0; i < children.size(); i++) {
@@ -57,6 +55,7 @@ void Column::update(time_t time) {
 			requestParentRedraw();
 		}
 	}
+	MultiChildWidget::update(time);
 }
 
 void Column::push(Widget *const child) {
