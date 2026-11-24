@@ -15,7 +15,7 @@ Keyboard::Keyboard(const layout::KeyboardLayout &layout, color_t textColor, colo
 }
 
 Keyboard::Keyboard(const layout::KeyboardLayout &layout, const GFXfont &font, color_t textColor, color_t buttonColor, color_t backgroundColor) : layout(&layout), font(&font), textColor(textColor), buttonColor(buttonColor), backgroundColor(backgroundColor), Panel(nullptr, backgroundColor, {0, 0}, 0, {0, 0}, {ALIGN_CENTER, ALIGN_BOTTOM}, {0, 5_px}) {
-	rebuild([&font, textColor](char letter, color_t color) { return new Text(String(letter), font, textColor, {0, 0}, {ALIGN_CENTER, ALIGN_CENTER}); });
+	rebuild([&font](char letter, color_t color) { return new Text(String(letter), font, color, {0, 0}, {ALIGN_CENTER, ALIGN_CENTER}); });
 }
 
 void Keyboard::rebuild(std::function<Text *(char, color_t)> makeText) {
