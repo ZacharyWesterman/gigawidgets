@@ -33,6 +33,11 @@ void Numpad::build(const Size &size, std::function<Text *(char, color_t)> makete
 		auto button = new Panel(maketext(i, textColor), buttonColor, {buttonWidth, buttonHeight}, 5_px);
 		row->push(button);
 		bind(button);
+		button->onrelease([this, i]() {
+			if (insert_handler) {
+				insert_handler(i);
+			}
+		});
 	}
 
 	// Second row - 4 5 6
@@ -42,6 +47,11 @@ void Numpad::build(const Size &size, std::function<Text *(char, color_t)> makete
 		auto button = new Panel(maketext(i, textColor), buttonColor, {buttonWidth, buttonHeight}, 5_px);
 		row->push(button);
 		bind(button);
+		button->onrelease([this, i]() {
+			if (insert_handler) {
+				insert_handler(i);
+			}
+		});
 	}
 
 	// Third row - 1 2 3
@@ -51,6 +61,11 @@ void Numpad::build(const Size &size, std::function<Text *(char, color_t)> makete
 		auto button = new Panel(maketext(i, textColor), buttonColor, {buttonWidth, buttonHeight}, 5_px);
 		row->push(button);
 		bind(button);
+		button->onrelease([this, i]() {
+			if (insert_handler) {
+				insert_handler(i);
+			}
+		});
 	}
 
 	// Fourth row has special buttons, '-', '0', '.'
@@ -58,9 +73,15 @@ void Numpad::build(const Size &size, std::function<Text *(char, color_t)> makete
 	column->push(row);
 	const auto letters = "-0.";
 	for (int i = 0; i < 3; i++) {
-		auto button = new Panel(maketext(letters[i], textColor), buttonColor, {buttonWidth, buttonHeight}, 5_px);
+		char c = letters[i];
+		auto button = new Panel(maketext(c, textColor), buttonColor, {buttonWidth, buttonHeight}, 5_px);
 		row->push(button);
 		bind(button);
+		button->onrelease([this, c]() {
+			if (insert_handler) {
+				insert_handler(c);
+			}
+		});
 	}
 
 	// Fifth row is two special buttons - Back Enter
@@ -71,6 +92,16 @@ void Numpad::build(const Size &size, std::function<Text *(char, color_t)> makete
 	column->push(row);
 	auto backButton = new Panel(font ? text_with_font("Back") : text_without_font("Back"), buttonColor, {buttonWidth * 1.5 + 2, buttonHeight}, 5_px);
 	auto enterButton = new Panel(font ? text_with_font("Enter") : text_without_font("Enter"), buttonColor, {buttonWidth * 1.5 + 2, buttonHeight}, 5_px);
+	backButton->onrelease([this]() {
+		if (backspace_handler) {
+			backspace_handler();
+		}
+	});
+	enterButton->onrelease([this]() {
+		if (submit_handler) {
+			submit_handler();
+		}
+	});
 	bind(backButton);
 	bind(enterButton);
 	row->push(backButton);
@@ -78,7 +109,7 @@ void Numpad::build(const Size &size, std::function<Text *(char, color_t)> makete
 }
 
 void Numpad::bind(Panel *button) {
-	button->onpress([](Panel &btn) { btn.setColor(COLOR_WHITE); });
+	button->onpress([this](Panel &btn) { btn.setColor(COLOR_WHITE); });
 	button->onblur([this](Panel &btn) { btn.setColor(buttonColor); });
 }
 

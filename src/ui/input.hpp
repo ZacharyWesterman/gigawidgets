@@ -69,6 +69,11 @@ public:
 	void insert(char c);
 
 	/**
+	 * @brief Remove a character before the current cursor position.
+	 */
+	void backspace();
+
+	/**
 	 * @brief Get the current cursor position.
 	 * @return The cursor position.
 	 */

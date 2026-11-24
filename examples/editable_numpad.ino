@@ -11,7 +11,7 @@ void setup() {
 
 	auto column = new ui::Column({100_vw, 100_vh});
 
-	auto input = new ui::Input(FONT, ui::COLOR_BLACK, ui::COLOR_WHITE, {3.5_cm, 0.5_cm});
+	auto input = new ui::Input(FONT, ui::COLOR_BLACK, ui::COLOR_WHITE, {2.5_cm, 0.5_cm}, 5_px);
 
 	auto numpad = new ui::Numpad(		 //
 		FONT,							 //
@@ -27,6 +27,16 @@ void setup() {
 
 	column->push(input);
 	column->push(numpad);
+
+	input->setText("1234567890");
+	input->onpress([input](const ui::Event &event) { input->setCursor(input->nearestCursor(event.points[0])); });
+
+	numpad->onchange([input](char c) { input->insert(c); });
+	numpad->onback([input]() { input->backspace(); });
+	numpad->onsubmit([input]() {
+		Serial.println(input->getText());
+		input->setText("");
+	});
 
 	ui::setRoot(new ui::Body(column));
 }
