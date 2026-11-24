@@ -4,7 +4,7 @@ set -e
 rm -rf .bundle GigaWidgets.zip
 mkdir .bundle/GigaWidgets -p
 
-cp config/library.properties .bundle/GigaWidgets/
+sed "s/{VERSION}/$(./get_version.sh)/g" config/library.properties > .bundle/GigaWidgets/library.properties
 rsync -a src .bundle/GigaWidgets/
 mkdir .bundle/GigaWidgets/examples
 cp examples/*.ino .bundle/GigaWidgets/examples/

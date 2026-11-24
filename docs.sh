@@ -1,7 +1,2 @@
 #!/usr/bin/env bash
-VER_MAJOR=1
-VER_MINOR=0
-VER_CUTOFF_COMMIT=167a09990dc41286dfae796bd471688dee2fa75a
-VER_PATCH=$(git rev-list --count $VER_CUTOFF_COMMIT..HEAD^)
-
-PROJECT_NUMBER=$VER_MAJOR.$VER_MINOR.$VER_PATCH doxygen
+PROJECT_NUMBER=$(./get_version.sh) doxygen
